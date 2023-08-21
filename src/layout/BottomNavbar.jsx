@@ -8,7 +8,7 @@ const BottomNavbar = () => {
   return (
     <>
       <div className="navbar   px-20">
-        <div className="flex justify-evenly py-7">
+        <div className="bottom-nav flex justify-evenly py-7">
           <div className="box flex">
             <img className="nav-icon" src={women} alt="" />
             <p>WOMEN</p>

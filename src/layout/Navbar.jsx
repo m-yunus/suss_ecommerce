@@ -6,7 +6,7 @@ import "../assets/css/Navbar.css";
 const Navbar = () => {
   return (
     <>
-      <header className="navbar text-gray-600 body-font px-20">
+      <header className="navbar  body-font px-20">
         <div className="container mx-auto flex flex-wrap  flex-col md:flex-row items-center p ">
           <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <span className="ml-3 ">
