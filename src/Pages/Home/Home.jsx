@@ -4,8 +4,10 @@ import Navbar from "../../layout/Navbar";
 import BottomNavbar from "../../layout/BottomNavbar";
 import HomeTop from "../../assets/images/home-top.png";
 import arrow from "../../assets/images/arrow.png";
-import accessories from "../../assets/images/accessories.png";
-import footwear from "../../assets/images/footwear.png";
+import eye from "../../assets/images/accessories.png";
+import fav from "../../assets/images/footwear.png";
+import arrow2 from "../../assets/images/arrow-2.png";
+import { BestSelling } from "../../data/BestSellingData";
 
 const Home = () => {
   return (
@@ -56,13 +58,39 @@ const Home = () => {
               <div className=" flex justify-between mx-14 ">
                 <div className="category ">Clothing</div>
                 <div className="category flex flex-col ">
-                  <img className="w-6" src={accessories} alt="" /> Accessories
+                  <img className="w-6" src={eye} alt="" /> Accessories
                 </div>
                 <div className="category flex flex-col ">
-                  <img className="w-5" src={footwear} alt="" /> Footwear
+                  <img className="w-5" src={fav} alt="" /> Footwear
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="home-bottom  my-20 ">
+          <h1 className="best-selling">Best Selling</h1>
+          <div className="flex flex-wrap justify-between">
+            {BestSelling.map((data) => (
+              <div key={data.id} className="relative">
+                <div className="">
+                  <img
+                    className="best-selling-image "
+                    src={data.image}
+                    alt=""
+                  />
+                </div>
+                <div className="absolute bottom-0 right-0">
+                  <img className="arrow-icon w-20 m-5" src={arrow2} alt="" />
+                </div>
+                <div className="absolute top-0 right-0">
+                  <img className="fav-icon m-3 w-6" src={fav} alt="" />
+                </div>
+                <div className="absolute top-0 left-0">
+                  <img className="eye-icon w-8 m-3" src={eye} alt="" />
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
