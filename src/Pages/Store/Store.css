@@ -27,6 +27,7 @@ margin-left: 3rem;
     display: flex;
     margin-left: 2rem;
     margin-right: 2rem;
+    justify-content: center;
     
     
    
@@ -37,6 +38,7 @@ margin-left: 3rem;
     
     
 }
+
 img{
     background-color: #045A11;
 }
@@ -110,6 +112,67 @@ margin-top: 2rem;
 }
 .ofr{
     background-color: #045A11;
+    border-radius: 24.998px;
 }
+.off-text{
+    font-size: 50px;
+}
+.ofr-card{
+    margin-top: -2rem;
+}
+.offr-crd{
+    width: 1358px;
+    height: 432px;
+    object-fit: cover;
+    
+
+ 
+}
+.smcards{
+   display: flex;
+   margin-top: -5rem;
+   margin-left: 2rem;
+
+   flex-wrap: wrap;
+
+}
+.cpn-card{
+    width: 420px;
+height: 200px;
+margin-left: 1rem;
+margin-top: 1rem;
+padding-top: 5rem;
+color: white;
+font-size: x-large;
+
+border-radius: 24.998px;
+background: #045A11;
+text-align: center;
+
+
+}
+.by-card{
+   margin-left: 1rem;
+   margin-top: 1rem;
+width: 850px;
+height: 416px;
+border-radius: 24.998px;
+background: #045A11;
+text-align: center;
+padding-top: 15rem;
+font-size: 50px;
+color: white;
+
+}
+collections{
+
+}
+.clction-title{
+    
+
+}
+
+
+
 
 
