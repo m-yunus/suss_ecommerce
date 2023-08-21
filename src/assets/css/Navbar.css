@@ -1,0 +1,16 @@
+.logo{
+   width: 9rem;
+   height: 4rem;
+   margin-top: 1.5rem;
+    
+}
+.navbar{
+    background-color: #fff;
+}
+.box{
+    width: 150px;
+    height: 70px;
+    background-color: red;
+    border-radius: 23px;
+    box-shadow: 2.2409346103668213px 7.8432698249816895px 20.07301902770996px -10.948919296264648px rgba(0, 0, 0, 0.25);
+}
