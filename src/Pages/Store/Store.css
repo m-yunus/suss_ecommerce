@@ -1,0 +1,115 @@
+.star{
+   
+    display: flex;
+    margin-left: 6.5rem;
+    margin-top: -1.3rem;
+
+    
+}
+.container{
+margin-left: 2rem;
+}
+.head{
+    display: inline;
+    margin-left: rem;
+}
+.best{
+    
+    font-size: 20px;
+    color: #045A11;
+
+font-weight: 400;
+margin-left: 3rem;
+
+}
+
+.cards{
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
+    
+   
+    align-items: center;
+
+  
+  
+    
+    
+}
+img{
+    background-color: #045A11;
+}
+
+.card1{
+
+    margin-left: 2rem;
+    border-radius: 24.998px;
+    background: #045A11;
+    margin-top: 2rem;
+    width: 310px;
+height: 432px;
+flex-shrink: 0;
+
+}
+.card2,.card3,.card4{
+    margin-left: rem;
+    border-radius: 24.998px;
+    background: #045A11;
+    margin-top: 2rem;
+    width: 310px;
+height: 432px;
+flex-shrink: 0;
+    margin-left: 2rem;
+    margin-top: 2rem;
+   
+}
+.filter-btn{
+    background-color: #FD7B85;
+    color: white;
+    border: white;
+    width: 6rem;
+    height: 1.5rem;
+    border-radius: 10px;
+    margin-right: 2rem;
+
+ 
+   
+
+display: flex;
+padding-left:3rem;
+
+font-size: 1.1rem;
+
+
+
+   
+   
+}
+.ftr-icon{
+    margin-left: -5rem;
+    padding-left: 3rem;
+    
+
+}
+.filter{
+    display: flex;
+    justify-content: end;
+    margin-top: -1.3rem;
+    
+    
+}
+.title{
+    font-size: 20px;
+    color: #045A11;
+
+font-weight: 400;
+margin-left: 4rem;
+margin-top: 2rem;
+
+}
+.ofr{
+    background-color: #045A11;
+}
+
+
