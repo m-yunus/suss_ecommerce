@@ -24,12 +24,17 @@ margin-left: 3rem;
 }
 .mn-img{
     height: 30rem;
-    margin-left: 1rem;
+    margin-left: 3rem;
 }
-.mn-img1,.mn-img2,.mn-img3{
+.mn-img1,.mn-img2{
     height: 30rem;
-    margin-left: -2rem;
+    margin-left: 3rem;
     
+
+}
+.mn-img3{
+    height: 30rem;
+    margin-right:2rem;
 
 }
 
@@ -158,10 +163,7 @@ font-size: 50px;
 color: white;
 
 }
-.collections{
-   
 
-}
 .clction-title{
     margin-top: 2rem;
     font-size: 30px;
@@ -170,7 +172,7 @@ color: white;
     font-weight: 400;
 }
 .clc-cards{
-  margin-left: 1rem;
+  margin-left: -2rem;
   margin-top: -4rem;
    
   
@@ -178,10 +180,8 @@ color: white;
 .clc-img{
     height: 30rem;
 }
-.clc-card{
-   
 
-}
+
 
 
 
