@@ -22,21 +22,20 @@ font-weight: 400;
 margin-left: 3rem;
 
 }
+.mn-img{
+    height: 30rem;
+    margin-left: 1rem;
+}
+.mn-img1,.mn-img2,.mn-img3{
+    height: 30rem;
+    margin-left: -2rem;
+    
+
+}
 
 .cards{
-    display: flex;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    justify-content: center;
-    
-    
-   
-    align-items: center;
-
-  
-  
-    
-    
+    margin-top: -4rem;
+    margin-left: -3rem;
 }
 
 img{
@@ -47,21 +46,14 @@ img{
 
     margin-left: 2rem;
     border-radius: 24.998px;
-    background: #045A11;
-    margin-top: 2rem;
-    width: 310px;
-height: 432px;
-flex-shrink: 0;
+    
+    
+   
+
 
 }
 .card2,.card3,.card4{
-    margin-left: rem;
-    border-radius: 24.998px;
-    background: #045A11;
-    margin-top: 2rem;
-    width: 310px;
-height: 432px;
-flex-shrink: 0;
+   
     margin-left: 2rem;
     margin-top: 2rem;
    
@@ -102,12 +94,12 @@ font-size: 1.1rem;
     
 }
 .title{
-    font-size: 20px;
+    font-size: 30px;
     color: #045A11;
 
 font-weight: 400;
-margin-left: 4rem;
-margin-top: 2rem;
+margin-left: 7rem;
+margin-top: -5rem;
 
 }
 .ofr{
@@ -116,9 +108,11 @@ margin-top: 2rem;
 }
 .off-text{
     font-size: 50px;
+   
 }
 .ofr-card{
-    margin-top: -2rem;
+    margin-top: -4rem;
+    margin-left: -3rem;
 }
 .offr-crd{
     width: 1358px;
@@ -130,8 +124,8 @@ margin-top: 2rem;
 }
 .smcards{
    display: flex;
-   margin-top: -5rem;
-   margin-left: 2rem;
+   margin-top: -8rem;
+   margin-left: 4rem;
 
    flex-wrap: wrap;
 
@@ -154,7 +148,7 @@ text-align: center;
 .by-card{
    margin-left: 1rem;
    margin-top: 1rem;
-width: 850px;
+width: 870px;
 height: 416px;
 border-radius: 24.998px;
 background: #045A11;
@@ -164,15 +158,30 @@ font-size: 50px;
 color: white;
 
 }
-collections{
+.collections{
+   
 
 }
 .clction-title{
-    
+    margin-top: 2rem;
+    font-size: 30px;
+    color: #045A11;
+    margin-left: 5rem;
+    font-weight: 400;
+}
+.clc-cards{
+  margin-left: 1rem;
+  margin-top: -4rem;
+   
+  
+}
+.clc-img{
+    height: 30rem;
+}
+.clc-card{
+   
 
 }
-
-
 
 
 

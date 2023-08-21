@@ -158,25 +158,42 @@ const Store = () => {
         </h5>
       </div>
 
-      <div className="cards ">
-        <div className="row">
-          <div className="card1"></div>
-        </div>
-        <div className="row">
-          <div className="card2"></div>
-        </div>
-        <div className="row">
-          <div className="card3"></div>
-        </div>
-        <div className="row">
-          <div className="card4"></div>
-        </div>
+      <section className="text-gray-600 body-font">
+  <div className="container px-5 py-24 mx-auto">
+    <div className=" cards flex justify-between flex-wrap -m-4">
+      <div className=" clc-card  lg:w-1/5 md:w-2/5 p-4 w-">
+        <a className=" mn-img rounded-2xl block relative h-48  overflow-hidden">
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+        </a>
+       
       </div>
+      <div className=" clc-card lg:w-1/5 md:w-2/5 p-4 w-">
+        <a className=" mn-img1 block rounded-2xl relative h-48  overflow-hidden">
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+        </a>
+       
+      </div>
+      <div className=" clc-card lg:w-1/5 md:w-2/5 p-4 w-">
+        <a className=" mn-img2 block rounded-2xl relative h-48  overflow-hidden">
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+        </a>
+       
+      </div>
+      <div className=" clc-card lg:w-1/5 md:w-2/5 ms-1 p-4 w-">
+        <a className=" mn-img3 block rounded-2xl  relative h-48  overflow-hidden">
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</section>
       <div className="offers">
         <h3 className="title">OFFERS</h3>
       </div>
-      <div className="ofr-card"></div>
-      <section className="text-gray-600 body-font">
+      <div className="ofr-card">
+      <section className="text-gray-600 ms-10 body-font">
         <div className="container px-7 py-24 mx- flex flex-wrap">
           <div className="offr-crd lg:w-5/6 mx-auto">
             <div className="ofr flex flex-wrap w-full bg-green-900 py-32 px-10 relative mb-4">
@@ -191,6 +208,7 @@ const Store = () => {
           </div>
         </div>
       </section>
+      </div>
       <div className="smcards">
         <div className="smcard">
           <div className="cpn-card">
@@ -204,9 +222,66 @@ const Store = () => {
         </div>
 
       </div>
+
+
+
       <div className="collections">
         <h2 className="clction-title">COLLECTIONS</h2>
       </div>
+      <section className="text-gray-600 body-font">
+  <div className="container px-5 py-24 mx-auto">
+    <div className=" clc-cards flex justify-between flex-wrap -m-4">
+      <div className=" clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a className=" clc-img block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/0385/ff38/86f40fefbfdd918125dfd63be7b305f7?Expires=1693785600&Signature=M71hxcHLy-Ofk59vQHs9yVG~AIji8OGsQMUxjVnDnYuIYXfd5DtfEQL-0ZgjqU1BpFh1myFS-MJtSFwT-pLUSvvSOb0CIueNUK09lGQkdZpJDRtPptBNvanpuA~-aNl5izcB45vtyeIFEk9KILHkWazr0KtpY1vjZ9PuHDMYsrEf2XREq-aTI4iwoU67gYPuaCCVTH4pwNXJghjr9ZEBnIPCIAkL2JCYD7wAz5ggmEb~CnuJAQK8fLp4oI2L6idc3ZKcyGVmFszmD06IyKGW2WlwRPXWS8lpSKfsDr8pmUZNS79etawD40zLdMjUmuocZNF6r~KLqCw-NxCA1-HVng__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+       
+      </div>
+      <div className=" clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a className=" clc-imgblock relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/30ab/8b97/7b56a02ecd60bd937501bf588a3c51c0?Expires=1693785600&Signature=Sd8dnC-9~UWuImtmDqAeilrIW2ZeoKbpjMOBxv7jXL1~FSGcD1tlA~OroW02YVdqD0qYeG0BM1wSHCx1kCL6~CRg7H7xc341AwZX2jW1osD1TOUYefbn6qUfJPfZ-QBiNXwgse8p1nzwcMRzQBLns-zwP3Sd82uVRgyi~7qfBQZY-Aw8HU89IYS-ZeJHxzg~Ibsdh1qeR9t2qCZ0Ercbxx1wf2jjPUhjiT4Lr6yF5nRb2x2fiZIM3ZNg3tSAVfPQGdC6k50pXaI5XxZRtjxj73cXZlYHQPq8gWMwQKbwEajDqllPvnfn~GgXuSGNQU9hdi9iOQ0YB-uOHUGLMW5dxw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+       
+      </div>
+      <div className=" clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a className=" clc-img block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/510b/aa24/728f4dc369084097b32f13f3ab54344f?Expires=1693785600&Signature=i2KCnk~eAuHQ~~9M6Xa~et8n0V93c3jCGqxhvK0vD6OY5M9-xW4scDu0r7fffcdcxVUcSXG4brVObRjdUZPeR08XvF0YjtS5Emd8wxuXlTEzHWBYIk1aHLDhieSUEctvrJ03o6jnucoqtEWLNn8EP8xbCxYDdUOR9U70Rps1O0rYucrXjmmU~yAqXbTyoOQXxvp1M6P6EVFWlwIDvjZh~4EMpZZgWQSq0KuNrkVP3eh3CKG8gQ-not5l0P-FsUhhokOiNOjm90HMNwK1AKSiptu7usqhGBbTqwDZS7UpqvSlX52l2QBdvjex-qzVu25lla4X40lAg0raHuhTKuXYzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+       
+      </div>
+      <div className=" clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a className=" clc-img block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/ad98/5c64/34895e2d2bd8884b267c2e2e02171e5e?Expires=1693785600&Signature=OgFQrEd2rnxqj1FI6-xLiSYpEezl0dx~htwlpGpI5t00kWP7dG2LtKbxsYYJySSn6xWfIH1drBdemzlJ04S2b9CHzY1bT9w9MHB0VWI1jZ-sb~Umc3U2lvSf1qKVXOlbNlugVMvVVxSjJxz42CafGX5TvPwX5pZV2CIXsouqJhW4LPFrbOGKDiyJwTBcSttv-QRXnFnjUZyUXaGLcr91Rh2ken7q342wiqjx~7VDyjYUxIta8RnN46qlMcC8R0dY-4mqG5RMMBJz4SLWqeBGwJ1ddgvqZTCkjk1~1EFE1UHDBSzIuifKAtgTLdqeobG7td-hDkaXpUq6wMYRaaXdkA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+        
+      </div>
+      <div className=" clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a className="clc-img block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/0385/ff38/86f40fefbfdd918125dfd63be7b305f7?Expires=1693785600&Signature=M71hxcHLy-Ofk59vQHs9yVG~AIji8OGsQMUxjVnDnYuIYXfd5DtfEQL-0ZgjqU1BpFh1myFS-MJtSFwT-pLUSvvSOb0CIueNUK09lGQkdZpJDRtPptBNvanpuA~-aNl5izcB45vtyeIFEk9KILHkWazr0KtpY1vjZ9PuHDMYsrEf2XREq-aTI4iwoU67gYPuaCCVTH4pwNXJghjr9ZEBnIPCIAkL2JCYD7wAz5ggmEb~CnuJAQK8fLp4oI2L6idc3ZKcyGVmFszmD06IyKGW2WlwRPXWS8lpSKfsDr8pmUZNS79etawD40zLdMjUmuocZNF6r~KLqCw-NxCA1-HVng__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+       
+      </div>
+      <div className="clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a className="clc-img block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/30ab/8b97/7b56a02ecd60bd937501bf588a3c51c0?Expires=1693785600&Signature=Sd8dnC-9~UWuImtmDqAeilrIW2ZeoKbpjMOBxv7jXL1~FSGcD1tlA~OroW02YVdqD0qYeG0BM1wSHCx1kCL6~CRg7H7xc341AwZX2jW1osD1TOUYefbn6qUfJPfZ-QBiNXwgse8p1nzwcMRzQBLns-zwP3Sd82uVRgyi~7qfBQZY-Aw8HU89IYS-ZeJHxzg~Ibsdh1qeR9t2qCZ0Ercbxx1wf2jjPUhjiT4Lr6yF5nRb2x2fiZIM3ZNg3tSAVfPQGdC6k50pXaI5XxZRtjxj73cXZlYHQPq8gWMwQKbwEajDqllPvnfn~GgXuSGNQU9hdi9iOQ0YB-uOHUGLMW5dxw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+        
+      </div>
+      <div className="clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a className="clc-img block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/510b/aa24/728f4dc369084097b32f13f3ab54344f?Expires=1693785600&Signature=i2KCnk~eAuHQ~~9M6Xa~et8n0V93c3jCGqxhvK0vD6OY5M9-xW4scDu0r7fffcdcxVUcSXG4brVObRjdUZPeR08XvF0YjtS5Emd8wxuXlTEzHWBYIk1aHLDhieSUEctvrJ03o6jnucoqtEWLNn8EP8xbCxYDdUOR9U70Rps1O0rYucrXjmmU~yAqXbTyoOQXxvp1M6P6EVFWlwIDvjZh~4EMpZZgWQSq0KuNrkVP3eh3CKG8gQ-not5l0P-FsUhhokOiNOjm90HMNwK1AKSiptu7usqhGBbTqwDZS7UpqvSlX52l2QBdvjex-qzVu25lla4X40lAg0raHuhTKuXYzg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+       
+      </div>
+      <div className="clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="clc-img block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/ad98/5c64/34895e2d2bd8884b267c2e2e02171e5e?Expires=1693785600&Signature=OgFQrEd2rnxqj1FI6-xLiSYpEezl0dx~htwlpGpI5t00kWP7dG2LtKbxsYYJySSn6xWfIH1drBdemzlJ04S2b9CHzY1bT9w9MHB0VWI1jZ-sb~Umc3U2lvSf1qKVXOlbNlugVMvVVxSjJxz42CafGX5TvPwX5pZV2CIXsouqJhW4LPFrbOGKDiyJwTBcSttv-QRXnFnjUZyUXaGLcr91Rh2ken7q342wiqjx~7VDyjYUxIta8RnN46qlMcC8R0dY-4mqG5RMMBJz4SLWqeBGwJ1ddgvqZTCkjk1~1EFE1UHDBSzIuifKAtgTLdqeobG7td-hDkaXpUq6wMYRaaXdkA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
+        </a>
+       
+      </div>
+    </div>
+  </div>
+</section>
 
       
     </>
