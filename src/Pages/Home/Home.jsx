@@ -8,14 +8,16 @@ import eye from "../../assets/images/accessories.png";
 import fav from "../../assets/images/footwear.png";
 import arrow2 from "../../assets/images/arrow-2.png";
 import { BestSelling } from "../../data/BestSellingData";
+import Footer from "../../layout/Footer";
 
 const Home = () => {
   return (
     <>
       <Navbar />
       <BottomNavbar />
+      
       <section className=" home body-font px-20">
-        <div className="home-top container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div className="home-top container mx-auto flex px-5  pt-20 pb-4 md:flex-row flex-col items-center">
           <div className=" caption  lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col    md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
             <h1 className="sm:text-4xl flex flex-col  mb-4 mt-4  ">
               <span className="top-bottom-line ">We are</span>
@@ -37,7 +39,7 @@ const Home = () => {
         </div>
 
         <div className="home-middle flex flex-wrap flex-col ">
-          <div className="flex justify-center items-center mx-auto mb-10">
+          <div className="flex justify-center items-center mx-auto mb-20">
             <p className="collection ">
               SHOP THIS <br />
               COLLECTION
@@ -94,6 +96,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

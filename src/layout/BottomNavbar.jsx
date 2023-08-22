@@ -14,16 +14,16 @@ const BottomNavbar = () => {
             <p>WOMEN</p>
           </div>
           <div className="box">
-            <img src={man} alt="" />
+            <img className="nav-icon" src={man} alt="" />
             <p>MEN</p>
           </div>
           <div className="box">
-            <img src={kids} alt="" />
+            <img className="nav-icon" src={kids} alt="" />
             <p>KIDS</p>
           </div>
           <div className="box">
             {" "}
-            <img src={newarrival} alt="" />
+            <img className="nav-icon" src={newarrival} alt="" />
             <p>NEW ARRIVAL</p>
           </div>
         </div>

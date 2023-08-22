@@ -1,0 +1,51 @@
+.footer{
+    background-color: #C4C4C4;
+    width: 100%;
+    height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.chat-btn{
+width: 14rem;
+height: 2.5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 0.55244rem;
+background: #FFF;
+box-shadow: 1.7678383588790894px 6.18743371963501px 19.446218490600586px -1.3258785009384155px rgba(0, 0, 0, 0.25);
+backdrop-filter: blur(6.850371837615967px);
+color: #33793E;
+font-family: Roboto;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 400;
+margin-top: 1rem;
+margin-bottom: 1rem;
+
+
+}
+
+.chat-image{
+    width: 2.7rem;
+   
+}
+.footer-text{
+    color: #F0EEEF;
+font-family: Roboto;
+font-size: 1.3rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-align: center;
+}
+.footer-icon{
+    width: 1.7rem;
+
+    
+}
