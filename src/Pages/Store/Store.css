@@ -108,7 +108,7 @@ margin-top: -5rem;
 
 }
 .ofr{
-    background-color: #045A11;
+  
     border-radius: 24.998px;
 }
 .off-text{
@@ -127,9 +127,13 @@ margin-top: -5rem;
 
  
 }
+.ofr-img{
+    width: full;
+    height:20rem ;
+}
 .smcards{
    display: flex;
-   margin-top: -8rem;
+   margin-top: -rem;
    margin-left: 4rem;
 
    flex-wrap: wrap;
@@ -150,6 +154,11 @@ text-align: center;
 
 
 }
+.cpn-img{
+  
+    
+
+}
 .by-card{
    margin-left: 1rem;
    margin-top: 1rem;
@@ -158,7 +167,7 @@ height: 416px;
 border-radius: 24.998px;
 background: #045A11;
 text-align: center;
-padding-top: 15rem;
+padding-top: 12rem;
 font-size: 50px;
 color: white;
 

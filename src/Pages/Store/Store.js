@@ -163,25 +163,25 @@ const Store = () => {
     <div className=" cards flex justify-between flex-wrap -m-4">
       <div className=" clc-card  lg:w-1/5 md:w-2/5 p-4 w-">
         <a className=" mn-img rounded-2xl block relative h-48  overflow-hidden">
-          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg?size=626&ext=jpg&ga=GA1.1.2019463417.1683196046&semt=sph"/>
         </a>
        
       </div>
       <div className=" clc-card lg:w-1/5 md:w-2/5 p-4 w-">
         <a className=" mn-img1 block rounded-2xl relative h-48  overflow-hidden">
-          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://img.freepik.com/free-photo/woman-wearing-high-heels-stocking_23-2150261096.jpg?size=626&ext=jpg&ga=GA1.1.2019463417.1683196046&semt=sph"/>
         </a>
        
       </div>
       <div className=" clc-card lg:w-1/5 md:w-2/5 p-4 w-">
         <a className=" mn-img2 block rounded-2xl relative h-48  overflow-hidden">
-          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://img.freepik.com/free-photo/woman-posing-arid-environment-while-wearing-native-african-clothing_23-2150609677.jpg?size=626&ext=jpg&ga=GA1.1.2019463417.1683196046&semt=sph"/>
         </a>
        
       </div>
       <div className=" clc-card lg:w-1/5 md:w-2/5 ms-1 p-4 w-">
         <a className=" mn-img3 block rounded-2xl  relative h-48  overflow-hidden">
-          <img alt="" class="object-cover object-center w-full h-full block" src="https://www.colorhexa.com/045a0a.png"/>
+          <img alt="" class="object-cover object-center w-full h-full block" src="https://img.freepik.com/premium-photo/fashion-portrait-female-with-crossed-arms-studio-with-stylish-trendy-classy-outfit-smile-happy-young-indian-woman-model-with-style-confidence-isolated-by-gray-background_590464-163835.jpg?size=626&ext=jpg&ga=GA1.1.2019463417.1683196046&semt=sph"/>
         </a>
         
       </div>
@@ -196,13 +196,19 @@ const Store = () => {
       <section className="text-gray-600 ms-10 body-font">
         <div className="container px-7 py-24 mx- flex flex-wrap">
           <div className="offr-crd lg:w-5/6 mx-auto">
-            <div className="ofr flex flex-wrap w-full bg-green-900 py-32 px-10 relative mb-4">
+            <div className="ofr flex flex-wrap w-full  py-32 px-10 relative mb-4">
+               <img alt="gallery" class="w-full object-cover h-full rounded-2xl object-center block opacity-55 absolute inset-0" src="https://thumbs.dreamstime.com/b/collage-cheerful-jumping-multinational-people-air-color-background-panorama-excited-174200583.jpg?w=1200"></img>
               <div className="text-center relative z-10 w-full">
                 <h2 className=" off-text text-2xl text-white  font-normal title-font mb-2">
                   40% OFF
+                  
                 </h2>
-                <p className="leading-relaxed"></p>
-                <a className="mt-3 text-indigo-500 inline-flex items-center"></a>
+                <p className="leading-relaxed">
+                 
+                </p>
+                <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  
+                </a>
               </div>
             </div>
           </div>
@@ -212,7 +218,7 @@ const Store = () => {
       <div className="smcards">
         <div className="smcard">
           <div className="cpn-card">
-            <img src="" alt="" />COUPON 1</div>
+            <img className="cpn-img" src="" alt="" />COUPON 1</div>
           <div className="cpn-card">
             <img src="" alt="" />COUPON 2</div>
           
