@@ -13,7 +13,8 @@ const Footer = () => {
       <div className="footer px-20">
         <div>
           <p className="footer-text">
-            HELP | OUR SERVICES | AUTHANTICITY | CONTACTS <br /> TERMS | VENDOR
+            HELP | OUR SERVICES | AUTHANTICITY | CONTACTS <br />
+             TERMS | VENDOR
             | STYLIST | ABOUT US
           </p>
         </div>

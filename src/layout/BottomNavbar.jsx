@@ -9,19 +9,19 @@ const BottomNavbar = () => {
     <>
       <div className="navbar   px-20">
         <div className="bottom-nav flex justify-evenly py-7">
-          <div className="box flex">
-            <img className="nav-icon" src={women} alt="" />
+          <div className="box flex gap-2">
+            <img className="nav-icon " src={women} alt="" />
             <p>WOMEN</p>
           </div>
-          <div className="box">
+          <div className="box gap-2 ">
             <img className="nav-icon" src={man} alt="" />
             <p>MEN</p>
           </div>
-          <div className="box">
+          <div className="box gap-2">
             <img className="nav-icon" src={kids} alt="" />
             <p>KIDS</p>
           </div>
-          <div className="box">
+          <div className="box gap-2">
             {" "}
             <img className="nav-icon" src={newarrival} alt="" />
             <p>NEW ARRIVAL</p>

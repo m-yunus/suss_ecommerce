@@ -1,15 +1,15 @@
 .caption {
-  align-items: center;
+ align-items: center;
+ font-family: 'Roboto', sans-serif;
 }
 
 .top-bottom-line {
   color: #045a11;
-  font-family: Roboto;
+  font-weight: 100;
   font-size: 4rem;
 }
 .centre-line {
   color: #045a11;
-  font-family: Roboto;
   font-size: 4rem;
   font-weight: 600;
 }
@@ -22,10 +22,17 @@
 }
 .collection {
   color: #045a11;
-  font-family: Readex Pro;
+  font-family: 'Poppins';
   font-size: 1.3rem;
-  font-style: normal;
-  font-weight: 600;
+  
+  
+}
+.greaterthan-img{
+  width: 2rem;
+  height: 2rem;
+  
+  
+  
 }
 .arrow {
   width: 2rem;
@@ -40,7 +47,7 @@
     rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(16.016597747802734px);
   color: #fff;
-  font-family: Readex Pro;
+   font-family: 'Poppins';
   font-size: 3.7rem;
   font-style: normal;
   font-weight: 400;
@@ -59,11 +66,12 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-family: Readex Pro;
+  font-family: 'Readex Pro', sans-serif;
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+   font-family: 'Poppins';
 }
 .cat {
   width: 32rem;
@@ -71,7 +79,7 @@
 
 .title-cat {
   color: #fd7b85;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -79,7 +87,7 @@
 }
 .best-selling{
     color: #045A11;
-font-family: Readex Pro;
+  font-family: 'Poppins';
 font-size: 3rem;
 font-style: normal;
 font-weight: 400;

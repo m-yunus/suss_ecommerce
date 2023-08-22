@@ -37,15 +37,19 @@ margin-bottom: 1rem;
 }
 .footer-text{
     color: #F0EEEF;
-font-family: Roboto;
+font-family: 'Roboto', sans-serif;
 font-size: 1.3rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
 text-align: center;
+line-height: 2rem;
 }
 .footer-icon{
     width: 1.7rem;
 
     
+}
+.chat-btn{
+    font-family: 'Roboto', sans-serif;
 }
