@@ -7,7 +7,6 @@ const RouteLayout = () => {
     <>
     <BrowserRouter>
     <Routes>
-
         <Route path='/' element={<Home/>}/>
         <Route path='store' element={<Store/>}/>
     </Routes>
