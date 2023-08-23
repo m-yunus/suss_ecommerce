@@ -7,13 +7,14 @@ import close from "../../assets/images/Store/close.png";
 import downarrow from "../../assets/images/Store/down-arrow.png";
 import fav from "../../assets/images/Store/fav.png";
 import { StoreData } from "../../data/StoreData";
+import card from "../../assets/images/Store/card.png"
 
 const Store = () => {
   return (
     <>
       <Navbar />
-      <div className=" px-16 py-10 mx-auto flex flex-wrap bg-grey-700   text-center">
-        <div className=" cart-left ">
+      <div className=" px-16 py-10 mx-auto flex flex-wrap bg-grey-700   text-center ">
+        <div className=" cart-left  flex flex-col  items-center">
           <div className="my-bag ">
             <h1>MY BAG</h1>
           </div>
@@ -55,15 +56,50 @@ const Store = () => {
               </div>
             </div>
           ))}
-          <div className="sub-total flex justify-between px-6">
+          <div className="sub-total  flex justify-between px-6">
             <h1>SUB-TOTAL</h1>
             <h1> £95.00</h1>
           </div>
         </div>
-        <div className=" cart-right b">
-          <div className="total flex justify-between px-6">
-            <h1>SUB-TOTAL</h1>
+        <div className=" cart-right mx-auto  flex flex-col items-center">
+          <div className="total flex justify-between  px-6">
+            <h1>TOTAL</h1>
             <h1> £95.00</h1>
+          </div>
+          <div className="total-section mx-auto pt-6">
+            <div className="checkout flex flex-col justify-between mt-10  mx-auto ">
+              <div className="flex flex-row justify-between">
+                <h1>SUB TOTAL</h1>
+                <h2>£95.00</h2>
+              </div>
+              <div>
+                <hr className="line" />
+              </div>
+            </div>
+            <div className="checkout flex flex-col justify-between mt-10 mx-auto ">
+              <div className="flex flex-row justify-between">
+                <h1>DELIVERY</h1>
+                <h2>£15.00</h2>
+              </div>
+              <div>
+                <hr className="line" />
+              </div>
+            </div>
+            <div className="flex items-center py-14 justify-between ">
+              <h1 className="discount ">Discount code</h1>
+              <input
+                type="text"
+                className=" discount-input "
+                placeholder="Enter Code"
+              ></input>
+            </div>
+            <div className="checkout-last flex justify-center items-center">
+              <h1>CHECKOUT</h1>
+              
+            </div>
+            <div className="flex py-7 justify-center  ">
+              <h1 className="card">WE ACCEPT</h1><img src={card} alt=""  />
+            </div>
           </div>
         </div>
       </div>
