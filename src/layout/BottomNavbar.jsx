@@ -1,8 +1,9 @@
 import React from 'react'
-import man from "../../src/assets/images/man.png";
-import women from "../../src/assets/images/woman.png";
-import kids from "../../src/assets/images/kids.png";
-import newarrival from "../../src/assets/images/new-arrival.png";
+import "../assets/css/Navbar/Navbar.css"
+import man from "../../src/assets/images/Bottom-nav/man.png";
+import women from "../../src/assets/images/Bottom-nav/woman.png";
+import kids from "../../src/assets/images/Bottom-nav/kids.png";
+import newarrival from "../../src/assets/images/Bottom-nav/new-arrival.png";
 
 const BottomNavbar = () => {
   return (

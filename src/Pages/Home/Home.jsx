@@ -2,15 +2,15 @@ import React from "react";
 import "./Home.css";
 import Navbar from "../../layout/Navbar";
 import BottomNavbar from "../../layout/BottomNavbar";
-import HomeTop from "../../assets/images/home-top.png";
-import arrow from "../../assets/images/arrow.png";
-import greaterthan from "../../assets/images/greaterthan.png";
-import eye from "../../assets/images/accessories.png";
-import fav from "../../assets/images/footwear.png";
-import arrow2 from "../../assets/images/arrow-2.png";
+import HomeTop from "../../assets/images/Home/home-top.png";
+import arrow from "../../assets/images/Home/arrow.png";
+import greaterthan from "../../assets/images/Home/greaterthan.png";
+import eye from "../../assets/images/Home/accessories.png";
+import fav from "../../assets/images/Home/footwear.png";
+import arrow2 from "../../assets/images/Home/arrow-2.png";
 import { BestSelling } from "../../data/BestSellingData";
 import Footer from "../../layout/Footer";
-import darkarrow from "../../assets/images/dark-arrow.png"
+import darkarrow from "../../assets/images/Home/dark-arrow.png";
 
 const Home = () => {
   return (

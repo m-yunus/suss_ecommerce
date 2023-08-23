@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "../../src/assets/images/logo.png";
-import profile from "../../src/assets/images/profile.png";
-import cart from "../../src/assets/images/cart.png";
-import search from "../../src/assets/images/search.png";
-import menu from "../../src/assets/images/menu.png";
+import logo from "../../src/assets/images/Navbar/logo.png";
+import profile from "../../src/assets/images/Navbar/profile.png";
+import cart from "../../src/assets/images/Navbar/cart.png";
+import search from "../../src/assets/images/Navbar/search.png";
+import menu from "../../src/assets/images/Navbar/menu.png";
 
-import "../assets/css/Navbar.css";
+import "../assets/css/Navbar/Navbar.css";
 
 const Navbar = () => {
   return (

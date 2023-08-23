@@ -1,11 +1,11 @@
 import React from 'react'
-import "../../src/assets/css/Footer.css"
-import chat from "../../src/assets/images/chat.png"
-import instagram from "../assets/images/instagram.png"
-import twitter from "../assets/images/twitter.png";
-import facebook from "../assets/images/facebook.png";
-import messenger from "../assets/images/messenger.png";
-import whatsapp from "../assets/images/whatsapp.png";
+import "../../src/assets/css/Footer/Footer.css"
+import chat from "../../src/assets/images/Footer/chat.png"
+import instagram from "../assets/images/Footer/instagram.png";
+import twitter from "../assets/images/Footer/twitter.png";
+import facebook from "../assets/images/Footer/facebook.png";
+import messenger from "../assets/images/Footer/messenger.png";
+import whatsapp from "../assets/images/Footer/whatsapp.png";
 
 const Footer = () => {
   return (
