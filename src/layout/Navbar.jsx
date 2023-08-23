@@ -10,18 +10,18 @@ import "../assets/css/Navbar.css";
 const Navbar = () => {
   return (
     <>
-      <header className="navbar  body-font px-20">
-        <div className="container mx-auto flex flex-wrap  flex-col md:flex-row items-center p ">
-          <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-            <span className="ml-3 ">
+      <header className="navbar  body-font px-20 ">
+        <div className="container mx-auto flex    items-center justify-between ">
+          <a className="flex title-font font-medium items-center mb-4  ">
+            <span className="">
               <img className="logo" src={logo} alt="" />
             </span>
           </a>
-          <nav className="md:ml-auto flex flex-wrap items-center gap-6 text-base justify-center">
-            <img className="nav-icon" src={profile} alt="" />
-            <img className="nav-icon" src={cart} alt="" />
-            <img className="nav-icon" src={search} alt="" />
-            <img className="nav-icon" src={menu} alt="" />
+          <nav className="md:ml-auto flex flex-wrap items-center gap-6 text-base justify-center  icons ">
+            <img className="nav-icon-top" src={profile} alt="" />
+            <img className="nav-icon-top" src={cart} alt="" />
+            <img className="nav-icon-top" src={search} alt="" />
+            <img className="nav-icon-top" src={menu} alt="" />
           </nav>
         </div>
       </header>

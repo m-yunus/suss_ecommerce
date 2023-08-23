@@ -10,6 +10,7 @@ import fav from "../../assets/images/footwear.png";
 import arrow2 from "../../assets/images/arrow-2.png";
 import { BestSelling } from "../../data/BestSellingData";
 import Footer from "../../layout/Footer";
+import darkarrow from "../../assets/images/dark-arrow.png"
 
 const Home = () => {
   return (
@@ -17,26 +18,24 @@ const Home = () => {
       <Navbar />
       <BottomNavbar />
 
-      <section className=" home body-font px-20">
-        <div className="home-top container mx-auto flex px-20  pt-20 pb-4 md:flex-row flex-col items-center">
-          <div className=" caption  lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col    md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
-            <h1 className="sm:text-4xl flex flex-col  mb-4 mt-4  ">
+      <section className=" home body-font px-20 ">
+        <div className="home-top  mx-auto flex px-20      justify-between items-center ">
+          <div className="caption     flex flex-col      mb-16 ">
+            <h1 className="cap  flex flex-col  mb-4 mt-4  ">
               <span className="top-bottom-line ">We are</span>
-              <br className="hidden lg:inline-block" />
+              <br />
               <span className="centre-line font-bol ">Ethical</span>
-              <br className="hidden lg:inline-block" />
+              <br />
               <span className="centre-line">Fashion</span>
-              <br className="hidden lg:inline-block" />
+              <br />
               <span className="top-bottom-line">Store</span>
             </h1>
           </div>
-          <div className=" home-top-pic lg:max-w-lg lg:w-full md:w-1/2 w-5/6  ">
-            <img
-              className="object-cover object-center rounded"
-              alt="hero"
-              src={HomeTop}
-            />
-            <div className="flex  items-center   my-8">
+          <div className=" img-cont ">
+            <div className="">
+              <img className="home-top-pic " alt="hero" src={HomeTop} />
+            </div>
+            <div className=" flex coll items-center   my-8">
               <p className="collection ">
                 SHOP THIS <br />
                 COLLECTION
@@ -47,9 +46,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-
-        <div className="home-middle flex flex-wrap flex-col mt-8">
-          <div className="flex flex-wrap mx-auto">
+        <div className="home-middle flex mx-auto flex-col px-28 mt-8 ">
+          <div className="flex  ">
             <div className="stylist ">
               <h1>
                 <div>Shop with</div>
@@ -63,29 +61,30 @@ const Home = () => {
                 </div>
               </h1>
             </div>
-            <div className="cat  flex flex-col mx-auto mt-auto  ">
+            <div className="cat  flex flex-col mx-auto mt-auto ">
               <h2 className=" mx-auto title-cat mb-4">Shop By Categories</h2>
-              <div className=" flex justify-between mx-14 ">
+              <div className="three-box flex justify-between mx-14 ">
                 <div className="category ">Clothing</div>
                 <div className="category flex flex-col ">
-                  <img className="w-6" src={eye} alt="" /> Accessories
+                  <img className="w-6 accessories-icon" src={eye} alt="" />{" "}
+                  Accessories
                 </div>
                 <div className="category flex flex-col ">
-                  <img className="w-5" src={fav} alt="" /> Footwear
+                  <img className="w-5 footwear-icon" src={fav} alt="" />{" "}
+                  Footwear
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="home-bottom  my-20 ">
+        </div>{" "}
+        <div className="home-bottom  mt-20  ">
           <h1 className="best-selling mb-4">Best Selling</h1>
-          <div className="flex flex-wrap justify-between">
+          <div className="flex  justify-between gap-2">
             {BestSelling.map((data) => (
-              <div key={data.id} className="relative">
+              <div key={data.id} className="relative best-selling-set">
                 <div className="">
                   <img
-                    className="best-selling-image "
+                    className="best-selling-image spaced-image "
                     src={data.image}
                     alt=""
                   />
@@ -103,7 +102,11 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <div className=" dark-arrow">
+          <img className="dark-arr-img" src={darkarrow} alt="" />
+        </div>
       </section>
+
       <Footer />
     </>
   );

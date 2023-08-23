@@ -4,7 +4,6 @@
   margin-top: 1.5rem;
 }
 .navbar {
-  background-color: #fff;
 }
 .box {
   width: 160px;
@@ -20,9 +19,62 @@
 
 .bottom-nav {
   color: #045a11;
-
   font-weight: 400;
 }
 .nav-icon {
   width: 1.7rem;
+}
+.nav-icon-top {
+  width: 1.7rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+}
+@media (max-width: 620px) {
+  .bottom-nav {
+    padding-top: 0.7rem;
+  }
+  .box {
+    width: 6rem;
+
+    height: 2rem;
+    font-size: 0.6rem;
+  }
+  .nav-icon {
+    width: 1.2rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    padding: 0 0.5rem;
+  }
+  .logo {
+    width: 4rem;
+    height: 2rem;
+  }
+  .nav-icon-top {
+    width: 1rem;
+  }
+  .icons {
+    gap: 0.7rem;
+    width: 98px;
+  }
+  .box {
+    width: 3.9rem;
+    box-shadow: 0px 3.292924404144287px 4.390565872192383px 0px
+      rgba(0, 0, 0, 0.25);
+    gap: 0.3rem;
+    height: 1.1rem;
+    font-size: 0.4rem;
+  }
+  .nav-icon {
+    width: 0.8rem;
+  }
+  .bottom-nav {
+    padding-top: 0.1rem;
+  }
 }

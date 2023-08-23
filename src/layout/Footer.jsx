@@ -24,7 +24,7 @@ const Footer = () => {
             Chat with us
           </button>
         </div>
-        <div className="flex gap-2 ">
+        <div className="flex  ">
           <img className="footer-icon" src={instagram} alt="" />
           <img className="footer-icon" src={twitter} alt="" />
           <img className="footer-icon" src={facebook} alt="" />
