@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Home from '../Pages/Home/Home'
-import Store from '../Pages/Store/Store'
-import box from '../Pages/Box/box'
+
+import Products from '../Pages/Products/Products'
 const RouteLayout = () => {
   return (
     <>
@@ -10,7 +10,7 @@ const RouteLayout = () => {
     <Routes>
 
         <Route path='/' element={<Home/>}/>
-        <Route path='store' element={<Store/>}/>
+        <Route path='products' element={<Products/>}/>
 
      
     </Routes>

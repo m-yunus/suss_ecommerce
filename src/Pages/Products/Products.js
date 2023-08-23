@@ -1,7 +1,7 @@
 import React from "react";
-import "./Store.css";
+import "./Products.css";
 
-const Store = () => {
+const Products = () => {
   return (
     <>
       <div className="header">
@@ -223,9 +223,28 @@ const Store = () => {
             <img src="" alt="" />COUPON 2</div>
           
         </div>
-        <div className="by-card">BUY 1 GET 1
-          <img src="" alt="" />
+         <section className="text-gray-600 ms-10 body-font">
+        <div className="container px-7 py-24 mx- flex flex-wrap">
+          <div className="by-crd lg:w-5/6 mx-auto">
+            <div className="ofr flex flex-wrap w-full  py-32 px-10 relative mb-4">
+               <img alt="gallery" class="w-full object-cover h-full rounded-2xl object-center block opacity-55 absolute inset-0" src="https://img.freepik.com/free-photo/pretty-young-stylish-sexy-woman-pink-luxury-dress-summer-fashion-trend-chic-style-sunglasses-blue-studio-background-shopping-holding-paper-bags-talking-mobile-phone-shopaholic_285396-2957.jpg?size=626&ext=jpg&ga=GA1.1.2019463417.1683196046&semt=sph"></img>
+              <div className="text-center relative z-10 w-full">
+                <h2 className=" off-text text-2xl text-white  font-normal title-font mb-2">
+                  BUY 1 GET 1
+                  
+                </h2>
+                <p className="leading-relaxed">
+                 
+                </p>
+                <a className="mt-3 text-indigo-500 inline-flex items-center">
+                  
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+       
 
       </div>
 
@@ -244,7 +263,7 @@ const Store = () => {
        
       </div>
       <div className=" clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a className=" clc-imgblock relative h-48 rounded overflow-hidden">
+        <a className=" clc-img block relative h-48 rounded overflow-hidden">
           <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/30ab/8b97/7b56a02ecd60bd937501bf588a3c51c0?Expires=1693785600&Signature=Sd8dnC-9~UWuImtmDqAeilrIW2ZeoKbpjMOBxv7jXL1~FSGcD1tlA~OroW02YVdqD0qYeG0BM1wSHCx1kCL6~CRg7H7xc341AwZX2jW1osD1TOUYefbn6qUfJPfZ-QBiNXwgse8p1nzwcMRzQBLns-zwP3Sd82uVRgyi~7qfBQZY-Aw8HU89IYS-ZeJHxzg~Ibsdh1qeR9t2qCZ0Ercbxx1wf2jjPUhjiT4Lr6yF5nRb2x2fiZIM3ZNg3tSAVfPQGdC6k50pXaI5XxZRtjxj73cXZlYHQPq8gWMwQKbwEajDqllPvnfn~GgXuSGNQU9hdi9iOQ0YB-uOHUGLMW5dxw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
         </a>
        
@@ -280,7 +299,7 @@ const Store = () => {
        
       </div>
       <div className="clc-card lg:w-1/4 md:w-1/2 p-4 w-full">
-        <a class="clc-img block relative h-48 rounded overflow-hidden">
+        <a className="clc-img block relative h-48 rounded overflow-hidden">
           <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://s3-alpha-sig.figma.com/img/ad98/5c64/34895e2d2bd8884b267c2e2e02171e5e?Expires=1693785600&Signature=OgFQrEd2rnxqj1FI6-xLiSYpEezl0dx~htwlpGpI5t00kWP7dG2LtKbxsYYJySSn6xWfIH1drBdemzlJ04S2b9CHzY1bT9w9MHB0VWI1jZ-sb~Umc3U2lvSf1qKVXOlbNlugVMvVVxSjJxz42CafGX5TvPwX5pZV2CIXsouqJhW4LPFrbOGKDiyJwTBcSttv-QRXnFnjUZyUXaGLcr91Rh2ken7q342wiqjx~7VDyjYUxIta8RnN46qlMcC8R0dY-4mqG5RMMBJz4SLWqeBGwJ1ddgvqZTCkjk1~1EFE1UHDBSzIuifKAtgTLdqeobG7td-hDkaXpUq6wMYRaaXdkA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"/>
         </a>
        
@@ -294,4 +313,4 @@ const Store = () => {
   );
 };
 
-export default Store;
+export default Products;
