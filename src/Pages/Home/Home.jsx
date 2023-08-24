@@ -10,7 +10,7 @@ import fav from "../../assets/images/Home/footwear.png";
 import arrow2 from "../../assets/images/Home/arrow-2.png";
 import { BestSelling } from "../../data/BestSellingData";
 import Footer from "../../layout/Footer";
-import darkarrow from "../../assets/images/Home/dark-arrow.png";
+
 
 const Home = () => {
   return (
@@ -102,9 +102,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className=" dark-arrow">
-          <img className="dark-arr-img" src={darkarrow} alt="" />
-        </div>
+        
       </section>
 
       <Footer />

@@ -2,6 +2,7 @@
   background-color: #c4c4c4;
   width: 100%;
   height: auto;
+  margin-top: 6rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
   display: flex;
@@ -54,6 +55,7 @@
   }
   .footer {
     padding: 1rem 0.5rem;
+    margin-top: 3rem;
   }
   .chat-btn {
     width: 10rem;
@@ -71,6 +73,7 @@
 @media (max-width: 425px) {
   .footer {
     padding: 0.5rem 0.7rem;
+    margin-top: 2rem;
   }
   .footer-text {
     font-size: 0.6rem;

@@ -1,0 +1,274 @@
+/* LEFT SIDE OF CART */
+
+.store-left {
+  width: 50%;
+}
+.store-right {
+  width: 50%;
+}
+
+.my-bag {
+  width: 38rem;
+  height: 5rem;
+  border: 1px solid #045a11;
+  color: #fd7b85;
+  font-family: "Readex Pro", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-details {
+  width: 26rem;
+  height: 11rem;
+  background-color: #fd7b85;
+  font-family: "Readex Pro", sans-serif;
+  color: #fff;
+}
+.price {
+  font-size: 2.5rem;
+}
+.product-name {
+  font-size: 1rem;
+  font-size: 1.1rem;
+}
+
+.down-arrow {
+  width: 1rem;
+  height: 0.7rem;
+  flex-shrink: 0;
+  margin-left: 0.8rem;
+}
+
+.store-fav {
+  width: 1rem;
+  height: 1rem;
+}
+.later {
+  font-size: 0.75rem;
+}
+.sub-total {
+  width: 38rem;
+  height: 5rem;
+  border: 1px solid #045a11;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* STORE RIGHT SIDE */
+
+.store-right {
+  font-family: "Readex Pro", sans-serif;
+  padding-top: 9rem;
+}
+
+.total {
+  width: 38rem;
+  height: 5rem;
+  border: 1px solid #000;
+  background: #090909;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  font-style: normal;
+  font-weight: 700;
+}
+.checkout {
+  height: 5rem;
+}
+.checkout h1 {
+  color: #cacaca;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.checkout h2 {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.line {
+  height: 0.1875rem;
+  flex-shrink: 0;
+  background: #d3d3d3;
+}
+.discount {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.total-section {
+  width: 34rem;
+}
+.discount-input {
+  width: 20rem;
+  height: 3.25rem;
+  border: 1px solid #000;
+}
+.checkout-last {
+  width: 34rem;
+  height: 5rem;
+  border: 1px solid #045a11;
+  background: #045a11;
+
+  color: #fff;
+}
+.checkout-last h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.card {
+  color: #cacaca;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1350px) {
+  .total,
+  .checkout-last,
+  .my-bag,
+  .sub-total {
+    width: 25rem;
+    height: 4rem;
+    font-size: 1.7rem;
+  }
+  .total-section {
+    width: 25rem;
+    padding-top: 0.5rem;
+  }
+  .checkout {
+    margin-top: 1rem;
+  }
+  .checkout h1 {
+    font-size: 1.5rem;
+  }
+  .checkout h2 {
+    font-size: 1.5rem;
+  }
+  .discount {
+    font-size: 1.4rem;
+  }
+  .discount-input {
+    width: 15rem;
+    height: 3rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .store {
+    flex-direction: column;
+  }
+  .store-right,
+  .store-left {
+    width: 100%;
+  }
+  .store-right{
+    padding-top: 3rem;
+  }
+}
+@media (max-width: 680px) {
+  .store {
+    padding: 1rem 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .total,
+  .my-bag,
+  .sub-total {
+    width: 19rem;
+    height: 3rem;
+    font-size: 1.1rem;
+  }
+  .map{
+    margin: 1rem 0;
+  }
+ 
+  .item-details {
+    width: 13rem;
+    height: 5.1rem;
+    padding-left: 0.7rem;
+    padding-top: 0.2rem;
+  }
+  .item-image {
+    width: 5.65981rem;
+    height: 6.58388rem;
+  }
+  .pound-image {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  .price {
+    font-size: 1.1rem;
+    padding-left: 0.2rem;
+  }
+  .product-name {
+    font-size: 0.6rem;
+    padding: 0 0;
+  }
+  .color-size-qty {
+    padding-top: 0.4;
+    gap: 1rem;
+  }
+  .color-size-qty p {
+    font-size: 0.5rem;
+  }
+  
+  .store-fav{
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  .later{
+    font-size: 0.4rem;
+    margin-left: 0.2rem;
+  }
+  .save-later{
+    margin-top: 0.5rem;
+  }
+  .total-section{
+    width: 18rem;
+    
+  }
+  .store-right{
+    padding-top: 3rem;
+  }
+  .checkout{
+    height: 3rem;
+  }
+  .checkout h1{
+    font-size: 1.1rem;
+  }
+   .checkout h2{
+    font-size: 1.2rem;
+  }
+  .discount{
+    font-size: 0.8rem;
+  }
+  .discount-input{
+    width: 12rem;
+height: 1.8rem;
+  }
+  .checkout-last{
+    width:18rem ;
+    height: 3rem;
+  }
+  .checkout-last h1{
+    font-size: 1.2rem;
+  }
+  .card{
+    font-size: 1.2rem;
+  }
+  .card-image{
+    width: 5rem;
+    height: 1.6rem;
+  }
+  .down-arrow{
+    width: 0.5rem;
+    height: 0.45rem;
+    margin-left: 0.4rem;
+  }
+}

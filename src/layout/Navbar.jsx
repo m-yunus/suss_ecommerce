@@ -4,8 +4,10 @@ import profile from "../../src/assets/images/Navbar/profile.png";
 import cart from "../../src/assets/images/Navbar/cart.png";
 import search from "../../src/assets/images/Navbar/search.png";
 import menu from "../../src/assets/images/Navbar/menu.png";
+import {Routes,Route, Link} from "react-router-dom"
 
 import "../assets/css/Navbar/Navbar.css";
+import Store from "../Pages/Store/Store";
 
 const Navbar = () => {
   return (
@@ -18,10 +20,18 @@ const Navbar = () => {
             </span>
           </a>
           <nav className="md:ml-auto flex flex-wrap items-center gap-6 text-base justify-center  icons ">
-            <img className="nav-icon-top" src={profile} alt="" />
-            <img className="nav-icon-top" src={cart} alt="" />
-            <img className="nav-icon-top" src={search} alt="" />
-            <img className="nav-icon-top" src={menu} alt="" />
+            <Link>
+              <img className="nav-icon-top" src={profile} alt="" />
+            </Link>
+            <Link to="store">
+              <img className="nav-icon-top" src={cart} alt="" />
+            </Link>
+            <Link>
+              <img className="nav-icon-top" src={search} alt="" />
+            </Link>
+            <Link>
+              <img className="nav-icon-top" src={menu} alt="" />
+            </Link>
           </nav>
         </div>
       </header>
