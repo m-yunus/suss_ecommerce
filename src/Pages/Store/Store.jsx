@@ -13,27 +13,26 @@ const Store = () => {
   return (
     <>
       <Navbar />
-      <div className=" px-16 py-10 mx-auto flex flex-wrap bg-grey-700   text-center ">
-        <div className=" cart-left  flex flex-col  items-center">
+      <div className="store  px-16 py-10 mx-auto flex flex-row flex-wrap bg-grey-700   text-center ">
+        <div className=" store-left  flex flex-col  items-center ">
           <div className="my-bag ">
             <h1>MY BAG</h1>
           </div>
 
           {StoreData.map((data) => (
-            <div className=" my-8 flex   ">
+            <div className=" map my-8 flex">
               <div>
                 <img className="item-image " src={data.image} alt="" />
               </div>
-
               <div className="item-details flex-col ps-3.5 pt-1 flex relative  my-auto">
                 <div className="flex   items-center ">
-                  <img className="w-11 h-11" src={pound} alt="" />
+                  <img className="pound-image w-11 h-11" src={pound} alt="" />
                   <h1 className="price ps-2">{data.price}</h1>
                 </div>
-                <div className="py-2">
-                  <p className="product-name  flex">Product Name</p>
+                <div >
+                  <p className="product-name py-2 flex">Product Name</p>
                 </div>
-                <div className="flex flex-row gap-10 pt-1  ">
+                <div className="flex color-size-qty flex-row gap-10 pt-1  ">
                   <div className="flex items-center">
                     <p>Color </p>
                     <img className="down-arrow" src={downarrow} alt="" />
@@ -47,7 +46,7 @@ const Store = () => {
                     <img className="down-arrow" src={downarrow} alt="" />
                   </div>
                 </div>
-                <div className="flex items-center mt-3">
+                <div className="flex save-later items-center mt-3">
                   <img className="store-fav" src={fav} alt="" />
                   <p className="later">Save For Later</p>
                 </div>
@@ -61,12 +60,13 @@ const Store = () => {
             <h1> £95.00</h1>
           </div>
         </div>
-        <div className=" cart-right mx-auto  flex flex-col items-center">
+
+        <div className=" store-right mx-auto  flex flex-col items-center ">
           <div className="total flex justify-between  px-6">
             <h1>TOTAL</h1>
             <h1> £95.00</h1>
           </div>
-          <div className="total-section mx-auto pt-6">
+          <div className="total-section mx-auto pt-1">
             <div className="checkout flex flex-col justify-between mt-10  mx-auto ">
               <div className="flex flex-row justify-between">
                 <h1>SUB TOTAL</h1>
@@ -85,7 +85,7 @@ const Store = () => {
                 <hr className="line" />
               </div>
             </div>
-            <div className="flex items-center py-14 justify-between ">
+            <div className="flex items-center py-10 justify-between ">
               <h1 className="discount ">Discount code</h1>
               <input
                 type="text"
@@ -95,10 +95,10 @@ const Store = () => {
             </div>
             <div className="checkout-last flex justify-center items-center">
               <h1>CHECKOUT</h1>
-              
             </div>
-            <div className="flex py-7 justify-center  ">
-              <h1 className="card">WE ACCEPT</h1><img src={card} alt=""  />
+            <div className="flex py-7 gap-5 justify-center  ">
+              <h1 className="card">WE ACCEPT</h1>
+              <img className="card-image" src={card} alt="" />
             </div>
           </div>
         </div>
