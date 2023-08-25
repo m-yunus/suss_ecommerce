@@ -4,10 +4,10 @@ import profile from "../../src/assets/images/Navbar/profile.png";
 import cart from "../../src/assets/images/Navbar/cart.png";
 import search from "../../src/assets/images/Navbar/search.png";
 import menu from "../../src/assets/images/Navbar/menu.png";
-import {Routes,Route, Link} from "react-router-dom"
-
+import { Link} from "react-router-dom"
 import "../assets/css/Navbar/Navbar.css";
-import Store from "../Pages/Store/Store";
+import Sidebar from "./Sidebar";
+
 
 const Navbar = () => {
   return (
@@ -35,6 +35,7 @@ const Navbar = () => {
           </nav>
         </div>
       </header>
+      
     </>
   );
 };
