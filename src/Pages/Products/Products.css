@@ -179,8 +179,8 @@ flex-shrink: 0;
         height: 200px;
        
         margin-top: -rem;
-          /* Move the top edge of the text to the center of the container */
-  right: 50%; /* Move the left edge of the text to the center of the container */
+        
+  right: 50%;
   transform: translate(90%, -50%);
         
     }
@@ -214,8 +214,8 @@ flex-shrink: 0;
         height: 200px;
        
         margin-top: -rem;
-          /* Move the top edge of the text to the center of the container */
-  right: 50%; /* Move the left edge of the text to the center of the container */
+
+  right: 50%;
   transform: translate(60%, -0%);
         
     }
@@ -234,8 +234,8 @@ flex-shrink: 0;
         height: 200px;
        
         margin-top: -rem;
-          /* Move the top edge of the text to the center of the container */
-  right: 50%; /* Move the left edge of the text to the center of the container */
+         
+  right: 50%;
   transform: translate(20%, -0%);
         
     }
