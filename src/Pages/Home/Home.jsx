@@ -18,7 +18,7 @@ const Home = () => {
       <Navbar />
       <BottomNavbar />
 
-      <section className=" home body-font px-20 ">
+      <section className=" home body-font px-20  home">
         <div className="home-top  mx-auto flex px-20      justify-between items-center ">
           <div className="caption     flex flex-col      mb-16 ">
             <h1 className="cap  flex flex-col  mb-4 mt-4  ">

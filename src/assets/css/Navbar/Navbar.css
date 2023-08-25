@@ -4,6 +4,7 @@
   margin-top: 1.5rem;
 }
 .navbar {
+  z-index: 900;
 }
 .box {
   width: 160px;
