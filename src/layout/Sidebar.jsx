@@ -13,10 +13,14 @@ import close from "../assets/images/Sidebar/close.png";
 
 
 const Sidebar = ({isOpen,onClose}) => {
+   
+
   return (
+     
+    
     
       <>
-        <div className={`sidebar ${isOpen ? "open" : ""}`}>
+        <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
           <div className="close" onClick={onClose}>
             <img src={close} alt="" />
           </div>
@@ -48,6 +52,7 @@ const Sidebar = ({isOpen,onClose}) => {
           </div>
         </div>
       </>
+     
     
   );
 };
