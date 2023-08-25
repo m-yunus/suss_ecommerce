@@ -68,6 +68,112 @@ height: 432px;
 border-radius: 10px;
 object-fit: cover;
 }
+.offers-section{
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+.image-container {
+   
+    position: relative;
+    max-width: 100%;
+    margin-left: -3rem;
+    margin-top: 3rem;
+    overflow: hidden;
+   
+
+ 
+  }
+  
+  .ofr-img {
+    width: 100%;
+    height: auto;
+    display: block; 
+    object-fit: cover;
+    border-radius: 15px;
+
+  }
+  .ofr-title{
+    font-size: 22.601px;
+    margin-top: .5rem;
+       color: #045A11;
+  }
+  
+  .ofr-text {
+    position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 5vw;
+  
+  padding: 10px;
+  border-radius: 5px;
+  }
+  .buy-section{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .cpns{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  }
+  .cpn{
+    background-color: #045A11;
+    margin-top: 1rem;
+    width: 420px;
+height: 200px;
+text-align: center;
+
+border-radius: 15px;
+color: white;
+padding-top: 5.5rem;
+ 
+
+
+  }
+  .cpn-img{
+    object-fit: cover;
+
+  }
+  .buy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 889px;
+height: 416px;
+position: relative;
+
+overflow: hidden;
+   
+
+  }
+  .buy-img{
+    
+   
+    display: block; 
+    object-fit: cover;
+    border-radius: 15px;
+
+  }
+  .buy-text{
+    position: absolute;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 5vw;
+    
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+
 @media(max-width:417px){
     
 .head-title{
@@ -91,5 +197,20 @@ flex-shrink: 0;
 background: #FD7B85;
 box-shadow: 2.192701578140259px 7.674454689025879px 19.640975952148438px -10.71325969696045px rgba(0, 0, 0, 0.25);
     
+}
+.image-container{
+    margin-left: -3rem;
+}
+.ofr-title{
+    font-size: 15px;
+}
+.cpn{
+    width: 150px;
+    height: 100px;
+    padding-top: 2.5rem;
+
+}
+.buy{
+    margin-top: -5rem;
 }
 }
