@@ -15,7 +15,7 @@ const ProductDetails = () => {
   return (
     <>
       <Navbar />
-      <div className="product-details mt-10 px-16 flex flex-row ">
+      <div className="product-details mt-10 px-16 flex flex-row justify-center">
         <div className="product-left flex flex-col">
           <div className="flex items-center justify-end relative">
             <img className="product-image" src={product} alt="" />
