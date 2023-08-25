@@ -1,0 +1,95 @@
+.head-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Readex Pro", sans-serif;
+    margin-top: .5rem;
+}
+.title {
+    display:flex ;
+   font-size: 22.601px;
+   align-items: center;
+   
+   
+ 
+}
+.bst-title{
+    color: #045A11 ;
+
+}
+
+.starimg{
+    display: flex;
+  width: 20.91px;
+height: 20.265px;
+flex-shrink: 0;
+margin-left: 10px;
+
+
+}
+.filter{
+    display: flex;
+  border-radius: 10.023px;
+ width: 7rem;
+ height: 2rem;
+flex-shrink: 0;
+background: #FD7B85;
+box-shadow: 2.192701578140259px 7.674454689025879px 19.640975952148438px -10.71325969696045px rgba(0, 0, 0, 0.25);
+    
+}
+.filter-icon{
+    margin-left: 3px;
+    width:20px ;
+    margin-left: 1rem;
+    margin-top: 4px;
+height: 20px;
+}
+.filter-text{
+   
+box-shadow: 2.192701578140259px 7.674454689025879px 19.640975952148438px -10.71325969696045px rgba(0, 0, 0, 0.25);
+margin-left: 10px;
+margin-top: 2px;
+color: white;
+
+
+    
+
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    
+}
+.cards-img{
+    width: 320px;
+height: 432px;
+border-radius: 10px;
+object-fit: cover;
+}
+@media(max-width:417px){
+    
+.head-title{
+    padding: 0 0.1rem;
+    margin-top: .5rem;
+}
+.title {
+    display:flex ;
+   font-size: 15.601px;
+   align-items: center;
+   
+   
+ 
+}
+.filter{
+    display: flex;
+  border-radius: 10.023px;
+ width: 6rem;
+ height: 2rem;
+flex-shrink: 0;
+background: #FD7B85;
+box-shadow: 2.192701578140259px 7.674454689025879px 19.640975952148438px -10.71325969696045px rgba(0, 0, 0, 0.25);
+    
+}
+}
