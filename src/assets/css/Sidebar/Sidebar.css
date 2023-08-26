@@ -5,15 +5,17 @@
   height: 35rem;
   background-color: #fff;
   margin-right: 2rem;
-  overflow: hidden;
   border-radius: 1.625rem;
   z-index: 1000;
   animation-name: slideSidebar;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
+     transition: right 0.8s ease-in-out;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; 
   
+
 }
+
 @keyframes slideSidebar {
   from {
     right: -100%; 
@@ -33,10 +35,11 @@
 .sidebar.open {
   right: 0;
   top: 0;
+  
  animation-name: slideSidebar;
 }
 .sidebar.closed {
-  border: none; 
+ 
   animation-name: slideSidebarClose; 
 }
 .order-img,
@@ -79,6 +82,9 @@ ul {
 .list {
   padding-top: 5rem;
 }
+.overflow-hidden {
+  overflow: hidden;
+}
 @media (max-width: 768px) {
   .sidebar {
     position: absolute;
@@ -94,6 +100,9 @@ ul {
   li img {
     width: 2.1rem;
     height: 2rem;
+  }
+  .close-img{
+    width: 1.5rem;
   }
   li h1 {
     font-size: 1.4rem;
@@ -130,6 +139,10 @@ ul {
     z-index: 1000;
     margin-right: 0.1rem;
   }
+  .close-img{
+    width: 0.9rem;
+  }
+  
   li img {
     width: 1.14231rem;
     height: 1.06381rem;

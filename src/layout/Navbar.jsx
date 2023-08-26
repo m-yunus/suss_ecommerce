@@ -13,9 +13,15 @@ const Navbar = () => {
  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
  const toggleSidebar = () => {
    setIsSidebarOpen(!isSidebarOpen);
-
-   
- };
+   document.body.classList.toggle("overflow-hidden");
+ 
+ if (isSidebarOpen) {
+   document.body.style.overflowY = "scroll";
+ } else {
+   document.body.style.overflowY = "auto";
+ }
+ 
+  };
  
 
    
