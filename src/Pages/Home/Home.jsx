@@ -77,9 +77,9 @@ const Home = () => {
             </div>
           </div>
         </div>{" "}
-        <div className="home-bottom  mt-20  ">
+        <div className="home-bottom mx-auto mt-20  ">
           <h1 className="best-selling mb-4">Best Selling</h1>
-          <div className="flex  justify-between gap-2">
+          <div className="flex   gap-2">
             {BestSelling.map((data) => (
               <div key={data.id} className="relative best-selling-set">
                 <div className="">

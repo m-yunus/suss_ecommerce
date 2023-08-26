@@ -4,7 +4,9 @@
   margin-top: 1.5rem;
 }
 .navbar {
+  z-index: 900;
 }
+
 .box {
   width: 160px;
   height: 40px;
@@ -78,4 +80,11 @@
   .bottom-nav {
     padding-top: 0.1rem;
   }
+}
+@media (min-width: 2560px) {
+.navbar{
+  width: 80rem;
+  display: flex;
+  justify-content: center;
+}
 }

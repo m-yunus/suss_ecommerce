@@ -1,3 +1,9 @@
+.home{
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+ 
+}
 .caption {
   align-items: center;
   line-height: 2.5rem;
@@ -132,6 +138,9 @@
   }
   .home-middle {
     padding: 0 0;
+  }
+  .caption {
+    margin-right: 5rem;
   }
 }
 
