@@ -187,46 +187,9 @@
     margin-bottom: 0.3rem;
   }
 }
-.cat {
-  width: 22rem;
-  height: 7.5rem;
-}
-.three-box{
-  margin: 0 0.8rem;
-}
-.category{
-  width: 5rem;
-  height: 6rem;
-  font-size: 1rem;
-}
-.title-cat{
-  font-size: 1.3rem;
-  margin-bottom: 0.3rem;
-
-}
-.best-selling{
-  font-size: 2.3rem;
-  margin-bottom: 0.5rem;
-}
-.arrow-icon{
-  width: 3rem;
-  height: 3rem;
-  margin-right: 0.3rem;
-  margin-bottom: 0.3rem;
-  
-}
-.caption{
-  margin-right: 2rem;
-}
-
-
-
-  
- 
-
-@media(max-width:630px){
-.top-bottom-line,
-  .centre-line{
+@media (max-width: 630px) {
+  .top-bottom-line,
+  .centre-line {
     font-size: 2rem;
     margin-right: 2rem;
   }
@@ -243,10 +206,6 @@
   .home {
     padding: 0 0.5rem;
   }
-  .caption{
-    margin-right: 1rem;
-  }
-
 }
 @media (max-width: 500px) {
   .stylist {
@@ -370,83 +329,3 @@
     width: 0.5rem;
   }
 }
-.best-selling{
-  font-size: 1rem;
-  margin-bottom: 0.3rem;
-}
-.best-selling-image{
-  width: 4.72581rem;
-height: 9.68681rem;
-}
-.home-bottom{
-  margin: 0.1 0.3rem;
-  margin-top: 2rem;
-  margin-bottom: 0;
-}
-.arrow-icon{
-  width: 1.6rem;
-  height: 1.5rem;
-  margin-right: 0.3rem;
-  margin-bottom: 0.3rem;
-  
-}
-.fav-icon{
-  height: 0.5rem;
-  width: 0.5rem;
-  margin-top: 0.3rem;
-  margin-right: 0.3rem;
-}
-.eye-icon{
-  height: 0.5rem;
-  width: 0.7rem;
-  margin-top: 0.3rem;
-  margin-left: 0.3rem;
-}
-
-
-
-@media(max-width:390px){
-    .stylist{
-  width: 9.43894rem;
-height: 5.005rem;
-border-radius: 0.34775rem;
-  font-size: 1.2rem;
-  display: flex;
- 
-  
-}
-.greaterthan-img{
-  width: 0.8rem;
-  height: 0.8rem;
-  margin-left: 0.5rem;
-}
-.three-box{
-  margin-left: 0.5rem;
-  
-  
-}
-.cat{
-  width: 10rem;
-  height: 5rem;
-}
-.category{
-  width: 2.6rem;
-  height: 2.8rem;
-  border-radius: 0.35375rem;
-  font-size: 0.5rem;
-}
-.title-cat{
-  font-size: 0.7rem;
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
-  margin-left: 2rem;
-
-}
-.accessories-icon,
-.footwear-icon{
-  width: 0.5rem;
-}
-
-
-}
-
