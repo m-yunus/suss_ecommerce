@@ -171,3 +171,8 @@ ul {
   }
   
 }
+@media (min-width: 2560px) {
+.sidebar{
+  margin-right: 42rem;
+}
+}

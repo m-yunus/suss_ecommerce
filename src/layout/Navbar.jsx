@@ -27,7 +27,7 @@ const Navbar = () => {
    
   return (
     <>
-      <header className="navbar  body-font px-20 ">
+      <header className="navbar  body-font px-20 mx-auto">
         <div className="container mx-auto flex    items-center justify-between ">
           <a className="flex title-font font-medium items-center mb-4  ">
             <span className="">

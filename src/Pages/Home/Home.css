@@ -1,10 +1,14 @@
 .home{
   z-index: 900;
+  display: flex;
+  flex-direction: column;
+ 
 }
 .caption {
  align-items: center;
  line-height: 2.5rem;
  font-family: 'Roboto', sans-serif;
+ margin-right: 7rem;
 }
 
 .top-bottom-line {
@@ -146,6 +150,9 @@ line-height: normal;
   .home-middle{
     padding: 0 0;
   }
+  .caption {
+    margin-right: 5rem;
+  }
 }
 
 @media(max-width:768px){
@@ -196,6 +203,9 @@ line-height: normal;
   margin-bottom: 0.3rem;
   
 }
+.caption{
+  margin-right: 2rem;
+}
 
 
 
@@ -220,6 +230,9 @@ line-height: normal;
 }
   .home{
     padding: 0 0.5rem;
+  }
+  .caption{
+    margin-right: 1rem;
   }
 
 }
@@ -332,12 +345,12 @@ border-radius: 0.34775rem;
   margin-left: 0.5rem;
 }
 .three-box{
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   
   
 }
 .cat{
-  width: 15rem;
+  width: 10rem;
   height: 5rem;
 }
 .category{
@@ -350,7 +363,7 @@ border-radius: 0.34775rem;
   font-size: 0.7rem;
   margin-top: 1rem;
   margin-bottom: 0.3rem;
-  margin-left: 3.5rem;
+  margin-left: 2rem;
 
 }
 .accessories-icon,

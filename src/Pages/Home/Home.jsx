@@ -18,7 +18,7 @@ const Home = () => {
       <Navbar />
       <BottomNavbar />
 
-      <section className=" home body-font px-20  home">
+      <section className=" home body-font px-20 ">
         <div className="home-top  mx-auto flex px-20      justify-between items-center ">
           <div className="caption     flex flex-col      mb-16 ">
             <h1 className="cap  flex flex-col  mb-4 mt-4  ">
@@ -77,9 +77,9 @@ const Home = () => {
             </div>
           </div>
         </div>{" "}
-        <div className="home-bottom  mt-20  ">
+        <div className="home-bottom mx-auto mt-20  ">
           <h1 className="best-selling mb-4">Best Selling</h1>
-          <div className="flex  justify-between gap-2">
+          <div className="flex   gap-2">
             {BestSelling.map((data) => (
               <div key={data.id} className="relative best-selling-set">
                 <div className="">

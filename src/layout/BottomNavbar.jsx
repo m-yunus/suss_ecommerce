@@ -8,7 +8,7 @@ import newarrival from "../../src/assets/images/Bottom-nav/new-arrival.png";
 const BottomNavbar = () => {
   return (
     <>
-      <div className="navbar   px-20">
+      <div className="navbar  mx-auto  px-20">
         <div className="bottom-nav flex justify-evenly py-7">
           <div className="box flex gap-2">
             <img className="nav-icon " src={women} alt="" />
