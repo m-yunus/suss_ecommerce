@@ -1,22 +1,80 @@
+.blog {
+  font-family: "Roboto", sans-serif;
+}
 .video-section {
-  width: 90%;
+  width: 100%;
   height: 40vw;
   border-radius: 0.8125rem;
   background: #c4c4c4;
 }
-.youtube-img{
-    width: 13.5vw;
-height: 13.25vw;
+.youtube-img {
+  width: 13.5vw;
+  height: 13.25vw;
+}
+.lifestyle h2 {
+  margin-top: 3rem;
+  color: #f6ce4b;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.lifestyle h1 {
+  color: #f6ce4b;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: -1.5rem;
+}
+.lifestyle h3 {
+  color: #c4c4c4;
+  font-size: 2.5rem;
+  font-weight: 300;
 }
 
 
-
-
-
-
-
-@media(max-width:768px){
-    .blog{
-        padding: 0.3rem 0.1rem;
-    }
+.lifestyle-pic{
+width: 20vw;
+height: auto;
+max-width: 22rem;
+object-fit: cover;
+border-radius: 2.19794rem;
+box-shadow: 0px 3.746230125427246px 3.746230125427246px 0px rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 768px) {
+  .blog {
+    padding: 0.3rem 0.5rem;
+  }
+  .lifestyle h1 {
+    font-size: 3rem;
+    margin-top: -0.5rem;
+}
+.lifestyle h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+.lifestyle h3{
+    font-size: 1.8rem;
+}
+}
+@media (max-width: 425px) {
+.lifestyle h1 {
+    font-size: 1.8rem;
+    margin-top: -0.5rem;
+}
+.lifestyle h2 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+.lifestyle h3{
+    font-size: 1rem;
+}
+.lifestyle-images{
+    margin: 1rem 0 ;
+    padding: 0 1rem;
+}
+
+.lifestyle-pic{
+    border-radius: 1rem;
+ 
+}
+}
+
