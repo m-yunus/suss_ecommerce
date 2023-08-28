@@ -16,6 +16,7 @@ line-height: normal;
 }
 .text{
     width: 1272px;
+    margin-top: 1rem;
 
   color: #C4C4C4;
 font-family: Roboto;
@@ -52,13 +53,7 @@ font-weight: 400;
 line-height: normal;
 margin-top: 3rem;
 }
-.team-section{
 
-
-    
-
-
-}
 .trd-title{
     color: #045A11;
 font-family: Roboto;
