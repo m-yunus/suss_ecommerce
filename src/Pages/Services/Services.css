@@ -1,0 +1,101 @@
+.services {
+  font-family: "Roboto", sans-serif;
+}
+.services h1 {
+  color: #045a11;
+  font-size: 3rem;
+  font-weight: 400;
+}
+.services h4 {
+  color: #cbcbcb;
+  font-size: 1.5rem;
+  max-width: 55rem;
+  word-wrap: break-word;
+}
+.pink-box {
+  width: 24rem;
+  height: 13rem;
+  border-radius: 1.1185rem;
+  background: #fd7b85;
+  box-shadow: 3.579246759414673px 12.527363777160645px 39.3717155456543px -2.6844351291656494px
+    rgba(0, 0, 0, 0.25);
+}
+.pink-box h2 {
+  margin-top: 2rem;
+  color: #fff;
+  line-height: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.white-box {
+  margin-top: 2.5rem;
+  width: 24rem;
+  height: 3rem;
+  border-radius: 0.52225rem;
+  background: #fff;
+  box-shadow: 0px 3.7139947414398193px 3.7139947414398193px 0px
+    rgba(0, 0, 0, 0.25);
+}
+.white-box h5 {
+  color: #045a11;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.service-arrow {
+  margin-left: 1rem;
+}
+.white-box-3{
+   margin-top: 3.4rem;
+}
+
+@media (min-width: 2560px) {
+  .services {
+    padding: 1rem 45rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding: 1rem 1rem;
+  }
+  .services h1 {
+    font-size: 2.5rem;
+  }
+  .services h4 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 425px) {
+  .services h1 {
+    margin-top: -1rem;
+    font-size: 1.5rem;
+  }
+  .services h4 {
+    font-size: 0.9rem;
+  }
+  .pink-box {
+    width: 10.75106rem;
+height: 5.75rem;
+    margin-top: -1rem;
+  }
+  .white-box {
+    margin-top: 0.3rem;
+    width: 10.74769rem;
+height: 1.53563rem;
+  }
+  .pink-box h2{
+   margin-top: 0.3rem;
+   line-height: 1.5rem;
+   font-size: 0.90725rem;
+  }
+  .white-box h5{
+   font-size: 0.78944rem;
+  }
+  .service-arrow{
+   width: 0.9rem;
+   margin-left: 0.5rem;
+  }
+  .white-box-3{
+   margin-top: 0.5rem;
+  }
+}
