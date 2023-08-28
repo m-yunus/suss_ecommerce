@@ -29,16 +29,63 @@
   font-weight: 300;
 }
 
+.lifestyle-pic {
+  width: 20vw;
+  height: auto;
+  max-width: 22rem;
+  object-fit: cover;
+  border-radius: 2.19794rem;
+  box-shadow: 0px 3.746230125427246px 3.746230125427246px 0px
+    rgba(0, 0, 0, 0.25);
+}
+.original-title {
+  color: #fb9334;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.original-pic-1{
+ width: 28vw;
+  height: 23vw;
+  border-radius: 3.125rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.original-pic-2{
+ width: 34vw;
+  height: 23vw;
+  border-radius: 3.125rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 1rem;
+}
+.original-pic-3{
+ width: 31vw;
+  height: 23vw;
+  border-radius: 3.125rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin-left: 1rem;
+}
+.organic h1{
+color: #74BDE0;
+font-size:3.5rem;
+font-weight: 400;
+  margin-top: 2rem;
 
-.lifestyle-pic{
-width: 20vw;
-height: auto;
-max-width: 22rem;
-object-fit: cover;
-border-radius: 2.19794rem;
-box-shadow: 0px 3.746230125427246px 3.746230125427246px 0px rgba(0, 0, 0, 0.25);
+}
+.organic h3{
+color: #C4C4C4;
+font-size: 2.5rem;
+font-weight: 300;
+margin-top: -1rem;
+}
+.organic img{
+  width: 13rem;
 }
 
+@media (max-width: 1024px) {
+  .organic img{
+  width: 10rem;
+}
+}
 @media (max-width: 768px) {
   .blog {
     padding: 0.3rem 0.5rem;
@@ -46,35 +93,84 @@ box-shadow: 0px 3.746230125427246px 3.746230125427246px 0px rgba(0, 0, 0, 0.25);
   .lifestyle h1 {
     font-size: 3rem;
     margin-top: -0.5rem;
-}
-.lifestyle h2 {
+  }
+  .lifestyle h2 {
     font-size: 3rem;
     margin-top: 1rem;
-}
-.lifestyle h3{
+  }
+  .lifestyle h3 {
     font-size: 1.8rem;
+  }
+  .lifestyle-images{
+    padding: 0 2rem;
+  }
+  .original-title{
+    font-size: 2.5rem;
+  }
+  .original-pic-1,
+  .original-pic-2,
+  .original-pic-3{
+border-radius: 2rem;
+  }
+   .organic img{
+  width: 8rem;
+ margin-top: -1rem;
+ 
+
+}
+.organic h1{
+  font-size: 2.5rem;
+}
+.organic h3{
+  font-size: 2.5rem;
+    
 }
 }
 @media (max-width: 425px) {
-.lifestyle h1 {
+  .lifestyle h1 {
     font-size: 1.8rem;
     margin-top: -0.5rem;
-}
-.lifestyle h2 {
+  }
+  .lifestyle h2 {
     font-size: 2rem;
     margin-top: 1rem;
-}
-.lifestyle h3{
+  }
+  .lifestyle h3 {
     font-size: 1rem;
-}
-.lifestyle-images{
-    margin: 1rem 0 ;
+  }
+  .lifestyle-images {
+    margin: 1rem 0;
     padding: 0 1rem;
-}
+  }
 
-.lifestyle-pic{
+  .lifestyle-pic {
     border-radius: 1rem;
- 
+  }
+  .original-title{
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+  }
+  .original-pic-1,
+  .original-pic-2,
+  .original-pic-3{
+border-radius: 1rem;
+  }
+  .original-pic-3,
+  .original-pic-2{
+    margin-left: 0.5rem;
+  }
+   .organic img{
+  width: 4rem;
+ margin-top: -1rem;
 }
+.organic h1{
+  font-size: 1.8rem;
+  margin-top: 0.6rem;
 }
+.organic h3{
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+  }
+  
 
