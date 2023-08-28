@@ -83,12 +83,47 @@ flex-shrink: 0;
 
  
 }
-.img{
-   margin-left:-rem ;
 
 
+.social-secion{
+    display: flex;
+    flex-wrap: wrap;
+ 
+
+
+}
+.frth-title{
+    color: #045A11;
+font-family: Roboto;
+font-size: 7vw;
+margin-top: 3rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.abt-social-icons{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 2rem;
    
 }
-.img1,.img2,.img3{
-    margin-left: 2rem;
+
+.abt-icons{
+    background-color:#C4C4C4 ;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    width: 10vw;
+height: 10vw;
+
+
+
+}
+.abt-icon{
+    width: 5vw;
+    height: 5vw;
+object-fit: cover;
+margin-left: 2.5vw;
+
 }
