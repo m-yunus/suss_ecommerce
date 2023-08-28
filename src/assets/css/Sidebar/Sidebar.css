@@ -9,11 +9,10 @@
   z-index: 1000;
   animation-name: slideSidebar;
   animation-duration: 0.8s;
-     transition: right 0.8s ease-in-out;
+  transition: right 0.8s ease-in-out;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards; 
   
-
 }
 
 @keyframes slideSidebar {

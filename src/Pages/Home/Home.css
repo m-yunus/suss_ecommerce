@@ -306,10 +306,10 @@
     margin-left: 0.5rem;
   }
   .three-box {
-    margin-left: 2rem;
+    margin-left: 0.5rem;
   }
   .cat {
-    width: 15rem;
+    width: 10rem;
     height: 5rem;
   }
   .category {
@@ -322,10 +322,13 @@
     font-size: 0.7rem;
     margin-top: 1rem;
     margin-bottom: 0.3rem;
-    margin-left: 3.5rem;
+    margin-left: 2rem;
   }
   .accessories-icon,
   .footwear-icon {
     width: 0.5rem;
+  }
+  .img-cont{
+    margin-left: -5rem;
   }
 }

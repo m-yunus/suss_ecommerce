@@ -27,7 +27,7 @@ const Store = () => {
               <div className="item-details flex-col ps-3.5 pt-1 flex relative  my-auto">
                 <div className="flex   items-center ">
                   <img className="pound-image w-11 h-11" src={pound} alt="" />
-                  <h1 className="price ps-2">{data.price}</h1>
+                  <h1 className="store-price ps-2">{data.price}</h1>
                 </div>
                 <div >
                   <p className="product-name py-2 flex">Product Name</p>
