@@ -1,0 +1,124 @@
+
+.head{
+    display: flex;
+    flex-wrap: wrap;
+}
+.first-title{
+    width: 605px;
+    
+    color: #045A11;
+font-family: Roboto;
+font-size: 7.912vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+.text{
+    width: 1272px;
+    margin-top: 1rem;
+
+  color: #C4C4C4;
+font-family: Roboto;
+font-size: 4vw;
+
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+.video-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.vdo{
+    width: 80vw;
+height: 44vw;
+border-radius: 65px;
+background: #C4C4C4;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 2rem;
+}
+.secnd-title{
+    margin-top: 2rem;
+    color: #045A11;
+font-family: Roboto;
+font-size: 7vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 3rem;
+}
+
+.trd-title{
+    color: #045A11;
+font-family: Roboto;
+font-size: 7vw;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 2rem;
+}
+.team-img{
+    width: 17vw;
+height: 17vw;
+border-radius: 100%;
+margin-top: 2rem;
+
+
+flex-shrink: 0;
+ fill: #C4C4C4;
+ display: flex;
+ justify-content:center;
+ 
+
+ 
+}
+
+
+.social-secion{
+    display: flex;
+    flex-wrap: wrap;
+ 
+
+
+}
+.frth-title{
+    color: #045A11;
+font-family: Roboto;
+font-size: 7vw;
+margin-top: 3rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.abt-social-icons{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-top: 2rem;
+   
+}
+
+.abt-icons{
+    background-color:#C4C4C4 ;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    width: 10vw;
+height: 10vw;
+
+
+
+}
+.abt-icon{
+    width: 5vw;
+    height: 5vw;
+object-fit: cover;
+margin-left: 2.5vw;
+
+}
