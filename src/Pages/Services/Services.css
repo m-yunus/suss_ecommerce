@@ -47,6 +47,18 @@
 .white-box-3{
    margin-top: 3.4rem;
 }
+.services-footer img{
+   width: 5rem;
+   height: 5rem;
+}
+.services-footer p{
+   color: #33793E;
+font-size: 2.5rem;
+}
+.services-footer h6{
+   color: #CECDCB;
+font-size: 2.5rem;
+}
 
 @media (min-width: 2560px) {
   .services {
@@ -64,14 +76,30 @@
   .services h4 {
     font-size: 1.3rem;
   }
+  .services-footer img{
+   width: 3.5rem;
+   height: 3.5rem;
+}
+.services-footer p {
+   font-size: 2rem;
+}
+.services-footer h6 {
+   font-size: 2rem;
+}
 }
 @media (max-width: 425px) {
+   .services{
+      padding: 0;
+      margin-top: 1rem;
+   }
   .services h1 {
     margin-top: -1rem;
     font-size: 1.5rem;
+    padding: 0 0.5rem;
   }
   .services h4 {
     font-size: 0.9rem;
+    padding: 0 0.5rem;
   }
   .pink-box {
     width: 10.75106rem;
@@ -98,4 +126,21 @@ height: 1.53563rem;
   .white-box-3{
    margin-top: 0.5rem;
   }
+    .services-footer img{
+   width: 2rem;
+   height: 2rem;
+   margin-left: 1rem;
+}
+.services-footer p {
+   font-size: 1.5rem;
+}
+.services-footer h6 {
+   font-size: 1.5rem;
+   margin-right: 1rem;
+}
+.services-footer{
+   margin-top: 1.5rem;
+   background-color: #C4C4C4;
+   height: 5rem;
+} 
 }
