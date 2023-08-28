@@ -1,0 +1,22 @@
+.video-section {
+  width: 90%;
+  height: 40vw;
+  border-radius: 0.8125rem;
+  background: #c4c4c4;
+}
+.youtube-img{
+    width: 13.5vw;
+height: 13.25vw;
+}
+
+
+
+
+
+
+
+@media(max-width:768px){
+    .blog{
+        padding: 0.3rem 0.1rem;
+    }
+}
