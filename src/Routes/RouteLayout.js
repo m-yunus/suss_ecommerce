@@ -8,6 +8,7 @@ import Products from '../Pages/Products/Products'
 import AboutUs from '../Pages/AboutUs/AboutUs'
 
 import Blog from '../Pages/Blog/Blog'
+import Vendor from '../Pages/Vendor/Vendor'
 
 const RouteLayout = () => {
   return (
@@ -23,6 +24,7 @@ const RouteLayout = () => {
 
 
           <Route path="blog" element={<Blog/>} />
+          <Route path="vendor" element={<Vendor/>} />
 
         </Routes>
       </BrowserRouter>
