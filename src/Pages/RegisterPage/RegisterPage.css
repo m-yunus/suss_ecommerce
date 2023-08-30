@@ -1,0 +1,113 @@
+.register{
+
+    flex-wrap: wrap;
+    justify-content:center ;
+    }
+    .register-title{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    }
+   
+    .register-text{
+    align-items: center;
+    margin-top: 13rem;
+    display: flex;
+    color: #272727;
+    font-family: Readex Pro;
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    
+    }
+    .register-input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    
+    }
+    .email-input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .email{
+        align-items: center;
+        background-color: white;
+        border-color: white;
+        width:36vw;
+        height: 5vw;
+        border-bottom: 1px solid grey;
+    }
+    
+    .pswrd-input{
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    }
+    .pswrd{
+        width:36vw;
+        height: 5vw;
+        border-bottom: 1px solid grey;
+    
+    }
+    input{
+        border-bottom: #272727;
+    }
+    
+    
+    input[type="email"] {
+        background-color: white;
+    ;
+      }
+      input[type="password"] {
+        background-color: white;
+      
+      }
+      .ggle-fb-btns{
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+      }
+    
+      .google-btn{
+     background-color:#045A11 ;
+     width: 18vw;
+     height: 7vw;
+     color: #FFF;
+    font-family: Inter;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 30px;
+      }
+      .or{
+      margin-top: .5rem;
+      font-size: 3vw;
+    
+      }
+     
+      .face-btn{
+        background-color: #272727;
+        width: 18vw;
+     height: 7vw;
+     color: #FFF;
+    font-family: Inter;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 30px;
+      }
+   

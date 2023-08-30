@@ -1,18 +1,26 @@
 import React from 'react'
 import './RegSignButton.css'
 import Navbar from '../../layout/Navbar'
-import Footer from '../../layout/Footer'
+import { useNavigate } from 'react-router-dom'
 
 const RegSignButton = () => {
+  const navigate=useNavigate();
+  function register(){
+    navigate('/register')
+    
+  }
+  function signin(){
+    navigate('/login')
+  }
   return (
     <>
     <Navbar/>
-    <div className="reg-sign-btn">
+    <div className="reg-sign-btn ">
       <div className="register-btn">
-        <button className='reg-btn'>Register</button>
+        <button className='reg-btn' onClick={register}>Register</button>
       </div>
       <div className="signin-btn">
-        <button className='sign-btn'>Sign in</button>
+        <button className='sign-btn'onClick={signin}>Sign in</button>
       </div>
     </div>
     <div className="reg-footer">
@@ -21,7 +29,11 @@ const RegSignButton = () => {
         <h2 className="reg-footer-text">Forget Password  |</h2>
         <h2 className="reg-footer-text"> Sign in Vendor Id</h2>
       </div>
+      <div>
+      
+      </div>
     </div>
+    
   
     </>
   )

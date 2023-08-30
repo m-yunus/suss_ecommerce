@@ -121,6 +121,7 @@ margin-top: 3rem;
 .log-ftr-btn{
 align-items: center;
 justify-content: center;
+cursor: pointer;
 }
 .log-ftr-text{
 background-color: #FD7B85;

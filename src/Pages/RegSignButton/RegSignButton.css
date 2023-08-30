@@ -48,9 +48,9 @@ cursor: pointer;
     display: flex;
   align-items: center;
   justify-content: center;
-  width: 80vw;
+  width: 70vw;
 
-    height: 8vw;
+    height:6vw;
     background-color:#FD7B85  ;
 }
 .reg-footer-text{

@@ -11,6 +11,7 @@ import Blog from '../Pages/Blog/Blog'
 import Vendor from '../Pages/Vendor/Vendor'
 import RegSignButton from '../Pages/RegSignButton/RegSignButton'
 import LoginPage from '../Pages/LoginPage/LoginPage'
+import RegisterPage from '../Pages/RegisterPage/RegisterPage'
 
 const RouteLayout = () => {
   return (
@@ -29,6 +30,7 @@ const RouteLayout = () => {
           <Route path="vendor" element={<Vendor/>} />
           <Route path="sign" element={<RegSignButton/>} />
           <Route path="login" element={<LoginPage/>} />
+          <Route path="register" element={<RegisterPage/>} />
 
         </Routes>
       </BrowserRouter>
