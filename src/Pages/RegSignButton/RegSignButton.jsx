@@ -15,7 +15,7 @@ const RegSignButton = () => {
   return (
     <>
     <Navbar/>
-    <div className="reg-sign-btn ">
+    <div className="reg-sign-btn gap-3 ">
       <div className="register-btn">
         <button className='reg-btn' onClick={register}>Register</button>
       </div>
@@ -33,6 +33,7 @@ const RegSignButton = () => {
       
       </div>
     </div>
+  
     
   
     </>
