@@ -1,0 +1,62 @@
+.reg-sign-btn{
+
+justify-content: center;
+align-items: center;
+
+}
+.register-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.reg-btn{
+    
+margin-top: 10rem;
+background-color:#045A11;
+width: 36vw;
+height: 15vw;
+font-size:5vw ;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+.signin-btn{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.sign-btn{
+    margin-top: 2rem;
+    background-color:#FD7B85 ;
+    width: 36vw;
+    height: 15vw;
+    font-size:5vw ;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+.reg-footer{
+    display: flex;
+    justify-content: center;
+    
+}
+.reg-footer-texts{
+    margin-top: 6rem;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+
+    height: 8vw;
+    background-color:#FD7B85  ;
+}
+.reg-footer-text{
+    font-size: 3vw;
+    color: white;
+    height: 2vw;
+
+ 
+}

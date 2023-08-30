@@ -9,6 +9,7 @@ import AboutUs from '../Pages/AboutUs/AboutUs'
 
 import Blog from '../Pages/Blog/Blog'
 import Vendor from '../Pages/Vendor/Vendor'
+import RegSignButton from '../Pages/RegSignButton/RegSignButton'
 
 const RouteLayout = () => {
   return (
@@ -25,6 +26,7 @@ const RouteLayout = () => {
 
           <Route path="blog" element={<Blog/>} />
           <Route path="vendor" element={<Vendor/>} />
+          <Route path="sign" element={<RegSignButton/>} />
 
         </Routes>
       </BrowserRouter>
