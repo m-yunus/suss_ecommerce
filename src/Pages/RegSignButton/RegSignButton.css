@@ -57,6 +57,8 @@ cursor: pointer;
     font-size: 3vw;
     color: white;
     height: 2vw;
+    align-items: center;
+    display: flex;
 
  
 }
