@@ -1,0 +1,87 @@
+.name-icon{
+    display: flex;
+    flex-wrap: wrap;
+   
+    flex-direction: row;
+    margin-top: 2rem;
+}
+.pr-icon{
+   
+ 
+    width: 4vw;
+    height: 4vw; 
+    
+}
+.name-title{
+   
+    color: #438D69;
+    font-family: Roboto;
+    font-size: 3.201vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  
+}
+.side-hr{
+    width: 1rem;
+    height: 20rem;
+    background-color: #438D69;
+    display: flex;
+    align-items: center;
+
+
+}
+.first-bar{
+    border-bottom-color: grey;
+    border-top-color:white;
+    border-right-color: grey;
+    border-left-color:white ;
+    border-width: 3px;
+    width: 10vw;
+    height: 10vw;
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    
+}
+
+.secnd-bar{
+    border-bottom-color: grey;
+    border-top-color:white;
+    border-right-color: grey;
+    border-left-color:white ;
+    border-width: 3px;
+    width: 10vw;
+    height: 8vw;
+    border-top-color:grey ;
+    margin-top: -1.2px;
+    border-top-width: 1px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thrd-bar{
+   
+    text-align: center;
+    border-top-color:white;
+    border-right-color: grey;
+    border-left-color:white ;
+    border-width: 3px;
+    border-top-width:1px ;
+    width: 10vw;
+    height: 10vw;
+    border-left-width: 5px;
+    border-top-color:grey ;
+    margin-top: -1.9px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+}
+.order-text1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
