@@ -1,0 +1,95 @@
+.reg-sign-btn{
+display:flex ;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+
+
+
+}
+.register-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   flex-wrap: wrap;
+
+}
+.reg-btn{
+ display: flex;
+ justify-content: center; 
+ align-items: center;
+margin-top: 1rem;
+background-color:#045A11;
+width: 20rem;
+height: 15vw;
+font-size:5vw ;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+.signin-btn{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+
+}
+.sign-btn{
+    margin-top: 1rem;
+    background-color:#FD7B85 ;
+    width: 20rem;
+    height: 15vw;
+    font-size:5vw ;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+.reg-footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    bottom:50%;
+ 
+  transform: translate(0%, 30%);
+    
+}
+.reg-footer-texts{
+    margin-top: 16rem;
+    display: flex;
+  align-items: center;
+  justify-content:center ;
+  
+  width:100%;
+
+    height:6rem;
+    background-color:#FD7B85  ;
+}
+.reg-footer-text{
+    font-size: 3vw;
+    color: white;
+    height: 2vw;
+    align-items: center;
+    display: flex;
+
+ 
+}
+@media (max-width: 958px) {
+    .reg-sign-btn{
+        margin-top: 2rem;
+    }
+    .reg-footer-texts{
+        height: 10vw;
+        margin-top: 8rem;
+ 
+        
+    }
+}
+@media (max-width: 421px) {
+    .register-btn{
+        margin-top: 9rem;
+    }
+    .reg-footer-texts{
+        height: 15vw;
+    }
+}
