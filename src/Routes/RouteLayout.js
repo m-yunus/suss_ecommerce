@@ -13,6 +13,9 @@ import LoginPage from '../Pages/LoginPage/LoginPage'
 import RegisterPage from '../Pages/RegisterPage/RegisterPage'
 
 import Services from "../Pages/Services/Services";
+
+import Order from '../Pages/Order/Order'
+
 import VendorButtons from '../Pages/VendorButtons/VendorButtons'
 
 
@@ -35,8 +38,11 @@ const RouteLayout = () => {
           <Route path="register" element={<RegisterPage/>} />
 
           <Route path="services" element={<Services />} />
+
+          <Route path="order" element={<Order />} />
+
           <Route path="vendorbutton" element={<VendorButtons />} />
-        </Routes>
+     </Routes>
       </BrowserRouter>
     </>
   );
