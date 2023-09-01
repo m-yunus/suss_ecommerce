@@ -7,8 +7,17 @@ import Products from '../Pages/Products/Products'
 import AboutUs from '../Pages/AboutUs/AboutUs'
 import Blog from '../Pages/Blog/Blog'
 import Vendor from '../Pages/Vendor/Vendor'
+
+import RegSignButton from '../Pages/RegSignButton/RegSignButton'
+import LoginPage from '../Pages/LoginPage/LoginPage'
+import RegisterPage from '../Pages/RegisterPage/RegisterPage'
+
 import Services from "../Pages/Services/Services";
+
 import Order from '../Pages/Order/Order'
+
+import VendorButtons from '../Pages/VendorButtons/VendorButtons'
+
 
 const RouteLayout = () => {
   return (
@@ -24,10 +33,16 @@ const RouteLayout = () => {
 
           <Route path="blog" element={<Blog/>} />
           <Route path="vendor" element={<Vendor/>} />
+          <Route path="sign" element={<RegSignButton/>} />
+          <Route path="login" element={<LoginPage/>} />
+          <Route path="register" element={<RegisterPage/>} />
 
           <Route path="services" element={<Services />} />
+
           <Route path="order" element={<Order />} />
-        </Routes>
+
+          <Route path="vendorbutton" element={<VendorButtons />} />
+     </Routes>
       </BrowserRouter>
     </>
   );
