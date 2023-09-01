@@ -1,0 +1,67 @@
+.vendor-reg-sign{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+margin-top: 20%;
+}
+
+.vendor-reg{
+    background: #045A11;
+    width: 20rem;
+    height: 13vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 3.7139947414398193px 3.7139947414398193px 0px
+    rgba(0, 0, 0, 0.25);
+
+}
+.vndr-reg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 4vw;
+    
+
+}
+.vndr-line{
+    color: aliceblue;
+    font-size: 5vw;
+}
+.vendor-sign{
+    border-radius: 20px;
+    margin-left: -2rem;
+    width: 20rem;
+    height: 13vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 3.7139947414398193px 3.7139947414398193px 0px
+    rgba(0, 0, 0, 0.25);
+
+
+}
+.vndr-sign{
+   
+    color: #045A11;
+    font-size: 4vw;
+
+}
+
+@media (max-width: 607px) {
+    .vendor-sign{
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+    .vendor-reg-sign{
+        margin-top: 50%;
+    }
+    .vndr-line{
+        visibility: hidden;
+    }
+
+}
