@@ -17,6 +17,7 @@ import Services from "../Pages/Services/Services";
 import Order from '../Pages/Order/Order'
 
 import VendorButtons from '../Pages/VendorButtons/VendorButtons'
+import SussPage from '../Pages/SussPage/SussPage'
 
 
 const RouteLayout = () => {
@@ -42,6 +43,7 @@ const RouteLayout = () => {
           <Route path="order" element={<Order />} />
 
           <Route path="vendorbutton" element={<VendorButtons />} />
+          <Route path="suss" element={<SussPage />} />
      </Routes>
       </BrowserRouter>
     </>

@@ -1,0 +1,130 @@
+.wish-style{
+display: flex;
+
+
+}
+.suss-wish{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+
+}
+.suss-button{
+color: white;
+width: 382px;
+height: 84px;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 28.596px;
+background: #045A11;
+box-shadow: 2.7234px 9.53191px 29.95745px -2.04255px rgba(0, 0, 0, 0.25);
+font-family: Roboto;
+font-size: 35.251px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.suss-wish-images{
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+  width: 60%;
+  margin-top: 2rem;
+
+
+  
+   
+
+}
+.suss-wish-img{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color:  #C4C4C4;;
+    width: 150px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+
+
+}
+.wish-img{
+   
+    width: 150px;
+    height: 220px;
+}
+.suss-style{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.style-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 680px;
+height: 75px;
+border-radius: 21.465px;
+    background-color: white;
+    color: #045A11;
+    border-radius: 21.465px;
+    background: radial-gradient(111.66% 140.73% at 0% 3.49%, rgba(255, 255, 255, 0.30) 0%, rgba(227, 227, 227, 0.00) 100%);
+    box-shadow: 2.04429px 7.155px 22.48714px -1.53321px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(7.921606063842773px);
+  
+font-family: Roboto;
+font-size: 50.609px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+.suss-style-images{
+display: flex;
+flex-wrap: wrap;
+width: 70%;
+justify-content: center;
+
+
+}
+.style-img{
+    width: 180px;
+    height: 227px;
+    background-color: #C4C4C4;
+
+
+}
+@media (max-width: 1072px) {
+    .wish-style{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        
+        }
+        .suss-button{
+            width:50vw;
+            font-size: 6vw;
+            display: flex;
+            justify-content: center;
+
+        }
+        .style-button{
+            width: 80vw;
+            font-size: 6vw;
+            margin-top: 3rem;
+        }
+        .style-img{
+            margin-top: 2rem;
+        }
+}
