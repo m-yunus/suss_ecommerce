@@ -8,6 +8,7 @@ import AboutUs from '../Pages/AboutUs/AboutUs'
 import Blog from '../Pages/Blog/Blog'
 import Vendor from '../Pages/Vendor/Vendor'
 import Services from "../Pages/Services/Services";
+import VendorButtons from '../Pages/VendorButtons/VendorButtons'
 
 const RouteLayout = () => {
   return (
@@ -25,6 +26,7 @@ const RouteLayout = () => {
           <Route path="vendor" element={<Vendor/>} />
 
           <Route path="services" element={<Services />} />
+          <Route path="vendorbutton" element={<VendorButtons />} />
         </Routes>
       </BrowserRouter>
     </>
