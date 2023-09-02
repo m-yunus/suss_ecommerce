@@ -93,6 +93,8 @@ display: flex;
 flex-wrap: wrap;
 width: 70%;
 justify-content: center;
+margin-top: 3rem;
+
 
 
 }
@@ -100,7 +102,7 @@ justify-content: center;
     width: 180px;
     height: 227px;
     background-color: #C4C4C4;
-
+  
 
 }
 @media (max-width: 1072px) {
@@ -125,6 +127,6 @@ justify-content: center;
             margin-top: 3rem;
         }
         .style-img{
-            margin-top: 2rem;
+            
         }
 }
