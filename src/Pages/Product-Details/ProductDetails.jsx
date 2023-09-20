@@ -24,27 +24,29 @@ import slideimg from "../../assets/images/Product-Details/slideimg.jpg"
 import slideimage from "../../assets/images/Product-Details/slideimage.jpg"
 import slidericn from "../../assets/images/Product-Details/slidericn.png"
 import slidericon from "../../assets/images/Product-Details/slidericon.png"
+import women from "../../assets/images/Product-Details/women.jpg"
+import men from "../../assets/images/Product-Details/men.jpg"
+import  { useState } from 'react';
 const ProductDetails = () => {
-  function handleIconClick(event) {
-    // Get the index of the clicked icon
-    var index = event.target.dataset.index;
-  
-    // Select the corresponding slide based on the index
-    var slides = document.querySelectorAll('.slide');
-    var activeSlide = document.querySelector('.slide.active');
-    
-    // Remove the active class from the current slide
-    activeSlide.classList.remove('active');
-  
-    // Add the active class to the clicked slide
-    slides[index].classList.add('active');
-  }
-  
-  // Add event listeners to the slider icons
-  var sliderIcons = document.querySelectorAll('.slider-icon');
-  sliderIcons.forEach(function(icon) {
-    icon.addEventListener('click', handleIconClick);
-  });
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const slides = [
+    { id: 0, src: slide },
+    { id: 1, src: slideimage },
+    { id: 2, src: slideimg },
+    { id: 3, src: slide },
+    { id: 4, src: slideimg },
+    { id: 5, src: slideimage },
+  ];
+  const slidesToShow = 3;
+  const handleClickPrev = () => {
+    setCurrentIndex((prevIndex) =>
+      (prevIndex-1 - slidesToShow + slides.length) % slides.length
+    );
+  };
+  const handleClickNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow) % slides.length);
+  };
+ 
   return (
     <>
       <Navbar />
@@ -55,32 +57,38 @@ const ProductDetails = () => {
            
           </div>
           <div className="slider flex flex-row gap-2">
-            <div className=" slide flex flex-col" data-intex='0'>
-              <img className="slide-img" src={slide} alt="" />
+        {slides.map((slideData) => {
+          const { id, src } = slideData;
+          return (
+            <div
+              key={id}
+              className={`slide flex flex-col ${id >= currentIndex &&
+                id  < currentIndex+1 + slidesToShow
+                ? ''
+                : 'hidden'}`}
+              data-intex={id}
+            >
+              <img className="slide-img" src={src} alt="" />
             </div>
-            <div className="slide flex flex-col" data-intex='1'>
-              <img className="slide-img" src={slideimage} alt="" />
-            </div>
-            <div className=" slide flex flex-col" data-intex='2'>
-              <img className="slide-img" src={slideimg} alt="" />
-            </div>
-            <div className= "slide flex flex-col" data-intex='3'>
-            <img className="slide-img" src={slide} alt="" />
-              
-            </div>
-            <div className=" slide flex flex-col" data-intex='4'>
-            <img className="slide-img" src={slideimg} alt="" />
-              
-            </div>
-            <div className="slide flex flex-col" data-intex='5'>
-            <img className="slide-img" src={slideimage} alt="" />
-              
-            </div>
-            <div className="slider-icons">
-  <img id="slider-icon-1" src={slidericn} alt="" className="slider-icon" />
-  <img id="slider-icon-2" src={slidericon} alt="" className="slider-icon" />
-</div>
-          </div>
+          );
+        })}
+        <div className="slider-icons">
+          <img
+            id="slider-icon-1"
+            src={slidericn}
+            alt=""
+            className="slider-icon"
+            onClick={handleClickPrev}
+          />
+          <img
+            id="slider-icon-2"
+            src={slidericon}
+            alt=""
+            className="slider-icon"
+            onClick={handleClickNext}
+          />
+        </div>
+      </div>
         </div>
 
         <div className="product-right">
@@ -160,7 +168,98 @@ const ProductDetails = () => {
           </div>
          
         </div>
+       
       </div>
+      <div className="description-similar px-16 gap-20">
+      <div className="product-description">
+          <div className="prdct-description-title gap-2">
+            <div className="desctn-line"></div>
+            <h2 className="prdct-desptn-title">Product <br /> Description</h2>
+          </div>
+          <p className="desptn">100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched with  fading. Provide  all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD prints.</p>
+         <div className="desptn-table">
+          <div className="first-row g">
+            <div className="clm1">
+              <p className="clm-title">Fabric</p>
+              <p className="clm-discptn">Bio-washed cotton</p>
+            </div>
+            <div className="clm2">
+            <p className="clm-title">Pattern</p>
+            <p className="clm-discptn">Printed</p>
+            </div>
+            <div className="clm3">
+            <p className="clm-title">Fit</p>
+            <p className="clm-discptn">Regular Fit</p>
+            </div>
+          </div>
+          <div className="scnd-row ">
+          <div className="clm4">
+              <p className="clm-title">Neck</p>
+              <p className="clm-discptn">Rounded Neck</p>
+            </div>
+            <div className="clm5">
+            <p className="clm-title">Sleeve</p>
+            <p className="clm-discptn">Half Sleeves</p>
+            </div>
+            <div className="clm6">
+            <p className="clm-title">Style</p>
+            <p className="clm-discptn">Casual Wear</p>
+            </div>
+          </div>
+       
+         </div>
+        </div>
+        <div className="similar-product">
+          <div className="similar-prdct gap-3">
+            <div className="similar-titles gap-3">
+            <div className="similar-line"></div>
+            <div className="similar-title">Similar <br /> Products</div>
+            </div>
+
+            <div  className="similar-images gap-6 relative  best-selling-set">
+                <div className="">
+                  <img
+                    className="best-selling-image object-cover spaced-image "
+                    src={women}
+                    alt=""
+                  />
+                  <p className="similar-img-title">White T-shirt</p>
+                  <div className="similar-img-brand-price">
+                  
+                  <p className="similar-img-brand">Priya's Brand</p>
+                  <p className="similar-img-price">$13.00</p>
+                  </div>
+                </div>
+                
+                <div className="absolute top-0 right-0">
+                  <img className="fav-icon m-3 w-6" src={fav} alt="" />
+                </div>
+                <div className="">
+                  <img
+                    className="best-selling-image object-cover spaced-image "
+                    src={men}
+                    alt=""
+                  />
+                  <p className="similar-img-title">Dark Green Sweatshirt...</p>
+                  <div className="similar-img-brand-price ">
+                  
+                  <p className="similar-img-brand">Roboto's Brand</p>
+                  <p className="similar-img-price">$127.00</p>
+                  </div>
+                </div>
+                
+                <div className="absolute top-0 right-0">
+                  <img className="fav-icon m-3 w-6" src={fav} alt="" />
+                </div>
+                
+              </div>
+          </div>
+          
+          <div className="similar-image">
+            
+          </div>
+        </div>
+        </div>
     </>
   );
 };
