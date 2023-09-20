@@ -33,31 +33,56 @@ color: #FD7B85;
 font-size: 1.3rem;
 
 }
-.signup h2{
+.signup label{
 color: #807D7E;
-
 font-size: 1.1rem;
 }
 .signup input{
-  border-radius: 0.5rem;
+border-radius: 0.5rem;
 border: 1px solid #3C4242;
 height: 50px;
 }
 .signup input::placeholder{
-  color: #807D7E;
+color: #807D7E;
 padding: 20px;
-
 font-size: 0.875rem;
 }
 .signup h3{
-  color: #EE1D52;
-
+color: #EE1D52;
 font-size: 1rem;
 
 
 
 }
+.signup h4{
+  color: #807D7E;
 
+
+font-size: 1rem;
+
+}
+.signup-btm{
+  color: #807D7E!important;
+
+font-size: 1.1rem!important;
+
+
+
+}
+.signup-button{
+border-radius: 0.5rem;
+background: #FD7B85;
+display: flex;
+width: 10rem;
+padding: 1rem 1.25rem;
+height: 3rem;
+margin-top: 3.5rem;
+font-size: 1.1rem;
+justify-content: center;
+align-items: center;
+gap: 0.75rem;
+color: white;
+}
 
 
 

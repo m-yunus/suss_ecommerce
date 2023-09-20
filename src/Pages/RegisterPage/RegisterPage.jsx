@@ -12,12 +12,12 @@ const RegisterPage = () => {
     <>
       <Navbar />
 
-      <div className="register  w-full flex ">
+      <div className="register px-16  w-full flex  ">
         <div className="w-1/2  ">
           <img src={register} alt="" />
         </div>
         <div className="w-1/2  flex  items-center  ">
-          <div className="signup flex flex-col w-[35rem] h-[50rem]   mx-auto">
+          <div className="signup flex flex-col w-[35rem] h-[50rem]    mx-auto">
             <h1>Sign Up</h1>
             <p>Sign up for free to access to in any of our products</p>
             <button className="google-signup mt-12 border  font-semibold">
@@ -28,7 +28,10 @@ const RegisterPage = () => {
               <img src={twitter} alt="" />
               Continue With Twitter
             </button>
-            <h2 className="mt-12">Email Address</h2>
+            <label className="mt-12" htmlFor="">
+              Email Address
+            </label>
+
             <input
               placeholder="designer@gmail.com"
               type="email"
@@ -37,14 +40,46 @@ const RegisterPage = () => {
             />
             <h3>Error message</h3>
             <div>
-              <span className="flex justify-between">
+              <span className="flex justify-between mt-8">
                 <label htmlFor="">Password</label>
-                <span className="flex">
-                  <img src={eye} alt="" />
-              <h4>Hide</h4>
+
+                <span className="flex items-center gap-2">
+                  <img className="w-4 h-4" src={eye} alt="" />
+                  <h4>Hide</h4>
                 </span>
               </span>
+              <input className="w-full" type="password" name="" id="" />
+              <h4>
+                Use 8 or more characters with a mix of letters, numbers &
+                symbols
+              </h4>
             </div>
+            <label
+              htmlFor=""
+              className="signup-btm flex items-center gap-2 mt-6"
+            >
+              <input type="checkbox" name="" id="" />
+              Agree to our{" "}
+              <a className="underline " href="">
+                Terms of use{" "}
+              </a>{" "}
+              and{" "}
+              <a href="" className="underline ">
+                {" "}
+                Privacy Policy
+              </a>
+            </label>
+            <label
+              htmlFor=""
+              className="signup-btm flex items-center gap-2 mt-[-10px]"
+            >
+              <input type="checkbox" name="" id="" />
+              Subscribe to our monthly newsletter
+            </label>
+            <button className="signup-button mb-2">Sign Up</button>
+            <p>
+              Already have an account? <a href="" className="underline">Log in</a>{" "}
+            </p>
           </div>
         </div>
       </div>
