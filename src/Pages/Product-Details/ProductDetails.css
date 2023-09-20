@@ -28,9 +28,117 @@
   font-size: 1.25rem;
   font-weight: 400;
 }
-.prdct-dtls {
-  margin-top: -1rem;
+.paths{
+  display: flex;
+  
+  
 }
+.path{
+  color: #807D7E;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.path-arrow{
+  height: 10px;
+}
+.slider{
+  display: flex;
+  align-items: center;
+  column-gap: 9px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+
+}
+.slide{
+  scroll-snap-align: center;
+  min-width: 10%;
+
+}
+.slide-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider-icons{
+  display: flex;
+}
+.prdct-t{
+ 
+  color:#3C4242!important;
+font-family: Open Sans;
+font-size: 34px;
+font-style: normal;
+font-weight: 700;
+line-height: 140%; /* 47.6px */
+letter-spacing: 0.68px;
+}
+.prdct-dtls {
+  margin-top: 2rem;
+  display: flex;
+  
+  align-items: center;
+}
+.prdct-star{
+  width: 22px;
+height: 22px;
+}
+.rating{
+  color: #807D7E;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.msg-icon{
+  width: 20px;
+height: 17.689px;
+flex-shrink: 0;
+stroke-width: 1.5px;
+stroke: #807D7E;
+}
+.cmt{
+  color: #807D7E;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.slct-sizes{
+  display: flex;
+
+  align-items: center;
+  margin-top: 2rem;
+}
+.slct-size{
+  color: #3F4646!important;
+font-family: Inter;
+font-size: 18px!important;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+
+}
+.size-guide{
+  color: #807D7E;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.size-guide-icon{
+  width: 13.586px;
+height: 12px;
+stroke-width: 1.8px;
+stroke: #807D7E;
+}
+
+
 .price img {
   width: 2.8rem;
   height: 2.8rem;
@@ -57,20 +165,55 @@
   font-size: 2rem;
   margin-right: 4rem;
 }
-.dwn-arrow {
-  width: 0.6rem;
-  height: 0.6rem;
+
+
+.size-box-s,.size-box-m,.size-box-xl {
+  width: 42px;
+  height: 42px;
+  color: #3C4242;
+text-align: center;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+align-items: center;
+justify-content: center;
+display: flex;
+border-radius: 12px;
+font-weight: 500;
+line-height: normal;
+border-width: 1px;
+background-color: white;
 }
-.size-box {
-  width: 2.4375rem;
-  height: 2.125rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #d9d9d9;
-  font-size: 0.96rem;
-  margin-right: 1.2rem;
-  color: #fff;
+.size-box-large{
+  width: 42px;
+  height: 42px;
+  color: white;
+text-align: center;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+align-items: center;
+justify-content: center;
+display: flex;
+
+font-weight: 500;
+line-height: normal;
+border-width: 1px;
+border-radius: 12px;
+background: #3C4242;
+}
+.color-title{
+  color: #3F4646!important;
+  font-family: Inter;
+  font-size: 18px!important;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.clr-icon{
+  width: 30px;
+height: 30px;
+margin-top: 1.5rem;
 }
 .size p {
   font-size: 0.94rem;
@@ -83,24 +226,71 @@
   margin-left: 0.5rem;
 }
 .addtobag {
-  width: 23rem;
+  width: 18rem;
   height: 3.4rem;
-  background: #045a11;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #fff;
+  border-radius: 8px;
+  background: #FD7B85;
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
+.rate-btn{
+  width: 10rem;
+  height: 3.4rem;
+  border-radius: 8px;
+  
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #3C4242;
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+border-width:2px ;
+border-color: #000;
+}
+
 .bag img {
   margin-left: 1.7rem;
 }
-.delivery {
-  width: 28rem;
-  height: 7rem;
-  border: 1px solid #c7c7c7;
-  margin-top: 2rem;
+.hr{
+  margin-top: 2.5rem;
+}
+.delivery{
+  margin-top: 1.5rem;
+  float: left;
+}
+.payment{
+  display: flex;
+  align-items: center;
+  color: #3C4242;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.size-fit{
+  display: flex;
+  align-items: center;
+  color: #3C4242;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 .delivery p {
   color: #000;
@@ -200,6 +390,7 @@
   .product-right h1 {
     font-size: 2rem;
   }
+  
   .prdct-dtls {
     width: 17rem;
 
@@ -226,31 +417,37 @@
     font-size: 0.9rem;
     margin-right: 2rem;
   }
-  .size-box {
-    width: 1.15006rem;
-    height: 1.00263rem;
-    font-size: 0.45rem;
-    margin-right: 0.8rem;
-  }
+ 
   .find {
     margin-top: 1rem;
   }
   .addtobag {
-    width: 15rem;
+    width: 12rem;
     height: 2.5rem;
     font-size: 1.5rem;
     margin: 0 0.35rem;
+  }
+  .rate-btn{
+    width: 6rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    margin: 0 0.35rem;
+ 
+
+  }
+  .bag{
+    margin-top: 2rem;
   }
   .bag img {
     margin-left: 0rem;
     width: 2.5rem;
   }
   .delivery {
-    width: 17rem;
-    height: 7rem;
-    border: 1px solid #c7c7c7;
-    margin-top: 2rem;
+   
+    
+    margin-top: rem;
   }
+ 
   .delivery p {
     font-size: 0.7rem;
   }
