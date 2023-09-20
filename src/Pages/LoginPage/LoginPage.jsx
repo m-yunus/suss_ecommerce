@@ -15,7 +15,7 @@ const LoginPage = () => {
         <div className="register-left w-1/2  h-auto ">
           <img src={login} alt="" />
         </div>
-        <div className="register-right w-1/2  flex   m-auto ">
+        <div className="register-right w-1/2  flex  max-w-[50rem]  my-auto ">
           <div className="signup flex flex-col w-[90%]      mx-auto">
             <h1>Sign In Page</h1>
 

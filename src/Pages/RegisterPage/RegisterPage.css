@@ -1,7 +1,16 @@
+
+
 .signup {
   font-family: "Inter", sans-serif;
   max-height: 250vh;
   margin-bottom: 20px;
+  
+  
+}
+.register-left img{
+  width: auto;
+  height: 85vh;
+  margin: 0 auto;
   
 }
 .signup h1 {
@@ -31,7 +40,8 @@
   border-radius: 0.5rem;
   border: 1px solid #3c4242;
   color: #fd7b85;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  height: 40px;
 }
 .signup label {
   color: #807d7e;
@@ -40,7 +50,7 @@
 .signup input {
   border-radius: 0.5rem;
   border: 1px solid #3c4242;
-  height: 50px;
+  height: 35px;
 }
 .signup input::placeholder {
   color: #807d7e;
@@ -68,7 +78,7 @@
   width: 10rem;
   padding: 1rem 1.25rem;
   height: 3rem;
-  margin-top: 3.5rem;
+  margin-top: 1rem;
   font-size: 1.1rem;
   justify-content: center;
   align-items: center;
@@ -176,6 +186,11 @@
   .register{
     padding: 0 10px;
   }
+  .signup-btm{
+  font-size: 0.6rem!important; 
+  
+}
+
 }
 @media (max-width: 630px) {
 
@@ -187,6 +202,7 @@
   margin: auto;
   
 }
+
 .signup{
   width: 60rem!important;
 }
