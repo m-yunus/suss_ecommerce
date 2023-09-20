@@ -13,33 +13,33 @@ const RegisterPage = () => {
       <Navbar />
 
       <div className="register px-16  w-full flex  ">
-        <div className="w-1/2  ">
+        <div className="register-left w-1/2  h-auto ">
           <img src={register} alt="" />
         </div>
-        <div className="w-1/2  flex  items-center  ">
-          <div className="signup flex flex-col w-[35rem] h-[50rem]    mx-auto">
+        <div className="register-right w-1/2  flex   m-auto ">
+          <div className="signup flex flex-col w-[90%]      mx-auto">
             <h1>Sign Up</h1>
-            <p>Sign up for free to access to in any of our products</p>
+            <h5>Sign up for free to access to in any of our products</h5>
+
             <button className="google-signup mt-12 border  font-semibold">
               <img src={google} alt="" /> Continue With Google
             </button>
             <button className="twitter-signup font-semibold mt-5">
-              {" "}
               <img src={twitter} alt="" />
               Continue With Twitter
             </button>
-            <label className="mt-12" htmlFor="">
-              Email Address
-            </label>
+            <span className="email-section-signup mt-12 flex flex-col">
+              <label htmlFor="">Email Address</label>
 
-            <input
-              placeholder="designer@gmail.com"
-              type="email"
-              name=""
-              id=""
-            />
-            <h3>Error message</h3>
-            <div>
+              <input
+                placeholder="designer@gmail.com"
+                type="email"
+                name=""
+                id=""
+              />
+              <h3>Error message</h3>
+            </span>
+            <div className="pass-section-signup">
               <span className="flex justify-between mt-8">
                 <label htmlFor="">Password</label>
 
@@ -71,49 +71,22 @@ const RegisterPage = () => {
             </label>
             <label
               htmlFor=""
-              className="signup-btm flex items-center gap-2 mt-[-10px]"
+              className="signup-btm signup-btm-2  flex items-center gap-2 mt-[-10px]"
             >
               <input type="checkbox" name="" id="" />
               Subscribe to our monthly newsletter
             </label>
             <button className="signup-button mb-2">Sign Up</button>
-            <p>
-              Already have an account? <a href="" className="underline">Log in</a>{" "}
-            </p>
+            <h5>
+              Already have an account?{" "}
+              <a href="" className="underline">
+                Log in
+              </a>{" "}
+            </h5>
+            
           </div>
         </div>
       </div>
-      {/* <div className="register">
-        <div className="register-title">
-          <h2 className="register-text gap-2">
-            <CgProfile /> Register Now
-          </h2>
-        </div>
-        <div className="register-input">
-          <div className="email-input">
-            <input className="email"placeholder="Email" type="email" />
-           
-          </div>
-          
-          
-          
-          <div className="pswrd-input">
-            <input className="pswrd" placeholder="password" type="password" />
-          </div>
-        </div>
-        <div className="ggle-fb-btns">
-          <div className="ggle-btn">
-            <button className="google-btn">Google</button>
-          </div>
-          <h2 className="or px-5">Or</h2>
-          <div className="fb-btn">
-            <button className="face-btn">Facebook</button>
-          </div>
-        </div>
-         */}
-
-      {/* </div>
-       */}
     </>
   );
 };
