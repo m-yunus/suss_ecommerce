@@ -2,7 +2,7 @@ import React from "react";
 import "./LoginPage.css";
 
 import Navbar from "../../layout/Navbar";
-import register from "../../assets/images/Register/register.png";
+import login from "../../assets/images/Register/login.png";
 import google from "../../assets/images/Register/google.png";
 import twitter from "../../assets/images/Register/twitter.png";
 import eye from "../../assets/images/Register/eye.png";
@@ -13,7 +13,7 @@ const LoginPage = () => {
       <Navbar />
       <div className="register px-16  w-full flex  ">
         <div className="register-left w-1/2  h-auto ">
-          <img src={register} alt="" />
+          <img src={login} alt="" />
         </div>
         <div className="register-right w-1/2  flex   m-auto ">
           <div className="signup flex flex-col w-[90%]      mx-auto">
