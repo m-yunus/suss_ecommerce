@@ -12,23 +12,23 @@ const RegisterPage = () => {
     <>
       <Navbar />
 
-      <div className="register px-16  w-full flex  ">
-        <div className="register-left w-1/2  h-auto ">
-          <img src={register} alt="" />
+      <div className="register px-16  w-full flex    ">
+        <div className="register-left w-1/2   h-auto   ">
+          <img  src={register} alt="" />
         </div>
-        <div className="register-right w-1/2  flex   m-auto ">
-          <div className="signup flex flex-col w-[90%]      mx-auto">
+        <div className="register-right w-1/2  flex  max-w-[50rem]  my-auto ">
+          <div className="signup flex flex-col w-[80%]    mx-auto">
             <h1>Sign Up</h1>
             <h5>Sign up for free to access to in any of our products</h5>
 
-            <button className="google-signup mt-12 border  font-semibold">
+            <button className="google-signup mt-2 border  font-semibold">
               <img src={google} alt="" /> Continue With Google
             </button>
             <button className="twitter-signup font-semibold mt-5">
               <img src={twitter} alt="" />
               Continue With Twitter
             </button>
-            <span className="email-section-signup mt-12 flex flex-col">
+            <span className="email-section-signup mt-6 flex flex-col">
               <label htmlFor="">Email Address</label>
 
               <input
@@ -39,8 +39,8 @@ const RegisterPage = () => {
               />
               <h3>Error message</h3>
             </span>
-            <div className="pass-section-signup">
-              <span className="flex justify-between mt-8">
+            <div className="pass-section-signup mt-2">
+              <span className="flex justify-between ">
                 <label htmlFor="">Password</label>
 
                 <span className="flex items-center gap-2">
@@ -56,7 +56,7 @@ const RegisterPage = () => {
             </div>
             <label
               htmlFor=""
-              className="signup-btm flex items-center gap-2 mt-6"
+              className="signup-btm flex items-center gap-2 mt-2"
             >
               <input type="checkbox" name="" id="" />
               Agree to our{" "}
