@@ -6,9 +6,11 @@ import { FaAngleRight, FaAngleDown, FaAngleUp} from "react-icons/fa";
 
 const Product_List_Page = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [dressDropdown, setdressDropdown] = useState(null);
    const [priceDropdown, setPricedropdown] = useState(false);
     const [colorDropdownopen, setColordropdownopen] = useState(false);
     const [sizeDropdownopen, setSizedropdownopen] = useState(false);
+     const [dressStyleopen, setDressstyleopen] = useState(false);
    const [minValue, setMinValue] = useState(50);
    const [maxValue, setMaxValue] = useState(1000);
      const toggleDropdown = (dropdownName) => {
@@ -20,6 +22,14 @@ const Product_List_Page = () => {
          setOpenDropdown(dropdownName);
        }
      };
+
+      const toggledressdrop = (dropdownName) => {
+        if (dressDropdown === dropdownName) {
+          setdressDropdown(null);
+        } else {
+         setdressDropdown(dropdownName);
+        }
+      };
 
       const handleSliderChange = (e) => {
         const newValue = parseInt(e.target.value);
@@ -36,6 +46,9 @@ const Product_List_Page = () => {
       }
       const sizedropdowntoggle = ()=>{
         setSizedropdownopen(!sizeDropdownopen)
+      }
+      const dressstyletoggle=()=>{
+        setDressstyleopen(!dressStyleopen)
       }
   return (
     <>
@@ -300,6 +313,116 @@ const Product_List_Page = () => {
             </div>
           )}
           <hr />
+
+          <button
+            className="plp-btn w-full flex justify-between my-2 items-center"
+            onClick={dressstyletoggle}
+          >
+            Dress Style {dressStyleopen ? <FaAngleUp /> : <FaAngleDown />}
+          </button>
+          <hr />
+          {dressStyleopen && (
+            <div className="my-4">
+              <div className="relative">
+                {" "}
+                <button
+                  className="relative flex justify-between items-center py-[3px] w-full"
+                  onClick={() => toggledressdrop("classic")}
+                >
+                  Classic <FaAngleRight />
+                </button>
+                {dressDropdown === "classic" && (
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                  </div>
+                )}
+              </div>
+              <div className="relative">
+                {" "}
+                <button
+                  className="relative flex justify-between items-center py-[3px] w-full"
+                  onClick={() => toggledressdrop("casual")}
+                >
+                  Casual <FaAngleRight />
+                </button>
+                {dressDropdown === "casual" && (
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                  </div>
+                )}
+              </div>
+              <div className="relative">
+                {" "}
+                <button
+                  className="relative flex justify-between items-center py-[3px] w-full"
+                  onClick={() => toggledressdrop("business")}
+                >
+                  Business <FaAngleRight />
+                </button>
+                {dressDropdown === "business" && (
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                  </div>
+                )}
+              </div>
+              <div className="relative">
+                {" "}
+                <button
+                  className="relative flex justify-between items-center py-[3px] w-full"
+                  onClick={() => toggledressdrop("sport")}
+                >
+                  Sport <FaAngleRight />
+                </button>
+                {dressDropdown === "sport" && (
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                  </div>
+                )}
+              </div>
+              <div className="relative">
+                {" "}
+                <button
+                  className="relative flex justify-between items-center py-[3px] w-full"
+                  onClick={() => toggledressdrop("elegant")}
+                >
+                  Elegant
+                  <FaAngleRight />
+                </button>
+                {dressDropdown === "elegant" && (
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                  </div>
+                )}
+              </div>
+              <div className="relative">
+                {" "}
+                <button
+                  className="relative flex justify-between items-center py-[3px] w-full"
+                  onClick={() => toggledressdrop("formal")}
+                >
+                  Formal (evening)
+                  <FaAngleRight />
+                </button>
+                {dressDropdown === "formal" && (
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                    <a href="#">Option 1</a>
+                    <a href="#">Option 2</a>
+                    <a href="#">Option 3</a>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>
