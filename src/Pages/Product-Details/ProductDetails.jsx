@@ -19,9 +19,9 @@ import red from "../../assets/images/Product-Details/red.png"
 import yellow from "../../assets/images/Product-Details/yellow.png"
 import payment from "../../assets/images/Product-Details/payment.png"
 import size from "../../assets/images/Product-Details/size.png"
-import slide from "../../assets/images/Product-Details/slide.jpg"
-import slideimg from "../../assets/images/Product-Details/slideimg.jpg"
-import slideimage from "../../assets/images/Product-Details/slideimage.jpg"
+import slide from "../../assets/images/Product-Details/slide.jpeg"
+import slideimg from "../../assets/images/Product-Details/slideimg.jpeg"
+import slideimage from "../../assets/images/Product-Details/slideimage.jpeg"
 import slidericn from "../../assets/images/Product-Details/slidericn.png"
 import slidericon from "../../assets/images/Product-Details/slidericon.png"
 import women from "../../assets/images/Product-Details/women.jpg"
@@ -40,12 +40,24 @@ const ProductDetails = () => {
   const slidesToShow = 3;
   const handleClickPrev = () => {
     setCurrentIndex((prevIndex) =>
-      (prevIndex-1 - slidesToShow + slides.length) % slides.length
+      (prevIndex-1- slidesToShow + slides.length) % slides.length
     );
   };
   const handleClickNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow) % slides.length);
+    setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow ) % slides.length);
   };
+
+
+
+
+    const [currentImage, setCurrentImage] = useState(slides[0].src);
+    const handleSlideClick = (src) => {
+      setCurrentImage(src);
+    };
+  
+    
+
+ 
  
   return (
     <>
@@ -53,7 +65,7 @@ const ProductDetails = () => {
       <div className="product-details mt-10 px-16 flex flex-row justify-center">
         <div className="product-left flex flex-col">
           <div className="flex items-center justify-end relative">
-            <img className="product-image" src={product} alt="" />
+            <img className="product-image" src={currentImage} alt="" />
            
           </div>
           <div className="slider flex flex-row gap-2">
@@ -61,15 +73,20 @@ const ProductDetails = () => {
           const { id, src } = slideData;
           return (
             <div
-              key={id}
-              className={`slide flex flex-col ${id >= currentIndex &&
-                id  < currentIndex+1 + slidesToShow
-                ? ''
-                : 'hidden'}`}
-              data-intex={id}
-            >
-              <img className="slide-img" src={src} alt="" />
-            </div>
+            key={id}
+            className={`slide flex flex-col ${id >= currentIndex &&
+              id < currentIndex + 1 + slidesToShow
+              ? ''
+              : 'hidden'}`}
+            data-intex={id}
+          >
+            <img
+              className="slide-img"
+              src={src}
+              alt=""
+              onClick={() =>handleSlideClick(src)} // Add onClick handler here
+            />
+          </div>
           );
         })}
         <div className="slider-icons">
@@ -219,7 +236,7 @@ const ProductDetails = () => {
             <div  className="similar-images gap-6 relative  best-selling-set">
                 <div className="">
                   <img
-                    className="best-selling-image object-cover spaced-image "
+                    className="similar-image object-cover spaced-image "
                     src={women}
                     alt=""
                   />
@@ -236,7 +253,7 @@ const ProductDetails = () => {
                 </div>
                 <div className="">
                   <img
-                    className="best-selling-image object-cover spaced-image "
+                    className="similar-image object-cover spaced-image "
                     src={men}
                     alt=""
                   />
