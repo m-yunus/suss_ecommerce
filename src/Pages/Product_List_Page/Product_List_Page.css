@@ -25,3 +25,35 @@
  font-size: 0.8rem!important;
  
 }
+.plp-btn{
+      font-size: 1rem;
+}
+.left-section-product-list input[type="number"]{
+    width: 4rem;
+height: 2rem;
+border-radius: 0.5rem;
+border: 1px solid #BEBCBD;
+text-align: center;
+
+
+
+}
+
+.left-section-product-list input[type="range"] {
+  
+  background-color: #8A33FD!important;
+  
+  
+  height: 6px;
+  width: 100%;
+}
+
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px; 
+  background-color:#8A33FD; 
+  border: none; 
+  border-radius: 50%; 
+}
