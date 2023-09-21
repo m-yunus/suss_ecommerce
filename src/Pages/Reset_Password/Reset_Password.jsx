@@ -1,7 +1,7 @@
-import React from 'react'
-import Navbar from '../../layout/Navbar'
-import "./Reset_Password.css"
-import  reset_password from "../../assets/images/Register/reset-password.png"
+import React from "react";
+import Navbar from "../../layout/Navbar";
+import "./Reset_Password.css";
+import reset_password from "../../assets/images/Register/reset-password.png";
 
 const Reset_Password = () => {
   return (
@@ -14,15 +14,16 @@ const Reset_Password = () => {
         <div className="register-right w-1/2  flex  max-w-[50rem]   ">
           <div className="signup flex flex-col w-[80%]    mx-auto">
             <h1>Reset Your Password</h1>
-            <h5>Enter your email and we'll send you a link to reset your password.  <br /> Pleasr check it</h5>
+            <h5>
+              Enter your email and we'll send you a link to reset your password.{" "}
+              <br /> Pleasr check it
+            </h5>
 
-            
-            
             <span className="email-section-signup mt-6 flex flex-col">
               <label htmlFor="">Email</label>
 
-              <input 
-              className='reset-pass-input'
+              <input
+                className="reset-pass-input"
                 placeholder="focus001@gmail.com"
                 type="email"
                 name=""
@@ -30,12 +31,10 @@ const Reset_Password = () => {
               />
               <h3>We can not find your email</h3>
             </span>
-           
-           
-          
+
             <button className=" snd-btn-psswd signup-button mb-2 ">Send</button>
             <h5>
-           Back to
+              Back to
               <a href="" className="underline ms-2">
                 Log in
               </a>{" "}
@@ -45,6 +44,6 @@ const Reset_Password = () => {
       </div>
     </>
   );
-}
+};
 
-export default Reset_Password
+export default Reset_Password;

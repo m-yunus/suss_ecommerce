@@ -1,0 +1,12 @@
+.checkmail-resend{
+    color: #fd7b85;
+    font-weight: 600!important;
+}
+@media(max-width:950px){
+
+
+
+     .back-section-checkmail{
+        margin-top: 30px!important;
+     }
+}
