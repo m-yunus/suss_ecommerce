@@ -69,6 +69,7 @@
   width: 68.039px;
   height: 68.039px;
   object-fit: cover;
+  border-radius: 8px;
 }
 .slider-icons{
   display: flex;
