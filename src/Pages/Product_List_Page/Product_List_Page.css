@@ -57,3 +57,18 @@ input[type="range"]::-webkit-slider-thumb {
   border: none; 
   border-radius: 50%; 
 }
+.plp-clrs span{
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.75rem;
+}
+.plp-clrs p{
+  color: #8A8989;
+  font-size: 0.7rem;
+}
+.plp-size-drp button{
+  width: 3rem;
+height: 2rem;
+border-radius: 0.5rem;
+border: 1px solid #BEBCBD;
+}

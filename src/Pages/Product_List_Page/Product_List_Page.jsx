@@ -8,6 +8,7 @@ const Product_List_Page = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
    const [priceDropdown, setPricedropdown] = useState(false);
     const [colorDropdownopen, setColordropdownopen] = useState(false);
+    const [sizeDropdownopen, setSizedropdownopen] = useState(false);
    const [minValue, setMinValue] = useState(50);
    const [maxValue, setMaxValue] = useState(1000);
      const toggleDropdown = (dropdownName) => {
@@ -32,6 +33,9 @@ const Product_List_Page = () => {
       const colordropdowntoggle=()=>{
         setColordropdownopen(!colorDropdownopen)
         
+      }
+      const sizedropdowntoggle = ()=>{
+        setSizedropdownopen(!sizeDropdownopen)
       }
   return (
     <>
@@ -217,7 +221,84 @@ const Product_List_Page = () => {
           >
             Colors {colorDropdownopen ? <FaAngleUp /> : <FaAngleDown />}
           </button>
-          {colorDropdownopen && <div></div>}
+          <hr />
+          {colorDropdownopen && (
+            <div className="plp-clrs py-4 px-2 flex justify-between gap-2 flex-wrap">
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-purple-500 block cursor-pointer"></span>
+                <p>Purple</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-black block cursor-pointer"></span>
+                <p>Black</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-red-500 block cursor-pointer"></span>
+                <p>Red</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-orange-600 block cursor-pointer"></span>
+                <p>Orange</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-blue-900 block cursor-pointer"></span>
+                <p>Navy</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-white block cursor-pointer"></span>
+                <p>White</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span
+                  style={{ backgroundColor: "#D67E3B" }}
+                  className=" cursor-pointer "
+                ></span>
+                <p>Broom</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-green-500 block cursor-pointer"></span>
+                <p>Green</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-yellow-500 block cursor-pointer"></span>
+                <p>Yellow</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-gray-500 block cursor-pointer"></span>
+                <p>Gray</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-pink-500 block cursor-pointer"></span>
+                <p>Pink</p>
+              </div>
+              <div className="flex flex-col justify-center items-center">
+                <span className="bg-blue-500 block cursor-pointer"></span>
+                <p>Blue</p>
+              </div>
+            </div>
+          )}
+          <hr />
+
+          <button
+            className="plp-btn w-full flex justify-between my-2 items-center"
+            onClick={sizedropdowntoggle}
+          >
+            Size {sizeDropdownopen ? <FaAngleUp /> : <FaAngleDown />}
+          </button>
+          <hr />
+          {sizeDropdownopen && (
+            <div className="plp-size-drp py-4 px-2 flex justify-between gap-2 flex-wrap">
+              <button>XXS</button>
+              <button>XL</button>
+              <button>XS</button>
+              <button>S</button>
+              <button>M</button>
+              <button>L</button>
+              <button>XXL</button>
+              <button>3XL</button>
+              <button>4XL</button>
+            </div>
+          )}
           <hr />
         </div>
       </div>
