@@ -7,10 +7,10 @@ import { FaAngleRight, FaAngleDown, FaAngleUp} from "react-icons/fa";
 const Product_List_Left = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [dressDropdown, setdressDropdown] = useState(null);
-   const [priceDropdown, setPricedropdown] = useState(false);
-    const [colorDropdownopen, setColordropdownopen] = useState(false);
-    const [sizeDropdownopen, setSizedropdownopen] = useState(false);
-     const [dressStyleopen, setDressstyleopen] = useState(false);
+   const [priceDropdown, setPricedropdown] = useState(true);
+    const [colorDropdownopen, setColordropdownopen] = useState(true);
+    const [sizeDropdownopen, setSizedropdownopen] = useState(true);
+     const [dressStyleopen, setDressstyleopen] = useState(true);
    const [minValue, setMinValue] = useState(50);
    const [maxValue, setMaxValue] = useState(1000);
      const toggleDropdown = (dropdownName) => {
@@ -66,7 +66,7 @@ const Product_List_Left = () => {
               Printed T-shirt <FaAngleRight />
             </button>
             {openDropdown === "printedTshirt" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -82,7 +82,7 @@ const Product_List_Left = () => {
               Plain T-shirt <FaAngleRight />
             </button>
             {openDropdown === "plainTshirt" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -97,7 +97,7 @@ const Product_List_Left = () => {
               Kurti <FaAngleRight />
             </button>
             {openDropdown === "kurti" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -112,7 +112,7 @@ const Product_List_Left = () => {
               Boxers <FaAngleRight />
             </button>
             {openDropdown === "boxers" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -127,7 +127,7 @@ const Product_List_Left = () => {
               Full sleeve T-shirts <FaAngleRight />
             </button>
             {openDropdown === "fullSleeveTshirts" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -142,7 +142,7 @@ const Product_List_Left = () => {
               Joggers <FaAngleRight />
             </button>
             {openDropdown === "joggers" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -158,7 +158,7 @@ const Product_List_Left = () => {
               Payjamas <FaAngleRight />
             </button>
             {openDropdown === "payjamas" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -173,7 +173,7 @@ const Product_List_Left = () => {
               Jeans <FaAngleRight />
             </button>
             {openDropdown === "jeans" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -331,7 +331,7 @@ const Product_List_Left = () => {
                   Classic <FaAngleRight />
                 </button>
                 {dressDropdown === "classic" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -347,7 +347,7 @@ const Product_List_Left = () => {
                   Casual <FaAngleRight />
                 </button>
                 {dressDropdown === "casual" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -363,7 +363,7 @@ const Product_List_Left = () => {
                   Business <FaAngleRight />
                 </button>
                 {dressDropdown === "business" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -379,7 +379,7 @@ const Product_List_Left = () => {
                   Sport <FaAngleRight />
                 </button>
                 {dressDropdown === "sport" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -396,7 +396,7 @@ const Product_List_Left = () => {
                   <FaAngleRight />
                 </button>
                 {dressDropdown === "elegant" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -413,7 +413,7 @@ const Product_List_Left = () => {
                   <FaAngleRight />
                 </button>
                 {dressDropdown === "formal" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col">
+                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
