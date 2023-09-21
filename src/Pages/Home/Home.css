@@ -1,334 +1,61 @@
-.home{
-  z-index: 900;
-  display: flex;
-  flex-direction: column;
- 
-}
-.caption {
-  align-items: center;
-  line-height: 2.5rem;
-  font-family: "Roboto", sans-serif;
-}
 
-.top-bottom-line {
-  color: #045a11;
-  font-weight: 100;
-  font-size: 4rem;
+.banner_text h1 {
+  font-size: 1em;
 }
-.centre-line {
-  color: #045a11;
-  font-size: 4rem;
-  font-weight: 600;
+.banner_text button{
+  font-size: 8px;
+ padding: 4px;
 }
-
-.round {
-  background-color: #fd7b85;
-  border-radius: 50%;
-  border-radius: 50%;
-  padding: 0.3rem;
-}
-.collection {
-  color: #045a11;
-  font-family: "Poppins";
-  font-size: 1.3rem;
-}
-.greaterthan-img {
-  width: 2rem;
-  height: 2rem;
-}
-.arrow {
-  width: 2rem;
-  height: 2rem;
-}
-
-.stylist {
-  width: 25rem;
-  height: 15rem;
-  border-radius: 1.66794rem;
-  background: #fd7b85;
-  box-shadow: 4.133315563201904px 14.466605186462402px 45.46647262573242px -3.099987030029297px
-    rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(16.016597747802734px);
-  color: #fff;
-  font-family: "Poppins";
-  font-size: 3.7rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  display: flex;
-  padding-left: 1rem;
-  align-items: center;
-}
-.category {
-  border-radius: 1.75rem;
-  background: #045a11;
-  width: 7rem;
-  height: 8rem;
-  align-items: bottom;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-family: "Readex Pro", sans-serif;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  font-family: "Poppins";
-}
-.cat {
-  width: 32rem;
-}
-
-.title-cat {
-  color: #fd7b85;
-  font-family: "Roboto", sans-serif;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.best-selling {
-  color: #045a11;
-  font-family: "Poppins";
-  font-size: 3rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-.home-top-pic {
-  object-fit: contain;
-}
-.dark-arrow {
-  display: flex;
-  justify-content: center;
-  height: 6rem;
-}
-
-@media (max-width: 1075px) {
-  .stylist {
-    width: 20rem;
-    height: 13rem;
-    font-size: 3.5rem;
+@media  (min-width: 410px) {
+  .banner_text h1 {
+    font-size: 2em;
   }
-  .cat {
-    width: 25rem;
+  .banner_text button{
+    font-size: 8px;
+   padding: 4px;
+   width: 50%;
   }
-  .three-box {
-    margin: 0 1rem;
+  .banner_text {
+    top: 2rem;
+    left: 1rem;
   }
-  .category {
-    width: 6rem;
-    height: 7rem;
+}
+@media  (min-width: 640px) {
+  .banner_text h1 {
+    font-size: 2.5em;
+  }
+  .banner_text button{
+    font-size: 10px;
+   padding: 6px;
+  }
+  .banner_text {
+    top: 20%;
+    left: 5%;
   }
 }
 
-@media (max-width: 1024px) {
-  .top-bottom-line,
-  .centre-line {
-    font-size: 3rem;
-    margin-right: 2rem;
+/* Styles for screens with a maximum width of 1024px (tablets) */
+@media (min-width: 1024px) {
+  .banner_text h1 {
+    font-size: 3em;
   }
-  .cap {
-    line-height: 1.8rem;
+  .banner_text button{
+    font-size: 16px;
+   padding: 6px;
   }
-  .home-top {
-    padding: 0 1rem;
-  }
-  .home-middle {
-    padding: 0 0;
-  }
-  .caption {
-    margin-right: 5rem;
+  .banner_text {
+    top: 35%;
+    left: 8%;
   }
 }
 
-@media (max-width: 768px) {
-  .top-bottom-line,
-  .centre-line {
-    font-size: 2.5rem;
-    margin-right: 2rem;
+/* Styles for screens with a maximum width of 1440px (desktop screens) */
+@media (min-width: 1440px) {
+  .banner_text h1 {
+    font-size: 4em;
   }
-  .home {
-    padding: 0 1rem;
-  }
-
-  .stylist {
-    width: 18rem;
-    height: 12rem;
-    font-size: 3rem;
-    display: flex;
-  }
-  .cat {
-    width: 22rem;
-    height: 7.5rem;
-  }
-  .three-box {
-    margin: 0 0.8rem;
-  }
-  .category {
-    width: 5rem;
-    height: 6rem;
-    font-size: 1rem;
-  }
-  .title-cat {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
-  }
-  .best-selling {
-    font-size: 2.3rem;
-    margin-bottom: 0.5rem;
-  }
-  .arrow-icon {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 0.3rem;
-    margin-bottom: 0.3rem;
-  }
-}
-@media (max-width: 630px) {
-  .top-bottom-line,
-  .centre-line {
-    font-size: 2rem;
-    margin-right: 2rem;
-  }
-  .cap {
-    line-height: 1.3rem;
-  }
-  .collection {
-    font-size: 1rem;
-  }
-  .arrow {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .home {
-    padding: 0 0.5rem;
-  }
-}
-@media (max-width: 500px) {
-  .stylist {
-    width: 10rem;
-    height: 8rem;
-    font-size: 1.8rem;
-    display: flex;
-  }
-  .greaterthan-img {
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-  .three-box {
-    margin: 0 0.5rem;
-  }
-  .cat {
-    width: 14rem;
-    height: 6rem;
-  }
-  .category {
-    width: 4rem;
-    height: 5rem;
-    font-size: 0.7rem;
-    border-radius: 0.4rem;
-  }
-  .title-cat {
-    font-size: 1rem;
-    margin-bottom: 0.1rem;
-  }
-  .accessories-icon,
-  .footwear-icon {
-    width: 0.9rem;
-  }
-}
-@media (max-width: 425px) {
-  .top-bottom-line,
-  .centre-line {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-  }
-  .cap {
-    line-height: 0.7rem;
-    margin-bottom: 2rem;
-  }
-  .collection {
-    font-size: 0.7rem;
-  }
-  .arrow {
-    width: 1rem;
-    height: 1rem;
-  }
-  .coll {
-    margin: 1rem 0;
-  }
-  .best-selling {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
-  }
-  .best-selling-image {
-    width: 4.72581rem;
-    height: 9.68681rem;
-  }
-  .home-bottom {
-    margin: 0.1 0.3rem;
-    margin-top: 2rem;
-    margin-bottom: 0;
-  }
-  .arrow-icon {
-    width: 1.6rem;
-    height: 1.5rem;
-    margin-right: 0.3rem;
-    margin-bottom: 0.3rem;
-  }
-  .fav-icon {
-    height: 0.5rem;
-    width: 0.5rem;
-    margin-top: 0.3rem;
-    margin-right: 0.3rem;
-  }
-  .eye-icon {
-    height: 0.5rem;
-    width: 0.7rem;
-    margin-top: 0.3rem;
-    margin-left: 0.3rem;
-  }
-}
-@media (max-width: 390px) {
-  .stylist {
-    width: 9.43894rem;
-    height: 5.005rem;
-    border-radius: 0.34775rem;
-    font-size: 1.2rem;
-    display: flex;
-  }
-  .greaterthan-img {
-    width: 0.8rem;
-    height: 0.8rem;
-    margin-left: 0.5rem;
-  }
-  .three-box {
-    margin-left: 0.5rem;
-  }
-  .cat {
-    width: 10rem;
-    height: 5rem;
-  }
-  .category {
-    width: 2.6rem;
-    height: 2.8rem;
-    border-radius: 0.35375rem;
-    font-size: 0.5rem;
-  }
-  .title-cat {
-    font-size: 0.7rem;
-    margin-top: 1rem;
-    margin-bottom: 0.3rem;
-    margin-left: 2rem;
-  }
-  .accessories-icon,
-  .footwear-icon {
-    width: 0.5rem;
-  }
-  .img-cont{
-    margin-left: -5rem;
+  .banner_text button{
+    font-size: 16px;
+   padding: 6;
   }
 }
