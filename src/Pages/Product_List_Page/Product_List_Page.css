@@ -1,0 +1,27 @@
+.product-list-page{
+    font-size: 0.8rem;
+    font-family: "Inter", sans-serif;
+}
+.left-section-product-list{
+    width: 15rem;
+    border: 1px solid #BEBCBD;
+    color: #807D7E;
+}
+.left-section-product-list h5{
+    font-size: 1rem;
+}
+.left-section-product-list hr{
+    background-color: #BEBCBD;
+    width: 100%;
+    margin: 0; 
+    width: calc(100% + 2rem);
+    margin: 0 -1rem;
+}
+.plp-dropdown-content{
+  border: 1px solid #BEBCBD;
+ width:40%;
+ margin-left: 17px!important;
+ line-height: 20px;
+ font-size: 0.8rem!important;
+ 
+}
