@@ -116,14 +116,14 @@ const Home = () => {
       </div>
       {/* Banner in Middle */}
       <div className="w-full h-auto">
-        <div className="w-full flex px-8 sm:px-24 min-h-[34rem] ">
+        <div className="w-full flex-col sm:flex-row flex px-8 sm:px-24 min-h-[20rem] sm:min-h-[34rem] ">
 
    
  
-    <div className="w-1/2 bg-cover flex flex-wrap justify-center items-center " style={{ backgroundImage: `url(${middlebannerleft})` }}>
-      <div className="px-24 flex flex-col gap-8">
+    <div className="w-full sm:w-1/2 bg-cover flex flex-wrap justify-center items-center " style={{ backgroundImage: `url(${middlebannerleft})` }}>
+      <div className="px-8 py-8  sm:px-24 flex flex-col gap-8">
             <h2 className="text-white font-extrabold  tracking-wider sm:text-xl">WE MADE YOUR EVERYDAY FASHION BETTER!</h2>
-            <p className="text-white font-light tracking-wide text-sm w-11/12">In our journey to improve everyday fashion, sussin presents EVERYDAY wear range - Comfortable & Affordable fashion 24/7</p>
+            <p className="text-white font-light text-justify  tracking-wide text-sm w-11/12">In our journey to improve everyday fashion, sussin presents EVERYDAY wear range - Comfortable & Affordable fashion 24/7</p>
             <button className="bg-white flex items-center justify-center rounded-lg py-2 w-4/12">
             Shop Now
           </button>
@@ -247,6 +247,7 @@ const Home = () => {
                 <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
                 </div>
                 
+                <img src={RightArrow} alt="" />
             </div>
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
@@ -266,6 +267,18 @@ const Home = () => {
          
         </div> 
       </div>
+
+      {/* Reviews */}
+
+            <div className="w-full h-auto md:py-24 px-24">
+              <div className="flex ">
+
+              
+              <div  className="border border-[#BEBCBD] p-4">
+rey
+              </div>
+            </div>
+            </div>
       <Footer />
     </div>
   );

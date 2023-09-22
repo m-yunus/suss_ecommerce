@@ -19,25 +19,25 @@ const Sidebar = ({ isOpen, onClose }) => {
         </div>
         <div className="list">
           <ul>
-            <li>
+            <li className="flex flex-row"> 
               <img src={services} alt="" /> <h1>OUR SERVICES</h1>
             </li>
-            <li>
+            <li  className="flex flex-row">
               <img src={hub} alt="" /> <h1>VENDOR HUB</h1>
             </li>
-            <li>
+            <li  className="flex flex-row">
               <img src={talk} alt="" /> <h1>TALK TO US</h1>
             </li>
-            <li>
+            <li  className="flex flex-row">
               <img src={about} alt="" /> <h1>ABOUT US</h1>
             </li>
-            <li>
+            <li  className="flex flex-row">
               <img src={blog} alt="" /> <h1>BLOG</h1>
             </li>
-            <li>
+            <li  className="flex flex-row"> 
               <img className="order-img" src={order} alt="" /> <h1>ORDER</h1>
             </li>
-            <li>
+            <li  className="flex flex-row">
               <img className="channel-img" src={channel} alt="" />
               <h1>CHANNEL</h1>
             </li>
