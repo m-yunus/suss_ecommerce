@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-import "./Product_List_Page.css"
+import "./Product_List_Left.css"
 import filter from "../../../assets/images/Product-List-Page/filter.png"
 import { FaAngleRight, FaAngleDown, FaAngleUp} from "react-icons/fa";
+import {BiSort} from "react-icons/bi"
 
 const Product_List_Left = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -13,6 +14,16 @@ const Product_List_Left = () => {
      const [dressStyleopen, setDressstyleopen] = useState(true);
    const [minValue, setMinValue] = useState(50);
    const [maxValue, setMaxValue] = useState(1000);
+
+
+
+
+ 
+
+
+
+
+   
      const toggleDropdown = (dropdownName) => {
        if (openDropdown === dropdownName) {
        
@@ -52,7 +63,7 @@ const Product_List_Left = () => {
       }
   return (
     <>
-      <div className="left-section-product-list px-4 product-list-page ">
+      <div className="left-section-product-list px-4 product-list-page ms-14">
         <div className="  relative ">
           <h5 className="flex justify-between my-2 items-center">
             Filter <img className=" h-4" src={filter} alt="" />
@@ -424,6 +435,13 @@ const Product_List_Left = () => {
           )}
         </div>
       </div>
+
+      {/* <div className="pll-bottom-button flex  fixed bottom-0 w-full  justify-center bg-red z-10">
+        <button className="w-1/2 bg-white flex gap-4 justify-center  items-center">SORT  <BiSort className="text-gray-700" /></button>
+        <button className="flex w-1/2 bg-white justify-center gap-4 items-center mr-10">
+          FILTER <img src={filter} alt="" />
+        </button>
+      </div> */}
     </>
   );
 };

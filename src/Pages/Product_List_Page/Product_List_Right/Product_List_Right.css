@@ -44,3 +44,8 @@ font-weight: 700;
 
 
 }
+@media(max-width:768px){
+    .prdct-lst-right{
+        margin-right: 5px;
+    }
+}

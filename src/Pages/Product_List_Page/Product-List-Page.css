@@ -1,0 +1,39 @@
+
+ .pll-bottom-button{
+  
+  display: none;
+} 
+.Product_List_Left {
+  display: block; /* Show by default */
+}
+.sort-dropdown{
+
+}
+
+
+.sort-dropdown p{
+font-size: 12px;
+line-height: 26px;
+text-align: left;
+cursor: pointer;
+color: #807D7E;
+
+}
+@media(max-width:768px){
+
+
+}
+@media(max-width:426px){
+
+  .pll-bottom-button{
+  display: block;
+  margin: 0!important;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  font-weight: 600;
+ 
+}
+ 
+
+}

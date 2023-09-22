@@ -7,14 +7,18 @@ import { ProductData } from '../ProductData';
 const Product_List_Right = () => {
   return (
     <>
-      <div className="prdct-lst-right w-full px-10">
+      <div className="prdct-lst-right w-full px-10 mx-auto mr-14">
         <div className="flex justify-between">
           <h1>Womens Clothing</h1>
           <h1>Recommended</h1>
         </div>
-        <div className='flex justify-between flex-wrap'>
+        <div className="flex justify-between flex-wrap gap-6">
           {ProductData.map((data) => (
-            <div className="plr-set my-6 relative cursor-pointer">
+            <div
+              className="plr-set my-6 relative cursor-pointer mx-auto "
+              key={data.id}
+            >
+              {" "}
               <img src={data.image} alt="" />
               <img className="absolute top-2 right-2" src={heart} alt="" />
               <div className="flex w-100 mt-6 items-center">
