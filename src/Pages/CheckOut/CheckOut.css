@@ -248,7 +248,37 @@ margin-top: 1rem;
 }
 .smry-images{
     display: flex;
+   
     
+    
+}
+.smry-image-title{
+    color: #3C4242;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.28px;
+}
+.smry-image{
+    display: flex;
+width: 57px;
+height: 63px;
+padding-right: 0px;
+align-items: center;
+gap: 15px;
+flex-shrink: 0;
+object-fit: contain;
+}
+.smry-img-color{
+    color: #3C4242;
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.28px;
 }
 .smry-image-clr{
    display: flex;
@@ -269,29 +299,20 @@ margin-top: 1rem;
     display: flex;
     margin-top: 2rem;
 }
+
 .subtotal-bill{
     margin-top: 3rem;
 }
 .subttl-bill{
     display: flex;
 }
-.subtotal{
 
-}
-.ttl-rate{
-
-}
 .savings{
     display: flex;
     justify-content: space-between;
     margin-top: 1.5rem;
 }
-.svngs{
 
-}
-.svngs-rate{
-
-}
 .shipping{
     display: flex;
     justify-content: space-between;
@@ -317,6 +338,67 @@ font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
+}
+.bill-adress{
+    border-radius: 12px;
+    background: #F6F6F6;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.ship-adress{
+    color: #3C4242;
+font-family: Open Sans;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.5px; /* 152.273% */
+letter-spacing: 0.44px;
+margin-top: 4rem;
+}
+.adrs-text{
+    color: #3C4242;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 1rem;
+    
+}
+.same-as{
+    display: flex;
+    padding-top: 1.5rem;
+}
+.same-text{
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.use-dif{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+   
+    
+}
+.use-dif-text{
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+.adr-hr{
+    margin-top: 2rem;
 }
 .save-input{
     display: flex;
@@ -345,6 +427,7 @@ line-height: normal;
     font-weight: 700;
     line-height: 33.5px; /* 152.273% */
     letter-spacing: 0.44px;  
+    margin-top:4rem;
 }
 .arvs{
     margin-top: 3rem;
@@ -354,10 +437,22 @@ font-size: 20px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+padding-bottom: 1.5rem;
+}
+.shp-mthd-arv{
+    height: 189px;
+    border-radius: 12px;
+    background: #F6F6F6; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  
+
 }
 .delivery-charge{
     display: flex;
- 
+    padding-top: 1.5rem;
+ justify-content: space-between;
 }
 .dlvry-charge{
     color: #3C4242;
@@ -375,6 +470,7 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 
+
 }
 .fees{
     color: #807D7E;
@@ -383,6 +479,7 @@ line-height: normal;
     font-style: normal;
     font-weight: 500;
     line-height: normal; 
+    margin-top: 1rem;
 }
 .payment-method{
     color: #3C4242;
@@ -392,6 +489,7 @@ font-style: normal;
 font-weight: 700;
 line-height: 33.5px; /* 152.273% */
 letter-spacing: 0.44px;
+margin-top: 4rem;
 }
 .payment-sub-title{
     color: #3C4242;
@@ -400,15 +498,27 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-top: 5px;
 }
 .credit-card{
     display: flex;
+    margin-top: 4rem;
+}
+.credit-title{
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 }
 .credit-input{
-    width: 18px;
-height: 18px;
+  
+background-color: #3C4242;
 
 }
+ 
+
 .crdt-text{
     color: #3C4242;
 font-family: Inter;
@@ -416,15 +526,19 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+margin-top: 5px;
 }
 .credit-crds{
     display: flex;
+    margin-top: 3rem;
 }
 .crdt-inpt{
     display: flex;
+    flex-wrap: wrap;
 }
 .crdt-inpt1{
     display: flex;
+    flex-wrap: wrap;
 }
 .cash-on{
     display: flex;
@@ -450,6 +564,184 @@ font-weight: 500;
 line-height: normal;
 border-radius: 8px;
 background: #FD7B85;
+margin-top: 3rem;
+}
+.card-num{
+    display: flex;
+width: 337px;
+padding: 18px 20px;
+align-items: center;
+gap: 190px;
+border-radius: 8px;
+border: 1px solid #3C4242;
+}
+.card-name{
+    display: flex;
+    width: 337px;
+    padding: 18px 20px;
+    align-items: center;
+    gap: 190px;
+    border-radius: 8px;
+border: 1px solid #3C4242;
+}
+.crdt-inpt1{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.date-birth{
+    display: flex;
+    width: 337px;
+    padding: 18px 20px;
+    align-items: center;
+    gap: 190px;
+    border-radius: 8px;
+border: 1px solid #3C4242;  
+}
+.scrty-code{
+    display: flex;
+    width: 337px;
+    padding: 18px 20px;
+    align-items: center;
+    gap: 190px;
+    border-radius: 8px;
+border: 1px solid #3C4242;  
+}
+.scrt{
+    display: flex;
+  
+    flex-wrap: wrap;
+}
+.crd-info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.cash-on{
+    margin-top: 3rem;
+}
+.cash-title{
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.cash-text{
+
+color: #3C4242;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin-top: 5px;
+}
+.pay-pol{
+    margin-top: 2rem;
+}
+.cash-hr{
+    margin-top: 2rem;
+}
+.pay-pol-title{
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.smry-title{
+    color: #3C4242!important;
+font-family: Open Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.scrt-code{
+    display: flex;
+    position: relative;
+    justify-content: end;
+    align-items: center;
+
+}
+.scrt-img{
+    position: absolute;
+    padding-right: 3px;
+    
+}
+@media(max-width:1024px){
+  .bill-main{
+    display: flex;
+    justify-content: center;
+  }  
+  .bill-section{
+    width: 100%;
+  }
+  .bill-sec{
+    
+    display: flex;
+    flex-direction: column;
+
+  }
+  .bill-titl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .bill-main-title{
+    display: flex;
+    justify-content: center;
+  }
+  .bill-input-1,.bill-inpt,.bill-input-2,.bill-input-3,.bill-input-4,.chk{display: flex;
+    justify-content: center;
+
+  }
+  .smry-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .smry-ttl{
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+  margin-top: 2rem;
+}
+  .smry-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .smry-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .subtotal-bill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .cnt-button,.save-input,.same-as,.use-dif{
+    display: flex;
+    justify-content: center;
+  }
+  .credit-card{
+    display: flex;
+    justify-content: center;
+  }
+  .credit-crds,.crdt-inpt,.crdt-inpt1,.cash-on,.pay-pol,.play-btn{
+    display: flex;
+    justify-content: center;
+  }
+  
+ 
+ 
 }
 
 @media(max-width:431px){
@@ -462,4 +754,8 @@ background: #FD7B85;
         height: 8.143px;
         margin-top: 3px;
     }
+    .checkout{
+        padding: 0 ;
+    }
+   
 }
