@@ -6,11 +6,12 @@ import "./Product-List-Page.css";
 
 import filter from "../../assets/images/Product-List-Page/filter.png";
 
-import { BiDollarCircle, BiSort } from "react-icons/bi";
+import {  BiSort } from "react-icons/bi";
 import { BsFire, BsStar } from "react-icons/bs";
 import {CiDiscount1} from "react-icons/ci"
 import {AiOutlineDollarCircle} from "react-icons/ai"
 import {GiStarsStack} from "react-icons/gi"
+import { IoMdDoneAll} from "react-icons/io"
 
 const Product_List_Page = () => {
    const [showProductListLeft, setShowProductListLeft] = useState(
@@ -55,16 +56,62 @@ const Product_List_Page = () => {
           className="w-1/2 bg-white flex gap-4 justify-center items-center"
           onClick={toggleLeftSection}
         >
-          {showProductListLeft ? "HIDE FILTER" : "FILTER"}{" "}
-          <img src={filter} alt="" />
+          {showProductListLeft ? (
+            <>
+             APPLY <IoMdDoneAll />{" "}
+            </>
+          ) : (
+            <>
+              FILTER <img src={filter} alt="" />
+            </>
+          )}
         </button>
         <button
           className="flex w-1/2 bg-white justify-center gap-4 items-center "
           onClick={toggleDropdown}
         >
-          SORT <BiSort />
+          {isDropdownopen ? (
+            <>
+              APPLY <IoMdDoneAll />
+            </>
+          ) : (
+            <>
+              SORT <BiSort />
+            </>
+          )}
         </button>
-        
+        {isDropdownopen && (
+          <div className="sort-dropdown w-[45%] bg-white border   mr-2 h-auto py-2 fixed px-4  text-left bottom-10 left-[50%] ">
+            <p className="flex items-center gap-1 ">
+              <BsFire /> Popularity
+            </p>
+            <p className="flex items-center gap-1 ">
+              {" "}
+              <BsStar />
+              Latest
+            </p>
+            <p className="flex items-center gap-1 ">
+              {" "}
+              <CiDiscount1 />
+              Discount
+            </p>
+            <p className="flex items-center gap-1 ">
+              {" "}
+              <AiOutlineDollarCircle />
+              Price High to Low
+            </p>
+            <p className="flex items-center gap-1 ">
+              {" "}
+              <AiOutlineDollarCircle />
+              Price Low to High
+            </p>
+            <p className="flex items-center gap-1 ">
+              {" "}
+              <GiStarsStack />
+              Customer Rating
+            </p>
+          </div>
+        )}
       </div>
     </>
   );

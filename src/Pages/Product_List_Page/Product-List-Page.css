@@ -6,14 +6,14 @@
 .Product_List_Left {
   display: block; /* Show by default */
 }
-.sort-dropdown{
 
-}
+
+
 
 
 .sort-dropdown p{
-font-size: 12px;
-line-height: 26px;
+font-size: 0.8rem;
+line-height: 30px;
 text-align: left;
 cursor: pointer;
 color: #807D7E;
@@ -36,4 +36,9 @@ color: #807D7E;
 }
  
 
+}
+@media(max-width:350px){
+.sort-dropdown{
+  padding: 8px  8px;
+}
 }
