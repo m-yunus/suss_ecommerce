@@ -1,0 +1,37 @@
+.contact-details-right{
+    font-family: "Open Sans", sans-serif;
+    color: #3C4242;
+}
+
+
+.contact-details-right h1{
+
+font-size: 1.75rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2.2rem; 
+letter-spacing: 0.035rem;
+
+
+
+}
+.contact-details-right h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+
+}
+.contact-details-right span label{
+ font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    color: #807D7E;
+
+}
+.contact-details-right span input{
+color: #3C4242;
+}
+.contact-details-right span input::placeholder{
+    color: #3C4242;
+}
+.contact-details-right span button{
+font-size: 1.1rem;
+}

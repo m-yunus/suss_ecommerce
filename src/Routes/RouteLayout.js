@@ -22,6 +22,7 @@ import Check_Email from '../Pages/Check_Email/Check_Email'
 import Verification from '../Pages/Verification/Verification'
 import CheckOut from '../Pages/CheckOut/CheckOut'
 import Product_List_Page from '../Pages/Product_List_Page/Product_List_Page'
+import Contact_Details from '../Pages/Contact_Details/Contact_Details.jsx/Contact_Details'
 
 
 const RouteLayout = () => {
@@ -52,6 +53,7 @@ const RouteLayout = () => {
           <Route path="verification" element={<Verification />} />
           <Route path="checkout" element={<CheckOut />} />
           <Route path="product-list-page" element={<Product_List_Page />} />
+          <Route path="contact-details" element={<Contact_Details/>} />
         </Routes>
       </BrowserRouter>
     </>
