@@ -243,6 +243,7 @@ margin-top: 1rem;
 background: #F6F6F6;
 margin-top: 1rem;
 }
+
 .bill-input-box1{
     width:150px
 }
@@ -743,6 +744,21 @@ line-height: normal;
  
  
 }
+@media(max-width:668px){
+    .bill-input-1{
+        display: flex;
+     
+    }
+    .bill-input-box{
+         width: 143px;
+    }
+    .bill-input-box2{
+        width: 146px;
+    }
+    .bill-input-box1{
+        width: 91px;
+    }
+}
 
 @media(max-width:431px){
     .home,.myacnt,.chkout{
@@ -757,5 +773,19 @@ line-height: normal;
     .checkout{
         padding: 0 ;
     }
+    .bill-input-1{
+        display: flex;
+     
+    }
+    .bill-input-box{
+         width: 136px;
+    }
+    .bill-input-box2{
+        width: 146px;
+    }
+    .bill-input-box1{
+        width: 91px;
+    }
+   
    
 }
