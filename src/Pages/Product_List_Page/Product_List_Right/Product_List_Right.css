@@ -1,0 +1,51 @@
+.prdct-lst-right{
+    color: #3F4646;
+ font-family: "Inter", sans-serif;
+font-size: 1.2rem;
+
+font-weight: 600;
+}
+.plr-set{
+width: 15rem;
+height: 24rem;
+
+}
+.prdct-lst-right h2{
+    color: #3C4242;
+
+font-size: 0.8rem;
+
+font-weight: 600;
+
+}
+.prdct-lst-right h3{
+color: #807D7E;
+
+font-size: 0.8rem;
+
+font-weight: 500;
+
+}
+.prdct-lst-right button{
+  
+
+
+border-radius: 0.5rem;
+background: #F6F6F6;
+width: 5rem;
+height: 2rem;
+
+color: #3C4242;
+text-align: center;
+
+font-size: 0.8rem;
+
+font-weight: 700;
+
+
+}
+@media(max-width:768px){
+    .prdct-lst-right{
+        margin-right: 5px;
+    }
+}
