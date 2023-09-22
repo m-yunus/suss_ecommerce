@@ -10,7 +10,7 @@ import whatsapp from "../assets/images/Footer/whatsapp.png";
 const Footer = () => {
   return (
     <>
-      <div className="footer px-20">
+      <footer className="footer px-20">
         <div>
           <p className="footer-text">
             HELP | OUR SERVICES | AUTHANTICITY | CONTACTS <br />
@@ -31,7 +31,7 @@ const Footer = () => {
           <img className="footer-icon" src={messenger} alt="" />
           <img className="footer-icon" src={whatsapp} alt="" />
         </div>
-      </div>
+      </footer>
     </>
   );
 }
