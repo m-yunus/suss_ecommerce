@@ -1,0 +1,465 @@
+.paths{
+    display: flex;
+
+  
+}
+
+.home,.myacnt{
+    color: #807D7E;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.chk-path-icon{
+    width: 5px;
+height: 10.143px;
+fill: #807D7E;
+margin-top:5px ;
+}
+.dtls-smry{
+    display: flex;
+    flex-wrap: wrap;
+    
+   
+    
+}
+
+.chkout{
+    color: #3C4242;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.chk-bill-dtls{
+margin-top: 3rem;
+width: 50%;
+}
+.bill-head{
+
+
+display: flex;
+}
+.bill-line{
+    width: 6px;
+height: 28px;
+border-radius: 10px;
+background: #FD7B85;
+}
+.bill-title{
+    float: left;
+    color: #3C4242;
+font-family: Open Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.5px; /* 119.643% */
+letter-spacing: 0.56px;
+}
+.scnd-bill-title{
+    margin-top: 6px;
+    float: left;
+    color: #3C4242;
+font-family: Open Sans;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.5px; /* 152.273% */
+letter-spacing: 0.44px;
+}
+.bill-input{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+.bill-input-title{
+    float: left;
+    color: #3C4242;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.32px;
+    
+}
+.bill-input-name{
+    display: flex;
+    width: 362px;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 12px;
+    margin-top: rem;
+    float: left;
+}
+.city-state{
+    display: flex;
+    float: left;
+    margin-top: 2rem;
+}
+.bill-input-city{
+    display: flex;
+    width: 202px;
+    padding: 16px 20px;
+    align-items: center;
+    
+    margin-top: 3rem;
+    height: 10px;
+    float: left;
+}
+.bill-input-state{
+    display: flex;
+    width: 202px;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 12px;
+    margin-top: 3rem;
+}
+.bill-inpt-main{
+    display: flex;
+  
+
+}
+.ordr-smry{
+   
+    flex-wrap: wrap;
+
+}
+.smry-title{
+    color: #3C4242;
+font-family: Open Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.bill-main{
+    display: flex;
+}
+.bill-title{
+    color: #3C4242;
+font-family: Open Sans;
+font-size: 22px!important;
+font-style: normal;
+font-weight: 700;
+line-height: 33.5px; /* 152.273% */
+letter-spacing: 0.44px;
+}
+.chck-title{
+    color: #3C4242!important;
+font-family: Open Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.5px; /* 119.643% */
+letter-spacing: 0.56px;
+}
+.bill-main-title{
+    display: flex;
+}
+.bill-inpt{
+display: flex;
+flex-direction: column;
+}
+.bill-input-1,.bill-input-2,.bill-input-3{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: rem;
+    padding-top: 3rem;
+    
+   
+}
+.bill-input-4{
+    display: flex;
+    flex-wrap: wrap;
+}
+.bill-inpt-title{
+    float: left;
+    color: #3C4242;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.32px;
+}
+.bill-inpt-title1{
+    float: left;
+    color: #3C4242;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.32px;
+margin-left: 10px;
+}
+.bill-inpt-title2{
+    float: left;
+    color: #3C4242;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+letter-spacing: 0.32px;
+margin-top: 1rem;
+}
+.bill-input-box{
+    display: flex;
+    width: 246px;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 12px;
+    background-color: #807D7E;
+    margin-top: 1rem;
+    border-radius: 8px;
+background: #F6F6F6;
+}
+.bill-input-box1{
+    width: 246px;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 12px;
+    background-color: #807D7E;
+    margin-left: 8px;
+    border-radius: 8px;
+background: #F6F6F6;
+margin-top: 1rem;
+}
+.bill-input-box2{
+    display: flex;
+    width: 246px;
+    padding: 16px 20px;
+    align-items: center;
+    gap: 12px;
+    background-color: #807D7E;
+    margin-left: 8px;
+    border-radius: 8px;
+background: #F6F6F6;
+margin-top: 1rem;
+}
+.bill-input-box1{
+    width:150px
+}
+.smry-images{
+    display: flex;
+    
+}
+.smry-image-clr{
+   display: flex;
+   flex-direction: column;
+    
+}
+.smry-main{
+    display: flex;
+    margin-top: 2rem;
+  
+}
+.smry-titlee{
+    display: flex;
+    flex-direction: column;
+
+}
+.smry-rate{
+    display: flex;
+    margin-top: 2rem;
+}
+.subtotal-bill{
+    margin-top: 3rem;
+}
+.subttl-bill{
+    display: flex;
+}
+.subtotal{
+
+}
+.ttl-rate{
+
+}
+.savings{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.svngs{
+
+}
+.svngs-rate{
+
+}
+.shipping{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.total-bill{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+.dlvry-btn{
+    display: flex;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px; 
+    border-radius: 8px;
+background: #FD7B85;
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.save-input{
+    display: flex;
+    margin-top: 2rem;
+
+}
+.save-chkout{
+   
+width: 18px;
+height: 18px;
+background-color:#BEBCBD ;
+}
+.save-text{
+    color: #3C4242;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.shpng-title{
+    color: #3C4242;
+    font-family: Open Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 33.5px; /* 152.273% */
+    letter-spacing: 0.44px;  
+}
+.arvs{
+    margin-top: 3rem;
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.delivery-charge{
+    display: flex;
+ 
+}
+.dlvry-charge{
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.dlvry-chrg{
+    color: #3C4242;
+font-family: Inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+
+}
+.fees{
+    color: #807D7E;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+}
+.payment-method{
+    color: #3C4242;
+font-family: Open Sans;
+font-size: 22px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.5px; /* 152.273% */
+letter-spacing: 0.44px;
+}
+.payment-sub-title{
+    color: #3C4242;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.credit-card{
+    display: flex;
+}
+.credit-input{
+    width: 18px;
+height: 18px;
+
+}
+.crdt-text{
+    color: #3C4242;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.credit-crds{
+    display: flex;
+}
+.crdt-inpt{
+    display: flex;
+}
+.crdt-inpt1{
+    display: flex;
+}
+.cash-on{
+    display: flex;
+
+}
+.pay-pol{
+    display: flex;
+}
+.play-now{
+    width: 155px;
+    height: 10px;
+    display: inline-flex;
+padding: 16px 20px;
+justify-content: center;
+align-items: center;
+gap: 12px;
+color: #FFF;
+text-align: center;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border-radius: 8px;
+background: #FD7B85;
+}
+
+@media(max-width:431px){
+    .home,.myacnt,.chkout{
+        font-size: 10px;
+        
+    }
+    .chk-path-icon{
+        width: 3px;
+        height: 8.143px;
+        margin-top: 3px;
+    }
+}
