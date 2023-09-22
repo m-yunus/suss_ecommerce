@@ -21,6 +21,7 @@ import Reset_Password from '../Pages/Reset_Password/Reset_Password'
 import Check_Email from '../Pages/Check_Email/Check_Email'
 import Verification from '../Pages/Verification/Verification'
 import Product_List_Page from '../Pages/Product_List_Page/Product_List_Page'
+import CheckOut from '../Pages/CheckOut/CheckOut'
 
 
 const RouteLayout = () => {
@@ -52,6 +53,7 @@ const RouteLayout = () => {
           <Route path="check-email" element={<Check_Email />} />
           <Route path="verification" element={<Verification />} />
           <Route path="product-list-page" element={<Product_List_Page/>}/>
+          <Route path="checkout" element={<CheckOut />} />
         </Routes>
       </BrowserRouter>
     </>
