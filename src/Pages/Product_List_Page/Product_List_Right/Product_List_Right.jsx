@@ -12,7 +12,7 @@ const Product_List_Right = () => {
   const [isHeartFilled, setIsHeartFilled] = useState({});
   const dispatch = useDispatch();
   const wishItems = useSelector((state) => state.Wishlist.WishItems);
-console.log(wishItems.length);
+
   
   useEffect(() => {
     const wishlistFromLocalStorage = JSON.parse(
