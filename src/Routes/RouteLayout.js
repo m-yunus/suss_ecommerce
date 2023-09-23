@@ -22,6 +22,8 @@ import Check_Email from '../Pages/Check_Email/Check_Email'
 import Verification from '../Pages/Verification/Verification'
 import CheckOut from '../Pages/CheckOut/CheckOut'
 import Product_List_Page from '../Pages/Product_List_Page/Product_List_Page'
+import WishlistSidebar from '../Pages/WishlistSidebar/WishlistSidebar'
+import WishList from '../Pages/WishList/WishList'
 
 
 const RouteLayout = () => {
@@ -52,6 +54,8 @@ const RouteLayout = () => {
           <Route path="verification" element={<Verification />} />
           <Route path="checkout" element={<CheckOut />} />
           <Route path="product-list-page" element={<Product_List_Page />} />
+          <Route path="wish-sidebar" element={<WishlistSidebar />} />
+          <Route path="wishlist" element={<WishList />} />
         </Routes>
       </BrowserRouter>
     </>
