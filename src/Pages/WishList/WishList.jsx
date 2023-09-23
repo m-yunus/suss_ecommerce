@@ -6,6 +6,7 @@ import Navbar from "../../layout/Navbar";
 import close from "../../assets/images/WishList/close.png";
 import { useDispatch, useSelector } from "react-redux";
 import { removedFromWishlist } from "../../Redux/WishSlice";
+import WishListEmpty from "./WishListEmpty";
 
 const WishList = () => {
   const wishItems = useSelector((state) => state.Wishlist.WishItems);
@@ -65,8 +66,11 @@ const WishList = () => {
         <div className="wish-list gap-10">
           <div className="wish-t">
             <p className="Wishlist-title">Wishlist</p>
-            {wishlistItems} 
+            
           </div>
+        </div>
+        <div>
+        {wishItems.length === 0 ? <WishListEmpty/> :  wishlistItems} 
         </div>
       </div>
     </>

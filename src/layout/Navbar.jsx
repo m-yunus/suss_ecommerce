@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <ul className=" hidden sm:flex flex-row items-center justify-center gap-8 ">
+          <ul className=" hidden  lg:flex flex-row items-center justify-center gap-8  ">
             <li>Shop</li>
             <li>Men</li>
             <li>Women</li>
@@ -69,7 +69,7 @@ const Navbar = () => {
             <li>Joggers</li>
           </ul>
 
-          <div className=" hidden sm:flex justify-center items-center h-full relative">
+          <div className=" hidden lg:flex justify-center items-center h-full relative">
             <img
               src={search}
               alt=""
