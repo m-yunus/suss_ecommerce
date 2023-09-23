@@ -2,7 +2,7 @@ import React from "react";
 import "./WishList.css";
 import arrow from "../../assets/images/WishList/arrow.png";
 import Navbar from "../../layout/Navbar";
-import WishlistSidebar from "../WishlistSidebar/WishlistSidebar";
+
 import close from "../../assets/images/WishList/close.png";
 import blue from "../../assets/images/WishList/blue.png";
 import yellow from "../../assets/images/WishList/yellow.png";
