@@ -19,3 +19,56 @@ letter-spacing: 0.035rem;
     font-weight: 700;
 
 }
+.add-address-right label{
+    color: #3C4242;
+ font-family: "Inter", sans-serif;
+font-size: 1.1rem;
+
+font-weight: 600;
+}
+
+.add-address-right input,
+.add-address-right select
+{
+border-radius: 0.5rem;
+background: #F6F6F6;
+padding: 10px;
+font-size: 0.9rem;
+}
+.text-area-delivery{
+    border-radius: 0.5rem;
+background: #F6F6F6;
+padding: 10px;
+font-size: 0.9rem;
+}
+.add-address-right h5{
+    color: #3C4242;
+font-family: "Inter", sans-serif;
+font-size: 1rem;
+
+font-weight: 400;
+
+}
+.add-address-right button{
+   
+padding: 0.4rem 2rem;
+font-size: 1.1rem;
+font-weight: 600;
+border-radius: 0.5rem;
+font-family: "Inter", sans-serif;
+}
+.add-address-right .save-btn{
+    background: #FD7B85;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.add-address-right .cancel-btn{
+background: #F6F6F6;
+color: #807D7E;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+}

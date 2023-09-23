@@ -68,7 +68,7 @@ const Contact_Details = () => {
             </div>
           </span>
           <h2 className="mt-7">Address</h2>
-          <div className="flex flex-wrap mt-4 gap-x-28 gap-y-10">
+          <div className="flex flex-wrap my-4 gap-x-28 gap-y-10">
             <div className="address-contact p-6">
               <h3>Jhanvi shah</h3>
               <p className="mt-3">8980252445</p>
@@ -136,6 +136,8 @@ const Contact_Details = () => {
                 <button className="border-r">Edit</button>{" "}
                 <button>Set as default</button>
               </div>
+
+              
             </div>
           </div>
         </div>
