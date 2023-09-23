@@ -9,7 +9,7 @@ import fav from "../../assets/images/Store/fav.png";
 import { StoreData } from "../../data/StoreData";
 import card from "../../assets/images/Store/card.png"
 
-const Store = () => {
+const ProductStore = () => {
   return (
     <>
       <Navbar />
@@ -107,4 +107,4 @@ const Store = () => {
   );
 };
 
-export default Store;
+export default ProductStore;
