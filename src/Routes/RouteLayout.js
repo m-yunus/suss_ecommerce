@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Home from '../Pages/Home/Home'
-import Store from '../Pages/Store/Store'
+import Store from '../Pages/Store/ProductStore'
 import ProductDetails from '../Pages/Product-Details/ProductDetails'
 import Products from '../Pages/Products/Products'
 import AboutUs from '../Pages/AboutUs/AboutUs'
@@ -25,6 +25,7 @@ import Product_List_Page from '../Pages/Product_List_Page/Product_List_Page'
 import Contact_Details from '../Pages/Contact_Details/Contact_Details_Right/Contact_Details'
 import Add_Address from '../Pages/Add_Address/Add_Address'
 
+import Cart from '../Pages/Cart/Cart'
 
 
 const RouteLayout = () => {
@@ -57,6 +58,7 @@ const RouteLayout = () => {
           <Route path="product-list-page" element={<Product_List_Page />} />
           <Route path="contact-details" element={<Contact_Details />} />
           <Route path="add-address" element={<Add_Address />} />
+          <Route path='Cart' element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
     </>
