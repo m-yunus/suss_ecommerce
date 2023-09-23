@@ -1,16 +1,23 @@
 import React from 'react'
 import "./Contact_Details.css"
 import Navbar from '../../../layout/Navbar';
+import WishlistSidebar from '../WishlistSidebar/WishlistSidebar';
+import arrow from "../../../assets/images/Wishlist-Sidebar/arrow.png"
 
 const Contact_Details = () => {
   return (
     <>
       <Navbar />
-      <div className='flex px-8'>
+
+      <div className="contact-details-top mb-8 my-4  px-8 flex items-center gap-2">
+        <p className="text-gray-400">Home</p> <img src={arrow} alt="" />{" "}
+        <p className="text-gray-400">My Account</p> <img src={arrow} alt="" />{" "}
+        <p className="text-gray-800">Personal Info</p>
+      </div>
+
+      <div className="flex px-8">
         <div>
-
-
-            
+          <WishlistSidebar />
         </div>
         <div className="contact-details-right">
           <h1>My Info</h1>
@@ -61,7 +68,7 @@ const Contact_Details = () => {
             </div>
           </span>
           <h2 className="mt-7">Address</h2>
-          <div className="flex flex-wrap mt-4">
+          <div className="flex flex-wrap mt-4 gap-x-28 gap-y-10">
             <div className="address-contact p-6">
               <h3>Jhanvi shah</h3>
               <p className="mt-3">8980252445</p>

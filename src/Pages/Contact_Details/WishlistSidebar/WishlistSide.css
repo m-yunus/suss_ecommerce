@@ -1,0 +1,94 @@
+.wish-sidebar{
+ width: 270px;
+}
+.wish-head{
+display: flex;   
+}
+.wish-head-line{
+border-radius: 10px;
+background: #FD7B85;
+width: 6px;
+height: 28px;
+}
+.wish-head-title{
+color: #3C4242;
+font-family: Open Sans;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: 33.5px; 
+letter-spacing: 0.56px;
+}
+.wish-sub-text{
+color: #807D7E;
+font-family: Open Sans;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 33.5px; 
+letter-spacing: 0.28px;
+float: left;
+}
+.wish-sidebar-list{
+    width: auto;
+}
+.wish-orders{
+    display: flex;
+    cursor: pointer;
+    margin-top: 4rem;
+ 
+}
+.wish-wishlist{
+    display: flex;
+    cursor: pointer;
+    margin-top: 3rem;
+  
+
+}
+.wish-myinfo{
+    display: flex;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+.wish-signout{
+    display: flex;
+    cursor: pointer;
+    margin-top: 3rem;
+}
+.wish-ordr-title{
+    color: #807D7E;
+font-family: "Inter", sans-serif;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.wish-wish-title{
+    color: #807D7E;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.wish-wishlist:focus{
+    background-color: #F6F6F6; 
+    border-left: #3C4242;
+}
+.wish-info-title{
+    color: #807D7E;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+.wish-signout{
+    color: #807D7E;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
