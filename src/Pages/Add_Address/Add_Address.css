@@ -1,74 +1,99 @@
-.add-address-right{
-    font-family: "Open Sans", sans-serif;
-    color: #3C4242;
+.add-address-right {
+  font-family: "Open Sans", sans-serif;
+  color: #3c4242;
 }
 
-.add-address-right h1{
-
-font-size: 1.75rem;
-font-style: normal;
-font-weight: 700;
-line-height: 2.2rem; 
-letter-spacing: 0.035rem;
-
-
-
+.add-address-right h1 {
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.2rem;
+  letter-spacing: 0.035rem;
 }
-.add-address-right h2{
-    font-size: 1.3rem;
-    font-weight: 700;
-
+.add-address-right h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
-.add-address-right label{
-    color: #3C4242;
- font-family: "Inter", sans-serif;
-font-size: 1.1rem;
+.add-address-right label {
+  color: #3c4242;
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
 
-font-weight: 600;
+  font-weight: 600;
 }
 
 .add-address-right input,
-.add-address-right select
-{
-border-radius: 0.5rem;
-background: #F6F6F6;
-padding: 10px;
-font-size: 0.9rem;
+.add-address-right select {
+  border-radius: 0.5rem;
+  background: #f6f6f6;
+  padding: 10px;
+  font-size: 0.9rem;
 }
-.text-area-delivery{
-    border-radius: 0.5rem;
-background: #F6F6F6;
-padding: 10px;
-font-size: 0.9rem;
+.text-area-delivery {
+  border-radius: 0.5rem;
+  background: #f6f6f6;
+  padding: 10px;
+  font-size: 0.9rem;
 }
-.add-address-right h5{
-    color: #3C4242;
-font-family: "Inter", sans-serif;
-font-size: 1rem;
+.add-address-right h5 {
+  color: #3c4242;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
 
-font-weight: 400;
+  font-weight: 400;
+}
+.add-address-right button {
+  padding: 0.4rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+.add-address-right .save-btn {
+  background: #fd7b85;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.add-address-right .cancel-btn {
+  background: #f6f6f6;
+  color: #807d7e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+.add-address-right h1 {
+  font-size: 1.5rem;
+ 
+}
+.add-address-right h2{
+    font-size: 1.05rem;
+    margin-top: 10px;
 
 }
-.add-address-right button{
-   
-padding: 0.4rem 2rem;
-font-size: 1.1rem;
-font-weight: 600;
-border-radius: 0.5rem;
-font-family: "Inter", sans-serif;
+.add-address-right label {
+ 
+  font-size: 0.9rem;
+
+  
 }
-.add-address-right .save-btn{
-    background: #FD7B85;
-    color: #fff;
+.add-address-right span{
+    width: 100%;
+}
+.add-address-main{
+    padding: 10px 10px;
+}
+.save-cancel-brns-add-address{
     display: flex;
-    justify-content: center;
-    align-items: center;
-
+    justify-content: space-between;
 }
-.add-address-right .cancel-btn{
-background: #F6F6F6;
-color: #807D7E;
- display: flex;
-    justify-content: center;
-    align-items: center;
+.add-address-right input,
+.add-address-right select {
+  
+  padding: 8px;
+  
+}
 }

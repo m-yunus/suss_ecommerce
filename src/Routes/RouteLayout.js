@@ -46,7 +46,6 @@ const RouteLayout = () => {
           <Route path="register" element={<RegisterPage />} />
 
           <Route path="services" element={<Services />} />
-
           <Route path="order" element={<Order />} />
 
           <Route path="vendorbutton" element={<VendorButtons />} />
