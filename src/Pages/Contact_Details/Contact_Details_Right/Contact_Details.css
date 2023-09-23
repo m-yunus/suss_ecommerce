@@ -35,3 +35,30 @@ color: #3C4242;
 .contact-details-right span button{
 font-size: 1.1rem;
 }
+.address-contact{
+width: 25rem;
+height: 15rem;
+border-radius: 0.75rem;
+background-color: #F6F6F6;;
+ font-family: "Inter", sans-serif;
+}
+.address-contact h3{
+font-size: 1.1rem;
+font-weight: 600;}
+.address-contact p{
+color: #807D7E;
+font-size: 0.9rem;
+}
+.address-contact span{
+    border-radius: 0.5rem;
+border: 1px solid #807D7E;
+padding: 0.3rem 1rem;
+color: #807D7E;
+font-size: 0.9rem;
+}
+.address-contact button{
+font-weight: 600;
+font-size: 0.9rem;
+
+padding-right: 10px;
+}
