@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
 import Home from '../Pages/Home/Home'
-import Store from '../Pages/Store/Store'
+import Store from '../Pages/Store/ProductStore'
 import ProductDetails from '../Pages/Product-Details/ProductDetails'
 import Products from '../Pages/Products/Products'
 import AboutUs from '../Pages/AboutUs/AboutUs'
@@ -22,6 +22,7 @@ import Check_Email from '../Pages/Check_Email/Check_Email'
 import Verification from '../Pages/Verification/Verification'
 import CheckOut from '../Pages/CheckOut/CheckOut'
 import Product_List_Page from '../Pages/Product_List_Page/Product_List_Page'
+import Cart from '../Pages/Cart/Cart'
 
 
 const RouteLayout = () => {
@@ -52,6 +53,7 @@ const RouteLayout = () => {
           <Route path="verification" element={<Verification />} />
           <Route path="checkout" element={<CheckOut />} />
           <Route path="product-list-page" element={<Product_List_Page />} />
+          <Route path='Cart' element={<Cart/>}/>
         </Routes>
       </BrowserRouter>
     </>

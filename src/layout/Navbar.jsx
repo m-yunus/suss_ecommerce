@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../src/assets/images/Navbar/logo.png";
 import cart from "../../src/assets/images/Home/shopping cart.png";
 import user from "../../src/assets/images/Home/user.png";
@@ -8,8 +8,15 @@ import { Link } from "react-router-dom";
 import "../assets/css/Navbar/Navbar.css";
 import Sidebar from "./Sidebar";
 import menu from "../../src/assets/images/Navbar/menu.png";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { useSelector } from "react-redux";
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [wishlength,setwishlength]=useState(0)
+  const wishItems = useSelector((state) => state.Wishlist.WishItems);
+  useEffect(()=>{
+   setwishlength(wishItems.length)
+  })
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
     document.body.classList.toggle("overflow-hidden");
@@ -75,8 +82,12 @@ const Navbar = () => {
             />
           </div>
           <div className="flex flex-row gap-7">
-            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer">
-              <img src={heart} alt="" />
+            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer relative">
+              <div className="min-h-[1rem] min-w-[1rem] bg-orange-400 absolute z-10 top-0 left-5 rounded-2xl flex justify-center">
+                <h2 className="text-xs">{wishlength}</h2>
+              </div>
+          {wishlength === 0 ? <AiOutlineHeart/> : <AiFillHeart color="red" />}
+              
             </div>
             <div  className=" bg-gray-100 p-2 rounded-md cursor-pointer">
               <img src={user} alt="" />
