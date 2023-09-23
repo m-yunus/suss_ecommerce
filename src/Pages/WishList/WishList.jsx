@@ -1,13 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./WishList.css";
 import arrow from "../../assets/images/WishList/arrow.png";
 import Navbar from "../../layout/Navbar";
 
 import close from "../../assets/images/WishList/close.png";
-import blue from "../../assets/images/WishList/blue.png";
-import yellow from "../../assets/images/WishList/yellow.png";
-import white from "../../assets/images/WishList/white.png";
+import { useDispatch, useSelector } from "react-redux";
+import { removedFromWishlist } from "../../Redux/WishSlice";
+
 const WishList = () => {
+  const wishItems = useSelector((state) => state.Wishlist.WishItems);
+  const dispatch = useDispatch();
+  const [wishlistItems, setWishlistItems] = useState([]);
+  console.log(wishItems);
+  const removeistitems = (productId) => {
+    dispatch(removedFromWishlist(productId));
+  };
+  useEffect(() => {
+    // You can use map to generate JSX elements for each item in the wishlist
+    const wishlistItems = wishItems.map((item, index) => (
+      <div className="wishlist-order" key={index}>
+        <img
+          className="wishlist-close cursor-pointer"
+          src={close}
+          alt=""
+          onClick={() => removeistitems(item)}
+        />
+        <img className="wishlist-img" src={item.image} alt="" />
+        <div className="wishlist-text">
+          <p className="wishlist-ttl">{item.title}</p>{" "}
+          {/* Use item.title here */}
+          <div className="wishlist-color">
+            <p className="list-color">color:</p>
+            <p className="wishlist-clr">{item.color}</p>{" "}
+            {/* Use item.color here */}
+          </div>
+          <div className="wishlist-quantity">
+            <p className="quantity-title">Quantity:</p>
+            <p className="qntity">{item.quantity}</p>{" "}
+            {/* Use item.quantity here */}
+          </div>
+        </div>
+        <p className="wishlist-rate">{`${item.price}`}</p>{" "}
+        {/* Use item.price here */}
+        <button className="wishlist-addcart-button">Add to cart</button>
+      </div>
+    ));
+
+    setWishlistItems(wishlistItems);
+  }, [wishItems]);
+
   return (
     <>
       <Navbar />
@@ -22,63 +63,9 @@ const WishList = () => {
           <p className="path-wish">Wishlist</p>
         </div>
         <div className="wish-list gap-10">
-         
           <div className="wish-t">
             <p className="Wishlist-title">Wishlist</p>
-
-            <div className="wishlist-order">
-              <img className="wishlist-close" src={close} alt="" />
-              <img className="wishlist-img" src={blue} alt="" />
-              <div className="wishlist-text">
-                <p className="wishlist-ttl">Blue Flower Print Crop Top</p>
-                <div className="wishlist-color">
-                  <p className="list-color">color:</p>
-                  <p className="wishlist-clr">Yellow</p>
-                </div>
-                <div className="wishlist-quantity">
-                  <p className="quantity-title">Quantity:</p>
-                  <p className="qntity">1</p>
-                </div>
-              </div>
-              <p className="wishlist-rate">$29.00</p>
-              <button className="wishlist-addcart-button">Add to cart</button>
-            </div>
-
-            <div className="wishlist-order">
-              <img className="wishlist-close" src={close} alt="" />
-              <img className="wishlist-img" src={yellow} alt="" />
-              <div className="wishlist-text">
-                <p className="wishlist-ttl">Blue Flower Print Crop Top</p>
-                <div className="wishlist-color">
-                  <p className="list-color">color:</p>
-                  <p className="wishlist-clr">Yellow</p>
-                </div>
-                <div className="wishlist-quantity">
-                  <p className="quantity-title">Quantity:</p>
-                  <p className="qntity">1</p>
-                </div>
-              </div>
-              <p className="wishlist-rate">$29.00</p>
-              <button className="wishlist-addcart-button">Add to cart</button>
-            </div>
-
-            <div className="wishlist-order">
-              <img className="wishlist-close" src={close} alt="" />
-              <img className="wishlist-img" src={white} alt="" />
-              <div className="wishlist-text">
-                <p className="wishlist-ttl">Blue Flower Print Crop Top</p>
-                <div className="wishlist-color">
-                  <p className="list-color">color:</p>
-                  <p className="wishlist-clr">Yellow</p>
-                </div>
-                <div className="wishlist-quantity">
-                  <p className="quantity-title">Quantity:</p>
-                  <p className="qntity">1</p>
-                </div>
-              </div>
-              <p className="wishlist-rate">$29.00</p>
-              <button className="wishlist-addcart-button">Add to cart</button>
-            </div>
+            {wishlistItems} 
           </div>
         </div>
       </div>

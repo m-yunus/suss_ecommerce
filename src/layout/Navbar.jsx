@@ -82,12 +82,14 @@ const Navbar = () => {
             />
           </div>
           <div className="flex flex-row gap-7">
-            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer relative">
+            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer relative" >
+              <Link to="/wishlist">
+             
               <div className="min-h-[1rem] min-w-[1rem] bg-orange-400 absolute z-10 top-0 left-5 rounded-2xl flex justify-center">
                 <h2 className="text-xs">{wishlength}</h2>
               </div>
-          {wishlength === 0 ? <AiOutlineHeart/> : <AiFillHeart color="red" />}
-              
+          {wishlength === 0 ? <AiOutlineHeart /> : <AiFillHeart color="red" />}
+          </Link>
             </div>
             <div  className=" bg-gray-100 p-2 rounded-md cursor-pointer">
               <img src={user} alt="" />
