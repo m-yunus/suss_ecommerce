@@ -25,6 +25,7 @@ import Product_List_Page from '../Pages/Product_List_Page/Product_List_Page'
 
 import WishList from '../Pages/WishList/WishList'
 import Cart from '../Pages/Cart/Cart'
+import CartEmpty from '../Pages/Cart/CartEmpty/CartEmpty'
 
 const RouteLayout = () => {
   return (
@@ -33,7 +34,7 @@ const RouteLayout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="store" element={<Store />} />
-          <Route path="product-details" element={<ProductDetails />} />
+          <Route path="product-list-page/:id" element={<ProductDetails />} />
           <Route path="products" element={<Products />} />
           <Route path="about" element={<AboutUs />} />
 
@@ -55,7 +56,7 @@ const RouteLayout = () => {
           <Route path="checkout" element={<CheckOut />} />
           <Route path="product-list-page" element={<Product_List_Page />} />
           <Route path='Cart' element={<Cart/>}/>
-          
+          <Route path='Cartempty' element={<CartEmpty/>}/>
           <Route path="wishlist" element={<WishList />} />
         </Routes>
       </BrowserRouter>

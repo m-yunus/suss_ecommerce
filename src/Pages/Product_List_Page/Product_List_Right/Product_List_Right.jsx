@@ -7,10 +7,13 @@ import {
   removedFromWishlist,
   setAddItemtoWishlist,
 } from "../../../Redux/WishSlice";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Product_List_Right = () => {
   const [isHeartFilled, setIsHeartFilled] = useState({});
+
   const dispatch = useDispatch();
+  const navigate=useNavigate()
   const wishItems = useSelector((state) => state.Wishlist.WishItems);
 
   
@@ -47,6 +50,11 @@ const Product_List_Right = () => {
     }));
   };
 
+  const handlenavigate=(data)=>{
+ console.log(data.id);
+ navigate(`/product-list-page/${data.id}`)
+  }
+
   return (
     <>
       <div className="prdct-lst-right w-full px-10 mx-auto mr-14">
@@ -59,9 +67,10 @@ const Product_List_Right = () => {
             <div
               className="plr-set my-6 relative cursor-pointer mx-auto "
               key={data.id}
+             
             >
               {" "}
-              <img src={data.image} alt="" />
+              <img src={data.image} alt=""  onClick={()=>{handlenavigate(data)}}/>
               <div
                 className={`bg-gray-200 min-h-[1rem] max-w-[2rem] absolute top-2 right-2  p-1 rounded-3xl ${
                   isHeartFilled[data.id] ? "filled-heart large" : ""
