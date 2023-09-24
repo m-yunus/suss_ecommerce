@@ -27,6 +27,7 @@ const WishList = () => {
           onClick={() => removeistitems(item)}
         />
         <img className="wishlist-img" src={item.image} alt="" />
+      
         <div className="wishlist-text">
           <p className="wishlist-ttl">{item.title}</p>{" "}
           {/* Use item.title here */}
@@ -40,10 +41,13 @@ const WishList = () => {
             <p className="qntity">{item.quantity}</p>{" "}
             {/* Use item.quantity here */}
           </div>
-        </div>
+        
+         <div className="wishlist-btn-main gap-6">
         <p className="wishlist-rate">{`${item.price}`}</p>{" "}
         {/* Use item.price here */}
         <button className="wishlist-addcart-button">Add to cart</button>
+        </div>
+        </div>
       </div>
     ));
 
