@@ -127,14 +127,9 @@ const ProductDetails = () => {
 
         <div className="product-right">
           <div>
-            <div className="paths gap-5">
-            <h4 className="path">Shop</h4>
-            <img className="path-arrow" src={left} alt="" />
-            <h4 className="path">Women</h4>
-            <img className="path-arrow" src={left} alt="" />
-            <h4 className="path">Top</h4>
             
-            </div>
+           
+
             <h1 className="prdct-t">{FilteredData?.title}</h1>
             
             <h1 className="prdct-t">Raven Hoodie with Black colored Design</h1>
