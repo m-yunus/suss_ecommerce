@@ -60,7 +60,11 @@ const Cart = () => {
               <tr className=" border-b border-[#BEBCBD]  ">
                 <td className="flex py-8  ms-4">
                   <div>
-                    <img className="" src={img1} alt="" />
+                    <img
+                      className=""
+                      src={img1}
+                      alt=""
+                    />
                   </div>
                   <div className="ms-2">
                     <h1 className="text-[#3C4242] font-bold text-lg">
@@ -297,7 +301,7 @@ const Cart = () => {
               <h1>$518.00 </h1>
             </div>
             <hr className="my-4  bg-[#BEBCBD]" />
-            <button className= " prcd-cart bg-[#FD7B85] rounded-lg px-2 py-2 text-white  font-semibold text-lg">
+            <button className=" prcd-cart bg-[#FD7B85] rounded-lg px-2 py-2 text-white  font-semibold text-lg">
               Proceed to Checkout{" "}
             </button>
           </div>
