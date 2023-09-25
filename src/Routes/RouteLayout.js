@@ -22,11 +22,15 @@ import Check_Email from '../Pages/Check_Email/Check_Email'
 import Verification from '../Pages/Verification/Verification'
 import CheckOut from '../Pages/CheckOut/CheckOut'
 import Product_List_Page from '../Pages/Product_List_Page/Product_List_Page'
+
 import Contact_Details from '../Pages/Contact_Details/Contact_Details_Right/Contact_Details'
 import Add_Address from '../Pages/Add_Address/Add_Address'
 
-import Cart from '../Pages/Cart/Cart'
+// import Cart from '../Pages/Cart/Cart'
 
+import WishList from '../Pages/WishList/WishList'
+import Cart from '../Pages/Cart/Cart'
+import CartEmpty from '../Pages/Cart/CartEmpty/CartEmpty'
 
 const RouteLayout = () => {
   return (
@@ -35,7 +39,7 @@ const RouteLayout = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="store" element={<Store />} />
-          <Route path="product-details" element={<ProductDetails />} />
+          <Route path="product-list-page/:id" element={<ProductDetails />} />
           <Route path="products" element={<Products />} />
           <Route path="about" element={<AboutUs />} />
 
@@ -58,6 +62,8 @@ const RouteLayout = () => {
           <Route path="contact-details" element={<Contact_Details />} />
           <Route path="add-address" element={<Add_Address />} />
           <Route path='Cart' element={<Cart/>}/>
+          <Route path='Cartempty' element={<CartEmpty/>}/>
+          <Route path="wishlist" element={<WishList />} />
         </Routes>
       </BrowserRouter>
     </>

@@ -61,7 +61,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <ul className=" hidden sm:flex flex-row items-center justify-center gap-8 ">
+          <ul className=" hidden  lg:flex flex-row items-center justify-center gap-8  ">
             <li>Shop</li>
             <li>Men</li>
             <li>Women</li>
@@ -69,7 +69,7 @@ const Navbar = () => {
             <li>Joggers</li>
           </ul>
 
-          <div className=" hidden sm:flex justify-center items-center h-full relative">
+          <div className=" hidden lg:flex justify-center items-center h-full relative">
             <img
               src={search}
               alt=""
@@ -82,12 +82,14 @@ const Navbar = () => {
             />
           </div>
           <div className="flex flex-row gap-7">
-            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer relative">
+            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer relative" >
+              <Link to="/wishlist">
+             
               <div className="min-h-[1rem] min-w-[1rem] bg-orange-400 absolute z-10 top-0 left-5 rounded-2xl flex justify-center">
                 <h2 className="text-xs">{wishlength}</h2>
               </div>
-          {wishlength === 0 ? <AiOutlineHeart/> : <AiFillHeart color="red" />}
-              
+          {wishlength === 0 ? <AiOutlineHeart /> : <AiFillHeart color="red" />}
+          </Link>
             </div>
             <div  className=" bg-gray-100 p-2 rounded-md cursor-pointer">
               <img src={user} alt="" />
