@@ -149,7 +149,7 @@ const ProductDetails = () => {
               <h4 className="size-guide">Size Guide</h4>
               <img src={arrow} alt="" className="size-guide-icon" />
               </div>
-          <div className="size flex items-center ">
+          <div className="size flex  items-center ">
         
             <div className="flex flex-row items-center ">
               
@@ -201,12 +201,15 @@ const ProductDetails = () => {
         </div>
        
       </div>
-      <div className="description-similar px-16 gap-20">
+      <div className="description-similar px-8 gap-24">
       <div className="product-description">
           <div className="prdct-description-title gap-2">
             <div className="desctn-line"></div>
-            <h2 className="prdct-desptn-title">Product <br /> Description</h2>
+            <h2 className="prdct-desptn-title">Product </h2>
+            <h2 className="prdct-desptn-title"> Description</h2>
+            
           </div>
+
           <p className="desptn">100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched with  fading. Provide  all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD prints.</p>
          <div className="desptn-table">
           <div className="first-row gap-8">
@@ -244,7 +247,7 @@ const ProductDetails = () => {
           <div className="similar-prdct gap-3">
             <div className="similar-titles gap-3">
             <div className="similar-line"></div>
-            <div className="similar-title">Similar <br /> Products</div>
+            <div className="similar-title">Similar  Products</div>
             </div>
 
             <div  className="similar-images gap-6 relative  best-selling-set">
