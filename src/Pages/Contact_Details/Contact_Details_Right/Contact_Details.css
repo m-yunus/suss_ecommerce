@@ -1,0 +1,175 @@
+.contact-details-top{
+ font-family: "Inter", sans-serif;
+font-size: 1rem;
+font-weight: 500;
+}
+
+.contact-details-right{
+    font-family: "Open Sans", sans-serif;
+    color: #3C4242;
+}
+
+
+.contact-details-right h1{
+
+font-size: 1.75rem;
+font-style: normal;
+font-weight: 700;
+line-height: 2.2rem; 
+letter-spacing: 0.035rem;
+
+
+
+}
+.contact-details-right h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+
+}
+.contact-details-right span label{
+ font-family: "Inter", sans-serif;
+    font-size: 1.1rem;
+    color: #807D7E;
+
+}
+.contact-details-right span input{
+color: #3C4242;
+}
+.contact-details-right span input::placeholder{
+    color: #3C4242;
+}
+.contact-details-right span button{
+font-size: 1.1rem;
+}
+.address-contact{
+width: 25rem;
+height: 15rem;
+border-radius: 0.75rem;
+background-color: #F6F6F6;;
+ font-family: "Inter", sans-serif;
+}
+.address-contact h3{
+font-size: 1.1rem;
+font-weight: 600;}
+.address-contact p{
+color: #807D7E;
+font-size: 0.9rem;
+text-align: left;
+}
+.address-contact span{
+    border-radius: 0.5rem;
+border: 1px solid #807D7E;
+padding: 0.3rem 1rem;
+color: #807D7E;
+font-size: 0.9rem;
+}
+.address-contact button{
+font-weight: 600;
+font-size: 0.9rem;
+
+padding-right: 10px;
+}
+.menu-btn-contact{  
+
+ 
+  display: none;
+
+}
+
+@media(max-width:768px){
+.menu-btn-contact{ 
+    display: block;
+     background-color: rgb(102, 95, 95);
+     border-radius: 5px;
+  color: white;
+  width: 100px;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+
+ }
+
+ .address-contact{
+    margin: auto;
+ }
+}
+@media(max-width:530px){
+.contact-details-total{
+    padding: 10px 10px;
+    
+}
+.contact-details-right h1{
+font-size: 1.5rem;
+}
+.contact-details-right h2{
+    font-size: 1.05rem;
+    margin-top: 10px;
+
+}
+.contact-details-right span label{
+ 
+    font-size: 0.9rem;
+   
+
+}
+.contact-details-right span{
+    margin-top: 15px;
+}
+.contact-details-right span input{
+height: 30px;
+width: 250px;
+}
+.contact-details-right span input::placeholder{
+    font-size: 12px;
+  
+}
+.contact-details-right span button{
+font-size: 0.7rem;
+margin-left: 5px;
+}
+.address-contact{
+width: 18rem;
+height: 14rem;
+border-radius: 0.75rem;
+padding: 6px;
+
+}
+
+
+
+
+
+
+
+.address-contact h3{
+font-size: 1rem;
+font-weight: 600;}
+.address-contact p{
+
+font-size: 0.8rem;
+}
+.address-contact span{
+    margin-top: 5px;
+
+padding: 0.1rem 0.5rem;
+color: #807D7E;
+font-size: 0.9rem;
+}
+.address-contact button{
+font-weight: 600;
+font-size: 0.8rem;
+
+padding-right: 10px;
+}
+.contact-details-top{
+    padding: 10px;
+    
+    margin-bottom: 5px;
+    margin-top: -5px;
+
+    font-size: 0.9rem;
+}
+}
+
+
+
