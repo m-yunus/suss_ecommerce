@@ -19,6 +19,8 @@ import TeesTshirt from "../../assets/images/Home/Tees&Tshirt.png"
 import Boxers from "../../assets/images/Home/Boxers.png"
 import middlebannerleft from "../../assets/images/Home/middlebannerleft.png"
 import middlebannerright from "../../assets/images/Home/middlebannerright.png"
+import Review1 from "../../assets/images/Home/Review1.png"
+import star from "../../assets/images/Home/star_purple500.png"
 const Home = () => {
   const items = [
     { imgSrc: joggers, text: 'Knitted joggers' },
@@ -70,7 +72,27 @@ const Home = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  const reviews = [
+    {
+      imgSrc: Review1,
+      stars: [star, star, star, star],
+      author: "Floyd Miles",
+      text: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+    },
+    // Add more reviews here
+  ];
 
+  const [currentReview, setCurrentReview] = useState(0);
+
+  const nextReview = () => {
+    setCurrentReview((prevReview) => (prevReview + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentReview((prevReview) =>
+      prevReview === 0 ? reviews.length - 1 : prevReview - 1
+    );
+  };
   return (
     <div className="flex flex-col min-h-screen">
       <div>
@@ -116,14 +138,14 @@ const Home = () => {
       </div>
       {/* Banner in Middle */}
       <div className="w-full h-auto">
-        <div className="w-full flex px-8 sm:px-24 min-h-[34rem] ">
+        <div className="w-full flex-col sm:flex-row flex px-8 sm:px-24 min-h-[20rem] sm:min-h-[34rem] ">
 
    
  
-    <div className="w-1/2 bg-cover flex flex-wrap justify-center items-center " style={{ backgroundImage: `url(${middlebannerleft})` }}>
-      <div className="px-24 flex flex-col gap-8">
+    <div className="w-full sm:w-1/2 bg-cover flex flex-wrap justify-center items-center " style={{ backgroundImage: `url(${middlebannerleft})` }}>
+      <div className="px-8 py-8  sm:px-24 flex flex-col gap-8">
             <h2 className="text-white font-extrabold  tracking-wider sm:text-xl">WE MADE YOUR EVERYDAY FASHION BETTER!</h2>
-            <p className="text-white font-light tracking-wide text-sm w-11/12">In our journey to improve everyday fashion, sussin presents EVERYDAY wear range - Comfortable & Affordable fashion 24/7</p>
+            <p className="text-white font-light text-justify  tracking-wide text-sm w-11/12">In our journey to improve everyday fashion, sussin presents EVERYDAY wear range - Comfortable & Affordable fashion 24/7</p>
             <button className="bg-white flex items-center justify-center rounded-lg py-2 w-4/12">
             Shop Now
           </button>
@@ -247,6 +269,7 @@ const Home = () => {
                 <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
                 </div>
                 
+                <img src={RightArrow} alt="" />
             </div>
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
@@ -266,6 +289,84 @@ const Home = () => {
          
         </div> 
       </div>
+
+      {/* Reviews */}
+
+            <div className="w-full h-auto px-12 py-12 md:py-24 md:px-24">
+              <div className="flex gap-6 flex-wrap sm:flex-nowrap ">
+
+              
+              <div  className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
+                  <div className="flex justify-between">
+                    <div>
+                      <img src={Review1} alt="" />
+                    </div>
+                    <div className="flex">
+                      <img src={star} alt="" className="object-cover w-7 h-7 " />
+                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
+                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
+                      <img src={star} alt="" className="object-cover w-7 h-7 "  />
+
+                    </div>
+                  </div>
+                  <div className="py-4">
+                    <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
+                  </div>
+                  <div className="py-4">
+                    <p className="text-[#807D7E] overflow-hidden text-justify">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam 
+                    </p>
+                  </div>
+              </div>
+              <div  className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
+                  <div className="flex justify-between">
+                    <div>
+                      <img src={Review1} alt="" />
+                    </div>
+                    <div className="flex">
+                      <img src={star} alt="" className="object-cover w-7 h-7 " />
+                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
+                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
+                      <img src={star} alt="" className="object-cover w-7 h-7 "  />
+
+                    </div>
+                  </div>
+                  <div className="py-4">
+                    <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
+                  </div>
+                  <div className="py-4">
+                    <p className="text-[#807D7E] overflow-hidden text-justify">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam 
+                    </p>
+                  </div>
+              </div>
+              <div  className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
+                  <div className="flex justify-between">
+                    <div>
+                      <img src={Review1} alt="" />
+                    </div>
+                    <div className="flex">
+                      <img src={star} alt="" className="object-cover w-7 h-7 " />
+                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
+                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
+                      <img src={star} alt="" className="object-cover w-7 h-7 "  />
+
+                    </div>
+                  </div>
+                  <div className="py-4">
+                    <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
+                  </div>
+                  <div className="py-4">
+                    <p className="text-[#807D7E] overflow-hidden text-justify">
+                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
+Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam 
+                    </p>
+                  </div>
+              </div>
+            </div>
+            </div>
       <Footer />
     </div>
   );
