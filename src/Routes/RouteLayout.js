@@ -31,6 +31,7 @@ import Add_Address from '../Pages/Add_Address/Add_Address'
 import WishList from '../Pages/WishList/WishList'
 import Cart from '../Pages/Cart/Cart'
 import CartEmpty from '../Pages/Cart/CartEmpty/CartEmpty'
+import My_Order from '../Pages/My_Order/My_Order'
 
 const RouteLayout = () => {
   return (
@@ -61,9 +62,10 @@ const RouteLayout = () => {
           <Route path="product-list-page" element={<Product_List_Page />} />
           <Route path="contact-details" element={<Contact_Details />} />
           <Route path="add-address" element={<Add_Address />} />
-          <Route path='Cart' element={<Cart/>}/>
-          <Route path='Cartempty' element={<CartEmpty/>}/>
+          <Route path="Cart" element={<Cart />} />
+          <Route path="Cartempty" element={<CartEmpty />} />
           <Route path="wishlist" element={<WishList />} />
+          <Route path="my-orders" element={<My_Order />} />
         </Routes>
       </BrowserRouter>
     </>
