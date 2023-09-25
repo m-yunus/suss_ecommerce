@@ -24,7 +24,7 @@ const Cart = () => {
   };
   return (
     <>
-      <div w-full h-auto>
+      <div className="" w-full h-auto>
         <Navbar />
         <div className="px-6 py-4 flex flex-col gap-4">
           <div className="flex gap-3 items-center">
@@ -60,7 +60,7 @@ const Cart = () => {
               <tr className=" border-b border-[#BEBCBD]  ">
                 <td className="flex py-8  ms-4">
                   <div>
-                    <img src={img1} alt="" />
+                    <img className="" src={img1} alt="" />
                   </div>
                   <div className="ms-2">
                     <h1 className="text-[#3C4242] font-bold text-lg">
@@ -215,15 +215,59 @@ const Cart = () => {
             </tbody>
           </table>
         </div>
-        <div className="w-full flex px-20 py-10 justify-between  bg-[#F6F6F6]">
-          <div>
+
+        {/* MOBILE - VIEW */}
+
+        <div className=" cart-mobile px-4 w-full    flex ">
+          <div className=" mx-auto flex   items-center">
+            <div className="flex  mx-auto items-center gap-6">
+              <img
+                className="w-[140px]  object-contain h-[200px]"
+                src={img1}
+                alt=""
+              />
+              <div className="w-auto  ">
+                <h1 className="text-[#3C4242] font-bold text-base">
+                  Levender Hoodie
+                </h1>
+                <h2 className="text-[#807D7E] font-medium text-sm ">
+                  Color : Levender
+                </h2>
+                <h2 className="text-[#807D7E] font-medium text-sm">
+                  Size : XXL
+                </h2>
+                <p className="text-[#3C4242] font-bold text-sm  text-left mt-2">
+                  Price : $29.00
+                </p>
+                <div className="  bg-[#F6F6F6] text-[#3C4242] font-semibold text-sm flex items-center gap-2">
+                  <button onClick={decreaseQuantity}>
+                    <img src={minus} alt="" />
+                  </button>{" "}
+                  {quantity}
+                  <button onClick={increaseQuantity}>
+                    <img src={plus} alt="" />
+                  </button>
+                </div>
+                <p className="text-[#3C4242] font-bold text-sm text-left">
+                  SUB TOTAL : $29.00
+                </p>
+                <div className="flex mt-2">
+                  <RiDeleteBinLine className="w-6 h-6  text-red-500 cursor-pointer" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="cart-bottom  w-full flex px-20 py-10 justify-between   bg-[#F6F6F6]">
+          <div className="cart-btm-1">
             <h1 className="text-[#3C4242]   text-2xl font-semibold">
               Discount Codes
             </h1>
-            <p className="text-[#807D7E] text-base mt-2">
+            <p className="text-[#807D7E] text-base mt-2 text-left">
               Enter your coupon code if you have one
             </p>
-            <div className="flex mt-6 border border-[#BEBCBD] rounded-xl">
+            <div className="  coupon-code-cart flex mt-6 border border-[#BEBCBD] rounded-xl w-[330px]">
               <input
                 type="text"
                 className="border-none rounded-xl px-3 "
@@ -233,13 +277,13 @@ const Cart = () => {
                 Apply Coupon
               </button>
             </div>
-            <div className="mt-6">
-              <button className="bg-white border text-[#3C4242] font-semibold text-base border-[#BEBCBD]  px-4 py-2 rounded-xl">
+            <div className="cntn-shopping  mt-6  mx-auto px-auto">
+              <button className="bg-white border mx-auto text-[#3C4242] font-semibold text-base border-[#BEBCBD]  px-4 py-2 rounded-xl">
                 Continue Shopping
               </button>
             </div>
           </div>
-          <div>
+          <div className="cart-calculation">
             <div className="flex  text-[#3C4242] text-xl font-medium">
               <h1 className="w-40 ">Sub Total </h1>
               <h1>$513.00 </h1>
@@ -252,10 +296,14 @@ const Cart = () => {
               <h1 className="w-40 ">Grand Total </h1>
               <h1>$518.00 </h1>
             </div>
+            <hr className="my-4  bg-[#BEBCBD]" />
+            <button className= " prcd-cart bg-[#FD7B85] rounded-lg px-2 py-2 text-white  font-semibold text-lg">
+              Proceed to Checkout{" "}
+            </button>
           </div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
