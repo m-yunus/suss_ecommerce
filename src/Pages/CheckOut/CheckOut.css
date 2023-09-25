@@ -771,7 +771,7 @@ line-height: normal;
         margin-top: 3px;
     }
     .checkout{
-        padding: 0 ;
+       padding: 0px;
     }
     .bill-input-1{
         display: flex;
@@ -785,6 +785,23 @@ line-height: normal;
     }
     .bill-input-box1{
         width: 91px;
+    }
+    .same-as,.use-dif{
+        display: flex;
+        justify-content: start;
+    
+    }
+    .save-text{
+        font-size: 11px;
+    }
+    .adrs-text,.same-text,.use-dif-text,.arvs,.fees,.payment-sub-title,.crdt-text,.cash-text {
+        font-size: 12px;
+    }
+    .shpng-title{
+        margin-top: 6rem;
+    }
+    .dlvry-charge,.dlvry-chrg{
+        font-size: 14px;
     }
    
    

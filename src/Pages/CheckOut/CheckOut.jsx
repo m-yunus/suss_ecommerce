@@ -201,12 +201,12 @@ const CheckOut = () => {
   </div>
   <div className="save-input gap-3">
     <input className="save-chkout" type="checkbox" />
-    <p className="save-text">Save my information for a faster checkout</p>
+    <p className="save-text ">Save my information for a faster checkout</p>
 
   </div>
   <p className="ship-adress">Shipping Address</p>
   <p className="adrs-text">Select the address that matches your card or payment methode</p>
-  <div className="bill-adress ">
+  <div className="bill-adress px-3 ">
     <div className="same-as gap-3">
       <input type="radio" />
       <p className="same-text">Same as Billing address</p>
