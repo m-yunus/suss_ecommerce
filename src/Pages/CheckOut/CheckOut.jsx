@@ -27,7 +27,7 @@ const CheckOut = () => {
         <div className="dtls-smry ">
          
         <section className="text-gray-600 body-font">
-  <div className="container gap-16 flex flex-wrap px-5 py-24 mx-auto items-center">
+  <div className="chk-main-main container gap-16 flex flex-wrap px- py-2 mx-auto items-center">
     <div className=" bill-section  md:w- md:pr-12 md:py-8 md:border- md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
       <div className="bill-sec">
       <div className="bill-main gap-3">
@@ -101,12 +101,12 @@ const CheckOut = () => {
         </div>
         </div>
     </div>
-    <div className=" smry-sec flex flex-col md:w-1/3 md:pl-15">
+    <div className=" smry-sec flex flex-col md:w-1/3  md:pl-15">
       <div className="smry-ttl">
         
       <h2 className="smry-title title-font f text-sm mb-3">Order Summary</h2>
       </div>
-      <nav className="flex flex-wrap list-none -mb-1">
+      <nav className="summry-main-main flex flex-wrap list-none -mb-1">
         <div className="smry-main gap-5">
        <div className="smry-images">
         <img src={smry} alt="" className="smry-image" />

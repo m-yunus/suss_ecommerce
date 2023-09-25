@@ -154,7 +154,7 @@ letter-spacing: 0.44px;
 font-family: Open Sans;
 font-size: 28px;
 font-style: normal;
-font-weight: 700;
+font-weight: 700!important;
 line-height: 33.5px; /* 119.643% */
 letter-spacing: 0.56px;
 }
@@ -211,7 +211,7 @@ margin-top: 1rem;
 }
 .bill-input-box{
     display: flex;
-    width: 246px;
+    width: 382px;
     padding: 16px 20px;
     align-items: center;
     gap: 12px;
@@ -221,7 +221,7 @@ margin-top: 1rem;
 background: #F6F6F6;
 }
 .bill-input-box1{
-    width: 246px;
+    width: 382px;
     padding: 16px 20px;
     align-items: center;
     gap: 12px;
@@ -233,7 +233,7 @@ margin-top: 1rem;
 }
 .bill-input-box2{
     display: flex;
-    width: 246px;
+    width: 382px;
     padding: 16px 20px;
     align-items: center;
     gap: 12px;
@@ -245,7 +245,7 @@ margin-top: 1rem;
 }
 
 .bill-input-box1{
-    width:150px
+    width: 246px;
 }
 .smry-images{
     display: flex;
@@ -270,7 +270,7 @@ padding-right: 0px;
 align-items: center;
 gap: 15px;
 flex-shrink: 0;
-object-fit: contain;
+object-fit: cover;
 }
 .smry-img-color{
     color: #3C4242;
@@ -303,6 +303,7 @@ letter-spacing: 0.28px;
 
 .subtotal-bill{
     margin-top: 3rem;
+ 
 }
 .subttl-bill{
     display: flex;
@@ -339,6 +340,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
+margin-top: 3rem;
 }
 .bill-adress{
     border-radius: 12px;
@@ -529,6 +531,11 @@ font-weight: 400;
 line-height: normal;
 margin-top: 5px;
 }
+.chk-main-main{
+    display: flex;
+    justify-content: space-between;
+    
+}
 .credit-crds{
     display: flex;
     margin-top: 3rem;
@@ -674,7 +681,12 @@ line-height: normal;
     padding-right: 3px;
     
 }
-@media(max-width:1024px){
+.summry-main-main{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+@media(max-width:1025px){
   .bill-main{
     display: flex;
     justify-content: center;
@@ -706,6 +718,10 @@ line-height: normal;
     justify-content: center;
     align-items: center;
   }
+  .smry-image{
+    width: 70px!important;
+    
+  }
   .smry-ttl{
     display: flex!important;
     justify-content: center!important;
@@ -721,12 +737,16 @@ line-height: normal;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-items: center;
   }
   .subtotal-bill{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center ;
     
+  }
+  .smry-image-clr{
+    width: 188px;
   }
   .cnt-button,.save-input,.same-as,.use-dif{
     display: flex;
@@ -740,6 +760,21 @@ line-height: normal;
     display: flex;
     justify-content: center;
   }
+  .bill-input-1{
+    display: flex;
+ 
+}
+.bill-input-box{
+     width: 243px;
+}
+.bill-input-box2{
+    width: 243px;
+}
+.bill-input-box1{
+    width: 91px;
+}
+
+
   
  
  
@@ -758,6 +793,13 @@ line-height: normal;
     .bill-input-box1{
         width: 91px;
     }
+    .smry-image-clr{
+        width: 188px;
+      }
+      .smry-main{
+        display: flex;
+        justify-content:center ;
+      }
 }
 
 @media(max-width:431px){
@@ -802,6 +844,10 @@ line-height: normal;
     }
     .dlvry-charge,.dlvry-chrg{
         font-size: 14px;
+    }
+    .bill-title{
+        font-size: 20px;
+        
     }
    
    
