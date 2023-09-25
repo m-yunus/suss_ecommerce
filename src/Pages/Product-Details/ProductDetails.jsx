@@ -27,36 +27,45 @@ import slidericon from "../../assets/images/Product-Details/slidericon.png"
 import women from "../../assets/images/Product-Details/women.jpg"
 import men from "../../assets/images/Product-Details/men.jpg"
 import  { useState } from 'react';
+import { useParams } from "react-router-dom";
+import { ProductData } from "../Product_List_Page/ProductData";
 const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const slides = [
-    { id: 0, src: slide },
-    { id: 1, src: slideimage },
-    { id: 2, src: slideimg },
-    { id: 3, src: slide },
-    { id: 4, src: slideimg },
-    { id: 5, src: slideimage },
-  ];
-  const slidesToShow = 3;
-  const handleClickPrev = () => {
-    setCurrentIndex((prevIndex) =>
-      (prevIndex-1- slidesToShow + slides.length) % slides.length
-    );
-  };
-  const handleClickNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow ) % slides.length);
-  };
+
+  
+    const {id}=useParams()
 
 
 
+    const idAsNumber = parseInt(id);
 
-    const [currentImage, setCurrentImage] = useState(slides[0].src);
-    const handleSlideClick = (src) => {
-      setCurrentImage(src);
+    const FilteredData = ProductData.find((data) => data.id === idAsNumber);
+  
+    const slides = [
+      { id: 0, src: FilteredData.image},
+      { id: 1, src: slideimage },
+      { id: 2, src: slideimg },
+      { id: 3, src: slide },
+      { id: 4, src: slideimg },
+      { id: 5, src: slideimage },
+    ];
+    const slidesToShow = 3;
+    const handleClickPrev = () => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex-1- slidesToShow + slides.length) % slides.length
+      );
+    };
+    const handleClickNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow ) % slides.length);
     };
   
-    
-
+  
+  
+  
+      const [currentImage, setCurrentImage] = useState(slides[0].src);
+      const handleSlideClick = (src) => {
+        setCurrentImage(src);
+      };
  
  
   return (
@@ -119,7 +128,11 @@ const ProductDetails = () => {
         <div className="product-right">
           <div>
             
-            <h1 className="prdct-t">Raven Hoodie with Black colored Design</h1>
+ <h1 className="prdct-t">{FilteredData?.title}</h1>
+
+            </div>
+           
+
             <div className="prdct-dtls gap-3">
              <img src={Star} alt="" className="prdct-star" />
              <img src={Star} alt="" className="prdct-star" />
