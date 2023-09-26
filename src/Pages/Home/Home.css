@@ -1,7 +1,5 @@
 
-.banner_text h1 {
-  font-size: 1em;
-}
+
 .banner_text button{
   font-size: 8px;
  padding: 4px;
@@ -56,6 +54,11 @@
   }
   .banner_text button{
     font-size: 16px;
-   padding: 6;
+   padding: 0.7rem 2.5rem;
+   margin-top: rem;
+  }
+   .banner_text {
+    top: 25%;
+    left: 18%;
   }
 }

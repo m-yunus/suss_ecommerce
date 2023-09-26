@@ -101,7 +101,7 @@ const Home = () => {
 
       <main className="relative">
         <div className="absolute top-8 left-4 banner_text flex flex-col gap-4 font-medium text-center">
-          <h1 className="font-medium text-white">
+          <h1 className="font-medium text-white ">
             We are Ethical <br /> Fashion Store
           </h1>
           <button className="bg-white flex items-center justify-center rounded-lg w-10/12 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
@@ -115,84 +115,113 @@ const Home = () => {
       <div className="py-7 px-4 sm:py-12 sm:px-8 md:px-12 md:py-16 lg:py-20 lg:px-16 w-full">
         <div className="font-bold text-#3C4242 text-xs sm:text-lg md:text-2xl flex gap-4 items-center">
           <div className="w-1 h-4 bg-[#8A33FD] rounded-3xl sm:h-5"></div>
-          <h1 className="text-#3C4242 tracking-wide font-sans not-italic">New Arrivals</h1>
+          <h1 className="text-[#3C4242] tracking-wide font-sans not-italic">
+            New Arrivals
+          </h1>
         </div>
 
         {/* Slider */}
         <div className="flex w-full items-center justify-center gap-4  py-7">
           <div className="flex">
-            <img src={leftArrow} alt="" className="cursor-pointer" onClick={prevItem} />
+            <img
+              src={leftArrow}
+              alt=""
+              className="cursor-pointer"
+              onClick={prevItem}
+            />
           </div>
           {itemsToShow.map((item, index) => (
             <div className={`w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/4`} key={index}>
               <div>
                 <img src={item.imgSrc} alt="" />
               </div>
-              <h2 className="text-[#3C4242] text-xs font-bold py-3">{item.text}</h2>
+              <h2 className="text-[#3C4242] text-xs font-bold py-3">
+                {item.text}
+              </h2>
             </div>
           ))}
           <div className="flex">
-            <img src={RightArrow} alt="" className="cursor-pointer" onClick={nextItem} />
+            <img
+              src={RightArrow}
+              alt=""
+              className="cursor-pointer"
+              onClick={nextItem}
+            />
           </div>
         </div>
       </div>
       {/* Banner in Middle */}
       <div className="w-full h-auto">
         <div className="w-full flex-col sm:flex-row flex px-8 sm:px-24 min-h-[20rem] sm:min-h-[34rem] ">
-
-   
- 
-    <div className="w-full sm:w-1/2 bg-cover flex flex-wrap justify-center items-center " style={{ backgroundImage: `url(${middlebannerleft})` }}>
-      <div className="px-8 py-8  sm:px-24 flex flex-col gap-8">
-            <h2 className="text-white font-extrabold  tracking-wider sm:text-xl">WE MADE YOUR EVERYDAY FASHION BETTER!</h2>
-            <p className="text-white font-light text-justify  tracking-wide text-sm w-11/12">In our journey to improve everyday fashion, sussin presents EVERYDAY wear range - Comfortable & Affordable fashion 24/7</p>
-            <button className="bg-white flex items-center justify-center rounded-lg py-2 w-4/12">
-            Shop Now
-          </button>
+          <div
+            className="w-full sm:w-2/2 md:w-1/2 bg-cover flex flex-wrap justify-center items-center "
+            style={{ backgroundImage: `url(${middlebannerleft})` }}
+          >
+            <div className="px-2 py-8  sm:px-2 md:px-4 lg:px-14 xl:px-24 flex flex-col gap-8">
+              <h2 className="text-white font-extrabold  tracking-wider sm:text-xl">
+                WE MADE YOUR EVERYDAY FASHION BETTER!
+              </h2>
+              <p className="text-white font-light text-justify  tracking-wide text-sm w-11/12">
+                In our journey to improve everyday fashion, sussin presents
+                EVERYDAY wear range - Comfortable & Affordable fashion 24/7
+              </p>
+              <button className="bg-white flex items-center justify-center rounded-lg py-2 w-4/12">
+                Shop Now
+              </button>
+            </div>
+            {/* Content for the first column */}
+          </div>
+          <div
+            className="w-1/2 bg-cover hidden md:block"
+            style={{ backgroundImage: `url(${middlebannerright})` }}
+          >
+            {/* Content for the second column */}
+          </div>
+        </div>
       </div>
-      {/* Content for the first column */}
-    </div>
-    <div className="w-1/2 bg-cover" style={{ backgroundImage: `url(${middlebannerright})` }}>
-      {/* Content for the second column */}
-    </div>
-    </div>
 
-</div>
-
-
-    {/* Best in Men Section */}
-    <div className="py-7 px-4 sm:py-12 sm:px-8 md:px-12 md:py-16 lg:py-20 lg:px-16 w-full">
+      {/* Best in Men Section */}
+      <div className="py-7 px-4 sm:py-12 sm:px-8 md:px-12 md:py-16 lg:py-20 lg:px-16 w-full">
         <div className="font-bold text-#3C4242 text-xs sm:text-lg md:text-2xl flex gap-4 items-center">
           <div className="w-1 h-4 bg-[#8A33FD] rounded-3xl sm:h-5"></div>
-          <h1 className="text-#3C4242 tracking-wide font-sans not-italic">Best in Men Section</h1>
+          <h1 className="text-[#3C4242] tracking-wide font-sans not-italic">
+            Best in Men Section
+          </h1>
         </div>
 
         {/* CArds*/}
         <div className="flex flex-wrap w-full py-7 px-4 gap-12 justify-center">
-        
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
             <div>
               <img src={shirts} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2"> Shirts</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  {" "}
+                  Shirts
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+              <img src={RightArrow} alt="" />
             </div>
-            
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
             <div>
               <img src={Printedshirts} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2">Printed T-Shirts</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  Printed T-Shirts
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+              <img src={RightArrow} alt="" />
             </div>
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
@@ -200,11 +229,15 @@ const Home = () => {
               <img src={PlainTshirts} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2">Plain T-Shirts</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  Plain T-Shirts
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+              <img src={RightArrow} alt="" />
             </div>
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
@@ -212,51 +245,61 @@ const Home = () => {
               <img src={PoloTshirts} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2">Polo T-Shirts</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  Polo T-Shirts
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+              <img src={RightArrow} alt="" />
             </div>
           </div>
-          
-       
-         
-        </div> 
+        </div>
       </div>
-          {/* Best in WoMen Section */}
-    <div className="py-7 px-4 sm:py-12 sm:px-8 md:px-12 md:py-16 lg:py-20 lg:px-16 w-full">
+      {/* Best in WoMen Section */}
+      <div className="py-7 px-4 sm:py-12 sm:px-8 md:px-12 md:py-16 lg:py-20 lg:px-16 w-full">
         <div className="font-bold text-#3C4242 text-xs sm:text-lg md:text-2xl flex gap-4 items-center">
           <div className="w-1 h-4 bg-[#8A33FD] rounded-3xl sm:h-5"></div>
-          <h1 className="text-#3C4242 tracking-wide font-sans not-italic">Best in Women Section</h1>
+          <h1 className="text-[#3C4242] tracking-wide font-sans not-italic">
+            Best in Women Section
+          </h1>
         </div>
 
         {/* CArds*/}
         <div className="flex flex-wrap w-full py-7 px-4 gap-12 justify-center">
-        
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
             <div>
               <img src={Hoodies} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2"> Hoodies & Sweetshirt</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  {" "}
+                  Hoodies & Sweetshirt
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+              <img src={RightArrow} alt="" />
             </div>
-            
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
             <div>
               <img src={CoatsParkas} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2">Coats & Parkas</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  Coats & Parkas
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+              <img src={RightArrow} alt="" />
             </div>
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
@@ -264,12 +307,16 @@ const Home = () => {
               <img src={TeesTshirt} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2">Tees & T-Shirt</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  Tees & T-Shirt
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+
+              <img src={RightArrow} alt="" />
             </div>
           </div>
           <div className="w-2/5 sm:w-1/5 h-auto flex flex-col">
@@ -277,96 +324,104 @@ const Home = () => {
               <img src={Boxers} alt="" />
             </div>
             <div className="flex justify-between">
-                <div>
-                <h2 className="text-[#3C4242] text-xs font-bold pt-2">Boxers</h2>
-                <h2 className="text-[#7F7F7F] text-xs font-medium">Explore Now!</h2>
-                </div>
-                <img src={RightArrow} alt="" />
+              <div>
+                <h2 className="text-[#3C4242] text-xs font-bold pt-2">
+                  Boxers
+                </h2>
+                <h2 className="text-[#7F7F7F] text-xs font-medium">
+                  Explore Now!
+                </h2>
+              </div>
+              <img src={RightArrow} alt="" />
             </div>
           </div>
-          
-       
-         
-        </div> 
+        </div>
       </div>
 
       {/* Reviews */}
 
-            <div className="w-full h-auto px-12 py-12 md:py-24 md:px-24">
-              <div className="flex gap-6 flex-wrap sm:flex-nowrap ">
-
-              
-              <div  className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
-                  <div className="flex justify-between">
-                    <div>
-                      <img src={Review1} alt="" />
-                    </div>
-                    <div className="flex">
-                      <img src={star} alt="" className="object-cover w-7 h-7 " />
-                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
-                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
-                      <img src={star} alt="" className="object-cover w-7 h-7 "  />
-
-                    </div>
-                  </div>
-                  <div className="py-4">
-                    <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
-                  </div>
-                  <div className="py-4">
-                    <p className="text-[#807D7E] overflow-hidden text-justify">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
-Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam 
-                    </p>
-                  </div>
+      <div className="w-full h-auto px-12 py-12 md:py-24 md:px-24">
+        <div className="flex gap-6 flex-wrap sm:flex-nowrap ">
+          <div className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
+            <div className="flex justify-between">
+              <div>
+                <img src={Review1} alt="" />
               </div>
-              <div  className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
-                  <div className="flex justify-between">
-                    <div>
-                      <img src={Review1} alt="" />
-                    </div>
-                    <div className="flex">
-                      <img src={star} alt="" className="object-cover w-7 h-7 " />
-                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
-                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
-                      <img src={star} alt="" className="object-cover w-7 h-7 "  />
-
-                    </div>
-                  </div>
-                  <div className="py-4">
-                    <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
-                  </div>
-                  <div className="py-4">
-                    <p className="text-[#807D7E] overflow-hidden text-justify">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
-Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam 
-                    </p>
-                  </div>
-              </div>
-              <div  className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
-                  <div className="flex justify-between">
-                    <div>
-                      <img src={Review1} alt="" />
-                    </div>
-                    <div className="flex">
-                      <img src={star} alt="" className="object-cover w-7 h-7 " />
-                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
-                      <img src={star} alt=""  className="object-cover w-7 h-7 " />
-                      <img src={star} alt="" className="object-cover w-7 h-7 "  />
-
-                    </div>
-                  </div>
-                  <div className="py-4">
-                    <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
-                  </div>
-                  <div className="py-4">
-                    <p className="text-[#807D7E] overflow-hidden text-justify">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. 
-Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam 
-                    </p>
-                  </div>
+              <div className="flex">
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
               </div>
             </div>
+            <div className="py-4">
+              <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
             </div>
+            <div className="py-4">
+              <p className="text-[#807D7E] text-sm lg:text-base  overflow-hidden text-justify">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet. Amet minim
+                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                Velit officia consequat duis enim velit mollit. Exercitation
+                veniam
+              </p>
+            </div>
+          </div>
+          <div className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
+            <div className="flex justify-between">
+              <div>
+                <img src={Review1} alt="" />
+              </div>
+              <div className="flex">
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+              </div>
+            </div>
+            <div className="py-4">
+              <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
+            </div>
+            <div className="py-4">
+              <p className="text-[#807D7E] text-sm lg:text-base  overflow-hidden text-justify">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet. Amet minim
+                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                Velit officia consequat duis enim velit mollit. Exercitation
+                veniam
+              </p>
+            </div>
+          </div>
+          <div className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
+            <div className="flex justify-between">
+              <div>
+                <img src={Review1} alt="" />
+              </div>
+              <div className="flex">
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                <img src={star} alt="" className="object-cover w-7 h-7 " />
+              </div>
+            </div>
+            <div className="py-4">
+              <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
+            </div>
+            <div className="py-4">
+              <p className="text-[#807D7E] text-sm lg:text-base  overflow-hidden text-justify">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet. Amet minim
+                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                Velit officia consequat duis enim velit mollit. Exercitation
+                veniam
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
       <Footer />
     </div>
   );

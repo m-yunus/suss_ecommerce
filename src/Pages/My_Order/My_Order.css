@@ -1,0 +1,9 @@
+@media(max-width:830px){
+.my-order-total{
+padding: 0px;
+
+}
+.my-order-total{
+    padding: 0 0px;
+}
+}
