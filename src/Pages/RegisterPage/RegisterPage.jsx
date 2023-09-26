@@ -14,12 +14,12 @@ const RegisterPage = () => {
       <Navbar />
       
 
-      <div className="register px-16  w-full flex    ">
+      <div className="register   w-full flex    ">
         <div className="register-left w-1/2   h-auto   ">
           <img  src={register} alt="" />
         </div>
-        <div className="register-right w-1/2  flex  max-w-[50rem]  my-auto ">
-          <div className="signup flex flex-col w-[80%]    mx-auto">
+        <div className="register-right w-1/2  flex  max-w-[50rem]   ">
+          <div className="signup flex flex-col w-[90%]    mx-auto">
             <h1>Sign Up</h1>
             <h5 className="mt-2">Sign up for free to access to in any of our products</h5>
 

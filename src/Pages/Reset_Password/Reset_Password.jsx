@@ -11,8 +11,8 @@ const Reset_Password = () => {
         <div className="register-left w-1/2   h-auto   ">
           <img src={reset_password} alt="" />
         </div>
-        <div className="reset-pass- register-right w-1/2  flex  max-w-[50rem] mt-10   ">
-          <div className="signup flex flex-col w-[80%]    mx-auto">
+        <div className="reset-pass- register-right w-1/2  flex  max-w-[50rem]    ">
+          <div className="signup flex flex-col w-[90%]    mx-auto">
             <h1>Reset Your Password</h1>
             <h5>
               Enter your email and we'll send you a link to reset your password.{" "}

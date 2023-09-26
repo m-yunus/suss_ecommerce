@@ -7,12 +7,12 @@ const Verification = () => {
   return (
     <>
       <Navbar />
-      <div className="register px-16  w-full flex    ">
+      <div className="register   w-full flex    ">
         <div className="register-left w-1/2   h-auto   ">
           <img src={verification} alt="" />
         </div>
-        <div className="register-right w-1/2  flex  max-w-[50rem]   ">
-          <div className="signup flex flex-col w-[80%]    mx-auto">
+        <div className="register-right w-1/2  flex  max-w-[55rem]   ">
+          <div className="signup flex flex-col w-[90%]     mx-auto">
             <h1>Verification</h1>
             <h5>
              Verify your code.

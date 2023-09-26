@@ -80,7 +80,7 @@
 font-family: Open Sans;
 font-size: 34px;
 font-style: normal;
-font-weight: 700;
+font-weight: 700!important;
 line-height: 140%; /* 47.6px */
 letter-spacing: 0.68px;
 }
@@ -128,7 +128,7 @@ line-height: normal;
 font-family: Inter;
 font-size: 18px!important;
 font-style: normal;
-font-weight: 600;
+font-weight: 600!important;
 line-height: normal;
 
 }
@@ -267,8 +267,8 @@ font-size: 18px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
-border-width:2px ;
-border-color: #000;
+border-width:1px ;
+border-color: #3C4242;
 }
 
 .bag img {
@@ -440,7 +440,7 @@ letter-spacing: 0.32px;
 padding-top: 8px;
 display: flex;
 align-items: center;
-justify-content: center;
+
 }
 .clm-discptn{
   margin-top: 5px;
@@ -453,7 +453,7 @@ line-height: 16px; /* 100% */
 letter-spacing: 0.32px;
 display: flex;
 align-items: center;
-justify-content: center;
+;
 }
 .similar-prdct{
   display: flex;
@@ -516,6 +516,9 @@ font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
+.paths-top{
+display: none;
+}
 
 @media (max-width: 1434px) {
   .size {
@@ -571,6 +574,15 @@ line-height: normal;
   }
 }
 @media (max-width: 1024px) {
+
+  .paths-top{
+    display: block;
+    display: flex;
+    float: left;
+  }
+  .paths{
+    display: none;
+  }
   .rects {
     display: none;
   }
@@ -597,6 +609,10 @@ line-height: normal;
     width: 27rem;
     
   }
+  .prdct-dtls{
+  margin: 0 auto;
+  margin-top: 1rem;
+  }
   .description-similar{
     display: flex;
     justify-content:center ;
@@ -609,9 +625,18 @@ line-height: normal;
     display: flex;
     justify-content: center;
   }
+  .size{
+    display: flex;
+    justify-content: center;
+  }
   
 }
 @media (max-width: 768px) {
+  .product-image {
+  
+  width: 282px;
+  height: 370px;
+}
   .product-details {
     flex-direction: column;
     padding: 0 1rem;
