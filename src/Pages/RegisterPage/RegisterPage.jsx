@@ -21,12 +21,12 @@ const RegisterPage = () => {
         <div className="register-right w-1/2  flex  max-w-[50rem]  my-auto ">
           <div className="signup flex flex-col w-[80%]    mx-auto">
             <h1>Sign Up</h1>
-            <h5>Sign up for free to access to in any of our products</h5>
+            <h5 className="mt-2">Sign up for free to access to in any of our products</h5>
 
-            <button className="google-signup mt-2 border  font-semibold">
+            <button className="google-signup mt-6 border  font-semibold">
               <img src={google} alt="" /> Continue With Google
             </button>
-            <button className="twitter-signup font-semibold mt-5">
+            <button className="twitter-signup font-semibold mt-4">
               <img src={twitter} alt="" />
               Continue With Twitter
             </button>
@@ -41,7 +41,7 @@ const RegisterPage = () => {
               />
               <h3>Error message</h3>
             </span>
-            <div className="pass-section-signup mt-2">
+            <div className="pass-section-signup mt-6">
               <span className="flex justify-between ">
                 <label htmlFor="">Password</label>
 
@@ -79,7 +79,7 @@ const RegisterPage = () => {
               Subscribe to our monthly newsletter
             </label>
             <button className="signup-button mb-2">Sign Up</button>
-            <h5>
+            <h5 className="already-have-ac">
               Already have an account?{" "}
               <a href="" className="underline">
                 Log in

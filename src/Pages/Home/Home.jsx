@@ -104,7 +104,7 @@ const Home = () => {
           <h1 className="font-medium text-white ">
             We are Ethical <br /> Fashion Store
           </h1>
-          <button className="bg-white flex items-center justify-center rounded-md w-8/12 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
+          <button className="bg-white flex font-bold items-center justify-center rounded-md w-8/12 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
             Shop Now
           </button>
         </div>
@@ -157,15 +157,15 @@ const Home = () => {
             className="w-full sm:w-2/2 md:w-1/2 bg-cover flex flex-wrap justify-center items-center "
             style={{ backgroundImage: `url(${middlebannerleft})` }}
           >
-            <div className="px-2 py-8  sm:px-2 md:px-4 lg:px-14 xl:px-24 flex flex-col gap-8">
-              <h2 className="text-white font-extrabold  tracking-wider sm:text-xl">
+            <div className="px-4 py-8  sm:px-8 md:px-4 lg:px-14 xl:px-24 flex flex-col gap-4">
+              <h2 className="text-white font-extrabold  tracking-wider  sm:text-xl">
                 WE MADE YOUR EVERYDAY FASHION BETTER!
               </h2>
               <p className="text-white font-light text-justify  tracking-wide text-sm w-11/12">
                 In our journey to improve everyday fashion, sussin presents
                 EVERYDAY wear range - Comfortable & Affordable fashion 24/7
               </p>
-              <button className="bg-white flex items-center text-sm justify-center rounded-lg py-2 w-4/12">
+              <button className="bg-white flex items-center font-bold  text-xs justify-center rounded-lg py-2 w-4/12">
                 Shop Now
               </button>
             </div>
@@ -340,7 +340,7 @@ const Home = () => {
 
       {/* Reviews */}
 
-      <div className="w-full h-auto px-12 py-12 md:py-24 md:px-24">
+      <div className="w-full h-auto px-8 py-2 md:py-24 md:px-24">
         <div className="flex gap-6 flex-wrap sm:flex-nowrap ">
           <div className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
             <div className="flex justify-between">

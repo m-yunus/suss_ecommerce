@@ -45,31 +45,34 @@
 }
 .signup label {
   color: #807d7e;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .signup input {
   border-radius: 0.5rem;
   border: 1px solid #3c4242;
-  height: 35px;
+  height: 40px;
 }
 .signup input::placeholder {
   color: #807d7e;
   padding: 20px;
-  font-size: 0.875rem;
+  font-size: 12px;
 }
 .signup h3 {
   color: #ee1d52;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .signup h4 {
   color: #807d7e;
 
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .signup-btm {
   color: #807d7e !important;
 
-  font-size: 1.1rem !important;
+  font-size: 0.8rem !important;
+}
+.already-have-ac{
+  font-size: 1rem;
 }
 .signup-button {
   border-radius: 0.5rem;
@@ -89,14 +92,14 @@
 @media (max-width: 1200px) {
 
   .google-signup{
-    margin-top: 20px;
+    margin-top: 25px!important;
     
   }
   .google-signup,
   .twitter-signup {
     padding: 0.5rem 1rem;
  margin-top: 15px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   .signup input {
   border-radius: 0.5rem;
@@ -108,13 +111,13 @@
   font-size: 1rem;
 }
 .email-section-signup{
-  margin-top: 15px;
+  margin-top: 25px;
 }
 .signup h4 {
   font-size: 0.9rem;
 }
-.pass-section-signup span{
-  margin-top: 5px;
+.pass-section-signup {
+  margin-top: 20px;
 }
 .signup-btm{
   font-size: 0.9rem!important; 
@@ -146,7 +149,7 @@
   .twitter-signup {
     padding: 0.1rem 1rem;
  margin-top: 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
    .signup input {
  
@@ -157,13 +160,13 @@
   font-size: 0.8rem;
 }
 .email-section-signup{
-  margin-top: 5px;
+  margin-top: 20px;
 }
-.pass-section-signup span{
-  margin-top: 0px;
+.pass-section-signup {
+  margin-top: 10px;
 }
 .signup h3 {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 .signup h4 {
   font-size: 0.7rem;
@@ -171,6 +174,7 @@
 .signup-btm{
   font-size: 0.7rem!important; 
   margin-top: 2px;
+  
 }
 .signup-btm-2{
   margin-top: -10px;
@@ -206,19 +210,27 @@
 .signup{
   width: 60rem!important;
 }
-.register{
+.regi ster{
   padding: 0px!important;
 }
+.google-signup img,
+  .twitter-signup img {
+width: 1rem;
+
+  }
 .google-signup,
   .twitter-signup {
-    padding: 0.5rem 1rem;
-  margin-top: 15px;
-    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+   margin-top: 15px;
+    font-size: 12px;
+    
   }
   .signup input {
- 
-  
   height: 40px;
+}
+.email-section-signup label, .pass-section-signup label{
+  font-size: 12px;
+
 }
 .signup-btm-2{
   margin-top: -10px;
@@ -233,11 +245,18 @@
 .email-section-signup{
   margin-top: 20px;
 }
+.email-section-signup h3,
+.pass-section-signup h4,
+.signup-btm {
+font-size: 10px;
+}
 .pass-section-signup {
   margin-top: 10px;
 }
+.already-have-ac{
+  font-size: 12px;
 }
-
+}
 @media (max-width: 375px) {
 
 .signup-btm{
