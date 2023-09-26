@@ -29,12 +29,14 @@ import men from "../../assets/images/Product-Details/men.jpg"
 import  { useState } from 'react';
 import { useParams } from "react-router-dom";
 import { ProductData } from "../Product_List_Page/ProductData";
+import { useDispatch } from "react-redux";
+import { setAddItemtoCart } from "../../Redux/CartSlice";
 const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   
     const {id}=useParams()
-
+    const dispatch=useDispatch()
 
 
     const idAsNumber = parseInt(id);
@@ -67,7 +69,9 @@ const ProductDetails = () => {
         setCurrentImage(src);
       };
  
- 
+ const handleAddToCart=()=>{
+dispatch(setAddItemtoCart(FilteredData))
+ }
   return (
     <>
       <Navbar />
@@ -172,9 +176,9 @@ const ProductDetails = () => {
           </div>
 
           <div className="bag gap-3 flex items-center">
-            <div className="addtobag">Add to cart</div>
+            <div className="addtobag cursor-pointer" onClick={()=>handleAddToCart()}>Add to cart</div>
             <div className="rate-btn">
-             $63.00
+            {FilteredData.price}
             </div>
           </div>
           <hr className="hr" />
