@@ -58,14 +58,14 @@ const Product_List_Right = () => {
   return (
     <>
       <div className="prdct-lst-right w-full px-10 mx-auto mr-14">
-        <div className="flex justify-between">
-          <h1>Womens Clothing</h1>
+        <div className="flex justify-between text-xs sm:text-base md:text-base lg:text-lg xl:text-xl font-semibold">
+          <h1>Women’s Clothing</h1>
           <h1>Recommended</h1>
         </div>
         <div className="flex justify-between flex-wrap gap-6 xl:gap-x-[100px]">
           {ProductData.map((data) => (
             <div
-              className="plr-set my-6 relative cursor-pointer mx-auto "
+              className="max-w-[8rem] sm:max-w-[9rem] md:max-w-[10rem] lg:max-w-[12rem] xl:max-w-[15rem] my-6 relative cursor-pointer mx-auto "
               key={data.id}
              
             >
@@ -83,12 +83,16 @@ const Product_List_Right = () => {
                   <AiOutlineHeart />
                 )}
               </div>
-              <div className="flex w-100 mt-6 items-center">
-                <div className="w-3/4">
-                  <h2>{data.title}</h2>
-                  <h3>{data.brand}</h3>
+              <div className="flex  flex-col  mt-6 items-center">
+                <div className="w-full min-h-[2rem]">
+                  <h2 className="text-xs sm:text-base md:text-lg  ">{data.title}</h2>
+                 
                 </div>
-                <button>{data.price}</button>
+                <div className="w-full flex items-center">
+                <h3 className="text-[8px] md:text-[12px] text-[#807D7E] w-1/2">{data.brand}</h3>
+                <button className="w-1/2">{data.price}</button>
+                </div>
+                
               </div>
             </div>
           ))}

@@ -31,7 +31,7 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { ProductData } from "../Product_List_Page/ProductData";
 import { useDispatch } from "react-redux";
-import { setAddItemtoCart } from "../../Redux/CartSlice";
+import { setAddItemToCart} from "../../Redux/CartSlice";
 const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -40,37 +40,37 @@ const ProductDetails = () => {
 
   const idAsNumber = parseInt(id);
 
-  const FilteredData = ProductData.find((data) => data.id === idAsNumber);
-
-  const slides = [
-    { id: 0, src: FilteredData.image },
-    { id: 1, src: slideimage },
-    { id: 2, src: slideimg },
-    { id: 3, src: slide },
-    { id: 4, src: slideimg },
-    { id: 5, src: slideimage },
-  ];
-  const slidesToShow = 3;
-  const handleClickPrev = () => {
-    setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 - slidesToShow + slides.length) % slides.length
-    );
-  };
-  const handleClickNext = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex + 1 + slidesToShow) % slides.length
-    );
-  };
-
-  const [currentImage, setCurrentImage] = useState(slides[0].src);
-  const handleSlideClick = (src) => {
-    setCurrentImage(src);
-  };
-
-  const handleAddToCart = () => {
-    dispatch(setAddItemtoCart(FilteredData));
-  };
+    const FilteredData = ProductData.find((data) => data.id === idAsNumber);
+  
+    const slides = [
+      { id: 0, src: FilteredData.image},
+      { id: 1, src: slideimage },
+      { id: 2, src: slideimg },
+      { id: 3, src: slide },
+      { id: 4, src: slideimg },
+      { id: 5, src: slideimage },
+    ];
+    const slidesToShow = 3;
+    const handleClickPrev = () => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex-1- slidesToShow + slides.length) % slides.length
+      );
+    };
+    const handleClickNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow ) % slides.length);
+    };
+  
+  
+  
+  
+      const [currentImage, setCurrentImage] = useState(slides[0].src);
+      const handleSlideClick = (src) => {
+        setCurrentImage(src);
+      };
+ 
+ const handleAddToCart=()=>{
+dispatch(setAddItemToCart(FilteredData))
+ }
   return (
     <>
       <Navbar />

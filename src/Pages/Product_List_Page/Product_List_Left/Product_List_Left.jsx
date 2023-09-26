@@ -65,11 +65,11 @@ const Product_List_Left = () => {
     <>
       <div className="left-section-product-list px-4 product-list-page ms-14">
         <div className="  relative ">
-          <h5 className="flex justify-between my-2 items-center">
+          <h5 className="flex justify-between my-2 items-center font-inter font-sans font-semibold text-[#8A8989]">
             Filter <img className=" h-4" src={filter} alt="" />
           </h5>
           <hr />
-          <div className="relative mt-2">
+          <div className="relative mt-2 font-semibold text-[#8A8989] ">
             <button
               className=" flex justify-between items-center py-[3px] w-full"
               onClick={() => toggleDropdown("printedTshirt")}
@@ -84,7 +84,7 @@ const Product_List_Left = () => {
               </div>
             )}
           </div>
-          <div className="relative">
+          <div className="relative font-semibold text-[#8A8989]">
             {" "}
             <button
               className="relative flex justify-between items-center py-[3px] w-full"
@@ -100,7 +100,7 @@ const Product_List_Left = () => {
               </div>
             )}
           </div>
-          <div className="relative">
+          <div className="relative font-semibold text-[#8A8989]">
             <button
               className="relative flex justify-between items-center  py-[3px] w-full"
               onClick={() => toggleDropdown("kurti")}
@@ -115,7 +115,7 @@ const Product_List_Left = () => {
               </div>
             )}
           </div>
-          <div className="relative">
+          <div className="relative font-semibold text-[#8A8989]">
             <button
               className=" flex justify-between items-center py-[3px] w-full"
               onClick={() => toggleDropdown("boxers")}
@@ -130,7 +130,7 @@ const Product_List_Left = () => {
               </div>
             )}
           </div>
-          <div className="relative">
+          <div className="relative font-semibold text-[#8A8989]">
             <button
               className=" flex justify-between items-center py-[3px] w-full"
               onClick={() => toggleDropdown("fullSleeveTshirts")}
@@ -145,7 +145,7 @@ const Product_List_Left = () => {
               </div>
             )}
           </div>
-          <div className="relative">
+          <div className="relative font-semibold text-[#8A8989]">
             <button
               className=" flex justify-between items-center py-[3px] w-full"
               onClick={() => toggleDropdown("joggers")}
@@ -161,7 +161,7 @@ const Product_List_Left = () => {
             )}
           </div>
 
-          <div className="relative">
+          <div className="relative font-semibold text-[#8A8989]">
             <button
               className=" flex justify-between items-center py-[3px] w-full"
               onClick={() => toggleDropdown("payjamas")}
@@ -176,7 +176,7 @@ const Product_List_Left = () => {
               </div>
             )}
           </div>
-          <div className="relative mb-2">
+          <div className="relative mb-2 font-semibold text-[#8A8989]">
             <button
               className=" flex justify-between items-center py-[3px] w-full"
               onClick={() => toggleDropdown("jeans")}
@@ -194,7 +194,7 @@ const Product_List_Left = () => {
           <hr />
 
           <button
-            className="plp-btn w-full flex justify-between my-2 items-center"
+            className="plp-btn w-full flex justify-between my-2 items-center text-[#807D7E] font-semibold "
             onClick={pricedropdowntoggle}
           >
             Price {priceDropdown ? <FaAngleUp /> : <FaAngleDown />}
@@ -239,7 +239,7 @@ const Product_List_Left = () => {
           <hr />
 
           <button
-            className="plp-btn w-full flex justify-between my-2 items-center"
+            className="plp-btn w-full flex justify-between my-2 items-center text-[#3C4242] font-semibold"
             onClick={colordropdowntoggle}
           >
             Colors {colorDropdownopen ? <FaAngleUp /> : <FaAngleDown />}
@@ -303,14 +303,14 @@ const Product_List_Left = () => {
           <hr />
 
           <button
-            className="plp-btn w-full flex justify-between my-2 items-center"
+            className="plp-btn w-full flex justify-between my-2 items-center text-[#807D7E] font-semibold"
             onClick={sizedropdowntoggle}
           >
             Size {sizeDropdownopen ? <FaAngleUp /> : <FaAngleDown />}
           </button>
           <hr />
           {sizeDropdownopen && (
-            <div className="plp-size-drp py-4 px-2 flex justify-between gap-2 flex-wrap">
+            <div className="plp-size-drp py-4 px-2 flex justify-between gap-2 flex-wrap text-[#3C4242] font-semibold">
               <button>XXS</button>
               <button>XL</button>
               <button>XS</button>
@@ -325,7 +325,7 @@ const Product_List_Left = () => {
           <hr />
 
           <button
-            className="plp-btn w-full flex justify-between my-2 items-center"
+            className="plp-btn w-full flex justify-between my-2 items-center text-[#807D7E] font-semibold"
             onClick={dressstyletoggle}
           >
             Dress Style {dressStyleopen ? <FaAngleUp /> : <FaAngleDown />}

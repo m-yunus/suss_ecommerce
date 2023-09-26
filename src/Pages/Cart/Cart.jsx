@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import Navbar from "../../layout/Navbar";
 import Rightarrow from "../../assets/images/Cart/rightArrow.svg";
 import img1 from "../../assets/images/Cart/img1.png";
-import img2 from "../../assets/images/Cart/img2.png";
-import img3 from "../../assets/images/Cart/img3.png";
+
 import minus from "../../assets/images/Cart/minus.png";
 import plus from "../../assets/images/Cart/plus.png";
 import { RiDeleteBinLine } from "react-icons/ri";
@@ -11,7 +10,7 @@ import "./Cart.css";
 import Footer from "../../layout/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { setRemoveItem } from "../../Redux/CartSlice";
+import { selectTotalAmount, setDecreaseQty, setGetTotals, setIncreaseQty, setRemoveItem } from "../../Redux/CartSlice";
 import CartEmpty from "./CartEmpty/CartEmpty";
 
 const Cart = () => {
@@ -19,16 +18,21 @@ const Cart = () => {
   const [CartListItems, setCartListItems] = useState([]);
   const dispatch=useDispatch()
   const CartItems = useSelector((state) => state.Cart.CartItems);
+  const totalAmount=useSelector(selectTotalAmount)
+ console.log(totalAmount);
  
- 
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
+  const DecreaseQuantity = (items) => {
+    console.log(items);
+  dispatch(setDecreaseQty(items))
   };
+  const Increasequantity=(items)=>{
+    dispatch(setIncreaseQty(items))
+  }
   const handleDelete=(items)=>{
     dispatch(setRemoveItem(items))
   }
+
+  
   useEffect(() => {
     const Cartmapping = CartItems.map((items) => (
       <tr className=" border-b border-[#BEBCBD]  ">
@@ -51,11 +55,11 @@ const Cart = () => {
         </td>
         <td className=" ">
           <div className=" justify-center bg-[#F6F6F6] text-[#3C4242] font-semibold text-base flex items-center gap-2">
-            <button onClick={decreaseQuantity}>
+            <button onClick={()=>DecreaseQuantity(items)}>
               <img src={minus} alt="" />
             </button>{" "}
             {items?.cartQuantity}
-            <button onClick={increaseQuantity}>
+            <button onClick={()=>Increasequantity(items)}>
               <img src={plus} alt="" />
             </button>
           </div>
@@ -69,7 +73,7 @@ const Cart = () => {
         </td>
         <td className="">
           <div className="flex justify-center">
-            <p className="text-[#3C4242] font-bold text-lg">{items?.price}</p>
+            <p className="text-[#3C4242] font-bold text-lg">{items?.price * items?.cartQuantity}</p>
           </div>
         </td>
         <td>
@@ -81,14 +85,14 @@ const Cart = () => {
     ));
     setCartListItems(Cartmapping);
   }, [CartItems]);
-  const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-  };
+  useEffect(()=>{
+    dispatch(setGetTotals())
+  },[dispatch,CartItems])
   return (
     <>
       <div className="" w-full h-auto>
         <Navbar />
-        <div className="px-6 py-4 flex flex-col gap-4">
+        <div className={CartItems.length === 0 ? "hidden" : ` px-6 py-4 flex flex-col gap-4`}>
           <div className="flex gap-3 items-center">
             <h2 className="text-[#807D7E] font-medium">Home</h2>
             <img src={Rightarrow} alt="" className="" />
@@ -110,7 +114,7 @@ const Cart = () => {
         <div className="px-6">
           <table className="cart-table w-full">
             <tbody>
-              <tr className="bg-[#3C4242] text-white font-medium  text-center text-lg   ">
+              <tr className={CartItems.length===0 ? "hidden" :` bg-[#3C4242] text-white font-medium  text-center text-lg`   }>
                 <td className="py-4  w-[30%] ">PRODUCT DETAILS</td>
                 <td className="  ">PRICE</td>
                 <td className="   ">QUANTITY</td>
@@ -251,11 +255,11 @@ const Cart = () => {
                   Price : $29.00
                 </p>
                 <div className="  bg-[#F6F6F6] text-[#3C4242] font-semibold text-sm flex items-center gap-2">
-                  <button onClick={decreaseQuantity}>
+                  <button onClick={()=>DecreaseQuantity()}>
                     <img src={minus} alt="" />
                   </button>{" "}
                   {quantity}
-                  <button onClick={increaseQuantity}>
+                  <button onClick={Increasequantity}>
                     <img src={plus} alt="" />
                   </button>
                 </div>
@@ -270,7 +274,7 @@ const Cart = () => {
           </div>
         </div>
 
-        <div className="cart-bottom  w-full flex px-20 py-10 justify-between   bg-[#F6F6F6]">
+        <div className={CartItems.length===0 ? "hidden" :" cart-bottom  w-full flex px-20 py-10 justify-between   bg-[#F6F6F6]"}>
           <div className="cart-btm-1">
             <h1 className="text-[#3C4242]   text-2xl font-semibold">
               Discount Codes
@@ -297,7 +301,7 @@ const Cart = () => {
           <div className="cart-calculation">
             <div className="flex  text-[#3C4242] text-xl font-medium">
               <h1 className="w-40 ">Sub Total </h1>
-              <h1>$513.00 </h1>
+              <h1>${totalAmount.toFixed(2)}</h1>
             </div>
             <div className="flex  text-[#3C4242] text-xl font-medium mt-2">
               <h1 className="w-40 ">Shipping </h1>
@@ -305,7 +309,7 @@ const Cart = () => {
             </div>
             <div className="flex  text-[#3C4242] text-xl font-bold mt-6">
               <h1 className="w-40 ">Grand Total </h1>
-              <h1>$518.00 </h1>
+              <h1>${totalAmount.toFixed(2)}</h1>
             </div>
             <hr className="my-4  bg-[#BEBCBD]" />
             <button className=" prcd-cart bg-[#FD7B85] rounded-lg px-2 py-2 text-white  font-semibold text-lg">
