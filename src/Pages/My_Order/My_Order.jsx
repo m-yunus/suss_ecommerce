@@ -183,10 +183,10 @@ const My_Order = () => {
       
       break;
     case "Cancelled":
-      content = <h1>.....</h1>;
+      content = <h1>Cancelled Items</h1>;
       break;
     case "Completed":
-      content = <h1>...</h1>;
+      content = <h1>Completed Items</h1>;
       break;
     default:
       content = null;
