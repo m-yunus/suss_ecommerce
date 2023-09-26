@@ -100,11 +100,11 @@ const Home = () => {
       </div>
 
       <main className="relative">
-        <div className="absolute top-8 left-4 banner_text flex flex-col gap-4 font-medium text-center">
+        <div className="absolute top-10  left-8 banner_text flex flex-col gap-4 font-medium text-center">
           <h1 className="font-medium text-white ">
             We are Ethical <br /> Fashion Store
           </h1>
-          <button className="bg-white flex items-center justify-center rounded-lg w-10/12 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
+          <button className="bg-white flex items-center justify-center rounded-md w-8/12 sm:w-1/2 md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
             Shop Now
           </button>
         </div>
@@ -165,7 +165,7 @@ const Home = () => {
                 In our journey to improve everyday fashion, sussin presents
                 EVERYDAY wear range - Comfortable & Affordable fashion 24/7
               </p>
-              <button className="bg-white flex items-center justify-center rounded-lg py-2 w-4/12">
+              <button className="bg-white flex items-center text-sm justify-center rounded-lg py-2 w-4/12">
                 Shop Now
               </button>
             </div>
