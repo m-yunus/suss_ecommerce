@@ -87,8 +87,7 @@ letter-spacing: 0.68px;
 .prdct-dtls {
   margin-top: 2rem;
   display: flex;
-  
-  align-items: center;
+ 
 }
 .prdct-star{
   width: 22px;
@@ -250,6 +249,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 600;
 line-height: normal;
+cursor: pointer;
 }
 .rate-btn{
   width: 10rem;
@@ -378,10 +378,11 @@ letter-spacing: 0.32px;
 margin-top: 4rem;
 }
 .desptn-table{
- margin-top: 3rem;
+ margin-top: 11rem;
 }
 .first-row{
   display: flex;
+
 
 }
 .scnd-row{
@@ -390,7 +391,7 @@ margin-top: 4rem;
 }
 .clm1{
   width:11rem ;
-
+  
   border-width: 1px;
   border-top: white;
   border-left-color: white;
@@ -437,13 +438,13 @@ font-style: normal;
 font-weight: 400;
 line-height: 16px; /* 100% */
 letter-spacing: 0.32px;
-padding-top: 8px;
+padding-top: 10px;
 display: flex;
 align-items: center;
 justify-content: center;
 }
 .clm-discptn{
-  margin-top: 5px;
+  margin-top: 10px;
   color: #3C4242;
 font-family: Inter;
 font-size: 16px;
@@ -597,6 +598,10 @@ line-height: normal;
     width: 27rem;
     
   }
+  .prdct-dtls{
+  margin: 0 auto;
+  margin-top: 1rem;
+  }
   .description-similar{
     display: flex;
     justify-content:center ;
@@ -606,6 +611,10 @@ line-height: normal;
     justify-content: center;
   }
   .scnd-row{
+    display: flex;
+    justify-content: center;
+  }
+  .size{
     display: flex;
     justify-content: center;
   }
@@ -631,6 +640,17 @@ line-height: normal;
     padding-left: 0;
     margin-top: 1rem;
   }
+  .product-image{
+    width: 282px;
+height: 370px;
+  }
+  .prdct-t{
+    font-size: 25px!important;
+  }
+  .prdct-star{
+    width: 10px;
+    height: 10px;
+  }
 }
 @media (max-width: 524px) {
   .product-right h1 {
@@ -639,8 +659,8 @@ line-height: normal;
   
   .prdct-dtls {
     width: 17rem;
-
-    word-wrap: break-word;
+ 
+  margin: 0 auto;
     margin-top: 1rem;
   }
   .product-right p {
@@ -668,15 +688,15 @@ line-height: normal;
     margin-top: 1rem;
   }
   .addtobag {
-    width: 12rem;
+    width: 10rem;
     height: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0 0.35rem;
   }
   .rate-btn{
     width: 6rem;
     height: 2.5rem;
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 0 0.35rem;
  
 
@@ -727,5 +747,20 @@ line-height: normal;
   }
   .similar-product{
     margin-top: -2rem;
+  }
+  .product-image{
+
+  }
+  .prdct-desptn-title,.similar-title{
+    font-size: 20px;
+  }
+  .desptn{
+    font-size: 12px;
+  }
+  .scnd-row{
+    margin-top: 1rem;
+  }
+  .prdct-dtls{
+  
   }
 }

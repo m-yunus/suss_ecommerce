@@ -75,6 +75,14 @@ dispatch(setAddItemtoCart(FilteredData))
   return (
     <>
       <Navbar />
+      <div className="paths px-5 gap-5">
+            <h4 className="path">Shop</h4>
+            <img className="path-arrow" src={left} alt="" />
+            <h4 className="path">Women</h4>
+            <img className="path-arrow" src={left} alt="" />
+            <h4 className="path">Top</h4>
+            
+            </div>
       <div className="product-details mt-10 px-16 flex flex-row justify-center">
         <div className="product-left flex flex-col">
           <div className="flex items-center justify-end relative">
@@ -123,15 +131,12 @@ dispatch(setAddItemtoCart(FilteredData))
 
         <div className="product-right">
           <div>
-            <div className="paths gap-5">
-            <h4 className="path">Shop</h4>
-            <img className="path-arrow" src={left} alt="" />
-            <h4 className="path">Women</h4>
-            <img className="path-arrow" src={left} alt="" />
-            <h4 className="path">Top</h4>
             
-            </div>
+           
+
             <h1 className="prdct-t">{FilteredData?.title}</h1>
+            
+            <h1 className="prdct-t">Raven Hoodie with Black colored Design</h1>
             <div className="prdct-dtls gap-3">
              <img src={Star} alt="" className="prdct-star" />
              <img src={Star} alt="" className="prdct-star" />
@@ -148,7 +153,7 @@ dispatch(setAddItemtoCart(FilteredData))
               <h4 className="size-guide">Size Guide</h4>
               <img src={arrow} alt="" className="size-guide-icon" />
               </div>
-          <div className="size flex items-center ">
+          <div className="size flex  items-center ">
         
             <div className="flex flex-row items-center ">
               
@@ -200,15 +205,18 @@ dispatch(setAddItemtoCart(FilteredData))
         </div>
        
       </div>
-      <div className="description-similar px-16 gap-20">
+      <div className="description-similar px-8 gap-24">
       <div className="product-description">
           <div className="prdct-description-title gap-2">
             <div className="desctn-line"></div>
-            <h2 className="prdct-desptn-title">Product <br /> Description</h2>
+            <h2 className="prdct-desptn-title">Product </h2>
+            <h2 className="prdct-desptn-title"> Description</h2>
+            
           </div>
+
           <p className="desptn">100% Bio-washed Cotton – makes the fabric extra soft & silky. Flexible ribbed crew neck. Precisely stitched with  fading. Provide  all-time comfort. Anytime, anywhere. Infinite range of matte-finish HD prints.</p>
          <div className="desptn-table">
-          <div className="first-row g">
+          <div className="first-row gap-8">
             <div className="clm1">
               <p className="clm-title">Fabric</p>
               <p className="clm-discptn">Bio-washed cotton</p>
@@ -222,7 +230,7 @@ dispatch(setAddItemtoCart(FilteredData))
             <p className="clm-discptn">Regular Fit</p>
             </div>
           </div>
-          <div className="scnd-row ">
+          <div className="scnd-row gap-8 ">
           <div className="clm4">
               <p className="clm-title">Neck</p>
               <p className="clm-discptn">Rounded Neck</p>
@@ -243,7 +251,7 @@ dispatch(setAddItemtoCart(FilteredData))
           <div className="similar-prdct gap-3">
             <div className="similar-titles gap-3">
             <div className="similar-line"></div>
-            <div className="similar-title">Similar <br /> Products</div>
+            <div className="similar-title">Similar  Products</div>
             </div>
 
             <div  className="similar-images gap-6 relative  best-selling-set">
