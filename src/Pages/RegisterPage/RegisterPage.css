@@ -4,19 +4,16 @@
   font-family: "Inter", sans-serif;
   max-height: 250vh;
   margin-bottom: 20px;
-  
-  
 }
 .register-left img{
   width: auto;
-  height: 85vh;
+  height: 95vh;
   margin: 0 auto;
-  
 }
 .signup h1 {
   font-family: "Open Sans", sans-serif;
   color: #333;
-  font-size: 2.125rem;
+  font-size: 2rem!important;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
@@ -24,7 +21,7 @@
 .signup h5 {
   color: rgba(102, 102, 102, 0.8);
 
-  font-size: 1rem;
+  font-size: 0.9rem;
  
   font-weight: 500;
  
@@ -33,6 +30,7 @@
 .twitter-signup {
   display: flex;
   width: 100%;
+  
   padding: 1rem 1.25rem;
   justify-content: center;
   align-items: center;
@@ -41,16 +39,17 @@
   border: 1px solid #3c4242;
   color: #fd7b85;
   font-size: 1.2rem;
-  height: 40px;
+  height: 50px;
 }
 .signup label {
   color: #807d7e;
   font-size: 1rem;
+  font-weight: 400;
 }
-.signup input {
+.signup input{
   border-radius: 0.5rem;
   border: 1px solid #3c4242;
-  height: 40px;
+  height: 50px;
 }
 .signup input::placeholder {
   color: #807d7e;
@@ -88,23 +87,21 @@
   gap: 0.75rem;
   color: white;
 }
-
 @media (max-width: 1200px) {
-
   .google-signup{
     margin-top: 25px!important;
-    
   }
   .google-signup,
   .twitter-signup {
     padding: 0.5rem 1rem;
- margin-top: 15px;
+    margin-top: 15px;
+    height: 40px;
     font-size: 1rem;
   }
   .signup input {
   border-radius: 0.5rem;
   border: 1px solid #3c4242;
-  height: 40px;
+  height: 45px;
 }
 .signup label {
   color: #807d7e;
@@ -134,7 +131,7 @@
   font-size: 1rem;
 }
 .signup h5 {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 }
 @media (max-width: 947px) {
@@ -206,6 +203,9 @@
   margin: auto;
   
 }
+.signup h1{
+  font-size: 1.7rem!important;
+}
 
 .signup{
   width: 60rem!important;
@@ -216,21 +216,18 @@
 .google-signup img,
   .twitter-signup img {
 width: 1rem;
-
   }
 .google-signup,
   .twitter-signup {
     padding: 0.4rem 0.8rem;
    margin-top: 15px;
     font-size: 12px;
-    
   }
   .signup input {
   height: 40px;
 }
 .email-section-signup label, .pass-section-signup label{
   font-size: 12px;
-
 }
 .signup-btm-2{
   margin-top: -10px;
@@ -258,15 +255,13 @@ font-size: 10px;
 }
 }
 @media (max-width: 375px) {
-
 .signup-btm{
-  font-size: 0.6rem!important; 
+  font-size: 10px!important; 
   margin-top: 2px;
 }
-  
-   
-
-
+.signup h1{
+  font-size: 1.5rem!important;
+}
 }
 
 
