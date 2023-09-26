@@ -11,7 +11,7 @@ const CartEmpty = () => {
   return (
     <>
     <div className='w-full h-auto'>
-        <Navbar/>
+     
         <div className='w-full py-12 flex flex-col'>
 
             <div className='w-full flex-col '>
@@ -45,7 +45,7 @@ const CartEmpty = () => {
         </div>
                 </div> 
         </div>
-        <Footer/>
+     
     </div>
     </>
   )

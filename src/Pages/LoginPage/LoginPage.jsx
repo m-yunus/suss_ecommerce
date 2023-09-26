@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./LoginPage.css";
 
 import Navbar from "../../layout/Navbar";
 import login from "../../assets/images/Register/log.jpg";
@@ -9,6 +8,7 @@ import eye from "../../assets/images/Register/eye.png";
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider, twitterprovider } from "../../FIrebaseLogin/config";
 import axios from "axios";
+import SigninNavbar from "../../layout/SigninNavbar";
 
 const LoginPage = () => {
   const [value, setvalue] = useState("");
@@ -52,7 +52,7 @@ const LoginPage = () => {
   });
   return (
     <>
-      <Navbar />
+      <SigninNavbar />
       <div className="register px-16  w-full flex  ">
         <div className="register-left w-1/2  h-auto ">
           <div className="w-full">
@@ -62,7 +62,7 @@ const LoginPage = () => {
         </div>
         <div className="register-right w-1/2  flex  max-w-[50rem]  my-auto ">
           <div className="signup flex flex-col w-[80%]      mx-auto">
-            <h1>Sign In Page</h1>
+            <h1 className="font-bold text-xs">Sign In Page</h1>
 
             <button className="google-signup mt-16 border  font-semibold " onClick={handleSigninGoogle}>
               <img src={google} alt="" /> Continue With Google

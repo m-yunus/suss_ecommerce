@@ -10,12 +10,17 @@ import Sidebar from "./Sidebar";
 import menu from "../../src/assets/images/Navbar/menu.png";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { useSelector } from "react-redux";
+import {BsCart3} from "react-icons/bs"
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [wishlength,setwishlength]=useState(0)
+  const [wishlength,setwishlength]=useState(0);
+  const [CartItemslength,setCartItemslength]=useState(0)
+  const CartItems=useSelector((state)=>state.Cart.CartItems)
+ 
   const wishItems = useSelector((state) => state.Wishlist.WishItems);
   useEffect(()=>{
    setwishlength(wishItems.length)
+   setCartItemslength(CartItems.length)
   })
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -97,8 +102,14 @@ const Navbar = () => {
             <div className=" bg-gray-100 p-2 rounded-md cursor-pointer">
               <img src={user} alt="" />
             </div>
-            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer">
-              <img src={cart} alt="" />
+            <div className=" bg-gray-100 p-2 rounded-md cursor-pointer relative" >
+              <Link to="/Cart">
+             
+              <div className="min-h-[1rem] min-w-[1rem] bg-orange-400 absolute z-10 top-0 left-5 rounded-2xl flex justify-center">
+                <h2 className="text-xs">{CartItemslength}</h2>
+              </div>
+                { <BsCart3/>}
+          </Link>
             </div>
           </div>
           <button onClick={toggleSidebar}>

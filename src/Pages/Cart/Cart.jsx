@@ -9,16 +9,78 @@ import plus from "../../assets/images/Cart/plus.png";
 import { RiDeleteBinLine } from "react-icons/ri";
 import "./Cart.css";
 import Footer from "../../layout/Footer";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { setRemoveItem } from "../../Redux/CartSlice";
+import CartEmpty from "./CartEmpty/CartEmpty";
 
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
-
+  const [CartListItems, setCartListItems] = useState([]);
+  const dispatch=useDispatch()
+  const CartItems = useSelector((state) => state.Cart.CartItems);
+ 
+ 
   const decreaseQuantity = () => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
     }
   };
-
+  const handleDelete=(items)=>{
+    dispatch(setRemoveItem(items))
+  }
+  useEffect(() => {
+    const Cartmapping = CartItems.map((items) => (
+      <tr className=" border-b border-[#BEBCBD]  ">
+        <td className="flex py-8  ms-4">
+          <div>
+            <img className="" src={items?.image} alt="" />
+          </div>
+          <div className="ms-2">
+            <h1 className="text-[#3C4242] font-bold text-lg">{items?.title}</h1>
+            <h2 className="text-[#807D7E] font-medium text-sm mt-2">
+              Color : Yellow
+            </h2>
+            <h2 className="text-[#807D7E] font-medium text-sm">Size : M</h2>
+          </div>
+        </td>
+        <td className="">
+          <div className="flex justify-center">
+            <p className="text-[#3C4242] font-bold text-lg">{items?.price}</p>
+          </div>
+        </td>
+        <td className=" ">
+          <div className=" justify-center bg-[#F6F6F6] text-[#3C4242] font-semibold text-base flex items-center gap-2">
+            <button onClick={decreaseQuantity}>
+              <img src={minus} alt="" />
+            </button>{" "}
+            {items?.cartQuantity}
+            <button onClick={increaseQuantity}>
+              <img src={plus} alt="" />
+            </button>
+          </div>
+        </td>
+        <td className="">
+          <div className="flex justify-center">
+            <p className="text-[#BEBCBD] text-lg font-bold">
+              Login to Calculate
+            </p>
+          </div>
+        </td>
+        <td className="">
+          <div className="flex justify-center">
+            <p className="text-[#3C4242] font-bold text-lg">{items?.price}</p>
+          </div>
+        </td>
+        <td>
+          <div className="flex justify-center">
+            <RiDeleteBinLine className="w-6 h-6 text-red-500 cursor-pointer" onClick={()=>handleDelete(items)} />
+          </div>
+        </td>
+      </tr>
+    ));
+    setCartListItems(Cartmapping);
+  }, [CartItems]);
   const increaseQuantity = () => {
     setQuantity(quantity + 1);
   };
@@ -57,63 +119,8 @@ const Cart = () => {
                 <td className="">ACTION</td>
               </tr>
 
-              <tr className=" border-b border-[#BEBCBD]  ">
-                <td className="flex py-8  ms-4">
-                  <div>
-                    <img
-                      className=""
-                      src={img1}
-                      alt=""
-                    />
-                  </div>
-                  <div className="ms-2">
-                    <h1 className="text-[#3C4242] font-bold text-lg">
-                      Blue Flower Print Crop Top
-                    </h1>
-                    <h2 className="text-[#807D7E] font-medium text-sm mt-2">
-                      Color : Yellow
-                    </h2>
-                    <h2 className="text-[#807D7E] font-medium text-sm">
-                      Size : M
-                    </h2>
-                  </div>
-                </td>
-                <td className="">
-                  <div className="flex justify-center">
-                    <p className="text-[#3C4242] font-bold text-lg">$29.00</p>
-                  </div>
-                </td>
-                <td className=" ">
-                  <div className=" justify-center bg-[#F6F6F6] text-[#3C4242] font-semibold text-base flex items-center gap-2">
-                    <button onClick={decreaseQuantity}>
-                      <img src={minus} alt="" />
-                    </button>{" "}
-                    {quantity}
-                    <button onClick={increaseQuantity}>
-                      <img src={plus} alt="" />
-                    </button>
-                  </div>
-                </td>
-                <td className="">
-                  <div className="flex justify-center">
-                    <p className="text-[#BEBCBD] text-lg font-bold">
-                      Login to Calculate
-                    </p>
-                  </div>
-                </td>
-                <td className="">
-                  <div className="flex justify-center">
-                    <p className="text-[#3C4242] font-bold text-lg">$29.00</p>
-                  </div>
-                </td>
-                <td>
-                  <div className="flex justify-center">
-                    <RiDeleteBinLine className="w-6 h-6 text-red-500 cursor-pointer" />
-                  </div>
-                </td>
-              </tr>
-
-              <tr className=" border-b border-[#BEBCBD]  ">
+              {CartItems.length !==0 ? CartListItems : <CartEmpty/> }
+              {/* <tr className=" border-b border-[#BEBCBD]  ">
                 <td className="flex py-8 ms-4">
                   <div>
                     <img src={img2} alt="" />
@@ -163,9 +170,9 @@ const Cart = () => {
                     <RiDeleteBinLine className="w-6 h-6 text-red-500 cursor-pointer" />
                   </div>
                 </td>
-              </tr>
+              </tr> */}
 
-              <tr className=" border-b border-[#BEBCBD] justify-center ">
+              {/* <tr className=" border-b border-[#BEBCBD] justify-center ">
                 <td className="flex py-8 ms-4">
                   <div>
                     <img src={img3} alt="" />
@@ -215,7 +222,7 @@ const Cart = () => {
                     <RiDeleteBinLine className="w-6 h-6 text-red-500 cursor-pointer" />
                   </div>
                 </td>
-              </tr>
+              </tr> */}
             </tbody>
           </table>
         </div>

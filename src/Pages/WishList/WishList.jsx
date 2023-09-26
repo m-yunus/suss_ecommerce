@@ -17,7 +17,7 @@ const WishList = () => {
     dispatch(removedFromWishlist(productId));
   };
   useEffect(() => {
-    // You can use map to generate JSX elements for each item in the wishlist
+    
     const wishlistItems = wishItems.map((item, index) => (
       <div className="wishlist-order" key={index}>
         <img
@@ -29,20 +29,20 @@ const WishList = () => {
         <img className="wishlist-img" src={item.image} alt="" />
         <div className="wishlist-text">
           <p className="wishlist-ttl">{item.title}</p>{" "}
-          {/* Use item.title here */}
+         
           <div className="wishlist-color">
             <p className="list-color">color:</p>
             <p className="wishlist-clr">{item.color}</p>{" "}
-            {/* Use item.color here */}
+          
           </div>
           <div className="wishlist-quantity">
             <p className="quantity-title">Quantity:</p>
             <p className="qntity">{item.quantity}</p>{" "}
-            {/* Use item.quantity here */}
+         
           </div>
         </div>
         <p className="wishlist-rate">{`${item.price}`}</p>{" "}
-        {/* Use item.price here */}
+     
         <button className="wishlist-addcart-button">Add to cart</button>
       </div>
     ));
