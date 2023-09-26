@@ -74,7 +74,7 @@ const ProductDetails = () => {
   return (
     <>
       <Navbar />
-      <div className="paths-top gap-5 mb-4 flex items-center px-16">
+      <div className="paths-top gap-5 mb-4 flex items-center px-8">
         <h4 className="path">Shop</h4>
         <img className="path-arrow" src={left} alt="" />
         <h4 className="path">Women</h4>
@@ -129,14 +129,14 @@ const ProductDetails = () => {
 
         <div className="product-right">
           <div>
-            <div className="paths  gap-5">
+            <div className="pathss  gap-5">
               <h4 className="path">Shop</h4>
               <img className="path-arrow" src={left} alt="" />
               <h4 className="path">Women</h4>
               <img className="path-arrow" src={left} alt="" />
               <h4 className="path">Top</h4>
             </div>
-            <h1 className="prdct-t font-bold">{FilteredData?.title}</h1>
+            <h1 className="prdct-t  font-bold">{FilteredData?.title}</h1>
             <div className="prdct-dtls gap-3">
               <img src={Star} alt="" className="prdct-star" />
               <img src={Star} alt="" className="prdct-star" />
@@ -171,9 +171,9 @@ const ProductDetails = () => {
             <img src={red} alt="" className="clr-icon" />
           </div>
 
-          <div className="bag gap-3 flex items-center">
+          <div className="bag gap-3 flex items-center ">
             <div
-              className="addtobag cursor-pointer gap-4"
+              className="addtobag  cursor-pointer gap-4"
               onClick={() => handleAddToCart()}
             >
               <img src={cart} alt="" />
@@ -181,8 +181,8 @@ const ProductDetails = () => {
             </div>
             <div className="rate-btn">{FilteredData.price}</div>
           </div>
-          <hr className="hr" />
-          <div className="delivery gap-20  flex justify-center items-center">
+          <hr className=" bg-[#BEBCBD] h-[2px]  mt-10" />
+          <div className="delivery gap-20  flex justify-center items-center ">
             <div className="payment">
               <img src={payment} alt="" />
 
@@ -196,7 +196,7 @@ const ProductDetails = () => {
         </div>
       </div>
       <div className="description-similar px-16 gap-20">
-        <div className="product-description">
+        <div className="product-description ">
           <div className="prdct-description-title gap-2">
             <div className="desctn-line"></div>
             <h2 className="prdct-desptn-title">
@@ -209,7 +209,7 @@ const ProductDetails = () => {
             all-time comfort. Anytime, anywhere. Infinite range of matte-finish
             HD prints.
           </p>
-          <div className="desptn-table bg-[#F6F6F6]">
+          <div className="desptn-table bg-[#f6f6f6]">
             <div className="first-row ">
               <div className="clm1 pb-4 ps-2 pt-2">
                 <p className="clm-title">Fabric</p>
@@ -285,7 +285,7 @@ const ProductDetails = () => {
             </div>
           </div>
 
-          <div className="similar-image"></div>
+          <div className="similar-image "></div>
         </div>
       </div>
     </>

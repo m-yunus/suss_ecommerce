@@ -12,7 +12,7 @@ const Verification = () => {
           <img src={verification} alt="" />
         </div>
         <div className="register-right w-1/2  flex  max-w-[55rem]   ">
-          <div className="signup flex flex-col w-[90%]     mx-auto">
+          <div className="signup flex flex-col w-[100%]  px-20 mt-4  mx-auto">
             <h1>Verification</h1>
             <h5>
              Verify your code.
