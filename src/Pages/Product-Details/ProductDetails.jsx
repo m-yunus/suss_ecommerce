@@ -30,7 +30,7 @@ import  { useState } from 'react';
 import { useParams } from "react-router-dom";
 import { ProductData } from "../Product_List_Page/ProductData";
 import { useDispatch } from "react-redux";
-import { setAddItemtoCart } from "../../Redux/CartSlice";
+import { setAddItemToCart} from "../../Redux/CartSlice";
 const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -70,7 +70,7 @@ const ProductDetails = () => {
       };
  
  const handleAddToCart=()=>{
-dispatch(setAddItemtoCart(FilteredData))
+dispatch(setAddItemToCart(FilteredData))
  }
   return (
     <>
