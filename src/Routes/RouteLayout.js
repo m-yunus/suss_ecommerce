@@ -32,6 +32,9 @@ import WishList from '../Pages/WishList/WishList'
 import Cart from '../Pages/Cart/Cart'
 import CartEmpty from '../Pages/Cart/CartEmpty/CartEmpty'
 import My_Order from '../Pages/My_Order/My_Order'
+
+import Order_Details from '../Pages/Order_Details/Order_Details'
+
 import Unfound from '../Pages/404/Unfound'
 
 const RouteLayout = () => {
@@ -67,7 +70,11 @@ const RouteLayout = () => {
           <Route path="Cartempty" element={<CartEmpty />} />
           <Route path="wishlist" element={<WishList />} />
           <Route path="my-orders" element={<My_Order />} />
+
+          <Route path="order-details" element={<Order_Details />} />
+
           <Route path='error' element={<Unfound/>}/>
+
         </Routes>
       </BrowserRouter>
     </>
