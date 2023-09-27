@@ -12,6 +12,7 @@ import {CiDiscount1} from "react-icons/ci"
 import {AiOutlineDollarCircle} from "react-icons/ai"
 import {GiStarsStack} from "react-icons/gi"
 import { IoMdDoneAll} from "react-icons/io"
+import Footer from "../../layout/Footer";
 
 const Product_List_Page = () => {
    const [showProductListLeft, setShowProductListLeft] = useState(
@@ -113,6 +114,7 @@ const Product_List_Page = () => {
           </div>
         )}
       </div>
+      <Footer/>
     </>
   );
 };

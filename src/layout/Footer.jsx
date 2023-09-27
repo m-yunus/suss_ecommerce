@@ -54,7 +54,7 @@ const Footer = () => {
            </div>
 
            <div className='w-full lg:px-4 py-4'>
-            <div className='flex px-3 lg:px-40 gap-3'>
+            <div className='flex px-3 lg:px-64 gap-3'>
               <div className=' bg-white w-[2rem] h-[2rem] rounded-xl flex justify-center items-center '>
                   <BiLogoFacebook/>
               </div>
