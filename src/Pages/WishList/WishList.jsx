@@ -7,6 +7,7 @@ import close from "../../assets/images/WishList/close.png";
 import { useDispatch, useSelector } from "react-redux";
 import { removedFromWishlist } from "../../Redux/WishSlice";
 import WishListEmpty from "./WishListEmpty";
+import Footer from "../../layout/Footer";
 
 const WishList = () => {
   const wishItems = useSelector((state) => state.Wishlist.WishItems);
@@ -73,6 +74,7 @@ const WishList = () => {
         {wishItems.length === 0 ? <WishListEmpty/> :  wishlistItems} 
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

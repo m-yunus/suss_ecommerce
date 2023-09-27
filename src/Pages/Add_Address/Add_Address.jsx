@@ -3,6 +3,7 @@ import "./Add_Address.css";
 import Navbar from "../../layout/Navbar";
 import arrow from "../../assets/images/Wishlist-Sidebar/arrow.png";
 import WishlistSidebar from "../Contact_Details/WishlistSidebar/WishlistSidebar";
+import Footer from "../../layout/Footer";
 
 const Add_Address = () => {
    const [showProductListLeft, setShowProductListLeft] = useState(
@@ -138,6 +139,7 @@ const Add_Address = () => {
           {showProductListLeft ? "Cancel" : "Menu"}
         </button>
       </div>
+      <Footer/>
     </>
   );
 };
