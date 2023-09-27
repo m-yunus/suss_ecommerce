@@ -120,36 +120,43 @@ const Home = () => {
           </h1>
         </div>
 
-        {/* Slider */}
-        <div className="flex w-full items-center justify-center gap-4  py-7">
-          <div className="flex">
-            <img
-              src={leftArrow}
-              alt=""
-              className="cursor-pointer"
-              onClick={prevItem}
-            />
-          </div>
-          {itemsToShow.map((item, index) => (
-            <div className={`w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/4`} key={index}>
-              <div>
-                <img src={item.imgSrc} alt="" />
-              </div>
-              <h2 className="text-[#3C4242] text-xs font-bold py-3">
-                {item.text}
-              </h2>
-            </div>
-          ))}
-          <div className="flex">
-            <img
-              src={RightArrow}
-              alt=""
-              className="cursor-pointer"
-              onClick={nextItem}
-            />
-          </div>
+        <div className="carousel-container relative">
+  {/* Slider */}
+  <div className="carousel flex w-full items-center justify-center gap-4 py-7 overflow-hidden">
+    {itemsToShow.map((item, index) => (
+      <div
+        className={`carousel-slide w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/4 transform transition-transform duration-300`}
+        key={index}
+      >
+        <div>
+          <img src={item.imgSrc} alt="" />
         </div>
+        <h2 className="text-[#3C4242] text-xs font-bold py-3">
+          {item.text}
+        </h2>
       </div>
+    ))}
+  </div>
+  {/* Navigation Arrows */}
+  <div className="absolute inset-y-0 left-0 flex items-center">
+    <button
+      className="carousel-arrow cursor-pointer"
+      onClick={prevItem}
+    >
+      <img src={leftArrow} alt="Previous" />
+    </button>
+  </div>
+  <div className="absolute inset-y-0 right-0 flex items-center">
+    <button
+      className="carousel-arrow cursor-pointer"
+      onClick={nextItem}
+    >
+      <img src={RightArrow} alt="Next" />
+    </button>
+  </div>
+</div>
+</div>
+
       {/* Banner in Middle */}
       <div className="w-full h-auto">
         <div className="w-full flex-col sm:flex-row flex px-8 sm:px-24 min-h-[20rem] sm:min-h-[34rem] ">

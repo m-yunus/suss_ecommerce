@@ -32,6 +32,7 @@ import { useParams } from "react-router-dom";
 import { ProductData } from "../Product_List_Page/ProductData";
 import { useDispatch } from "react-redux";
 import { setAddItemToCart} from "../../Redux/CartSlice";
+import Footer from "../../layout/Footer";
 const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -288,6 +289,7 @@ dispatch(setAddItemToCart(FilteredData))
           <div className="similar-image "></div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

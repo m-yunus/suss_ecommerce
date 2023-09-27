@@ -3,6 +3,7 @@ import "./Contact_Details.css";
 import Navbar from "../../../layout/Navbar";
 import WishlistSidebar from "../WishlistSidebar/WishlistSidebar";
 import arrow from "../../../assets/images/Wishlist-Sidebar/arrow.png";
+import Footer from "../../../layout/Footer";
 
 const Contact_Details = () => {
   const [showProductListLeft, setShowProductListLeft] = useState(
@@ -164,6 +165,7 @@ const Contact_Details = () => {
           {showProductListLeft ? "Cancel" : "Menu"}
         </button>
       </div>
+      <Footer/>
     </>
   );
 };
