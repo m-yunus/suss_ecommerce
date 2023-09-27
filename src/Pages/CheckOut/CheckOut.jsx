@@ -25,7 +25,7 @@ const CheckOut = () => {
         </div>
         <div className="flex flex-col-reverse md:flex-row w-full">
           <section className="text-gray-600 body-font md:w-2/3">
-            <div className="container gap-16 flex flex-wrap px-5 py-24 mx-auto items-center">
+            <div className=" input-containers   container gap-16 flex flex-wrap px-5 py-24 mx-auto items-center ">
               <div className=" bill-section  md:w- md:pr-12 md:py-8 md:border- md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
                 <div className="bill-sec">
                   <div className="bill-main gap-3">
@@ -43,31 +43,31 @@ const CheckOut = () => {
                       <input type="text" className="bill-input-box " />
                     </div>
 
-                    <div className="bill-inpt">
+                    <div className="bill-inpt  laast-name-checkout">
                       <p className="bill-inpt-title1">Last Name</p>
                       <input type="text" className="bill-input-box2" />
                     </div>
                   </div>
 
-                  <div className="bill-input-2">
+                  <div className="bill-input-2  country-checkout">
                     <div className="bill-inpt">
                       <p className="bill-inpt-title">Country/Region</p>
                       <input type="text" className="bill-input-box" />
                     </div>
 
-                    <div className="bill-inpt">
+                    <div className="bill-inpt cmpny-name-checkout">
                       <p className="bill-inpt-title1">Company Name</p>
                       <input type="text" className="bill-input-box2" />
                     </div>
                   </div>
 
-                  <div className="bill-input-3">
+                  <div className="bill-input-3 strrt-address">
                     <div className="bill-inpt">
                       <p className="bill-inpt-title">Street Adress</p>
                       <input type="text" className="bill-input-box" />
                     </div>
 
-                    <div className="bill-inpt">
+                    <div className="bill-inpt apt-suite">
                       <p className="bill-inpt-title1">Apt,suite,unit</p>
                       <input type="text" className="bill-input-box2" />
                     </div>
@@ -90,7 +90,7 @@ const CheckOut = () => {
                     </div>
                   </div>
 
-                  <div className="bill-inpt">
+                  <div className="bill-inpt phone-chkout ">
                     <p className="bill-inpt-title2">Phone</p>
                     <div className="chk">
                       <input type="text" className="bill-input-box" />
@@ -99,7 +99,7 @@ const CheckOut = () => {
                 </div>
               </div>
             </div>
-            <div className="cnt-button">
+            <div className="cnt-button ">
               <button className="dlvry-btn">Continue to delivery</button>
             </div>
             <div className="save-input gap-3">
@@ -170,29 +170,29 @@ const CheckOut = () => {
                 type="date"
                 className="date-birth"
               />
-              <div className="scrt-code">
+              {/* <div className="scrt-code"> */}
                 <input
                   placeholder="Security Code"
                   type="password"
                   className="scrty-code"
                 ></input>
-                <img src={eye} alt="" className="scrt-img" />
-              </div>
+                {/* <img src={eye} alt="" className="scrt-img" /> */}
+              {/* </div> */}
             </div>
 
-            <div className="cash-on gap-3">
+            <div className="cash-on  gap-3">
               <input type="radio" className="cash-on-input" />
               <p className="cash-title">Cash on delivery</p>
             </div>
             <p className="cash-text px-6">Pay with cash upon delivary</p>
 
             <hr className="cash-hr" />
-            <div className="pay-pol gap-3">
+            <div className="pay-pol   gap-3">
               <input type="radio" className="pay-pol-input" />
               <p className="pay-pol-title">Paypol</p>
             </div>
-            <div className="play-btn">
-              <button className="play-now">Play Now</button>
+            <div className="play-btn ">
+              <button className="play-now">Pay Now</button>
             </div>
           </section>
           <div className=" smry-sec flex flex-col md:w-1/3 md:pl-15">
@@ -228,7 +228,7 @@ const CheckOut = () => {
                 </div>
               </div>
 
-              <div className="smry-main gap-7">
+              <div className="smry-main gap-7 ">
                 <div className="smry-images">
                   <img src={smryimage} alt="" className="smry-image" />
                 </div>
@@ -240,7 +240,7 @@ const CheckOut = () => {
                   <p className="smry-img-rate">$129.00</p>
                 </div>
               </div>
-              <div className="subtotal-bill mx-auto">
+              <div className="subtotal-bill mx-auto ">
                 <div className="subttl-bill gap-16">
                   <p className="subtotal">Subtotal (3 item)</p>
 

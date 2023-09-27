@@ -747,7 +747,7 @@ line-height: normal;
 @media(max-width:431px){
 
 .smry-title{
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -10px;
 }
 .smry-main{
@@ -763,9 +763,203 @@ line-height: normal;
 .smry-img-rate{
     font-size: 12px;
 }
-.subttl-bill p{
-    font-size: 14px!important;
+.subtotal,.ttl-rate,.svngs,.svngs-rate,.ship,.ship-rate,.ttl-bill,.ttl-rate{
+    font-size: 12px!important;
 }
+.subtotal-bill{
+    margin-top: 25px;
+}
+.chck-title{
+    font-size: 25px;
+   
+}
+.bill-title{
+font-size: 15px!important;
+}
+.bill-sec{
+    margin-top: -40px;
+}
+.bill-inpt-title,.bill-inpt-title1,.bill-inpt-title,.bill-inpt-title1,.bill-inpt-title,.bill-inpt-title1,.bill-inpt-title2,.bill-inpt-title2,.bill-inpt-title2,.bill-inpt-title2{
+    font-size: 12px;
+    text-align: left;
+
+}
+.bill-input-box,.bill-input-box1,.bill-input-box2{
+    
+    width: 250px;
+    padding: 6px 20px;
+   
+    
+    background-color: #F6F6F6;
+    margin-top: 20px;
+    border-radius: 8px;
+
+}
+.phone-chkout{
+    margin-left: 10px;
+}
+.apt-suite{
+    margin-top: 20px;
+}
+.strrt-address{
+    margin-top: -18px;
+    margin-left: 10px;
+}
+.laast-name-checkout{
+    margin-top: 20px;
+}
+.country-checkout{
+    margin-top: -25px;
+}
+.cmpny-name-checkout{
+    margin-top: 20px;
+
+}
+.bill-inpt-title2{
+    margin-left: 15px;
+}
+.dlvry-btn{
+    padding: 12px 14px;
+   
+font-size: 15px;
+
+}
+.input-containers{
+    padding-bottom: 12px;
+}
+.save-input{
+    gap: 5px;
+    margin-top: 10px;
+}
+.save-text{
+    font-size: 12px;
+}
+.save-chkout{
+    width: 15px;
+}
+.ship-adress{
+    font-size: 15px;
+    margin-top: 20px;
+}
+.adrs-text{
+    font-size: 12px;
+    margin-top: 2px;
+    
+}
+.bill-adress{
+    margin-top: 20px;
+
+}
+.same-text,.use-dif-text{
+    font-size: 12px;
+}
+.use-dif{
+    padding-bottom: 1.5rem;
+}
+.shpng-title{
+    font-size: 15px;
+    margin-top: 20px;
+}
+.arvs{
+    font-size: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+     margin-bottom: 6px;
+    margin-top: 10px;
+}
+.shp-mthd-arv{
+    height: 160px;
+    border-radius: 12px;
+    background: #f3f3f3; 
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+   
+  
+
+}
+.dlvry-charge,.dlvry-chrg{
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: 12px;
+}
+.fees{
+    font-size: 12px;
+}
+.payment-method{
+
+font-size: 15px;
+
+margin-top: 1rem;
+}
+.payment-sub-title{
+    font-size: 12px;
+}
+.credit-card{
+    margin-top: 20px;
+}
+.credit-title{
+    font-size: 13px;
+}
+.crdt-text{
+    font-size: 12px;
+}
+.crdt-inpt,.crdt-inpt1{
+    padding: 0 15px;
+}
+.card-num,.card-name,.date-birth,.scrty-code{
+    height: 20px;
+    
+}
+.date-birth{
+   
+    padding: 18px 0;
+   
+    
+}
+.cash-title{
+    font-size: 13px;
+}
+.cash-text{
+    font-size: 12px;
+}
+.cash-on{
+    margin-top: 20px;
+}
+
+.pay-pol-title{
+    font-size: 13px;
+   
+}
+.cash-hr{
+    margin-top:20px;
+   
+}
+.pay-pol{
+    margin-top: 20px;
+   
+}
+.play-btn{
+    margin: 20px 0;
+}
+.play-now{
+font-size: 15px;
+margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -788,6 +982,7 @@ line-height: normal;
     .checkout{
         padding: 0 ;
     }
+
 
 
 
