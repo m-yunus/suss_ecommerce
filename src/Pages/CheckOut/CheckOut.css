@@ -745,17 +745,55 @@ line-height: normal;
 }
 
 @media(max-width:431px){
+
+.smry-title{
+    font-size: 20px;
+    margin-top: -10px;
+}
+.smry-main{
+    margin: 0 auto;
+    
+}
+.smry-image-title,.smry-img-color{
+    font-size: 12px;
+}
+.smry-img-color{
+    text-align: left!important;
+}
+.smry-img-rate{
+    font-size: 12px;
+}
+.subttl-bill p{
+    font-size: 14px!important;
+}
+
+
+
+
+
+
+
+
     .home,.myacnt,.chkout{
-        font-size: 10px;
+        font-size: 12px;
+     
         
     }
     .chk-path-icon{
         width: 3px;
         height: 8.143px;
         margin-top: 3px;
+      
     }
     .checkout{
         padding: 0 ;
     }
+
+
+
+
+
+
+
    
 }

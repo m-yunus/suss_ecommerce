@@ -53,27 +53,33 @@ const LoginPage = () => {
   return (
     <>
       <SigninNavbar />
-      <div className="register px-16  w-full flex  ">
+      <div className="register   w-full flex  ">
         <div className="register-left w-1/2  h-auto ">
           <div className="w-full">
-          <img src={login} alt="" />
+            <img src={login} alt="" />
           </div>
-         
         </div>
-        <div className="register-right w-1/2  flex  max-w-[50rem]  my-auto ">
-          <div className="signup flex flex-col w-[80%]      mx-auto">
+        <div className="register-right w-1/2  flex  max-w-[50rem]  mt-4  ">
+          <div className="signup flex flex-col w-[100%]   px-20    mx-auto">
             <h1 className="font-bold text-xs">Sign In Page</h1>
 
-            <button className="google-signup mt-16 border  font-semibold " onClick={handleSigninGoogle}>
+            <button
+              className="google-signup mt-8 border  font-semibold "
+              onClick={handleSigninGoogle}
+            >
               <img src={google} alt="" /> Continue With Google
             </button>
-            <button className="twitter-signup font-semibold mt-5" onClick={handlesigninTwitter}>
+            <button
+              className="twitter-signup  font-semibold mt-5"
+              onClick={handlesigninTwitter}
+            >
               <img src={twitter} alt="" />
               Continue With Twitter
             </button>
 
-            <div className="flex my-6 sign-in-or-section items-center">
-              <hr /> <h6> OR</h6> <hr />
+            <div className="flex my-8 sign-in-or-section gap-2 items-center">
+              <hr className="w-full bg-gray-400 h-[2px]" /> <h6> OR</h6>{" "}
+              <hr className="w-full bg-gray-400 h-[2px]" />
             </div>
             <span className="    flex flex-col">
               <label htmlFor="">User name or email address</label>
@@ -83,10 +89,10 @@ const LoginPage = () => {
                 name="email"
                 id=""
                 value={logindata.email}
-                onChange={(e)=>handloginchange(e)}
+                onChange={(e) => handloginchange(e)}
               />
             </span>
-            <div className="pass-section-signup mt-4">
+            <div className="pass-section-signup ">
               <span className="flex justify-between mt-8">
                 <label htmlFor="">Password</label>
 
@@ -95,7 +101,14 @@ const LoginPage = () => {
                   <h4>Hide</h4>
                 </span>
               </span>
-              <input className="w-full" type="password" name="password" id="" value={logindata.password} onChange={(e)=>handloginchange(e)} />
+              <input
+                className="w-full"
+                type="password"
+                name="password"
+                id=""
+                value={logindata.password}
+                onChange={(e) => handloginchange(e)}
+              />
               <h4 className="flex justify-end">
                 <a className="underline" href="">
                   Forget your password
@@ -103,7 +116,9 @@ const LoginPage = () => {
               </h4>
             </div>
 
-            <button className="signup-button mb-2" onClick={handleloginsubmit}>Sign In</button>
+            <button className="signup-button mb-2" onClick={handleloginsubmit}>
+              Sign In
+            </button>
             <h5>
               Don’t have an account?
               <a href="" className="underline">
@@ -111,7 +126,6 @@ const LoginPage = () => {
               </a>{" "}
             </h5>
           </div>
-        
         </div>
       </div>
     </>

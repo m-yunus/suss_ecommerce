@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../../layout/Navbar";
 import Footer from "../../layout/Footer";
+import "./My_Order.css"
 
 import arrow from "../../../src/assets/images/Wishlist-Sidebar/arrow.png";
 import WishlistSidebar from "../Contact_Details/WishlistSidebar/WishlistSidebar";
@@ -199,9 +200,9 @@ const My_Order = () => {
         <p className="text-gray-400">My Account</p> <img src={arrow} alt="" />{" "}
         <p className="text-gray-800">My Orders</p>
       </div>
-      <div className="px-6 flex">
-        <WishlistSidebar />
-        <div className="w-full px-4">
+      <div className="my-order-total px-6 flex ">
+        <WishlistSidebar  className=""/>
+        <div className=" my-order-right-section w-full px-4 ">
           <h1 className="text-[#3C4242] font-bold  text-2xl">My Orders</h1>
           <div className=" flex justify-between text-[#3C4242 ]  text-xl font-normal mt-6">
             <button

@@ -1,7 +1,5 @@
 
-.banner_text h1 {
-  font-size: 1em;
-}
+
 .banner_text button{
   font-size: 8px;
  padding: 4px;
@@ -11,7 +9,7 @@
     font-size: 2em;
   }
   .banner_text button{
-    font-size: 8px;
+    font-size: 10px;
    padding: 4px;
    width: 50%;
   }
@@ -27,6 +25,7 @@
   .banner_text button{
     font-size: 10px;
    padding: 6px;
+   margin-top: 1rem;
   }
   .banner_text {
     top: 20%;
@@ -42,6 +41,7 @@
   .banner_text button{
     font-size: 16px;
    padding: 6px;
+   margin-top: 2rem;
   }
   .banner_text {
     top: 35%;
@@ -56,6 +56,11 @@
   }
   .banner_text button{
     font-size: 16px;
-   padding: 6;
+   padding: 0.7rem 2.5rem;
+   margin-top:5rem;
+  }
+   .banner_text {
+    top: 25%;
+    left: 12%;
   }
 }
