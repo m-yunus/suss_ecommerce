@@ -19,16 +19,16 @@ const WishList = () => {
   useEffect(() => {
     
     const wishlistItems = wishItems.map((item, index) => (
-      <div className="wishlist-order" key={index}>
+      <div  className=" wishlist-order " key={index}>
         <img
-          className="wishlist-close cursor-pointer"
+          className="wishlist-close cursor-pointer "
           src={close}
           alt=""
           onClick={() => removeistitems(item)}
         />
-        <img className="wishlist-img" src={item.image} alt="" />
-        <div className="wishlist-text">
-          <p className="wishlist-ttl">{item.title}</p>{" "}
+        <img className="wishlist-img " src={item.image} alt="" />
+        <div className="wishlist-text ">
+          <p className="wishlist-ttl ">{item.title}</p>{" "}
          
           <div className="wishlist-color">
             <p className="list-color">color:</p>
@@ -41,7 +41,7 @@ const WishList = () => {
          
           </div>
         </div>
-        <p className="wishlist-rate">{`${item.price}`}</p>{" "}
+        <p className="wishlist-rate ">{`${item.price}`}</p>{" "}
      
         <button className="wishlist-addcart-button">Add to cart</button>
       </div>

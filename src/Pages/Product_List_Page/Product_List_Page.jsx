@@ -51,14 +51,14 @@ const Product_List_Page = () => {
         {showRightSection && <Product_List_Right />}
       </div>
 
-      <div className="pll-bottom-button flex fixed bottom-0 w-full justify-center bg-red z-10">
+      <div className="pll-bottom-button flex fixed bottom-0 w-full justify-center bg-red z-10 sm:hidden">
         <button
-          className="w-1/2 bg-white flex gap-4 justify-center items-center"
+          className="w-1/2 bg-white flex gap-4 justify-center items-center "
           onClick={toggleLeftSection}
         >
           {showProductListLeft ? (
             <>
-             APPLY <IoMdDoneAll />{" "}
+              APPLY <IoMdDoneAll />{" "}
             </>
           ) : (
             <>
