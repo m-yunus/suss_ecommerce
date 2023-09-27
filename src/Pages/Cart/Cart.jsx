@@ -16,6 +16,7 @@ import CartEmpty from "./CartEmpty/CartEmpty";
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
   const [CartListItems, setCartListItems] = useState([]);
+  const [mobviewitems,setmobviewitems]=useState([])
   const dispatch=useDispatch()
   const CartItems = useSelector((state) => state.Cart.CartItems);
   const totalAmount=useSelector(selectTotalAmount)
@@ -83,7 +84,51 @@ const Cart = () => {
         </td>
       </tr>
     ));
+    
     setCartListItems(Cartmapping);
+    const mobview=CartItems.map((items) => (  
+      <div className=" cart-mobile px-4 w-full    flex ">
+      <div className=" mx-auto flex   items-center">
+        <div className="flex  mx-auto items-center gap-6">
+          <img
+            className="w-[140px]  object-contain h-[200px]"
+            src={items?.image}
+            alt=""
+          />
+          <div className="w-auto  ">
+            <h1 className="text-[#3C4242] font-bold text-base">
+             {items?.title} 
+            </h1>
+            <h2 className="text-[#807D7E] font-medium text-sm ">
+              Color : Levender
+            </h2>
+            <h2 className="text-[#807D7E] font-medium text-sm">
+              Size : XXL
+            </h2>
+            <p className="text-[#3C4242] font-bold text-sm  text-left mt-2">
+              Price : {items?.price}
+            </p>
+            <div className="  bg-[#F6F6F6] text-[#3C4242] font-semibold text-sm flex items-center gap-2">
+              <button onClick={()=>DecreaseQuantity(items)}>
+                <img src={minus} alt="" />
+              </button>{" "}
+              {items?.cartQuantity}
+              <button onClick={()=>Increasequantity(items)}>
+                <img src={plus} alt="" />
+              </button>
+            </div>
+            <p className="text-[#3C4242] font-bold text-sm text-left">
+              SUB TOTAL : {items?.price * items?.cartQuantity}
+            </p>
+            <div className="flex mt-2">
+              <RiDeleteBinLine className="w-6 h-6  text-red-500 cursor-pointer" onClick={()=>handleDelete(items)}  />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    ));
+    setmobviewitems(mobview)
   }, [CartItems]);
   useEffect(()=>{
     dispatch(setGetTotals())
@@ -233,46 +278,7 @@ const Cart = () => {
 
         {/* MOBILE - VIEW */}
 
-        <div className=" cart-mobile px-4 w-full    flex ">
-          <div className=" mx-auto flex   items-center">
-            <div className="flex  mx-auto items-center gap-6">
-              <img
-                className="w-[140px]  object-contain h-[200px]"
-                src={img1}
-                alt=""
-              />
-              <div className="w-auto  ">
-                <h1 className="text-[#3C4242] font-bold text-base">
-                  Levender Hoodie
-                </h1>
-                <h2 className="text-[#807D7E] font-medium text-sm ">
-                  Color : Levender
-                </h2>
-                <h2 className="text-[#807D7E] font-medium text-sm">
-                  Size : XXL
-                </h2>
-                <p className="text-[#3C4242] font-bold text-sm  text-left mt-2">
-                  Price : $29.00
-                </p>
-                <div className="  bg-[#F6F6F6] text-[#3C4242] font-semibold text-sm flex items-center gap-2">
-                  <button onClick={()=>DecreaseQuantity()}>
-                    <img src={minus} alt="" />
-                  </button>{" "}
-                  {quantity}
-                  <button onClick={Increasequantity}>
-                    <img src={plus} alt="" />
-                  </button>
-                </div>
-                <p className="text-[#3C4242] font-bold text-sm text-left">
-                  SUB TOTAL : $29.00
-                </p>
-                <div className="flex mt-2">
-                  <RiDeleteBinLine className="w-6 h-6  text-red-500 cursor-pointer" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+       {mobviewitems}
 
         <div className={CartItems.length===0 ? "hidden" :" cart-bottom  w-full flex px-20 py-10 justify-between   bg-[#F6F6F6]"}>
           <div className="cart-btm-1">
