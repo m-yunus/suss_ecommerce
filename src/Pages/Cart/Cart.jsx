@@ -59,11 +59,11 @@ const Cart = () => {
   useEffect(() => {
     const Cartmapping = CartItems.map((items) => (
       <tr className=" border-b border-[#BEBCBD]  " key={items._id}>
-        <td className="flex py-8  ms-4">
-          <div>
-            <img className="" src={items?.variation?.images.image1} alt="img" />
+        <td className="flex py-8  ">
+          <div className="w-2/3">
+            <img className="w-2/3 h-full" src={`https://suss.onrender.com/${items?.images.image1}`} alt="img" />
           </div>
-          <div className="ms-2">
+          <div className="">
             <h1 className="text-[#3C4242] font-bold text-lg">{items?.product?.name || items?.name}</h1>
             <h2 className="text-[#807D7E] font-medium text-sm mt-2">
               Color : {items?.variation?.color}
@@ -114,7 +114,7 @@ const Cart = () => {
         <div className="flex  mx-auto items-center gap-6">
           <img
             className="w-[140px]  object-contain h-[200px]"
-            src={items?.image}
+            src={`https://suss.onrender.com/${items?.images.image1}`}
             alt=""
           />
           <div className="w-auto  ">

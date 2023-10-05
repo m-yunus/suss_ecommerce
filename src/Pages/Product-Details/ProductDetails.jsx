@@ -45,54 +45,49 @@ const ProductDetails = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
 
-  const fetchproducts = async () => {
-    try {
-      const res = await axios.get(
-        `https://suss.onrender.com/api/product/single/${id}`
+const fetchproducts=async()=>{
+  try {
+    const res=await axios.get(`https://suss.onrender.com/api/product/single/${id}`)
+    console.log(res.data);
+   setProductdata(res.data)
+  } catch (error) {
+    console.log(error);
+  }
+
+}
+useEffect(()=>{
+fetchproducts()
+},[])
+   
+
+    const slides = [
+   
+      { id: 1, src: slideimage },
+      { id: 2, src: slideimg },
+      { id: 3, src: slide },
+      { id: 4, src: slideimg },
+      { id: 5, src: slideimage },
+    ];
+    const slidesToShow = 3;
+    const handleClickPrev = () => {
+      setCurrentIndex((prevIndex) =>
+        (prevIndex-1- slidesToShow + slides.length) % slides.length
       );
-      console.log(res.data);
-      setProductdata(res.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  useEffect(() => {
-    fetchproducts();
-  }, []);
-
-  console.log(ProductData);
-  const slides = [
-    { id: 1, src: slideimage },
-    { id: 2, src: slideimg },
-    { id: 3, src: slide },
-    { id: 4, src: slideimg },
-    { id: 5, src: slideimage },
-  ];
-  const slidesToShow = 3;
-  const handleClickPrev = () => {
-    setCurrentIndex(
-      (prevIndex) =>
-        (prevIndex - 1 - slidesToShow + slides.length) % slides.length
-    );
-  };
-  const handleClickNext = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex + 1 + slidesToShow) % slides.length
-    );
-  };
-
-  const [currentImage, setCurrentImage] = useState(slides[0].src);
-  const handleSlideClick = (src) => {
-    setCurrentImage(src);
-  };
-
-  const handleAddToCart = async (quantity) => {
-    console.log(
-      ProductData,
-      ProductData._id,
-      ProductData.variations[0],
-      ProductData.price
-    );
+    };
+    const handleClickNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow ) % slides.length);
+    };
+  
+  
+  
+  
+      const [currentImage, setCurrentImage] = useState(slides[0].src);
+      const handleSlideClick = (src) => {
+        setCurrentImage(src);
+      };
+ 
+ const handleAddToCart=async(quantity)=>{
+console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.price);
 
     try {
       const headers = {
@@ -150,48 +145,49 @@ const ProductDetails = () => {
         <div className="product-left flex flex-col relative">
           <div className="flex items-center justify-end relative">
             <img className="product-image" src={currentImage} alt="" />
-            <div className="flex justify-center w-full absolute bottom-1 ">
-              <div className="slider flex flex-row gap-2 ">
-                {slides.map((slideData) => {
-                  const { id, src } = slideData;
-                  return (
-                    <div
-                      key={id}
-                      className={`slide flex flex-col ${
-                        id >= currentIndex &&
-                        id < currentIndex + 1 + slidesToShow
-                          ? ""
-                          : "hidden"
-                      }`}
-                      data-intex={id}
-                    >
-                      <img
-                        className="slide-img"
-                        src={src}
-                        alt=""
-                        onClick={() => handleSlideClick(src)} // Add onClick handler here
-                      />
-                    </div>
-                  );
-                })}
-                <div className="slider-icons">
+            <div className="flex justify-center w-full absolute bottom-1">
+
+            
+            <div className="slider flex flex-row gap-2 ">
+            {slides.map((slideData) => {
+              const { id, src } = slideData;
+              return (
+                <div
+                  key={id}
+                  className={`slide flex flex-col ${
+                    id >= currentIndex && id < currentIndex + 1 + slidesToShow
+                      ? ""
+                      : "hidden"
+                  }`}
+                  data-intex={id}
+                >
                   <img
-                    id="slider-icon-1"
-                    src={slidericn}
+                    className="slide-img"
+                    src={src}
                     alt=""
-                    className="slider-icon"
-                    onClick={handleClickPrev}
-                  />
-                  <img
-                    id="slider-icon-2"
-                    src={slidericon}
-                    alt=""
-                    className="slider-icon"
-                    onClick={handleClickNext}
+                    onClick={() => handleSlideClick(src)} // Add onClick handler here
                   />
                 </div>
-              </div>
+              );
+            })}
+            <div className="slider-icons">
+              <img
+                id="slider-icon-1"
+                src={slidericn}
+                alt=""
+                className="slider-icon"
+                onClick={handleClickPrev}
+              />
+              <img
+                id="slider-icon-2"
+                src={slidericon}
+                alt=""
+                className="slider-icon"
+                onClick={handleClickNext}
+              />
             </div>
+          </div>
+          </div>
           </div>
         </div>
 

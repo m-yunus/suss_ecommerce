@@ -54,7 +54,10 @@ const Product_List_Right = ({ProductData}) => {
  console.log(data.id);
  navigate(`/product-list-page/${data._id}`)
   }
-
+const data= ProductData.map((items)=>{
+  console.log(items?.images?.image1);
+})
+console.log(data);
   return (
     <>
       <div className="prdct-lst-right w-full px-10 mx-auto mr-14">
@@ -62,15 +65,15 @@ const Product_List_Right = ({ProductData}) => {
           <h1>Women’s Clothing</h1>
           <h1>Recommended</h1>
         </div>
-        <div className="flex justify-between flex-wrap gap-6 xl:gap-x-[100px]">
+        <div className="flex justify-between flex-wrap gap-2 xl:gap-x-[100px]">
           {ProductData.map((data) => (
             <div
-              className="max-w-[8rem] sm:max-w-[9rem] md:max-w-[10rem] lg:max-w-[12rem] xl:max-w-[15rem] my-6 relative cursor-pointer mx-auto "
+              className="max-w-[8rem] sm:max-w-[9rem] md:max-w-[10rem] lg:max-w-[12rem] xl:max-w-[15rem] my-6 relative cursor-pointer  "
               key={data._id}
              
             >
               {" "}
-              <img src={data?.images?.image1} alt="img"  onClick={()=>{handlenavigate(data)}}/>
+              <img src={`https://suss.onrender.com/${data?.images?.image1}`} alt="img"  onClick={()=>{handlenavigate(data)}}/>
               <div
                 className={`bg-gray-200 min-h-[1rem] max-w-[2rem] absolute top-2 right-2  p-1 rounded-3xl ${
                   isHeartFilled[data.id] ? "filled-heart large" : ""
