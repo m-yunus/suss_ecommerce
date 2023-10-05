@@ -31,110 +31,114 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { useDispatch } from "react-redux";
-import { setAddItemToCart} from "../../Redux/CartSlice";
+import { setAddItemToCart } from "../../Redux/CartSlice";
 import Footer from "../../layout/Footer";
 import axios from "axios";
 import toast from "react-hot-toast";
 const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-const [ProductData,setProductdata]=useState([])
-const[size,setsize]=useState([])
-const [filterItems,setFilter]=useState(false)
-const [variationId,setVariationId]=useState("")
-const [activeSize, setActiveSize] = useState("S"); // 
+  const [ProductData, setProductdata] = useState([]);
+  const [size, setsize] = useState([]);
+  const [filterItems, setFilter] = useState(false);
+  const [variationId, setVariationId] = useState("");
+  const [activeSize, setActiveSize] = useState("S"); //
   const { id } = useParams();
   const dispatch = useDispatch();
 
-const fetchproducts=async()=>{
-  try {
-    const res=await axios.get(`https://suss.onrender.com/api/product/single/${id}`)
-    console.log(res.data);
-   setProductdata(res.data)
-  } catch (error) {
-    console.log(error);
-  }
-
-}
-useEffect(()=>{
-fetchproducts()
-},[])
-   
-  console.log(ProductData);
-    const slides = [
-   
-      { id: 1, src: slideimage },
-      { id: 2, src: slideimg },
-      { id: 3, src: slide },
-      { id: 4, src: slideimg },
-      { id: 5, src: slideimage },
-    ];
-    const slidesToShow = 3;
-    const handleClickPrev = () => {
-      setCurrentIndex((prevIndex) =>
-        (prevIndex-1- slidesToShow + slides.length) % slides.length
+  const fetchproducts = async () => {
+    try {
+      const res = await axios.get(
+        `https://suss.onrender.com/api/product/single/${id}`
       );
-    };
-    const handleClickNext = () => {
-      setCurrentIndex((prevIndex) => (prevIndex+1 + slidesToShow ) % slides.length);
-    };
-  
-  
-  
-  
-      const [currentImage, setCurrentImage] = useState(slides[0].src);
-      const handleSlideClick = (src) => {
-        setCurrentImage(src);
-      };
- 
- const handleAddToCart=async(quantity)=>{
-console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.price);
-
-  try {
-    const headers = {
-      "x-access-token": sessionStorage.getItem("user-token"),
-    };
-    const res = await axios.post(`https://suss.onrender.com/api/user/add-to-cart`,{
-      productId :ProductData._id,
-      variationId :size._id,
-      count :1,
-      price :ProductData.price
-
-    },{headers})
-   
-    if (res)dispatch(setAddItemToCart(ProductData))
-  } catch (error) {
-    if(error.response.status ===401 ){
-      dispatch(setAddItemToCart(ProductData))
-    }else{
-      toast.error("error in add to cart")
+      console.log(res.data);
+      setProductdata(res.data);
+    } catch (error) {
+      console.log(error);
     }
-  
-  }
+  };
+  useEffect(() => {
+    fetchproducts();
+  }, []);
 
+  console.log(ProductData);
+  const slides = [
+    { id: 1, src: slideimage },
+    { id: 2, src: slideimg },
+    { id: 3, src: slide },
+    { id: 4, src: slideimg },
+    { id: 5, src: slideimage },
+  ];
+  const slidesToShow = 3;
+  const handleClickPrev = () => {
+    setCurrentIndex(
+      (prevIndex) =>
+        (prevIndex - 1 - slidesToShow + slides.length) % slides.length
+    );
+  };
+  const handleClickNext = () => {
+    setCurrentIndex(
+      (prevIndex) => (prevIndex + 1 + slidesToShow) % slides.length
+    );
+  };
 
+  const [currentImage, setCurrentImage] = useState(slides[0].src);
+  const handleSlideClick = (src) => {
+    setCurrentImage(src);
+  };
 
+  const handleAddToCart = async (quantity) => {
+    console.log(
+      ProductData,
+      ProductData._id,
+      ProductData.variations[0],
+      ProductData.price
+    );
 
- }
- const handleSizeChange = (size) => {
-  const lowerCaseSize = size.toLowerCase();
-  setActiveSize(lowerCaseSize);
-  const filteredItem = ProductData?.variationsDetails?.find((item) => item.size.toLowerCase() === lowerCaseSize);
+    try {
+      const headers = {
+        "x-access-token": sessionStorage.getItem("user-token"),
+      };
+      const res = await axios.post(
+        `https://suss.onrender.com/api/user/add-to-cart`,
+        {
+          productId: ProductData._id,
+          variationId: size._id,
+          count: 1,
+          price: ProductData.price,
+        },
+        { headers }
+      );
 
-  if (filteredItem) {
-   
-    console.log(filteredItem);
-   setFilter(true)
-   setsize(filteredItem)
-  } else {
-    setFilter(false)
-   toast.error("Item not found for selected size");
-  }
-};
+      if (res) dispatch(setAddItemToCart(ProductData));
+    } catch (error) {
+      if (error.response.status === 401) {
+        dispatch(setAddItemToCart(ProductData));
+      } else {
+        toast.error("error in add to cart");
+      }
+    }
+  };
+  const handleSizeChange = (size) => {
+    const lowerCaseSize = size.toLowerCase();
+    setActiveSize(lowerCaseSize);
+    const filteredItem = ProductData?.variationsDetails?.find(
+      (item) => item.size.toLowerCase() === lowerCaseSize
+    );
+
+    if (filteredItem) {
+      console.log(filteredItem);
+      setFilter(true);
+      setsize(filteredItem);
+    } else {
+      setFilter(false);
+      toast.error("Item not found for selected size");
+    }
+  };
 
   return (
     <>
       <Navbar />
-      
+
       <div className="paths-top gap-5 mb-4 flex items-center px-8">
         <h4 className="path">Shop</h4>
         <img className="path-arrow" src={left} alt="" />
@@ -143,57 +147,178 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
         <h4 className="path">Top</h4>
       </div>
       <div className="product-details mt-10  flex flex-row justify-center">
-        <div className="product-left flex flex-col relative" >
+        <div className="product-left flex flex-col relative">
           <div className="flex items-center justify-end relative">
             <img className="product-image" src={currentImage} alt="" />
-            <div className="flex justify-center w-full absolute bottom-1">
-
-            
-            <div className="slider flex flex-row gap-2 ">
-            {slides.map((slideData) => {
-              const { id, src } = slideData;
-              return (
-                <div
-                  key={id}
-                  className={`slide flex flex-col ${
-                    id >= currentIndex && id < currentIndex + 1 + slidesToShow
-                      ? ""
-                      : "hidden"
-                  }`}
-                  data-intex={id}
-                >
+            <div className="flex justify-center w-full absolute bottom-1 ">
+              <div className="slider flex flex-row gap-2 ">
+                {slides.map((slideData) => {
+                  const { id, src } = slideData;
+                  return (
+                    <div
+                      key={id}
+                      className={`slide flex flex-col ${
+                        id >= currentIndex &&
+                        id < currentIndex + 1 + slidesToShow
+                          ? ""
+                          : "hidden"
+                      }`}
+                      data-intex={id}
+                    >
+                      <img
+                        className="slide-img"
+                        src={src}
+                        alt=""
+                        onClick={() => handleSlideClick(src)} // Add onClick handler here
+                      />
+                    </div>
+                  );
+                })}
+                <div className="slider-icons">
                   <img
-                    className="slide-img"
-                    src={src}
+                    id="slider-icon-1"
+                    src={slidericn}
                     alt=""
-                    onClick={() => handleSlideClick(src)} // Add onClick handler here
+                    className="slider-icon"
+                    onClick={handleClickPrev}
+                  />
+                  <img
+                    id="slider-icon-2"
+                    src={slidericon}
+                    alt=""
+                    className="slider-icon"
+                    onClick={handleClickNext}
                   />
                 </div>
-              );
-            })}
-            <div className="slider-icons">
-              <img
-                id="slider-icon-1"
-                src={slidericn}
-                alt=""
-                className="slider-icon"
-                onClick={handleClickPrev}
-              />
-              <img
-                id="slider-icon-2"
-                src={slidericon}
-                alt=""
-                className="slider-icon"
-                onClick={handleClickNext}
-              />
+              </div>
             </div>
           </div>
-          </div>
-          </div>
-      
         </div>
 
-        <div className="product-right">
+        {/* -----------MOBILE VIEW------------- */}
+
+        <div className="p-2 sm:hidden">
+          <h1 className=" text-lg flex justify-center font-bold">
+            {ProductData?.name}
+          </h1>
+          <div className="prdct-dtls gap-3">
+            <img src={Star} alt="" className="prdct-star" />
+            <img src={Star} alt="" className="prdct-star" />
+            <img src={Star} alt="" className="prdct-star" />
+            <img src={Star} alt="" className="prdct-star" />
+            <img src={Star} alt="" className="prdct-star" />
+            <p className="rating">3.5</p>
+            <img src={Icon} alt="" className="msg-icon" />
+            <p className="cmt"> 120 comment</p>
+          </div>
+
+          <div className="mt-4 ">
+            <h1 className=" text-lg font-bold flex justify-center">
+              Product Description
+            </h1>
+            <p className="text-gray-500 text-sm mt-2  ">
+              100% Bio-washed Cotton – makes the fabric extra soft & silky.
+              Flexible ribbed crew neck. Precisely stitched with fading. Provide
+              all-time comfort. Anytime, anywhere. Infinite range of
+              matte-finish HD prints.
+            </p>
+            <div className="slct-sizes  flex justify-center gap-5">
+              <h1 className="slct-size">Select Size</h1>
+              <h4 className="size-guide">Size Guide</h4>
+              <img src={arrow} alt="" className="size-guide-icon" />
+            </div>
+            <div className="size flex items-center ">
+              <div className="flex flex-row items-center  ">
+                <div className="size-box-icons  flex gap-3 ">
+                  <div className="size-box-icons flex gap-3">
+                    <div
+                      className={`size-box-s ${
+                        activeSize === "s" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleSizeChange("S");
+                      }}
+                    >
+                      S
+                    </div>
+                    <div
+                      className={`size-box-m ${
+                        activeSize === "m" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleSizeChange("M");
+                      }}
+                    >
+                      M
+                    </div>
+                    <div
+                      className={`size-box-large ${
+                        activeSize === "l" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleSizeChange("L");
+                      }}
+                    >
+                      L
+                    </div>
+                    <div
+                      className={`size-box-xl ${
+                        activeSize === "xl" ? "active" : ""
+                      }`}
+                      onClick={() => {
+                        handleSizeChange("XL");
+                      }}
+                    >
+                      XL
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1 className="color-title justify-center flex">
+              Colours Available{" "}
+            </h1>
+            <div className="color gap-6 justify-center flex items-center">
+              <img src={black} alt="" className="clr-icon" />
+              <img src={yellow} alt="" className="clr-icon" />
+              <img src={pink} alt="" className="clr-icon" />
+              <img src={red} alt="" className="clr-icon" />
+            </div>
+
+            <div  className="bg-white z-10 fixed bottom-0 left-0 w-full">
+              <div className="bag gap-3 flex items-center  justify-center">
+                <div>{ProductData?.offer_price}</div>
+                <div
+                  className="addtobag  cursor-pointer gap-4"
+                  onClick={() => handleAddToCart()}
+                >
+                  <img src={cart} alt="" />
+                  Add to cart
+                </div>
+                <div className="rate-btn">
+                  {!filterItems ? ProductData?.price : size?.offer_price}
+                </div>
+              </div>
+
+             
+              <div className=" gap-20  w-full flex justify-center items-center ">
+                <div className="payment">
+                  <img src={payment} alt="" />
+
+                  <p className="payment-title">Secure payment</p>
+                </div>
+                <div className="size-fit">
+                  <img src={size} alt="" />
+                  <p className="size-fit-title">Size & fit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* -------------------------------------------- */}
+
+        <div className="product-right ">
           <div>
             <div className="pathss  gap-5">
               <h4 className="path">Shop</h4>
@@ -219,44 +344,52 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
             <h4 className="size-guide">Size Guide</h4>
             <img src={arrow} alt="" className="size-guide-icon" />
           </div>
+
           <div className="size flex items-center ">
             <div className="flex flex-row items-center ">
               <div className="size-box-icons flex gap-3 ">
-              <div className="size-box-icons flex gap-3">
-  <div
-    className={`size-box-s ${activeSize === "s" ? "active" : ""}`}
-    onClick={() => {
-      handleSizeChange("S");
-    }}
-  >
-    S
-  </div>
-  <div
-    className={`size-box-m ${activeSize === "m" ? "active" : ""}`}
-    onClick={() => {
-      handleSizeChange("M");
-    }}
-  >
-    M
-  </div>
-  <div
-    className={`size-box-large ${activeSize === "l" ? "active" : ""}`}
-    onClick={() => {
-      handleSizeChange("L");
-    }}
-  >
-    L
-  </div>
-  <div
-    className={`size-box-xl ${activeSize === "xl" ? "active" : ""}`}
-    onClick={() => {
-      handleSizeChange("XL");
-    }}
-  >
-    XL
-  </div>
-</div>
-
+                <div className="size-box-icons flex gap-3">
+                  <div
+                    className={`size-box-s ${
+                      activeSize === "s" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      handleSizeChange("S");
+                    }}
+                  >
+                    S
+                  </div>
+                  <div
+                    className={`size-box-m ${
+                      activeSize === "m" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      handleSizeChange("M");
+                    }}
+                  >
+                    M
+                  </div>
+                  <div
+                    className={`size-box-large ${
+                      activeSize === "l" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      handleSizeChange("L");
+                    }}
+                  >
+                    L
+                  </div>
+                  <div
+                    className={`size-box-xl ${
+                      activeSize === "xl" ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      handleSizeChange("XL");
+                    }}
+                  >
+                    XL
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -269,9 +402,7 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
           </div>
 
           <div className="bag gap-3 flex items-center ">
-            <div>
-              {ProductData?.offer_price}
-            </div>
+            <div>{ProductData?.offer_price}</div>
             <div
               className="addtobag  cursor-pointer gap-4"
               onClick={() => handleAddToCart()}
@@ -279,8 +410,11 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
               <img src={cart} alt="" />
               Add to cart
             </div>
-            <div className="rate-btn">{!filterItems ? ProductData?.price : size?.offer_price }</div>
+            <div className="rate-btn">
+              {!filterItems ? ProductData?.price : size?.offer_price}
+            </div>
           </div>
+
           <hr className=" bg-[#BEBCBD] h-[2px]  mt-10" />
           <div className="delivery gap-20  flex justify-center items-center ">
             <div className="payment">
@@ -297,7 +431,7 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
       </div>
       <div className="description-similar px-16 gap-20">
         <div className="product-description ">
-          <div className="prdct-description-title gap-2">
+          <div className="prdct-description-title gap-2  ">
             <div className="desctn-line"></div>
             <h2 className="prdct-desptn-title">
               Product <br /> Description
@@ -388,7 +522,7 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
           <div className="similar-image "></div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
