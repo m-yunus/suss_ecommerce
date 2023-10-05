@@ -1,8 +1,8 @@
 
 .sidebar {
-  position: absolute;
+  position: fixed;
   width: 25rem;
-  height: auto;
+  height: 100vh;
   background-color: #fff;
   margin-right: 2rem;
   border-radius: 1.625rem;
@@ -103,9 +103,9 @@
 }
 @media (max-width: 768px) {
   .sidebar {
-    position: absolute;
+    position: fixed;
     width: 20rem;
-    height: auto;
+    height: 100vh;
     border-radius: 0.71588rem;
     background-color: #fff;
     transition: right 0.3s ease-in-out;
@@ -148,9 +148,10 @@
 }
 @media (max-width: 426px) {
   .sidebar {
-    position: absolute;
-    width: 15rem;
-    height: auto;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: 100%;
+    height: 100vh;
     border-radius: 0.71588rem;
     background-color: #fff;
     transition: right 0.3s ease-in-out;
@@ -174,7 +175,7 @@
       
     
     margin-top: 1rem;
-    gap: 0.5rem;
+    gap: 1.5rem;
   }
   .close {
     top: 0;

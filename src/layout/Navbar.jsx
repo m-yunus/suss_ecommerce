@@ -19,8 +19,8 @@ const Navbar = () => {
  
   const wishItems = useSelector((state) => state.Wishlist.WishItems);
   useEffect(()=>{
-   setwishlength(wishItems.length)
-   setCartItemslength(CartItems.length)
+   setwishlength(wishItems?.length)
+   setCartItemslength(CartItems?.length)
   })
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);

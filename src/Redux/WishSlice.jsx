@@ -16,18 +16,18 @@ const wishlistSlice = createSlice({
     setAddItemtoWishlist: (state, action) => {
       const temp = { ...action.payload, WishListTotalQty: 1 };
       state.WishItems.push(temp);
-      toast.success(`${action.payload.title} added to wishlist`);
+      toast.success(`${action.payload.name} added to wishlist`);
       localStorage.setItem("Wishlist", JSON.stringify(state.WishItems));
     },
     removedFromWishlist:(state,action)=>{
-        const productIdToRemove = action.payload.id;
+        const productIdToRemove = action.payload._id;
         const indexToRemove = state.WishItems.findIndex(
-            (item) => item.id === productIdToRemove
+            (item) => item._id === productIdToRemove
           );
             if (indexToRemove !== -1){
                 state.WishItems.splice(indexToRemove,1)
                 localStorage.setItem("Wishlist", JSON.stringify(state.WishItems));
-                toast.error(`${action.payload.title} removed from wishlist`);
+                toast.error(`${action.payload.name} removed from wishlist`);
             }
     }
   },

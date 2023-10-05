@@ -4,12 +4,14 @@ import Navbar from "../../../layout/Navbar";
 import WishlistSidebar from "../WishlistSidebar/WishlistSidebar";
 import arrow from "../../../assets/images/Wishlist-Sidebar/arrow.png";
 import Footer from "../../../layout/Footer";
+import axios from "axios";
 
 const Contact_Details = () => {
   const [showProductListLeft, setShowProductListLeft] = useState(
     window.innerWidth > 769
   );
   const [showRightSection, setShowRightSection] = useState(true);
+  const[addressdetails,setaddressdetail]=useState([])
   useEffect(() => {
     const handleResize = () => {
       setShowProductListLeft(window.innerWidth > 769);
@@ -25,6 +27,38 @@ const Contact_Details = () => {
     setShowProductListLeft(!showProductListLeft);
     setShowRightSection(showProductListLeft);
   };
+
+const fetchProducts=async()=>{
+  const headers = {
+    "x-access-token": sessionStorage.getItem("user-token"),
+  };
+
+  try {
+    const res=await axios.get(`https://suss.onrender.com/api/user/shipping-address`,{headers})
+    setaddressdetail(res.data)
+    console.log(res.data);
+  } catch (error) {
+    console.log(error);
+  }
+  
+
+}
+
+useEffect(()=>{
+fetchProducts()
+},[])
+const handleremove=async(address)=>{
+  const headers = {
+    "x-access-token": sessionStorage.getItem("user-token"),
+  };
+  try {
+    const res=await axios.delete(`https://suss.onrender.com/api/user/shipping-address/${address._id}`,{headers})
+    fetchProducts()
+  console.log(res);
+  } catch (error) {
+    console.log(error);
+  }
+}
   return (
     <>
       <Navbar />
@@ -88,74 +122,29 @@ const Contact_Details = () => {
             </span>
             <h2 className="mt-7">Address</h2>
             <div className="flex flex-wrap my-4 gap-x-28  gap-y-10 ">
-              <div className="address-contact p-6 ">
-                <h3>Jhanvi shah</h3>
-                <p className="mt-3">8980252445</p>
-                <p className="mt-3">
-                  1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar,
-                  Vijaynagar road
-                </p>
-                <div className="flex gap-2 mt-4">
-                  <span>Home</span>
-                  <span>Default billing address</span>
-                </div>
-                <div className="flex mt-4 gap-2">
-                  <button className="border-r ">Remove</button>{" "}
-                  <button className="border-r">Edit</button>{" "}
-                  <button>Set as default</button>
-                </div>
-              </div>
-              <div className="address-contact p-6">
-                <h3>Jhanvi shah</h3>
-                <p className="mt-3">8980252445</p>
-                <p className="mt-3">
-                  1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar,
-                  Vijaynagar road
-                </p>
-                <div className="flex gap-2 mt-4">
-                  <span>Home</span>
-                  <span>Default billing address</span>
-                </div>
-                <div className="flex mt-4 gap-2">
-                  <button className="border-r ">Remove</button>{" "}
-                  <button className="border-r">Edit</button>{" "}
-                  <button>Set as default</button>
-                </div>
-              </div>
-              <div className="address-contact p-6">
-                <h3>Jhanvi shah</h3>
-                <p className="mt-3">8980252445</p>
-                <p className="mt-3">
-                  1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar,
-                  Vijaynagar road
-                </p>
-                <div className="flex gap-2 mt-4">
-                  <span>Home</span>
-                  <span>Default billing address</span>
-                </div>
-                <div className="flex mt-4 gap-2">
-                  <button className="border-r ">Remove</button>{" "}
-                  <button className="border-r">Edit</button>{" "}
-                  <button>Set as default</button>
-                </div>
-              </div>
-              <div className="address-contact p-6">
-                <h3>Jhanvi shah</h3>
-                <p className="mt-3">8980252445</p>
-                <p className="mt-3">
-                  1/4 Pragatinagar Flats, opp. jain derasar , near Jain derasar,
-                  Vijaynagar road
-                </p>
-                <div className="flex gap-2 mt-4">
-                  <span>Home</span>
-                  <span>Default billing address</span>
-                </div>
-                <div className="flex mt-4 gap-2">
-                  <button className="border-r ">Remove</button>{" "}
-                  <button className="border-r">Edit</button>{" "}
-                  <button>Set as default</button>
-                </div>
-              </div>
+              {addressdetails.map((address)=>(
+ <div className="address-contact p-6 ">
+ <h3>{address?.first_name}{address?.last_name}</h3>
+ <p className="mt-3">{address?.phone}</p>
+ <p className="mt-3">
+  {address?.company_name} {address?.street_address} {address?.city} {address?.state} {address?.country} {address?.postal_code}
+ </p>
+ <div className="flex gap-2 mt-4">
+   <span>Home</span>
+   <span>Default billing address</span>
+ </div>
+ <div className="flex mt-4 gap-2">
+   <button className="border-r " onClick={()=>handleremove(address)}>Remove</button>{" "}
+   <button className="border-r">Edit</button>{" "}
+   <button>Set as default</button>
+ </div>
+</div>
+              )
+
+              )}
+             
+             
+           
             </div>
           </div>
         )}

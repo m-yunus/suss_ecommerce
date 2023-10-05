@@ -9,7 +9,7 @@ import {
 } from "../../../Redux/WishSlice";
 import { useNavigate, useParams } from "react-router-dom";
 
-const Product_List_Right = () => {
+const Product_List_Right = ({ProductData}) => {
   const [isHeartFilled, setIsHeartFilled] = useState({});
 
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const Product_List_Right = () => {
       // Initialize isHeartFilled based on local storage wishlist items
       const heartFilledState = {};
       wishlistFromLocalStorage.forEach((item) => {
-        heartFilledState[item.id] = true;
+        heartFilledState[item._id] = true;
       });
       setIsHeartFilled(heartFilledState);
     }
@@ -33,10 +33,10 @@ const Product_List_Right = () => {
 
   // Function to toggle the heart icon and add/remove from the wishlist
   const toggleHeart = (productId) => {
-    const producttoWishlist = ProductData.find((data) => data.id === productId);
+    const producttoWishlist = ProductData.find((data) => data._id === productId);
     if (!producttoWishlist) return;
 
-    const isProductInWishlist = wishItems.some((item) => item.id === productId);
+    const isProductInWishlist = wishItems.some((item) => item._id === productId);
 
     if (isProductInWishlist) {
       dispatch(removedFromWishlist(producttoWishlist));
@@ -52,7 +52,7 @@ const Product_List_Right = () => {
 
   const handlenavigate=(data)=>{
  console.log(data.id);
- navigate(`/product-list-page/${data.id}`)
+ navigate(`/product-list-page/${data._id}`)
   }
 
   return (
@@ -66,18 +66,18 @@ const Product_List_Right = () => {
           {ProductData.map((data) => (
             <div
               className="max-w-[8rem] sm:max-w-[9rem] md:max-w-[10rem] lg:max-w-[12rem] xl:max-w-[15rem] my-6 relative cursor-pointer mx-auto "
-              key={data.id}
+              key={data._id}
              
             >
               {" "}
-              <img src={data.image} alt=""  onClick={()=>{handlenavigate(data)}}/>
+              <img src={data?.images?.image1} alt="img"  onClick={()=>{handlenavigate(data)}}/>
               <div
                 className={`bg-gray-200 min-h-[1rem] max-w-[2rem] absolute top-2 right-2  p-1 rounded-3xl ${
                   isHeartFilled[data.id] ? "filled-heart large" : ""
                 }`}
-                onClick={() => toggleHeart(data.id)}
+                onClick={() => toggleHeart(data._id)}
               >
-                {isHeartFilled[data.id] ? (
+                {isHeartFilled[data._id] ? (
                   <AiFillHeart className="heart-celebrating" />
                 ) : (
                   <AiOutlineHeart />
@@ -85,12 +85,12 @@ const Product_List_Right = () => {
               </div>
               <div className="flex  flex-col  mt-6 items-center">
                 <div className="w-full min-h-[2rem]">
-                  <h2 className="text-xs sm:text-base md:text-lg  ">{data.title}</h2>
+                  <h2 className="text-xs sm:text-base md:text-lg  ">{data.name}</h2>
                  
                 </div>
                 <div className="w-full flex items-center">
                 <h3 className="text-[8px] md:text-[12px] text-[#807D7E] w-1/2">{data.brand}</h3>
-                <button className="w-1/2">{data.price}</button>
+                <button className="w-1/2">{data?.price}</button>
                 </div>
                 
               </div>

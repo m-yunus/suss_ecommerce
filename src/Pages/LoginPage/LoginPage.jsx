@@ -33,6 +33,8 @@ const LoginPage = () => {
   const handleloginsubmit=async()=>{
     try {
       const res=await axios.post(`https://suss.onrender.com/api/user/login`,logindata)
+      const token = res.data.token;
+      sessionStorage.setItem("user-token", token);
     console.log(res);
     } catch (error) {
       console.log(error);

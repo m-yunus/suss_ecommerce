@@ -5,7 +5,7 @@ import filter from "../../../assets/images/Product-List-Page/filter.png"
 import { FaAngleRight, FaAngleDown, FaAngleUp} from "react-icons/fa";
 import {BiSort} from "react-icons/bi"
 
-const Product_List_Left = () => {
+const Product_List_Left = ({setcolor,color}) => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [dressDropdown, setdressDropdown] = useState(null);
    const [priceDropdown, setPricedropdown] = useState(true);
@@ -18,7 +18,7 @@ const Product_List_Left = () => {
 
 
 
- 
+ console.log(color);
 
 
 
@@ -247,15 +247,15 @@ const Product_List_Left = () => {
           <hr />
           {colorDropdownopen && (
             <div className="plp-clrs py-4 px-2 flex justify-between gap-2 flex-wrap">
-              <div className="flex flex-col justify-center items-center">
-                <span className="bg-purple-500 block cursor-pointer"></span>
+              <div className="flex flex-col justify-center items-center" >
+                <span className="bg-purple-500 block cursor-pointer" onClick={()=>setcolor("purple")}></span>
                 <p>Purple</p>
               </div>
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center" onClick={()=>setcolor("Black")}>
                 <span className="bg-black block cursor-pointer"></span>
                 <p>Black</p>
               </div>
-              <div className="flex flex-col justify-center items-center">
+              <div className="flex flex-col justify-center items-center" onClick={()=>setcolor("red")}>
                 <span className="bg-red-500 block cursor-pointer"></span>
                 <p>Red</p>
               </div>

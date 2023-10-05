@@ -3,6 +3,18 @@
   width: 628px;
   height: 697px;
 } */
+/* Add these styles to your CSS file */
+.size-box-s.active ,.size-box-m.active , .size-box-large.active , .size-box-xl.active {
+  background-color: #000000; /* Set the background color for active size S */
+  color: white; /* Set the text color for active size S */
+}
+
+
+
+
+
+
+
 .small-rect {
   width: 6.9375rem;
   height: 0.375rem;
@@ -190,7 +202,7 @@
 .size-box-large {
   width: 42px;
   height: 42px;
-  color: white;
+  color: rgb(8, 8, 8);
   text-align: center;
   font-family: Inter;
   font-size: 14px;
@@ -203,7 +215,7 @@
   line-height: normal;
   border-width: 1px;
   border-radius: 12px;
-  background: #3c4242;
+  background: white;
 }
 .color-title {
   color: #3f4646 !important;
@@ -649,8 +661,9 @@ height: 20px;
     font-size: 28px !important;
   }
   .product-image {
-    width: 282px;
-    height: 370px;
+    width: 100%;
+    object-fit: cover;
+    height: 20rem;
   }
   .cmt {
     font-size: 15px !important;
@@ -685,7 +698,7 @@ height: 20px;
 
   .product-details {
     flex-direction: column;
-    padding: 0 1rem;
+   
    
   }
   .product-left,

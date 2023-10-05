@@ -10,8 +10,10 @@ import "./Cart.css";
 import Footer from "../../layout/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { selectTotalAmount, setDecreaseQty, setGetTotals, setIncreaseQty, setRemoveItem } from "../../Redux/CartSlice";
+import { selectCartTotalAmount, selectTotalAmount, setDecreaseQty, setGetTotals, setIncreaseQty, setRemoveItem } from "../../Redux/CartSlice";
 import CartEmpty from "./CartEmpty/CartEmpty";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
@@ -19,7 +21,8 @@ const Cart = () => {
   const [mobviewitems,setmobviewitems]=useState([])
   const dispatch=useDispatch()
   const CartItems = useSelector((state) => state.Cart.CartItems);
-  const totalAmount=useSelector(selectTotalAmount)
+  
+  const totalAmount=useSelector(selectCartTotalAmount)
  console.log(totalAmount);
  
   const DecreaseQuantity = (items) => {
@@ -29,29 +32,48 @@ const Cart = () => {
   const Increasequantity=(items)=>{
     dispatch(setIncreaseQty(items))
   }
-  const handleDelete=(items)=>{
-    dispatch(setRemoveItem(items))
-  }
+ 
 
+  const fetchCartItems = async () => {
+   
+    
+   console.log(CartItems);
+    const headers = {
+      'x-access-token': sessionStorage.getItem('user-token'),
+    };
   
+    try {
+      const res = await axios.get('https://suss.onrender.com/api/user/cart', { headers });
+      console.log(res);
+  
+  
+      // Set response data into localStorage
+      localStorage.setItem('cart', JSON.stringify(res.data));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(()=>{
+    fetchCartItems()
+  },[])
   useEffect(() => {
     const Cartmapping = CartItems.map((items) => (
-      <tr className=" border-b border-[#BEBCBD]  ">
+      <tr className=" border-b border-[#BEBCBD]  " key={items._id}>
         <td className="flex py-8  ms-4">
           <div>
-            <img className="" src={items?.image} alt="" />
+            <img className="" src={items?.variation?.images.image1} alt="img" />
           </div>
           <div className="ms-2">
-            <h1 className="text-[#3C4242] font-bold text-lg">{items?.title}</h1>
+            <h1 className="text-[#3C4242] font-bold text-lg">{items?.product?.name || items?.name}</h1>
             <h2 className="text-[#807D7E] font-medium text-sm mt-2">
-              Color : Yellow
+              Color : {items?.variation?.color}
             </h2>
-            <h2 className="text-[#807D7E] font-medium text-sm">Size : M</h2>
+            <h2 className="text-[#807D7E] font-medium text-sm">Size : {items?.variation?.size}</h2>
           </div>
         </td>
         <td className="">
           <div className="flex justify-center">
-            <p className="text-[#3C4242] font-bold text-lg">{items?.price}</p>
+            <p className="text-[#3C4242] font-bold text-lg">{items?.variation?.offer_price || items?.price}</p>
           </div>
         </td>
         <td className=" ">
@@ -59,7 +81,7 @@ const Cart = () => {
             <button onClick={()=>DecreaseQuantity(items)}>
               <img src={minus} alt="" />
             </button>{" "}
-            {items?.cartQuantity}
+            {items?.count}
             <button onClick={()=>Increasequantity(items)}>
               <img src={plus} alt="" />
             </button>
@@ -74,7 +96,7 @@ const Cart = () => {
         </td>
         <td className="">
           <div className="flex justify-center">
-            <p className="text-[#3C4242] font-bold text-lg">{items?.price * items?.cartQuantity}</p>
+            <p className="text-[#3C4242] font-bold text-lg">{items?.variation?.offer_price || items?.price * items?.count}</p>
           </div>
         </td>
         <td>
@@ -133,6 +155,28 @@ const Cart = () => {
   useEffect(()=>{
     dispatch(setGetTotals())
   },[dispatch,CartItems])
+  const handleDelete=async(items)=>{
+    console.log(items?.variation);
+    const headers = {
+      'x-access-token': sessionStorage.getItem('user-token'),
+    };
+    
+    try {
+      const res= await axios.post(`https://suss.onrender.com/api/user/remove-cart-item`,{variationId :items?.variation?._id},{headers})
+      console.log(res.data);
+     
+      dispatch(setRemoveItem(items))
+      fetchCartItems()
+    } catch (error) {
+      if(error.response.status === 401){
+        dispatch(setRemoveItem(items))
+      }else{
+        toast.error("error occured")
+      }
+     
+    }
+       
+      }
   return (
     <>
       <div className="" w-full h-auto>

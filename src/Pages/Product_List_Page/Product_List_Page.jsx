@@ -13,6 +13,7 @@ import {AiOutlineDollarCircle} from "react-icons/ai"
 import {GiStarsStack} from "react-icons/gi"
 import { IoMdDoneAll} from "react-icons/io"
 import Footer from "../../layout/Footer";
+import axios from "axios";
 
 const Product_List_Page = () => {
    const [showProductListLeft, setShowProductListLeft] = useState(
@@ -20,12 +21,30 @@ const Product_List_Page = () => {
    );
    const [showRightSection, setShowRightSection] = useState(true);
    const [isDropdownopen,setIsdropdownopen]=useState(false)
-
+   const[ProductData ,setProductData]=useState([])
+  const [color,setcolor]=useState("")
+  const [filterData,setFilterData]=useState([])
     const toggleDropdown = () => {
-      setIsdropdownopen(!isDropdownopen);
-       
+      setIsdropdownopen(!isDropdownopen);     
     };
-
+const fetchProducts=async()=>{
+  try {
+    const res=await axios.get(`https://suss.onrender.com/api/product/get-all`)
+    console.log(res.data);
+    setProductData(res.data)
+  } catch (error) {
+    console.log(error);
+  }
+}
+const fetchwithcolor=async()=>{
+  try {
+    const res=await axios.get(`https://suss.onrender.com/api/product/filters?color=${color}`)
+    console.log(res.data);
+    setProductData(res.data)
+  } catch (error) {
+    console.log(error);
+  }
+}
    useEffect(() => {
      const handleResize = () => {
        setShowProductListLeft(window.innerWidth > 426);
@@ -43,13 +62,18 @@ const Product_List_Page = () => {
      setShowRightSection(showProductListLeft);
      
    };
-  
+  useEffect(()=>{
+fetchProducts()
+fetchwithcolor()
+  },[color])
+
+console.log(color,filterData);
   return (
     <>
       <Navbar />
       <div className=" flex  ">
-        {showProductListLeft && <Product_List_Left />}
-        {showRightSection && <Product_List_Right />}
+        {showProductListLeft && <Product_List_Left color={color} setcolor={setcolor} />}
+        {showRightSection && <Product_List_Right ProductData={ProductData} />}
       </div>
 
       <div className="pll-bottom-button flex fixed bottom-0 w-full justify-center bg-red z-10">

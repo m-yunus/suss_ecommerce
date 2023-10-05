@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ProductDetails.css";
 import Navbar from "../../layout/Navbar";
 import product from "../../assets/images/Product-Details/product.jpg";
@@ -29,22 +29,39 @@ import cart from "../../assets/images/Product-Details/cart.png";
 import men from "../../assets/images/Product-Details/men.jpg";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { ProductData } from "../Product_List_Page/ProductData";
+
 import { useDispatch } from "react-redux";
 import { setAddItemToCart} from "../../Redux/CartSlice";
 import Footer from "../../layout/Footer";
+import axios from "axios";
+import toast from "react-hot-toast";
 const ProductDetails = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+const [ProductData,setProductdata]=useState([])
+const[size,setsize]=useState([])
+const [filterItems,setFilter]=useState(false)
+const [variationId,setVariationId]=useState("")
+const [activeSize, setActiveSize] = useState("S"); // 
   const { id } = useParams();
   const dispatch = useDispatch();
 
-  const idAsNumber = parseInt(id);
+const fetchproducts=async()=>{
+  try {
+    const res=await axios.get(`https://suss.onrender.com/api/product/single/${id}`)
+    console.log(res.data);
+   setProductdata(res.data)
+  } catch (error) {
+    console.log(error);
+  }
 
-    const FilteredData = ProductData.find((data) => data.id === idAsNumber);
-  
+}
+useEffect(()=>{
+fetchproducts()
+},[])
+   
+  console.log(ProductData);
     const slides = [
-      { id: 0, src: FilteredData.image},
+   
       { id: 1, src: slideimage },
       { id: 2, src: slideimg },
       { id: 3, src: slide },
@@ -69,12 +86,55 @@ const ProductDetails = () => {
         setCurrentImage(src);
       };
  
- const handleAddToCart=()=>{
-dispatch(setAddItemToCart(FilteredData))
+ const handleAddToCart=async(quantity)=>{
+console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.price);
+
+  try {
+    const headers = {
+      "x-access-token": sessionStorage.getItem("user-token"),
+    };
+    const res = await axios.post(`https://suss.onrender.com/api/user/add-to-cart`,{
+      productId :ProductData._id,
+      variationId :size._id,
+      count :1,
+      price :ProductData.price
+
+    },{headers})
+   
+    if (res)dispatch(setAddItemToCart(ProductData))
+  } catch (error) {
+    if(error.response.status ===401 ){
+      dispatch(setAddItemToCart(ProductData))
+    }else{
+      toast.error("error in add to cart")
+    }
+  
+  }
+
+
+
+
  }
+ const handleSizeChange = (size) => {
+  const lowerCaseSize = size.toLowerCase();
+  setActiveSize(lowerCaseSize);
+  const filteredItem = ProductData?.variationsDetails?.find((item) => item.size.toLowerCase() === lowerCaseSize);
+
+  if (filteredItem) {
+   
+    console.log(filteredItem);
+   setFilter(true)
+   setsize(filteredItem)
+  } else {
+    setFilter(false)
+   toast.error("Item not found for selected size");
+  }
+};
+
   return (
     <>
       <Navbar />
+      
       <div className="paths-top gap-5 mb-4 flex items-center px-8">
         <h4 className="path">Shop</h4>
         <img className="path-arrow" src={left} alt="" />
@@ -82,12 +142,14 @@ dispatch(setAddItemToCart(FilteredData))
         <img className="path-arrow" src={left} alt="" />
         <h4 className="path">Top</h4>
       </div>
-      <div className="product-details mt-10 px-16 flex flex-row justify-center">
-        <div className="product-left flex flex-col">
+      <div className="product-details mt-10  flex flex-row justify-center">
+        <div className="product-left flex flex-col relative" >
           <div className="flex items-center justify-end relative">
             <img className="product-image" src={currentImage} alt="" />
-          </div>
-          <div className="slider flex flex-row gap-2">
+            <div className="flex justify-center w-full absolute bottom-1">
+
+            
+            <div className="slider flex flex-row gap-2 ">
             {slides.map((slideData) => {
               const { id, src } = slideData;
               return (
@@ -126,6 +188,9 @@ dispatch(setAddItemToCart(FilteredData))
               />
             </div>
           </div>
+          </div>
+          </div>
+      
         </div>
 
         <div className="product-right">
@@ -137,7 +202,7 @@ dispatch(setAddItemToCart(FilteredData))
               <img className="path-arrow" src={left} alt="" />
               <h4 className="path">Top</h4>
             </div>
-            <h1 className="prdct-t  font-bold">{FilteredData?.title}</h1>
+            <h1 className="prdct-t  font-bold">{ProductData?.name}</h1>
             <div className="prdct-dtls gap-3">
               <img src={Star} alt="" className="prdct-star" />
               <img src={Star} alt="" className="prdct-star" />
@@ -157,10 +222,41 @@ dispatch(setAddItemToCart(FilteredData))
           <div className="size flex items-center ">
             <div className="flex flex-row items-center ">
               <div className="size-box-icons flex gap-3 ">
-                <div className="size-box-s">S</div>
-                <div className="size-box-m">M</div>
-                <div className="size-box-large">L</div>
-                <div className="size-box-xl">XL</div>
+              <div className="size-box-icons flex gap-3">
+  <div
+    className={`size-box-s ${activeSize === "s" ? "active" : ""}`}
+    onClick={() => {
+      handleSizeChange("S");
+    }}
+  >
+    S
+  </div>
+  <div
+    className={`size-box-m ${activeSize === "m" ? "active" : ""}`}
+    onClick={() => {
+      handleSizeChange("M");
+    }}
+  >
+    M
+  </div>
+  <div
+    className={`size-box-large ${activeSize === "l" ? "active" : ""}`}
+    onClick={() => {
+      handleSizeChange("L");
+    }}
+  >
+    L
+  </div>
+  <div
+    className={`size-box-xl ${activeSize === "xl" ? "active" : ""}`}
+    onClick={() => {
+      handleSizeChange("XL");
+    }}
+  >
+    XL
+  </div>
+</div>
+
               </div>
             </div>
           </div>
@@ -173,6 +269,9 @@ dispatch(setAddItemToCart(FilteredData))
           </div>
 
           <div className="bag gap-3 flex items-center ">
+            <div>
+              {ProductData?.offer_price}
+            </div>
             <div
               className="addtobag  cursor-pointer gap-4"
               onClick={() => handleAddToCart()}
@@ -180,7 +279,7 @@ dispatch(setAddItemToCart(FilteredData))
               <img src={cart} alt="" />
               Add to cart
             </div>
-            <div className="rate-btn">{FilteredData.price}</div>
+            <div className="rate-btn">{!filterItems ? ProductData?.price : size?.offer_price }</div>
           </div>
           <hr className=" bg-[#BEBCBD] h-[2px]  mt-10" />
           <div className="delivery gap-20  flex justify-center items-center ">
