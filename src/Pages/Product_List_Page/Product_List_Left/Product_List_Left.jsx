@@ -63,7 +63,7 @@ const Product_List_Left = ({setcolor,color}) => {
       }
   return (
     <>
-      <div className="left-section-product-list px-4 product-list-page ms-14">
+      <div className="left-section-product-list px-4 product-list-page ms-14   w-full">
         <div className="  relative ">
           <h5 className="flex justify-between my-2 items-center font-inter font-sans font-semibold text-[#8A8989]">
             Filter <img className=" h-4" src={filter} alt="" />
@@ -77,7 +77,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Printed T-shirt <FaAngleRight />
             </button>
             {openDropdown === "printedTshirt" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -93,7 +93,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Plain T-shirt <FaAngleRight />
             </button>
             {openDropdown === "plainTshirt" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -108,7 +108,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Kurti <FaAngleRight />
             </button>
             {openDropdown === "kurti" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -123,7 +123,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Boxers <FaAngleRight />
             </button>
             {openDropdown === "boxers" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -138,7 +138,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Full sleeve T-shirts <FaAngleRight />
             </button>
             {openDropdown === "fullSleeveTshirts" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -153,7 +153,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Joggers <FaAngleRight />
             </button>
             {openDropdown === "joggers" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -169,7 +169,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Payjamas <FaAngleRight />
             </button>
             {openDropdown === "payjamas" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -184,7 +184,7 @@ const Product_List_Left = ({setcolor,color}) => {
               Jeans <FaAngleRight />
             </button>
             {openDropdown === "jeans" && (
-              <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+              <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                 <a href="#">Option 1</a>
                 <a href="#">Option 2</a>
                 <a href="#">Option 3</a>
@@ -342,7 +342,7 @@ const Product_List_Left = ({setcolor,color}) => {
                   Classic <FaAngleRight />
                 </button>
                 {dressDropdown === "classic" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+                  <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -358,7 +358,7 @@ const Product_List_Left = ({setcolor,color}) => {
                   Casual <FaAngleRight />
                 </button>
                 {dressDropdown === "casual" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+                  <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -374,7 +374,7 @@ const Product_List_Left = ({setcolor,color}) => {
                   Business <FaAngleRight />
                 </button>
                 {dressDropdown === "business" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+                  <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -390,7 +390,7 @@ const Product_List_Left = ({setcolor,color}) => {
                   Sport <FaAngleRight />
                 </button>
                 {dressDropdown === "sport" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+                  <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -407,7 +407,7 @@ const Product_List_Left = ({setcolor,color}) => {
                   <FaAngleRight />
                 </button>
                 {dressDropdown === "elegant" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+                  <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
@@ -424,7 +424,7 @@ const Product_List_Left = ({setcolor,color}) => {
                   <FaAngleRight />
                 </button>
                 {dressDropdown === "formal" && (
-                  <div className="plp-dropdown-content absolute top-0 left-full flex flex-col bg-white z-10">
+                  <div className="plp-dropdown-content  top-0 left-full flex flex-col bg-white z-10">
                     <a href="#">Option 1</a>
                     <a href="#">Option 2</a>
                     <a href="#">Option 3</a>
