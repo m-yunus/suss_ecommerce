@@ -63,8 +63,10 @@ console.log(existingItemIndex);
       toast.success('Cart cleared');
     },
     setGetTotals: (state) => {
+      // Calculate total amount and total quantity
       state.cartTotalAmount = state.CartItems.reduce((total, item) => {
-        return total + item.price || item?.vendordetails.offer_price * item.count;
+        // Use optional chaining to handle cases where item.price or item?.vendordetails.offer_price is undefined
+        return total + (item.price || item?.vendordetails?.offer_price) * item.count;
       }, 0);
       state.cartTotalQty = state.CartItems.reduce((totalQty, item) => {
         return totalQty + item.count;
