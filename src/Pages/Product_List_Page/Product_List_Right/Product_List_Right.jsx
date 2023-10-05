@@ -54,7 +54,10 @@ const Product_List_Right = ({ProductData}) => {
  console.log(data.id);
  navigate(`/product-list-page/${data._id}`)
   }
-
+const data= ProductData.map((items)=>{
+  console.log(items?.images?.image1);
+})
+console.log(data);
   return (
     <>
       <div className="prdct-lst-right w-full px-10 mx-auto mr-14">
@@ -70,7 +73,7 @@ const Product_List_Right = ({ProductData}) => {
              
             >
               {" "}
-              <img src={data?.images?.image1} alt="img"  onClick={()=>{handlenavigate(data)}}/>
+              <img src={`https://suss.onrender.com/${data?.images?.image1}`} alt="img"  onClick={()=>{handlenavigate(data)}}/>
               <div
                 className={`bg-gray-200 min-h-[1rem] max-w-[2rem] absolute top-2 right-2  p-1 rounded-3xl ${
                   isHeartFilled[data.id] ? "filled-heart large" : ""
