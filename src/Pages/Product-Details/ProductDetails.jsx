@@ -59,7 +59,7 @@ useEffect(()=>{
 fetchproducts()
 },[])
    
-  console.log(ProductData);
+
     const slides = [
    
       { id: 1, src: slideimage },
@@ -145,7 +145,7 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
       <div className="product-details mt-10  flex flex-row justify-center">
         <div className="product-left flex flex-col relative" >
           <div className="flex items-center justify-end relative">
-            <img className="product-image" src={currentImage} alt="" />
+            <img className="product-image" src={`https://suss.onrender.com/${ProductData?.images?.image1}`} alt="" />
             <div className="flex justify-center w-full absolute bottom-1">
 
             

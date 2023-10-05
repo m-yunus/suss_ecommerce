@@ -65,10 +65,10 @@ console.log(data);
           <h1>Women’s Clothing</h1>
           <h1>Recommended</h1>
         </div>
-        <div className="flex justify-between flex-wrap gap-6 xl:gap-x-[100px]">
+        <div className="flex justify-between flex-wrap gap-2 xl:gap-x-[100px]">
           {ProductData.map((data) => (
             <div
-              className="max-w-[8rem] sm:max-w-[9rem] md:max-w-[10rem] lg:max-w-[12rem] xl:max-w-[15rem] my-6 relative cursor-pointer mx-auto "
+              className="max-w-[8rem] sm:max-w-[9rem] md:max-w-[10rem] lg:max-w-[12rem] xl:max-w-[15rem] my-6 relative cursor-pointer  "
               key={data._id}
              
             >
