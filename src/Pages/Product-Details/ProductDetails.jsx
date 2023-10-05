@@ -282,7 +282,7 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
             </div>
 
             <div  className="bg-white z-10 fixed bottom-0 left-0 w-full">
-              <div className="bag gap-3 flex items-center  justify-center">
+              <div className="bag gap-3 flex items-center pb-6 justify-center">
                 <div>{ProductData?.offer_price}</div>
                 <div
                   className="addtobag  cursor-pointer gap-4"
@@ -297,17 +297,7 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
               </div>
 
              
-              <div className=" gap-20  w-full flex justify-center items-center ">
-                <div className="payment">
-                  <img src={payment} alt="" />
-
-                  <p className="payment-title">Secure payment</p>
-                </div>
-                <div className="size-fit">
-                  <img src={size} alt="" />
-                  <p className="size-fit-title">Size & fit</p>
-                </div>
-              </div>
+             
             </div>
           </div>
         </div>
