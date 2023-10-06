@@ -23,41 +23,109 @@ import Review1 from "../../assets/images/Home/Review1.png"
 import star from "../../assets/images/Home/star_purple500.png"
 const Home = () => {
   const items = [
-    { imgSrc: joggers, text: 'Knitted joggers' },
-    { imgSrc: FullSleeve, text: 'Full Sleeve' },
-    { imgSrc: ActiveTshirt, text: 'Active T-shirts' },
-    { imgSrc: Urban_Shirts, text: 'Urban Shirts' },
-    { imgSrc: FullSleeve, text: 'Full Sleeve' },
-    { imgSrc: ActiveTshirt, text: 'Active T-shirts' },
+    { imgSrc: joggers, text: "Knitted joggers" },
+    { imgSrc: FullSleeve, text: "Full Sleeve" },
+    { imgSrc: ActiveTshirt, text: "Active T-shirts" },
+    { imgSrc: Urban_Shirts, text: "Urban Shirts" },
+    { imgSrc: FullSleeve, text: "Full Sleeve" },
+    { imgSrc: ActiveTshirt, text: "Active T-shirts" },
+
     // Add more items here
   ];
 
+  const reviewss = [
+    {
+      imgSrc: Review1,
+      stars: [star, star, star, star],
+      author: "Floyd Miles",
+      text: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam",
+    },
+    {
+      imgSrc: Review1,
+      stars: [star, star, star, star],
+      author: "iu7iui",
+      text: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam",
+    },
+    {
+      imgSrc: Review1,
+      stars: [star, star, star, star],
+      author: "hgj",
+      text: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam",
+    },
+    {
+      imgSrc: Review1,
+      stars: [star, star, star, star],
+      author: "hgj",
+      text: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam",
+    },
+  ];
+  const [reviewIndex, setReviewIndex] = useState(0);
+    const handleLeftArrowClick = () => {
+      
+      setReviewIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    };
+
+  const handleRightArrowClick = () => {
+   
+    const maxReviewsToShow =
+      window.innerWidth >= 1024 ? 3 : window.innerWidth >= 768 ? 2 : 1;
+
+    
+    let newIndex = reviewIndex + maxReviewsToShow;
+
+    
+    if (newIndex >= reviewss.length) {
+      newIndex = reviewss.length - maxReviewsToShow;
+    }
+
+    setReviewIndex(newIndex);
+  };
+
+
+
   const [startIndex, setStartIndex] = useState(0);
   const [windowsize, setWindowSize] = useState(2); // Default to 2 cards for mobile
+  const slideInterval = 2000;
+
+  const [reviewWindowSize, setReviewWindowSize] = useState(3);
 
   const itemsToShow = items.slice(startIndex, startIndex + windowsize);
+ const reviewsToShow = reviewss.slice(
+   reviewIndex,
+   reviewIndex + reviewWindowSize
+ );
 
   const prevItem = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
+    let newIndex = startIndex - 1;
+    if (startIndex < 0) {
+      newIndex = items.length - windowsize;
     }
+    setStartIndex(newIndex);
   };
 
   const nextItem = () => {
-    if (startIndex + 4 < items.length) {
-      setStartIndex(startIndex + 1);
+    let newIndex = startIndex + 1;
+    if (newIndex + windowsize > items.length) {
+      newIndex = 0; // Go back to the first set of items
     }
+    setStartIndex(newIndex);
   };
 
+ 
+
   useEffect(() => {
+    const slideTimer = setInterval(nextItem, slideInterval);
     const handleResize = () => {
       const windowWidth = window.innerWidth;
       if (windowWidth < 768) {
+        setReviewWindowSize(1); // Mobile view: 1 review
         setWindowSize(2); // Mobile view: 2 cards
       } else if (windowWidth < 1024) {
         setWindowSize(3); // Tablet view: 3 cards
+        setReviewWindowSize(2); // Tablet view: 2 reviews
       } else {
         setWindowSize(4); // Desktop view: 4 cards
+        setReviewWindowSize(3); // Desktop view: 3 reviews
       }
     };
 
@@ -69,30 +137,11 @@ const Home = () => {
 
     // Cleanup the event listener on component unmount
     return () => {
+      clearInterval(slideTimer);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
-  const reviews = [
-    {
-      imgSrc: Review1,
-      stars: [star, star, star, star],
-      author: "Floyd Miles",
-      text: "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
-    },
-    // Add more reviews here
-  ];
+  }, [startIndex]);
 
-  const [currentReview, setCurrentReview] = useState(0);
-
-  const nextReview = () => {
-    setCurrentReview((prevReview) => (prevReview + 1) % reviews.length);
-  };
-
-  const prevReview = () => {
-    setCurrentReview((prevReview) =>
-      prevReview === 0 ? reviews.length - 1 : prevReview - 1
-    );
-  };
   return (
     <div className="flex flex-col min-h-screen">
       <div>
@@ -121,41 +170,41 @@ const Home = () => {
         </div>
 
         <div className="carousel-container relative">
-  {/* Slider */}
-  <div className="carousel flex w-full items-center justify-center gap-4 py-7 overflow-hidden">
-    {itemsToShow.map((item, index) => (
-      <div
-        className={`carousel-slide w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/4 transform transition-transform duration-300`}
-        key={index}
-      >
-        <div>
-          <img src={item.imgSrc} alt="" />
+          {/* Slider */}
+          <div className="carousel flex w-full items-center justify-center gap-4 py-7 overflow-hidden ">
+            {itemsToShow.map((item, index) => (
+              <div
+                className={`carousel-slide w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/4 transform transition-transform duration-300 `}
+                key={index}
+              >
+                <div>
+                  <img src={item.imgSrc} alt="" />
+                </div>
+                <h2 className="text-[#3C4242] text-xs font-bold py-3">
+                  {item.text}
+                </h2>
+              </div>
+            ))}
+          </div>
+          {/* Navigation Arrows */}
+          <div className="absolute inset-y-0 left-0 flex items-center">
+            <button
+              className="carousel-arrow cursor-pointer"
+              onClick={prevItem}
+            >
+              <img src={leftArrow} alt="Previous" />
+            </button>
+          </div>
+          <div className="absolute inset-y-0 right-0 flex items-center">
+            <button
+              className="carousel-arrow cursor-pointer"
+              onClick={nextItem}
+            >
+              <img src={RightArrow} alt="Next" />
+            </button>
+          </div>
         </div>
-        <h2 className="text-[#3C4242] text-xs font-bold py-3">
-          {item.text}
-        </h2>
       </div>
-    ))}
-  </div>
-  {/* Navigation Arrows */}
-  <div className="absolute inset-y-0 left-0 flex items-center">
-    <button
-      className="carousel-arrow cursor-pointer"
-      onClick={prevItem}
-    >
-      <img src={leftArrow} alt="Previous" />
-    </button>
-  </div>
-  <div className="absolute inset-y-0 right-0 flex items-center">
-    <button
-      className="carousel-arrow cursor-pointer"
-      onClick={nextItem}
-    >
-      <img src={RightArrow} alt="Next" />
-    </button>
-  </div>
-</div>
-</div>
 
       {/* Banner in Middle */}
       <div className="w-full h-auto">
@@ -347,87 +396,49 @@ const Home = () => {
 
       {/* Reviews */}
 
-      <div className="w-full h-auto px-8 py-2 md:py-24 md:px-24">
-        <div className="flex gap-6 flex-wrap sm:flex-nowrap ">
-          <div className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
+      <div className="w-full flex flex-row gap-4 h-auto px-2 sm:px-8 py-2 md:py-24 md:px-24  ">
+        <img
+          src={leftArrow}
+          alt=""
+          onClick={handleLeftArrowClick}
+          className=" cursor-pointer"
+        />
+        {reviewsToShow.map((review, index) => (
+          <div
+            className={`border border-[#BEBCBD] p-4 rounded-xl w-full flex-col`}
+            key={index}
+          >
             <div className="flex justify-between">
               <div>
-                <img src={Review1} alt="" />
+                <img src={review.imgSrc} alt="" />
               </div>
               <div className="flex">
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
+                {review.stars.map((starSrc, index) => (
+                  <img
+                    src={starSrc}
+                    alt={`Star ${index + 1}`}
+                    key={index}
+                    className="object-cover w-7 h-7"
+                  />
+                ))}
               </div>
             </div>
             <div className="py-4">
-              <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
+              <h1 className="text-[#3C4242] font-thin">{review.author}</h1>
             </div>
             <div className="py-4">
               <p className="text-[#807D7E] text-sm lg:text-base  overflow-hidden text-justify">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet. Amet minim
-                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                Velit officia consequat duis enim velit mollit. Exercitation
-                veniam
+                {review.text}
               </p>
             </div>
           </div>
-          <div className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
-            <div className="flex justify-between">
-              <div>
-                <img src={Review1} alt="" />
-              </div>
-              <div className="flex">
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-              </div>
-            </div>
-            <div className="py-4">
-              <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
-            </div>
-            <div className="py-4">
-              <p className="text-[#807D7E] text-sm lg:text-base  overflow-hidden text-justify">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet. Amet minim
-                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                Velit officia consequat duis enim velit mollit. Exercitation
-                veniam
-              </p>
-            </div>
-          </div>
-          <div className="border border-[#BEBCBD] p-4 rounded-xl w-full flex-col">
-            <div className="flex justify-between">
-              <div>
-                <img src={Review1} alt="" />
-              </div>
-              <div className="flex">
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-                <img src={star} alt="" className="object-cover w-7 h-7 " />
-              </div>
-            </div>
-            <div className="py-4">
-              <h1 className="text-[#3C4242] font-thin">Floyd Miles</h1>
-            </div>
-            <div className="py-4">
-              <p className="text-[#807D7E] text-sm lg:text-base  overflow-hidden text-justify">
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet. Amet minim
-                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                Velit officia consequat duis enim velit mollit. Exercitation
-                veniam
-              </p>
-            </div>
-          </div>
-        </div>
+        ))}
+        <img
+          src={RightArrow}
+          alt=""
+          onClick={handleRightArrowClick}
+          className=" cursor-pointer"
+        />
       </div>
       <Footer />
     </div>
