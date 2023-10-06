@@ -28,29 +28,43 @@ const Home = () => {
     { imgSrc: ActiveTshirt, text: 'Active T-shirts' },
     { imgSrc: Urban_Shirts, text: 'Urban Shirts' },
     { imgSrc: FullSleeve, text: 'Full Sleeve' },
-    { imgSrc: ActiveTshirt, text: 'Active T-shirts' },
+    { imgSrc: ActiveTshirt, text: 'Active T-shirts' }
+    
     // Add more items here
   ];
 
   const [startIndex, setStartIndex] = useState(0);
   const [windowsize, setWindowSize] = useState(2); // Default to 2 cards for mobile
+const slideInterval = 2000;
+
 
   const itemsToShow = items.slice(startIndex, startIndex + windowsize);
 
   const prevItem = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
+     let newIndex = startIndex - 1;
+    if (startIndex < 0) {
+      newIndex = items.length - windowsize;
     }
+    setStartIndex(newIndex);
   };
 
   const nextItem = () => {
-    if (startIndex + 4 < items.length) {
-      setStartIndex(startIndex + 1);
+    let newIndex = startIndex + 1;
+    if (newIndex + windowsize > items.length) {
+      newIndex = 0; // Go back to the first set of items
     }
+    setStartIndex(newIndex);
   };
 
   useEffect(() => {
+
+    const slideTimer = setInterval(nextItem, slideInterval);
     const handleResize = () => {
+
+      
+      
+
+
       const windowWidth = window.innerWidth;
       if (windowWidth < 768) {
         setWindowSize(2); // Mobile view: 2 cards
@@ -69,9 +83,10 @@ const Home = () => {
 
     // Cleanup the event listener on component unmount
     return () => {
+        clearInterval(slideTimer);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [startIndex]);
   const reviews = [
     {
       imgSrc: Review1,
@@ -122,10 +137,10 @@ const Home = () => {
 
         <div className="carousel-container relative">
   {/* Slider */}
-  <div className="carousel flex w-full items-center justify-center gap-4 py-7 overflow-hidden">
+  <div className="carousel flex w-full items-center justify-center gap-4 py-7 overflow-hidden ">
     {itemsToShow.map((item, index) => (
       <div
-        className={`carousel-slide w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/4 transform transition-transform duration-300`}
+        className={`carousel-slide w-2/5 sm:w-1/3 md:w-1/4 lg:w-1/4 transform transition-transform duration-300 `}
         key={index}
       >
         <div>
