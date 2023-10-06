@@ -70,10 +70,9 @@ console.log(data);
             <div
               className="max-w-[8rem] sm:max-w-[9rem] md:max-w-[10rem] lg:max-w-[12rem] xl:max-w-[15rem] my-6 relative cursor-pointer  "
               key={data._id}
-             
             >
               {" "}
-              <img src={`https://suss.onrender.com/${data?.images?.image1}`} alt="img"  onClick={()=>{handlenavigate(data)}}/>
+              <img className="h-[12vw]" src={`https://suss.onrender.com/${data?.images?.image1}`} alt="img"  onClick={()=>{handlenavigate(data)}}/>
               <div
                 className={`bg-gray-200 min-h-[1rem] max-w-[2rem] absolute top-2 right-2  p-1 rounded-3xl ${
                   isHeartFilled[data.id] ? "filled-heart large" : ""
@@ -89,13 +88,11 @@ console.log(data);
               <div className="flex  flex-col  mt-6 items-center">
                 <div className="w-full min-h-[2rem]">
                   <h2 className="text-xs sm:text-base md:text-lg  ">{data.name}</h2>
-                 
                 </div>
                 <div className="w-full flex items-center">
                 <h3 className="text-[8px] md:text-[12px] text-[#807D7E] w-1/2">{data.brand}</h3>
                 <button className="w-1/2">{data?.price}</button>
                 </div>
-                
               </div>
             </div>
           ))}
