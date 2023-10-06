@@ -194,9 +194,10 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
         {/* -----------MOBILE VIEW------------- */}
 
         <div className="p-2 sm:hidden">
-          <h1 className=" text-lg flex justify-center font-bold">
+          <h1 className=" text-lg flex justify-start font-bold">
             {ProductData?.name}
           </h1>
+          <div className="flex justify-start w-full">
           <div className="prdct-dtls gap-3">
             <img src={Star} alt="" className="prdct-star" />
             <img src={Star} alt="" className="prdct-star" />
@@ -207,23 +208,25 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
             <img src={Icon} alt="" className="msg-icon" />
             <p className="cmt"> 120 comment</p>
           </div>
+          </div>
+        
 
           <div className="mt-4 ">
-            <h1 className=" text-lg font-bold flex justify-center">
+            <h1 className=" text-lg font-bold flex justify-start">
               Product Description
             </h1>
-            <p className="text-gray-500 text-sm mt-2  ">
+            <p className="text-gray-500 text-sm mt-2 text-justify  ">
               100% Bio-washed Cotton – makes the fabric extra soft & silky.
               Flexible ribbed crew neck. Precisely stitched with fading. Provide
               all-time comfort. Anytime, anywhere. Infinite range of
               matte-finish HD prints.
             </p>
-            <div className="slct-sizes  flex justify-center gap-5">
+            <div className="slct-sizes  flex justify-start gap-5">
               <h1 className="slct-size">Select Size</h1>
               <h4 className="size-guide">Size Guide</h4>
               <img src={arrow} alt="" className="size-guide-icon" />
             </div>
-            <div className="size flex items-center ">
+            <div className="size w-full ">
               <div className="flex flex-row items-center  ">
                 <div className="size-box-icons  flex gap-3 ">
                   <div className="size-box-icons flex gap-3">
@@ -271,10 +274,10 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
                 </div>
               </div>
             </div>
-            <h1 className="color-title justify-center flex">
+            <h1 className="color-title justify-start flex">
               Colours Available{" "}
             </h1>
-            <div className="color gap-6 justify-center flex items-center">
+            <div className="color gap-6 justify-start flex items-center">
               <img src={black} alt="" className="clr-icon" />
               <img src={yellow} alt="" className="clr-icon" />
               <img src={pink} alt="" className="clr-icon" />
@@ -282,8 +285,11 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
             </div>
 
             <div  className="bg-white z-10 fixed bottom-0 left-0 w-full">
-              <div className="bag gap-3 flex items-center pb-6 justify-center">
-                <div>{ProductData?.offer_price}</div>
+              <div className="bag gap-3 flex items-center pb-6 justify-between px-8">
+              <div className="text-center font-black">
+                <h2 className="text-sm"> Price</h2>
+                 <h1 className="text-4xl">${!filterItems ? ProductData?.price : size?.offer_price}</h1> 
+                </div>
                 <div
                   className="addtobag  cursor-pointer gap-4"
                   onClick={() => handleAddToCart()}
@@ -291,9 +297,7 @@ console.log(ProductData,ProductData._id,ProductData.variations[0],ProductData.pr
                   <img src={cart} alt="" />
                   Add to cart
                 </div>
-                <div className="rate-btn">
-                  {!filterItems ? ProductData?.price : size?.offer_price}
-                </div>
+              
               </div>
 
              

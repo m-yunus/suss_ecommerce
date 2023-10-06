@@ -14,6 +14,7 @@ import { selectCartTotalAmount, selectTotalAmount, setDecreaseQty, setGetTotals,
 import CartEmpty from "./CartEmpty/CartEmpty";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [quantity, setQuantity] = useState(1);
@@ -21,7 +22,7 @@ const Cart = () => {
   const [mobviewitems,setmobviewitems]=useState([])
   const dispatch=useDispatch()
   const CartItems = useSelector((state) => state.Cart.CartItems);
-  
+  const navigate=useNavigate()
   const totalAmount=useSelector(selectCartTotalAmount)
  console.log(totalAmount);
  
@@ -362,9 +363,9 @@ const Cart = () => {
               <h1>${totalAmount.toFixed(2)}</h1>
             </div>
             <hr className="my-4  bg-[#BEBCBD]" />
-            <button className=" prcd-cart bg-[#FD7B85] rounded-lg px-2 py-2 text-white  font-semibold text-lg">
+         <Link to="/checkout" className=" prcd-cart bg-[#FD7B85] rounded-lg px-2 py-2 text-white  font-semibold text-lg">
               Proceed to Checkout{" "}
-            </button>
+              </Link>   
           </div>
         </div>
       </div>
