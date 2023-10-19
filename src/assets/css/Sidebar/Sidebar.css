@@ -168,7 +168,7 @@
     height: 1.2rem;
   }
  .sidebar .list h1 {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
   .sidebar ul li {
     padding-left: 1rem;
@@ -178,7 +178,7 @@
     gap: 1.5rem;
   }
   .close {
-    top: 0;
+    top: 16px;
     width: 1.32163rem;
     height: 1.26656rem;
     margin: 1rem;

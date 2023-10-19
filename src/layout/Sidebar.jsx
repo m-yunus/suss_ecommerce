@@ -1,46 +1,55 @@
 import React from "react";
 import "../assets/css/Sidebar/Sidebar.css";
-import about from "../assets/images/Sidebar/about.png";
-import blog from "../assets/images/Sidebar/blog.png";
-import channel from "../assets/images/Sidebar/channel.png";
-import hub from "../assets/images/Sidebar/hub.png";
-import order from "../assets/images/Sidebar/order.png";
-import services from "../assets/images/Sidebar/services.png";
-import talk from "../assets/images/Sidebar/talk.png";
+
+import logo from "../assets/images/Navbar/logo.png"
 import close from "../assets/images/Sidebar/close.png";
+import { Link, useNavigate } from "react-router-dom";
 
 const Sidebar = ({ isOpen, onClose }) => {
- 
+ const navigate=useNavigate();
+
+ const handleMen = () => {
+  navigate('/product-list-page');
+  localStorage.setItem('category', 'Men'); 
+};
+const handleWomen = () => {
+  navigate('/product-list-page');
+  localStorage.setItem('category', 'Women'); 
+};
+const handleShop=()=>{
+  navigate('/product-list-page');
+  localStorage.setItem('category', 'Shop'); 
+}
   return (
     <>
       <div className={`sidebar ${isOpen ? "open" : "closed"} `}>
-        <div className="close" onClick={onClose}>
-          <img className="close-img" src={close} alt="" />
-        </div>
+      
+      <div className="w-full flex justify-between  mx-4 my-4 h-[3rem] py-2 ">
+      <img src={logo} alt="" className="w-[5rem] "/>
+      <div className="close" onClick={onClose}>
+         
+         <img className="close-img" src={close} alt="" />
+       </div>
+      </div>
+       
         <div className="list ">
           <ul className="mx-auto">
             <li className="flex flex-row mx-auto">
-              <img src={services} alt="" /> <h1>OUR SERVICES</h1>
+               <h1 className="text-[1.5rem]">Home</h1>
             </li>
             <li className="flex flex-row mx-auto">
-              <img src={hub} alt="" /> <h1>VENDOR HUB</h1>
+              <h1 className="text-[1.5rem]" onClick={handleShop}>Shop</h1>
             </li>
             <li className="flex flex-row mx-auto">
-              <img src={talk} alt="" /> <h1>TALK TO US</h1>
+           <h1 className="text-[1.5rem]" onClick={handleMen}>Men</h1>
             </li>
             <li className="flex flex-row mx-auto">
-              <img src={about} alt="" /> <h1>ABOUT US</h1>
+              <h1 className="text-[1.5rem]" onClick={handleWomen}>Women</h1>
             </li>
             <li className="flex flex-row mx-auto">
-              <img src={blog} alt="" /> <h1>BLOG</h1>
+            <Link to="/my-orders"> <h1 className="text-[1.5rem]">About Us</h1></Link>  
             </li>
-            <li className="flex flex-row mx-auto">
-              <img className="order-img" src={order} alt="" /> <h1>ORDER</h1>
-            </li>
-            <li className="flex flex-row mx-auto">
-              <img className="channel-img" src={channel} alt="" />
-              <h1>CHANNEL</h1>
-            </li>
+           
           </ul>
         </div>
       </div>

@@ -27,6 +27,7 @@ const Product_List_Page = () => {
     const toggleDropdown = () => {
       setIsdropdownopen(!isDropdownopen);     
     };
+    const category=localStorage.getItem("category")
 const fetchProducts=async()=>{
   try {
     const res=await axios.get(`https://suss.onrender.com/api/product/get-all`)
@@ -35,6 +36,17 @@ const fetchProducts=async()=>{
   } catch (error) {
     console.log(error);
   }
+}
+const fetchwithCategory=async()=>{
+  try {
+    const res=await axios.get(`https://suss.onrender.com/api/product/filters?gender=${category}`)
+    console.log(res.data);
+    setProductData(res.data)
+    localStorage.removeItem('category');
+  } catch (error) {
+    console.log(error);
+  }
+  localStorage.removeItem('category');
 }
 const fetchwithcolor=async()=>{
   try {
@@ -63,11 +75,19 @@ const fetchwithcolor=async()=>{
      
    };
   useEffect(()=>{
-fetchProducts()
-fetchwithcolor()
+    if(category){
+      fetchwithCategory()
+    }else if(category === "Shop"){
+      fetchProducts()
+     
+    }
+   else{
+    fetchwithcolor()
+   } 
+
   },[color])
 
-console.log(color,filterData);
+
   return (
     <>
       <Navbar />

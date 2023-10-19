@@ -11,7 +11,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const Product_List_Right = ({ProductData}) => {
   const [isHeartFilled, setIsHeartFilled] = useState({});
-
+const category=localStorage.getItem('category')
+console.log(category);
   const dispatch = useDispatch();
   const navigate=useNavigate()
   const wishItems = useSelector((state) => state.Wishlist.WishItems);
@@ -54,10 +55,8 @@ const Product_List_Right = ({ProductData}) => {
  console.log(data.id);
  navigate(`/product-list-page/${data._id}`)
   }
-const data= ProductData.map((items)=>{
-  console.log(items?.images?.image1);
-})
-console.log(data);
+
+
   return (
     <>
       <div className="prdct-lst-right w-full px-10 mx-auto mr-14">

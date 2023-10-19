@@ -21,7 +21,9 @@ import middlebannerleft from "../../assets/images/Home/middlebannerleft.png"
 import middlebannerright from "../../assets/images/Home/middlebannerright.png"
 import Review1 from "../../assets/images/Home/Review1.png"
 import star from "../../assets/images/Home/star_purple500.png"
+import axios from "axios";
 const Home = () => {
+  const[categories,setcategories]=useState([])
   const items = [
     { imgSrc: joggers, text: "Knitted joggers" },
     { imgSrc: FullSleeve, text: "Full Sleeve" },
@@ -85,7 +87,7 @@ const Home = () => {
 
   const [startIndex, setStartIndex] = useState(0);
   const [windowsize, setWindowSize] = useState(2); // Default to 2 cards for mobile
-  const slideInterval = 2000;
+  const slideInterval = 4000;
 
   const [reviewWindowSize, setReviewWindowSize] = useState(3);
 
@@ -141,7 +143,18 @@ const Home = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, [startIndex]);
-
+  const fetchcategories=async()=>{
+    try {
+      const res= await axios.get(`https://suss.onrender.com/api/product/get-all-categories`)
+      console.log(res.data);
+      setcategories(res.data)
+    } catch (error) {
+      console.log(error);
+    }
+  }
+useEffect(()=>{
+fetchcategories();
+},[])
   return (
     <div className="flex flex-col min-h-screen">
       <div>

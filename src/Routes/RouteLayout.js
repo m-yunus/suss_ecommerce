@@ -63,7 +63,7 @@ const RouteLayout = () => {
           <Route path="check-email" element={<Check_Email />} />
           <Route path="verification" element={<Verification />} />
           <Route path="checkout" element={<CheckOut />} />
-          <Route path="product-list-page" element={<Product_List_Page />} />
+          <Route path="/product-list-page" element={<Product_List_Page />} />
           <Route path="contact-details" element={<Contact_Details />} />
           <Route path="add-address" element={<Add_Address />} />
           <Route path="Cart" element={<Cart />} />
