@@ -1,7 +1,7 @@
 
- .pll-bottom-button{
+ .pll-bottom-button button{
   
-  display: none;
+  display: flex!important;
 } 
 .Product_List_Left {
   display: block; /* Show by default */
@@ -23,10 +23,10 @@ color: #807D7E;
 
 
 }
-@media(max-width:426px){
+@media(min-width:426px){
 
-  .pll-bottom-button{
-  display: block;
+  .pll-bottom-button button{
+  display: none!important;
   margin: 0!important;
   display: flex;
   height: 40px;
